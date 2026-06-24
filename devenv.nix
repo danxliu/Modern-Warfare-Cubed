@@ -9,6 +9,7 @@ in
     gradleJdk
     gameJdk
     pkgs.xrandr
+    pkgs.fontconfig
   ];
 
   env = {
@@ -23,8 +24,15 @@ in
       libXrandr
       libXxf86vm
       libGL
+      libXrender
+      libXext
+      libX11
+      libXtst
+      libXi
+      fontconfig
     ]);
   };
 
   scripts."compile-jar".exec = "./gradlew build";
+  scripts."run-client".exec = "./gradlew runClient";
 }
