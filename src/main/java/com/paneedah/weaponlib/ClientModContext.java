@@ -33,7 +33,6 @@ import static com.paneedah.mwc.proxies.ClientProxy.MC;
 
 public class ClientModContext extends CommonModContext {
 
-    protected static ClientModContext currentContext;
     private ClientEventHandler clientEventHandler;
     private CompatibleRenderingRegistry rendererRegistry;
 
@@ -49,14 +48,14 @@ public class ClientModContext extends CommonModContext {
     @Getter private ScreenShakingAnimationManager playerRawPitchAnimationManager;
 
     public static ClientModContext getContext() {
-        return currentContext;
+        return (ClientModContext) currentContext;
     }
 
     @Override
     public void preInit(Object mod) {
         super.preInit(mod);
 
-        currentContext = new ClientModContext();
+        currentContext = this;
 
         aspectRatio = (float) MC.displayWidth / MC.displayHeight;
 
