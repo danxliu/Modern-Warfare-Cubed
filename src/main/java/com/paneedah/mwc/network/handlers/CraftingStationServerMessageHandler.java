@@ -23,6 +23,7 @@ import net.minecraftforge.oredict.OreDictionary;
 
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.IdentityHashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -67,51 +68,43 @@ public final class CraftingStationServerMessageHandler implements IMessageHandle
                 if (modernRecipe == null)
                     return;
 
-                Map<CraftingEntry, Map<ItemStack, Integer>> ingredientsToConsume = new HashMap<>();
+                Map<ItemStack, Integer> totalToConsume = new IdentityHashMap<>();
+                boolean canCraft = true;
 
                 // Gets all the items necessary to remove
                 for (CraftingEntry entry : modernRecipe) {
-                    Map<ItemStack, Integer> itemsForIngredient = new HashMap<>();
-                    ingredientsToConsume.put(entry, itemsForIngredient);
-
                     int remainingNeeded = entry.getCount();
-                    List<ItemStack> oreDictMatches = entry.isOreDictionary()
-                            ? OreDictionary.getOres(entry.getOreDictionaryEntry())
-                            : Collections.emptyList();
 
                     for (int i = 23; i < station.mainInventory.getSlots() && remainingNeeded > 0; ++i) {
                         ItemStack invStack = station.mainInventory.getStackInSlot(i);
                         if (invStack.isEmpty())
                             continue;
 
-                        boolean isMatch = entry.isOreDictionary()
-                                ? oreDictMatches.stream().anyMatch(ore -> OreDictionary.itemMatches(ore, invStack, false))
-                                : entry.getIngredient().test(invStack);
-
-                        if (!isMatch)
+                        if (!entry.matches(invStack))
                             continue;
 
-                        int toTake = Math.min(remainingNeeded, invStack.getCount());
-                        itemsForIngredient.put(invStack, toTake);
-                        remainingNeeded -= toTake;
+                        int alreadyPromised = totalToConsume.getOrDefault(invStack, 0);
+                        int available = invStack.getCount() - alreadyPromised;
+                        
+                        if (available <= 0) 
+                            continue;
 
-                        if (remainingNeeded <= 0)
-                            break;
+                        int toTake = Math.min(remainingNeeded, available);
+                        totalToConsume.put(invStack, alreadyPromised + toTake);
+                        remainingNeeded -= toTake;
+                    }
+                    
+                    if (remainingNeeded > 0) {
+                        canCraft = false;
+                        break;
                     }
                 }
 
-                // Verifies that the amount is not above what it should be.
-                for (CraftingEntry entry : modernRecipe) {
-                    int totalFound = ingredientsToConsume.get(entry).values().stream()
-                            .mapToInt(Integer::intValue)
-                            .sum();
+                if (!canCraft)
+                    return;
 
-                    if (totalFound < entry.getCount())
-                        return;
-                }
-
-                // Consumes the item's from the workbench inventory
-                ingredientsToConsume.values().forEach(itemMap -> itemMap.forEach(ItemStack::shrink));
+                // Consumes the items from the workbench inventory
+                totalToConsume.forEach(ItemStack::shrink);
 
                 if (station instanceof TileEntityWorkbench) {
                     final TileEntityWorkbench workbench = (TileEntityWorkbench) station;

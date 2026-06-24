@@ -95,6 +95,31 @@ public class CraftingEntry {
         return this.oreDictionary != null && !this.oreDictionary.isEmpty();
     }
 
+    /**
+     * Checks if the given ItemStack matches this CraftingEntry.
+     * Takes into account OreDictionary entries and standard Ingredients.
+     * 
+     * @param stack The stack to check
+     * @return true if it matches
+     */
+    public boolean matches(ItemStack stack) {
+        if (stack == null || stack.isEmpty()) {
+            return false;
+        }
+
+        if (!isOreDictionary()) {
+          return this.ingredient.test(stack);
+        }
+
+        int targetId = net.minecraftforge.oredict.OreDictionary.getOreID(this.oreDictionary);
+        for (int id : net.minecraftforge.oredict.OreDictionary.getOreIDs(stack)) {
+            if (id == targetId) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     @Override
     public String toString() {
         if (isOreDictionary()) {

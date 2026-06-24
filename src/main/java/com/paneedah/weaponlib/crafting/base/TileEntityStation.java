@@ -193,24 +193,12 @@ public class TileEntityStation extends TileEntity implements ITickable, ISidedIn
 
     public boolean inventoryContainsEnoughItems(CraftingEntry entry, int start, int end) {
         int count = 0;
+
         for (int i = start; i <= end; ++i) {
             final ItemStack slotStack = mainInventory.getStackInSlot(i);
+            if (slotStack.isEmpty()) continue;
 
-            if (entry.isOreDictionary()) {
-                final NonNullList<ItemStack> list = OreDictionary.getOres(entry.getOreDictionaryEntry());
-                for (ItemStack oreEntry : list) {
-                    if (OreDictionary.itemMatches(oreEntry, slotStack, false)) {
-                        count += slotStack.getCount();
-                        break;
-                    }
-                }
-
-                if (count >= entry.getCount())
-                    return true;
-                continue;
-            }
-
-            if (entry.getIngredient().test(slotStack)) {
+            if (entry.matches(slotStack)) {
                 count += slotStack.getCount();
                 if (count >= entry.getCount()) {
                     return true;
@@ -222,11 +210,7 @@ public class TileEntityStation extends TileEntity implements ITickable, ISidedIn
     }
 
     public void consumeFromInventory(CraftingEntry entry, int start, int end) {
-        final Ingredient ingredient = entry.getIngredient();
         final int requiredCount = entry.getCount();
-        final List<ItemStack> oreDictList = entry.isOreDictionary()
-                ? OreDictionary.getOres(entry.getOreDictionaryEntry())
-                : Collections.emptyList();
 
         final Map<ItemStack, Integer> toConsume = new HashMap<>();
         int collectedCount = 0;
@@ -236,10 +220,8 @@ public class TileEntityStation extends TileEntity implements ITickable, ISidedIn
             if (slotStack.isEmpty())
                 continue;
 
-            boolean matches = entry.isOreDictionary() ? oreDictList.stream().anyMatch(ore -> OreDictionary.itemMatches(ore, slotStack, false)) : ingredient.test(slotStack);
-
-            if (!matches)
-                continue; // We could make this into one line. (Could, not should)
+            if (!entry.matches(slotStack))
+                continue;
 
             final int needed = requiredCount - collectedCount;
             final int available = slotStack.getCount();
