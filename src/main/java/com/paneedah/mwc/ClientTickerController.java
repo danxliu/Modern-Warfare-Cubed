@@ -34,7 +34,8 @@ import static com.paneedah.mwc.proxies.ClientProxy.MC;
 @SideOnly(Side.CLIENT)
 public final class ClientTickerController {
 
-    private static ScheduledFuture<?> scheduledFuture;
+    private static volatile java.util.concurrent.ScheduledExecutorService executorService;
+    private static volatile ScheduledFuture<?> scheduledFuture;
 
     /**
      * Starts the client ticker.
@@ -43,7 +44,11 @@ public final class ClientTickerController {
      * @since 0.1
      */
     public static void start() {
-        scheduledFuture = Executors.newScheduledThreadPool(1).scheduleAtFixedRate(ClientTicker::onTick, 0, 10, TimeUnit.MILLISECONDS);
+        if (executorService != null && !executorService.isShutdown()) {
+            executorService.shutdownNow();
+        }
+        executorService = Executors.newScheduledThreadPool(1);
+        scheduledFuture = executorService.scheduleAtFixedRate(ClientTicker::onTick, 0, 10, TimeUnit.MILLISECONDS);
     }
 
     /**
@@ -55,6 +60,9 @@ public final class ClientTickerController {
     public static void stop() {
         if (scheduledFuture != null) {
             scheduledFuture.cancel(true);
+        }
+        if (executorService != null) {
+            executorService.shutdownNow();
         }
     }
 
