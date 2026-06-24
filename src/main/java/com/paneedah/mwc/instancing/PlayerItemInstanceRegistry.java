@@ -5,9 +5,8 @@ import com.google.common.cache.CacheBuilder;
 import com.google.common.util.concurrent.UncheckedExecutionException;
 import com.paneedah.weaponlib.SyncManager;
 import com.paneedah.weaponlib.state.ManagedState;
-import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
-import it.unimi.dsi.fastutil.ints.Int2ObjectOpenHashMap;
-import it.unimi.dsi.fastutil.objects.ObjectIterator;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.Iterator;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
@@ -37,7 +36,7 @@ public final class PlayerItemInstanceRegistry {
     /**
      * A registry mapping player UUIDs to their inventory slot item instances.
      */
-    private final Map<UUID, Int2ObjectMap<PlayerItemInstance<?>>> registry = new HashMap<>();
+    private final Map<UUID, Map<Integer, PlayerItemInstance<?>>> registry = new ConcurrentHashMap<>();
 
     /**
      * A cache mapping {@link ItemStack}s to their corresponding {@link PlayerItemInstance}s for rendering purposes.
@@ -96,7 +95,7 @@ public final class PlayerItemInstanceRegistry {
      * @return The item instance in the specified slot, or {@code null} if not found
      */
     public PlayerItemInstance<?> getItemInstance(final EntityPlayer player, final int slot) {
-        final Int2ObjectMap<PlayerItemInstance<?>> slotInstances = registry.computeIfAbsent(player.getPersistentID(), uuid -> new Int2ObjectOpenHashMap<>());
+        final Map<Integer, PlayerItemInstance<?>> slotInstances = registry.computeIfAbsent(player.getPersistentID(), uuid -> new ConcurrentHashMap<>());
         PlayerItemInstance<?> result = slotInstances.get(slot);
 
 //        log.debug("Slot {} contains {}", slot, result);
@@ -135,7 +134,7 @@ public final class PlayerItemInstanceRegistry {
      *
      * @return The newly created item instance, or {@code null} if creation failed
      */
-    private PlayerItemInstance<?> createItemInstance(final EntityPlayer player, final Int2ObjectMap<PlayerItemInstance<?>> slotInstances, final int slot) {
+    private PlayerItemInstance<?> createItemInstance(final EntityPlayer player, final Map<Integer, PlayerItemInstance<?>> slotInstances, final int slot) {
         final ItemStack itemStack = player.inventory.getStackInSlot(slot);
         PlayerItemInstance<?> result = null;
 
@@ -224,7 +223,7 @@ public final class PlayerItemInstanceRegistry {
      * @return {@code true} if the update was successful, {@code false} otherwise
      */
     public <S extends ManagedState<S>, T extends PlayerItemInstance<S>> boolean update(final S newManagedState, final T extendedStateToMerge) {
-        final Int2ObjectMap<PlayerItemInstance<?>> slotInstances = registry.get(extendedStateToMerge.getPlayer().getUniqueID());
+        final Map<Integer, PlayerItemInstance<?>> slotInstances = registry.get(extendedStateToMerge.getPlayer().getUniqueID());
 
         if (slotInstances == null)
             return false;
@@ -256,21 +255,21 @@ public final class PlayerItemInstanceRegistry {
         if (player == null)
             return;
 
-        final Int2ObjectMap<PlayerItemInstance<?>> slotInstances = registry.get(player.getPersistentID());
+        final Map<Integer, PlayerItemInstance<?>> slotInstances = registry.get(player.getPersistentID());
 
         if (slotInstances == null)
             return;
 
-        for (final ObjectIterator<Int2ObjectMap.Entry<PlayerItemInstance<?>>> iterator = slotInstances.int2ObjectEntrySet().iterator(); iterator.hasNext(); ) {
-            final Int2ObjectMap.Entry<PlayerItemInstance<?>> entry = iterator.next();
-            final ItemStack slotStack = player.inventory.getStackInSlot(entry.getIntKey());
+        for (final Iterator<Map.Entry<Integer, PlayerItemInstance<?>>> iterator = slotInstances.entrySet().iterator(); iterator.hasNext(); ) {
+            final Map.Entry<Integer, PlayerItemInstance<?>> entry = iterator.next();
+            final ItemStack slotStack = player.inventory.getStackInSlot(entry.getKey());
 
 //            log.debug("Slot {} contains item {} stack {}", e.getKey(), e.getValue(), System.identityHashCode(slotStack));
 
             if (itemStackMatchesInstance(slotStack, entry.getValue()))
                 continue;
 
-            LOGGER.debug("Removing {} in slot {} from the item instance registry", entry.getValue(), entry.getIntKey());
+            LOGGER.debug("Removing {} in slot {} from the item instance registry", entry.getValue(), entry.getKey());
             syncManager.unwatch(entry.getValue());
             iterator.remove();
         }
