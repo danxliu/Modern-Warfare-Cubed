@@ -2438,11 +2438,11 @@
       }
     ]
   },
-  "MClaren_senna_engine": {
+  "mclaren_senna_engine": {
     "category": "master",
     "sounds": [
       {
-       "name": "${id}:MClaren_senna_engine",
+       "name": "${id}:mclaren_senna_engine",
        "stream": false
       }
     ]

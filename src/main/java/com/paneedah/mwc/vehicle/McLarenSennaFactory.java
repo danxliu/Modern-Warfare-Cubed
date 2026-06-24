@@ -224,7 +224,7 @@ public class McLarenSennaFactory implements VehicleFactory {
                 .withGearshiftSound("gearshift4")
                 .withEnterSound("vehicle-enter")
                 .withExitSound("vehicle-exit")
-                .withRunSound("MClaren_senna_engine")
+                .withRunSound("mclaren_senna_engine")
                 .withShiftSettings(false, true)
                 .withIdleSound("audi_s4_rev")
                 .withRevSounds("audi_s4_rev$")
