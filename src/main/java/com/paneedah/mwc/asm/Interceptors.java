@@ -30,6 +30,8 @@ import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.gen.NoiseGeneratorPerlin;
 import net.minecraftforge.fml.client.FMLClientHandler;
 import net.minecraftforge.fml.relauncher.ReflectionHelper;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 import org.lwjgl.input.Keyboard;
 import org.lwjgl.input.Mouse;
 import org.lwjgl.util.vector.Matrix4f;
@@ -40,6 +42,7 @@ import java.util.*;
 import static com.paneedah.mwc.proxies.ClientProxy.MC;
 
 
+@SideOnly(Side.CLIENT)
 public class Interceptors {
 
     public static final int OPTIMIZATION_MODE_MIN = 400;
