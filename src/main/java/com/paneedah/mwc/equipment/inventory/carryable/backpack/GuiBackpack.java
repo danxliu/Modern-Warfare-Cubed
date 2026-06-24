@@ -1,12 +1,12 @@
 package com.paneedah.mwc.equipment.inventory.carryable.backpack;
 
+import static com.paneedah.mwc.proxies.ClientProxy.MC;
+
 import com.paneedah.mwc.gui.inventory.BackpackInventoryTab;
 import com.paneedah.mwc.gui.inventory.InventoryTabHandler;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.gui.inventory.GuiInventory;
 import net.minecraft.util.ResourceLocation;
-
-import static com.paneedah.mwc.proxies.ClientProxy.MC;
 
 public class GuiBackpack extends GuiContainer {
 
@@ -21,7 +21,7 @@ public class GuiBackpack extends GuiContainer {
 
         final int columns = inventory.getSizeInventory() / 4;
 
-        xSize += (columns > 5 ? ((columns * 3) + 1) : 0);
+        xSize += columns > 5 ? columns * 3 + 1 : 0;
     }
 
     @Override
@@ -30,8 +30,8 @@ public class GuiBackpack extends GuiContainer {
 
         final InventoryTabHandler inventoryTabHandler = InventoryTabHandler.getInstance();
 
-        inventoryTabHandler.updateTabValues(guiLeft, guiTop, BackpackInventoryTab.class);
-        inventoryTabHandler.addTabsToList(this.buttonList);
+        inventoryTabHandler.updateTabValues(guiLeft, guiTop, BackpackInventoryTab.class, buttonList);
+        inventoryTabHandler.addTabsToList(buttonList);
     }
 
     @Override
@@ -48,6 +48,6 @@ public class GuiBackpack extends GuiContainer {
 
         drawTexturedModalRect(guiLeft, guiTop, 0, 0, xSize, ySize);
 
-        GuiInventory.drawEntityOnScreen(guiLeft + 51, guiTop + 75, 30, (guiLeft + 51) - mouseX, (guiTop + 25) - mouseY, MC.player);
+        GuiInventory.drawEntityOnScreen(guiLeft + 51, guiTop + 75, 30, guiLeft + 51 - mouseX, guiTop + 25 - mouseY, MC.player);
     }
 }

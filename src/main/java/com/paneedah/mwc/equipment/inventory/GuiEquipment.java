@@ -35,7 +35,7 @@ public class GuiEquipment extends InventoryEffectRenderer {
 
         final InventoryTabHandler inventoryTabHandler = InventoryTabHandler.getInstance();
 
-        inventoryTabHandler.updateTabValues(guiLeft, guiTop, CustomPlayerInventoryTab.class);
+        inventoryTabHandler.updateTabValues(guiLeft, guiTop, CustomPlayerInventoryTab.class, buttonList);
         inventoryTabHandler.addTabsToList(buttonList);
     }
 
