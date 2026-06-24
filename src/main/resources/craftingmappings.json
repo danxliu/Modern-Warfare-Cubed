@@ -1513,7 +1513,8 @@
         {
           "entryName": "mwc:M4A1",
           "isOreDictionary": false,
-          "count": 1
+          "count": 1,
+          "defaultItem": "minecraft:air"
         }
       ]
     },
@@ -1530,7 +1531,8 @@
         {
           "entryName": "mwc:turret",
           "isOreDictionary": false,
-          "count": 1
+          "count": 1,
+          "defaultItem": "minecraft:air"
         }
       ]
     },
@@ -1547,7 +1549,8 @@
         {
           "entryName": "mwc:turretupgraded",
           "isOreDictionary": false,
-          "count": 1
+          "count": 1,
+          "defaultItem": "minecraft:air"
         }
       ]
     },
@@ -1732,7 +1735,8 @@
         {
           "entryName": "minecraft:string",
           "isOreDictionary": false,
-          "count": 4
+          "count": 4,
+          "defaultItem": "minecraft:air"
         },
         {
           "entryName": "paper",
@@ -1791,7 +1795,8 @@
         {
           "entryName": "minecraft:string",
           "isOreDictionary": false,
-          "count": 2
+          "count": 2,
+          "defaultItem": "minecraft:air"
         },
         {
           "entryName": "paper",
@@ -2786,7 +2791,8 @@
         {
           "entryName": "minecraft:string",
           "isOreDictionary": false,
-          "count": 3
+          "count": 3,
+          "defaultItem": "minecraft:air"
         },
         {
           "entryName": "paper",
@@ -7525,7 +7531,8 @@
         {
           "entryName": "minecraft:tnt",
           "isOreDictionary": false,
-          "count": 1
+          "count": 1,
+          "defaultItem": "minecraft:air"
         },
         {
           "entryName": "compositePolymerSynthetic",
