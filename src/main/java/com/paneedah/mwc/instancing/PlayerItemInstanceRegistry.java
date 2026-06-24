@@ -223,6 +223,10 @@ public final class PlayerItemInstanceRegistry {
      * @return {@code true} if the update was successful, {@code false} otherwise
      */
     public <S extends ManagedState<S>, T extends PlayerItemInstance<S>> boolean update(final S newManagedState, final T extendedStateToMerge) {
+        if (extendedStateToMerge.getPlayer() == null) {
+            return false;
+        }
+
         final Map<Integer, PlayerItemInstance<?>> slotInstances = registry.get(extendedStateToMerge.getPlayer().getUniqueID());
 
         if (slotInstances == null)
