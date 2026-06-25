@@ -177,53 +177,52 @@ public class BackpackInventory implements IInventory {
 
     @Override
     public ITextComponent getDisplayName() {
-        // TODO Auto-generated method stub
-        return null;
+        return new net.minecraft.util.text.TextComponentString(getName());
     }
 
     @Override
     public boolean isEmpty() {
-        // TODO Auto-generated method stub
-        return false;
+        for (ItemStack itemstack : this.inventory) {
+            if (!itemstack.isEmpty()) {
+                return false;
+            }
+        }
+        return true;
     }
 
     @Override
     public ItemStack removeStackFromSlot(int index) {
-        // TODO Auto-generated method stub
-        return null;
+        if (!this.inventory[index].isEmpty()) {
+            ItemStack itemstack = this.inventory[index];
+            this.inventory[index] = ItemStack.EMPTY;
+            return itemstack;
+        }
+        return ItemStack.EMPTY;
     }
 
     @Override
-    public void openInventory(EntityPlayer player) {
-        // TODO Auto-generated method stub
-
-    }
+    public void openInventory(EntityPlayer player) {}
 
     @Override
-    public void closeInventory(EntityPlayer player) {
-        // TODO Auto-generated method stub
-
-    }
+    public void closeInventory(EntityPlayer player) {}
 
     @Override
     public int getField(int id) {
-        // TODO Auto-generated method stub
         return 0;
     }
 
     @Override
-    public void setField(int id, int value) {
-        // TODO Auto-generated method stub
-
-    }
+    public void setField(int id, int value) {}
 
     @Override
     public int getFieldCount() {
-        // TODO Auto-generated method stub
         return 0;
     }
 
     @Override
     public void clear() {
+        for (int i = 0; i < this.inventory.length; ++i) {
+            this.inventory[i] = ItemStack.EMPTY;
+        }
     }
 }
