@@ -54,13 +54,6 @@ public class Armors {
     public static Item Juggernautboots;
     public static Item Juggernauthelmet;
 
-    public static Item NaziSantachest;
-    public static Item NaziSantaboots;
-    public static Item NaziSantahelmet;
-
-    public static Item Santachest;
-    public static Item Santaboots;
-    public static Item Santahelmet;
 
     static ArmorMaterial Juggernaut = EnumHelper.addArmorMaterial("Juggernaut", "Juggernaut", 20, new int[]{5, 6, 2, 5}, 20, null, 0);
     static ArmorMaterial Marine = EnumHelper.addArmorMaterial("Marine", "Marine", 60, new int[]{2, 3, 3, 3}, 15, null, 0);
@@ -152,26 +145,6 @@ public class Armors {
 
         Armors.KhakiJeansboots = khakijeansArmorBuilder.buildBoots(modContext.isClient());
 
-        Builder santaArmorBuilder = new CustomArmor.Builder()
-                .withMaterial(Armors.Marine)
-                .withUnlocalizedName("Santa")
-                .withTextureName("santasuit_normal")
-                .withModelClass("com.paneedah.mwc.models.SantasuitNormal")
-                .withCreativeTab(MWC.EQUIPMENT_TAB);
-
-        Armors.Santahelmet = santaArmorBuilder.buildHelmet(modContext);
-        Armors.Santachest = santaArmorBuilder.buildChest(modContext.isClient());
-        Armors.Santaboots = santaArmorBuilder.buildBoots(modContext.isClient());
-
-        Builder nazisantaArmorBuilder = new CustomArmor.Builder().withMaterial(Armors.Marine)
-                .withUnlocalizedName("Nazisanta")
-                .withTextureName("santasuit_nazi")
-                .withModelClass("com.paneedah.mwc.models.SantaSuit")
-                .withCreativeTab(MWC.EQUIPMENT_TAB);
-
-        Armors.NaziSantahelmet = nazisantaArmorBuilder.buildHelmet(modContext);
-        Armors.NaziSantachest = nazisantaArmorBuilder.buildChest(modContext.isClient());
-        Armors.NaziSantaboots = nazisantaArmorBuilder.buildBoots(modContext.isClient());
 
         Builder juggernautsuitArmorBuilder = new CustomArmor.Builder().withMaterial(Armors.Juggernaut)
                 .withUnlocalizedName("Juggernaut")

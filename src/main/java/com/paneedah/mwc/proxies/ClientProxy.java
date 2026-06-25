@@ -82,13 +82,6 @@ public class ClientProxy extends CommonProxy {
         modelMesher.register(Armors.Swatchest, 0, new ModelResourceLocation(ID + ":swat_chest", "inventory"));
         modelMesher.register(Armors.Swathelmet, 0, new ModelResourceLocation(ID + ":swat_helmet", "inventory"));
 
-        modelMesher.register(Armors.Santaboots, 0, new ModelResourceLocation(ID + ":santa_boots", "inventory"));
-        modelMesher.register(Armors.Santachest, 0, new ModelResourceLocation(ID + ":santa_chest", "inventory"));
-        modelMesher.register(Armors.Santahelmet, 0, new ModelResourceLocation(ID + ":santa_helmet", "inventory"));
-
-        modelMesher.register(Armors.NaziSantaboots, 0, new ModelResourceLocation(ID + ":nazisanta_boots", "inventory"));
-        modelMesher.register(Armors.NaziSantachest, 0, new ModelResourceLocation(ID + ":nazisanta_chest", "inventory"));
-        modelMesher.register(Armors.NaziSantahelmet, 0, new ModelResourceLocation(ID + ":nazisanta_helmet", "inventory"));
 
         modelMesher.register(Armors.SpecOpsboots, 0, new ModelResourceLocation(ID + ":spec_ops_boots", "inventory"));
         modelMesher.register(Armors.SpecOpschest, 0, new ModelResourceLocation(ID + ":spec_ops_chest", "inventory"));
