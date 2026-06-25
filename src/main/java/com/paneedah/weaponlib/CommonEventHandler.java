@@ -35,9 +35,11 @@ import net.minecraftforge.fml.common.gameevent.PlayerEvent.PlayerLoggedInEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
 
 import java.io.ByteArrayOutputStream;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Iterator;
+import java.util.List;
 
 import static com.paneedah.mwc.MWC.CHANNEL;
 import static com.paneedah.mwc.network.handlers.CraftingClientMessageHandler.RECEIVE_HASH;
@@ -84,23 +86,23 @@ public class CommonEventHandler {
 
             boolean effectiveUpdate = false;
             Collection<? extends Exposure> exposures = CompatibleExposureCapability.getExposures(livingUpdateEvent.getEntity());
-            for (Iterator<? extends Exposure> iterator = exposures.iterator(); iterator.hasNext(); ) {
-                final Exposure exposure = iterator.next();
-
+            List<Exposure> updatedExposures = new ArrayList<>();
+            for (Exposure exposure : exposures) {
                 exposure.update(livingUpdateEvent.getEntity());
 
                 if (doseNbt != null && exposure instanceof SpreadableExposure) {
                     doseNbt.setFloat("dose", ((SpreadableExposure) exposure).getLastDose());
                 }
 
-                if (!exposure.isEffective(livingUpdateEvent.getEntity().world)) {
-                    iterator.remove();
+                if (exposure.isEffective(livingUpdateEvent.getEntity().world)) {
+                    updatedExposures.add(exposure);
+                } else {
                     effectiveUpdate = true;
                 }
             }
 
             if (effectiveUpdate) {
-                CompatibleExposureCapability.updateExposures(livingUpdateEvent.getEntity(), exposures);
+                CompatibleExposureCapability.updateExposures(livingUpdateEvent.getEntity(), updatedExposures);
             }
 
             //final long lastExposuresUpdateTimestamp = CompatibleExposureCapability.getLastUpdateTimestamp(livingUpdateEvent.getEntity());
