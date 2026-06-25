@@ -8617,30 +8617,6 @@
       ]
     },
     {
-      "entryName": "mwc:C8Stock",
-      "craftingGroup": "ATTACHMENT_MODIFICATION",
-      "recipe": [
-        {
-          "entryName": "ingotGunmetal",
-          "defaultItem": "mwc:gunmetal_ingot",
-          "isOreDictionary": true,
-          "count": 3
-        },
-        {
-          "entryName": "ingotSteel",
-          "defaultItem": "mwc:steel_ingot",
-          "isOreDictionary": true,
-          "count": 2
-        },
-        {
-          "entryName": "compositePolymerSynthetic",
-          "defaultItem": "mwc:synthetic_polymer_composite",
-          "isOreDictionary": true,
-          "count": 1
-        }
-      ]
-    },
-    {
       "entryName": "mwc:FNFALStock",
       "craftingGroup": "ATTACHMENT_MODIFICATION",
       "recipe": [
@@ -9668,24 +9644,6 @@
     },
     {
       "entryName": "mwc:AR57Receiver",
-      "craftingGroup": "ATTACHMENT_MODIFICATION",
-      "recipe": [
-        {
-          "entryName": "ingotGunmetal",
-          "defaultItem": "mwc:gunmetal_ingot",
-          "isOreDictionary": true,
-          "count": 4
-        },
-        {
-          "entryName": "ingotSteel",
-          "defaultItem": "mwc:steel_ingot",
-          "isOreDictionary": true,
-          "count": 2
-        }
-      ]
-    },
-    {
-      "entryName": "mwc:C8SFWReceiver",
       "craftingGroup": "ATTACHMENT_MODIFICATION",
       "recipe": [
         {
@@ -12008,54 +11966,6 @@
     },
     {
       "entryName": "mwc:m134",
-      "craftingGroup": "GUN",
-      "recipe": [
-        {
-          "entryName": "compositePolymerSynthetic",
-          "defaultItem": "mwc:synthetic_polymer_composite",
-          "isOreDictionary": true,
-          "count": 20
-        },
-        {
-          "entryName": "plateGunmetal",
-          "defaultItem": "mwc:gunmetal_plate",
-          "isOreDictionary": true,
-          "count": 25
-        },
-        {
-          "entryName": "ingotSteel",
-          "defaultItem": "mwc:steel_ingot",
-          "isOreDictionary": true,
-          "count": 12
-        }
-      ]
-    },
-    {
-      "entryName": "mwc:ninth_sin",
-      "craftingGroup": "GUN",
-      "recipe": [
-        {
-          "entryName": "compositePolymerSynthetic",
-          "defaultItem": "mwc:synthetic_polymer_composite",
-          "isOreDictionary": true,
-          "count": 20
-        },
-        {
-          "entryName": "plateGunmetal",
-          "defaultItem": "mwc:gunmetal_plate",
-          "isOreDictionary": true,
-          "count": 25
-        },
-        {
-          "entryName": "ingotSteel",
-          "defaultItem": "mwc:steel_ingot",
-          "isOreDictionary": true,
-          "count": 12
-        }
-      ]
-    },
-    {
-      "entryName": "mwc:ntw_20",
       "craftingGroup": "GUN",
       "recipe": [
         {

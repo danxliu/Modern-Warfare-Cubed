@@ -621,15 +621,6 @@ public class AuxiliaryAttachments {
                 .withName("M32Cartridge")
                 .withTextureName("Dummy.png").build(modContext);
 
-        M41AMag = new AttachmentBuilder<Weapon>()
-                .withCategory(AttachmentCategory.EXTRA)
-                // .withCreativeTab(MWC.gunsTab)
-                .withModel(new com.paneedah.mwc.models.M41AMag(), "M41AMag.png")
-                .withName("M41AMag")
-                .withRenderablePart()
-
-                .withTextureName("Dummy.png").build(modContext);
-
         MP43Edoublebarrel = new AttachmentBuilder<Weapon>()
                 .withCategory(AttachmentCategory.EXTRA)
                 // .withCreativeTab(MWC.gunsTab)
@@ -1167,16 +1158,6 @@ public class AuxiliaryAttachments {
                 .withRenderablePart().withTextureName("Dummy.png")
                 .build(modContext);
 
-        M45A1slide = new AttachmentBuilder<Weapon>()
-                .withCategory(AttachmentCategory.EXTRA)
-                // .withCreativeTab(MWC.gunsTab)
-                .withModel(new com.paneedah.mwc.models.Emp1911Slide(), "Emp1911.png")
-                .withModel(new com.paneedah.mwc.models.M1911frontsight(), "m1911frontsight")
-                .withModel(new com.paneedah.mwc.models.M1911rearsight(), "m1911rearsight")
-                .withName("M45A1slide")
-                .withRenderablePart().withTextureName("Dummy.png")
-                .build(modContext);
-
         M17_Slide = new AttachmentBuilder<Weapon>()
                 .withCategory(AttachmentCategory.EXTRA)
                 // .withCreativeTab(MWC.gunsTab)
@@ -1636,7 +1617,7 @@ public class AuxiliaryAttachments {
         AR15Iron = new AttachmentBuilder<Weapon>().withCategory(AttachmentCategory.SCOPE)
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
                 .withModel(new M4Iron1(), "gun.png")
-                .withModel(new M4Iron2(), "AK12.png")
+                .withModel(new M4Iron2(), "gun.png")
                 .withModel(new FALIron(), "gun.png")
                 .withModel(new ARCarryHandle(), "arcarryhandle.png")
                 .withRequiredAttachments(Attachments.M4Receiver, Attachments.VLTORReceiver, Attachments.HoneyBadgerReceiver,
@@ -1693,11 +1674,6 @@ public class AuxiliaryAttachments {
                 .withModel(new com.paneedah.mwc.models.AKRail4(), "akrail.png")
                 .withModel(new com.paneedah.mwc.models.AKRail5(), "akrail.png")
                 .withName("M4Rail").withRenderablePart()
-                .withTextureName("Dummy.png").build(modContext);
-
-        M4AsiimovRail = new AttachmentBuilder<Weapon>().withCategory(AttachmentCategory.EXTRA5)
-                .withModel(new com.paneedah.mwc.models.AKRail(), "m4asiimovrail.png")
-                .withName("M4AsiimovRail").withRenderablePart()
                 .withTextureName("Dummy.png").build(modContext);
 
         MagnumRail = new AttachmentBuilder<Weapon>().withCategory(AttachmentCategory.EXTRA5)
