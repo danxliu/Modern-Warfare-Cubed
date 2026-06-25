@@ -31,11 +31,13 @@ public final class EntityInventorySyncMessageClientHandler implements IMessageHa
             final EntityPlayer player = MC.player;
             final Entity targetEntity = entityInventorySyncMessage.getEntity(player.world);
 
-            if (targetEntity != player || !entityInventorySyncMessage.isExcludeEntity()) {
+            if (targetEntity instanceof EntityLivingBase && (targetEntity != player || !entityInventorySyncMessage.isExcludeEntity())) {
                 final EquipmentInventory inventory = entityInventorySyncMessage.getInventory();
 
                 inventory.setContext(modContext);
-                inventory.setOwner((EntityPlayer) targetEntity);
+                if (targetEntity instanceof EntityPlayer) {
+                    inventory.setOwner((EntityPlayer) targetEntity);
+                }
                 EquipmentCapability.setInventory((EntityLivingBase) targetEntity, inventory);
             }
         });
