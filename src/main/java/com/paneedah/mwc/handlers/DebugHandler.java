@@ -19,8 +19,9 @@ public class DebugHandler {
         if (MC.gameSettings.showDebugInfo) {
             ArrayList<String> debugScreenLeft = event.getLeft();
 
-            debugScreenLeft.remove(4);
-            debugScreenLeft.add(4, "T: " + MC.world.getDebugLoadedEntities());
+            if (debugScreenLeft.size() > 4) {
+                debugScreenLeft.set(4, "T: " + MC.world.getDebugLoadedEntities());
+            }
 
             if (!debugScreenLeft.get(debugScreenLeft.size() - 1).equals("")) {
                 debugScreenLeft.add("");
