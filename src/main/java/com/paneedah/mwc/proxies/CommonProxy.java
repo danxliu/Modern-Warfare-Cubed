@@ -3,6 +3,7 @@ package com.paneedah.mwc.proxies;
 import com.paneedah.mwc.*;
 import com.paneedah.mwc.entities.Entities;
 import com.paneedah.mwc.equipment.*;
+import com.paneedah.mwc.init.MWCBlocks;
 import com.paneedah.mwc.init.MWCItems;
 import com.paneedah.mwc.items.melee.BaseballBatFactory;
 import com.paneedah.mwc.items.melee.BaseballBatNailsFactory;
@@ -31,6 +32,7 @@ public class CommonProxy {
 
         // Forcing Item Initialization here, at the very least the variables, before they get registered normally on the init() (@SubscribeEvent) phase.
         MWCItems.init();
+        MWCBlocks.init();
 
         // Special object initialization (Magic Mag)
         SpecialAttachments.init(MWC.modContext);

@@ -59,7 +59,6 @@ public class MWCBlocks {
 
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> blockRegistryEvent) {
-        init();
         blockRegistryEvent.getRegistry().registerAll(blocks);
     }
 
