@@ -76,8 +76,6 @@ public class ClientModContext extends CommonModContext {
 
         MinecraftForge.EVENT_BUS.register(InventoryTabHandler.getInstance());
 
-        MinecraftForge.EVENT_BUS.register(clientEventHandler); // TODO: what are the implications of registering the same class with 2 buses
-
         this.viewManager = new PerspectiveManager(this);
         this.inventoryTextureMap = new HashMap<>();
 
