@@ -5,13 +5,15 @@ import net.minecraft.item.Item;
 
 import java.util.Arrays;
 
+import static com.paneedah.mwc.ProjectConstants.ID;
+
 public class ItemBase extends Item {
 
     int stackSize = 64;
     String[] oreDictKeys;
 
     public ItemBase(String registryName) {
-        setRegistryName(registryName);
+        setRegistryName(ID, registryName);
         setTranslationKey(registryName);
 
         setMaxStackSize(stackSize);

@@ -21,6 +21,8 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
+import static com.paneedah.mwc.ProjectConstants.ID;
+
 public abstract class BlockStation extends Block {
 
     protected ModContext modContext;
@@ -36,7 +38,7 @@ public abstract class BlockStation extends Block {
 
         setHardness(2.0f);
         setTranslationKey(name);
-        setRegistryName(name);
+        setRegistryName(ID, name);
         setCreativeTab(CreativeTabs.MISC);
         this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
     }

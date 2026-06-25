@@ -8,11 +8,13 @@ import net.minecraft.item.Item;
 
 import java.util.Random;
 
+import static com.paneedah.mwc.ProjectConstants.ID;
+
 public class BlockBase extends Block {
 
     public BlockBase(String registryName) {
         super(Material.ROCK);
-        setRegistryName(registryName);
+        setRegistryName(ID, registryName);
         setTranslationKey(registryName);
 
         setHardness(6F);

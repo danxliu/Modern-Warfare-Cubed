@@ -7,6 +7,7 @@ import net.minecraft.item.Item;
 
 import java.util.Random;
 
+import static com.paneedah.mwc.ProjectConstants.ID;
 import static com.paneedah.mwc.ProjectConstants.LOGGER;
 
 public class OreBase extends BlockOre {
@@ -17,7 +18,7 @@ public class OreBase extends BlockOre {
     private String[] oreDictKeys;
 
     public OreBase(String registryName) {
-        setRegistryName(registryName);
+        setRegistryName(ID, registryName);
         setTranslationKey(registryName);
 
         setHardness(6F);
