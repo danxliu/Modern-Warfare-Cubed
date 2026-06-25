@@ -15,7 +15,12 @@ public class BlankStateMapper implements IStateMapper {
 
     @Override
     public Map<IBlockState, ModelResourceLocation> putStateModelLocations(Block blockIn) {
-        return Collections.EMPTY_MAP;
+        ModelResourceLocation dummyLocation = new ModelResourceLocation(com.paneedah.mwc.ProjectConstants.ID + ":dummy", "normal");
+        Map<IBlockState, ModelResourceLocation> map = new java.util.HashMap<>();
+        for (IBlockState state : blockIn.getBlockState().getValidStates()) {
+            map.put(state, dummyLocation);
+        }
+        return map;
     }
 
 }

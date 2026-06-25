@@ -181,7 +181,10 @@ public class AttachmentBuilder<T> extends AbstractItemBuilder<AttachmentBuilder<
     public ItemAttachment<T> build(ModContext modContext) {
         ItemAttachment<T> attachment = createAttachment(modContext);
         attachment.setTranslationKey(ID + "_" + name);
-        attachment.setCreativeTab(tab);
+        boolean hasRecipe = modernRecipe != null
+                || (craftingRecipe != null && craftingRecipe.length >= 2)
+                || craftingComplexity != null;
+        attachment.setCreativeTab(hasRecipe ? tab : null);
         attachment.setPostRenderer(postRenderer);
         attachment.setName(name);
         attachment.apply2 = apply2;

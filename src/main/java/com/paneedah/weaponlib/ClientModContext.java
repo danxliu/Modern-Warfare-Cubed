@@ -122,12 +122,14 @@ public class ClientModContext extends CommonModContext {
     public void registerRenderableItem(String name, Item item, Object renderer) {
         super.registerRenderableItem(name, item, renderer);
         rendererRegistry.register(item, name, renderer);
+        com.paneedah.weaponlib.compatibility.ModelRegistryServerInterchange.ITEM_MODEL_REG.add(item);
     }
 
     @Override
     public void registerRenderableItem(ResourceLocation name, Item item, Object renderer) {
         super.registerRenderableItem(name, item, renderer);
         rendererRegistry.register(item, name, renderer);
+        com.paneedah.weaponlib.compatibility.ModelRegistryServerInterchange.ITEM_MODEL_REG.add(item);
     }
 
     @Override

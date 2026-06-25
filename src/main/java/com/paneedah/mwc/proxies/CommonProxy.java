@@ -57,14 +57,14 @@ public class CommonProxy {
         new BaseballBatNailsFactory().createMelee(this);
         new NightStickFactory().createMelee(this);
 
+        TurretBaseFactory.createTileEntity(MWC.modContext);
+        TileEntities.createTileEntity(MWC.modContext);
+
         MWC.modContext.preInitEnd(mod);
     }
 
     public void init(final MWC mod) {
         MWC.modContext.init(mod);
-
-        TurretBaseFactory.createTileEntity(MWC.modContext);
-        TileEntities.createTileEntity(MWC.modContext);
 
         Entities.init(MWC.modContext);
         Vehicles.init(MWC.modContext);

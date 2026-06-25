@@ -315,7 +315,7 @@ public class Attachments {
 
     public static ItemAttachment<Weapon> CZ805BrenStock;
 
-    public static ItemAttachment<Weapon> C8Stock;
+
 
     public static ItemAttachment<Weapon> HeraArmsStock;
     public static ItemAttachment<Weapon> HK416Stock;
@@ -578,6 +578,10 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                .withModernRecipe(
+                        CraftingGroup.ATTACHMENT_MODIFICATION,
+                        new CraftingEntry(MWCItems.gunmetalIngot, 3),
+                        new CraftingEntry(MWCItems.steelIngot, 1))
                 .withName("G11HandguardK1").withTextureName("Dummy.png")
                 .build(modContext);
 
@@ -613,6 +617,7 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                
                 .withName("G11HandguardK2").withTextureName("Dummy.png")
                 .build(modContext);
 
@@ -692,6 +697,10 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                .withModernRecipe(
+                        CraftingGroup.ATTACHMENT_MODIFICATION,
+                        new CraftingEntry(MWCItems.gunmetalIngot, 2),
+                        new CraftingEntry(MWCItems.steelIngot, 1))
                 .withName("MAS21Mount").withTextureName("Dummy.png")
                 .build(modContext);
 
@@ -770,6 +779,7 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                
                 .withName("P90DefaultKit").withTextureName("Dummy.png")
                 .build(modContext);
 
@@ -805,15 +815,17 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                .withModernRecipe(
+                        CraftingGroup.ATTACHMENT_MODIFICATION,
+                        new CraftingEntry(MWCItems.gunmetalIngot, 2),
+                        new CraftingEntry(MWCItems.steelIngot, 1))
                 .withName("P90Terminator").withTextureName("Dummy.png")
                 .build(modContext);
 
         ScarHandGuard = new AttachmentBuilder<Weapon>().withCategory(AttachmentCategory.GUARD)
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
                 .withModel(new com.paneedah.mwc.models.ScarLHandguard(), "scarl.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 3))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.ScarLHandguard) {
                         GlStateManager.translate(-0.6F, 0.1F, -1.6F);
@@ -849,9 +861,7 @@ public class Attachments {
         ScarHHandGuard = new AttachmentBuilder<Weapon>().withCategory(AttachmentCategory.GUARD)
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
                 .withModel(new com.paneedah.mwc.models.ScarHHandguard(), "scarh.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 3))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.ScarHHandguard) {
                         GlStateManager.translate(-0.6F, 0.1F, -1.6F);
@@ -969,9 +979,7 @@ public class Attachments {
                 .withCategory(AttachmentCategory.GUARD)
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
                 .withModel(new com.paneedah.mwc.models.SIG556Handguard(), "sig556.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 3))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.SIG556Handguard) {
                         GlStateManager.translate(-0.6F, 0.1F, -1.6F);
@@ -1094,9 +1102,7 @@ public class Attachments {
                 .withCategory(AttachmentCategory.BACKGRIP)
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
                 .withModel(new com.paneedah.mwc.models.SIG556Grip(), "sig556.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 2))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.SIG556Grip) {
                         GlStateManager.translate(-0.6F, 0.1F, -1.6F);
@@ -1134,9 +1140,7 @@ public class Attachments {
         ScarLReceiver = new AttachmentBuilder<Weapon>().withCategory(AttachmentCategory.RECEIVER)
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
                 .withModel(new com.paneedah.mwc.models.ScarReceiver(), "scarl.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 3))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.ScarReceiver) {
                         GlStateManager.translate(-0.6F, -0F, -0.2F);
@@ -1172,9 +1176,7 @@ public class Attachments {
         KrissVectorReceiver = new AttachmentBuilder<Weapon>().withCategory(AttachmentCategory.RECEIVER)
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
                 .withModel(new com.paneedah.mwc.models.KrissVectorReceiver(), "krissvector.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 3))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.KrissVectorReceiver) {
                         GlStateManager.translate(-0.6F, -0.5F, -1F);
@@ -1371,10 +1373,7 @@ public class Attachments {
                 .withModel(new com.paneedah.mwc.models.Origin12Handguard(), "origin12.png")
                 .withModel(new com.paneedah.mwc.models.AKRail(), "akrail.png")
                 .withModel(new com.paneedah.mwc.models.AKRail2(), "akrail.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 3),
-                        new CraftingEntry(MWCItems.steelIngot, 2))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.Origin12Handguard) {
                         GlStateManager.translate(-0.6F, 0.2F, -1.5F);
@@ -1476,6 +1475,7 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                
                 .withName("Remington700Chassis").withTextureName("Dummy.png")
                 .build(modContext);
 
@@ -1511,6 +1511,10 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                .withModernRecipe(
+                        CraftingGroup.ATTACHMENT_MODIFICATION,
+                        new CraftingEntry(MWCItems.gunmetalIngot, 4),
+                        new CraftingEntry(MWCItems.steelIngot, 2))
                 .withName("Remington700APACChassis").withTextureName("Dummy.png")
                 .build(modContext);
 
@@ -1546,6 +1550,10 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                .withModernRecipe(
+                        CraftingGroup.ATTACHMENT_MODIFICATION,
+                        new CraftingEntry(MWCItems.gunmetalIngot, 4),
+                        new CraftingEntry(MWCItems.steelIngot, 2))
                 .withName("Remington700MDTXRSChassis").withTextureName("Dummy.png")
                 .build(modContext);
 
@@ -1582,16 +1590,14 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                
                 .withName("SSG08Chassis").withTextureName("Dummy.png")
                 .build(modContext);
 
         ARX160Chassis = new AttachmentBuilder<Weapon>().withCategory(AttachmentCategory.RECEIVER)
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
                 .withModel(new com.paneedah.mwc.models.ARX160(), "arx160.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 6),
-                        new CraftingEntry(MWCItems.steelIngot, 3))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.ARX160) {
                         GlStateManager.translate(-0.6F, -0.2F, -0.15F);
@@ -1659,6 +1665,7 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                
                 .withName("G2ContenderBarrelShort").withTextureName("Dummy.png")
                 .build(modContext);
 
@@ -1698,6 +1705,10 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                .withModernRecipe(
+                        CraftingGroup.ATTACHMENT_MODIFICATION,
+                        new CraftingEntry(MWCItems.steelIngot, 3),
+                        new CraftingEntry(MWCItems.gunmetalPlate, 1))
                 .withName("G2ContenderBarrelLong").withTextureName("Dummy.png")
                 .build(modContext);
 
@@ -1734,6 +1745,7 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                
                 .withName("G2ContenderGrip").withTextureName("Dummy.png")
                 .build(modContext);
 
@@ -1770,16 +1782,18 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                .withModernRecipe(
+                        CraftingGroup.ATTACHMENT_MODIFICATION,
+                        new CraftingEntry(MWCItems.gunmetalIngot, 3),
+                        new CraftingEntry(MWCItems.steelIngot, 2),
+                        new CraftingEntry(MWCItems.syntheticPolymerComposite, 1))
                 .withName("G2ContenderStock").withTextureName("Dummy.png")
                 .build(modContext);
 
         Origin12Grip = new AttachmentBuilder<Weapon>().withCategory(AttachmentCategory.BACKGRIP)
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
                 .withModel(new com.paneedah.mwc.models.Origin12Grip(), "origin12.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 2),
-                        new CraftingEntry(MWCItems.steelIngot, 1))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.Origin12Grip) {
                         GlStateManager.translate(-0.6F, -0F, 0F);
@@ -1844,16 +1858,17 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                .withModernRecipe(
+                        CraftingGroup.ATTACHMENT_MODIFICATION,
+                        new CraftingEntry(MWCItems.gunmetalIngot, 2),
+                        new CraftingEntry(MWCItems.steelIngot, 1))
                 .withName("HKS20Grip").withTextureName("Dummy.png")
                 .build(modContext);
 
         Origin12Stock = new AttachmentBuilder<Weapon>().withCategory(AttachmentCategory.STOCK)
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
                 .withModel(new com.paneedah.mwc.models.Origin12Stock(), "origin12.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 3),
-                        new CraftingEntry(MWCItems.steelIngot, 1))
+                
                 .withRequiredAttachments(Origin12Grip)
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.Origin12Stock) {
@@ -1920,6 +1935,11 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                .withModernRecipe(
+                        CraftingGroup.ATTACHMENT_MODIFICATION,
+                        new CraftingEntry(MWCItems.gunmetalIngot, 3),
+                        new CraftingEntry(MWCItems.steelIngot, 2),
+                        new CraftingEntry(MWCItems.syntheticPolymerComposite, 1))
                 .withName("HKS20Stock").withTextureName("Dummy.png")
                 .build(modContext);
 
@@ -1929,9 +1949,7 @@ public class Attachments {
                 .withModel(new com.paneedah.mwc.models.AKRail(), "acrrail.png")
                 .withModel(new com.paneedah.mwc.models.AKRail2(), "acrrail.png")
                 .withModel(new com.paneedah.mwc.models.AKRail3(), "acrrail.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 3))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.ACRHandGuard) {
                         GlStateManager.translate(-0.6F, 0.5F, -1.3F);
@@ -2200,9 +2218,7 @@ public class Attachments {
         Type20Handguard = new AttachmentBuilder<Weapon>().withCategory(AttachmentCategory.GUARD)
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
                 .withModel(new com.paneedah.mwc.models.Type20Handguard(), "type20.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 3))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.Type20Handguard) {
                         GlStateManager.translate(-0.6F, 0.5F, -1.3F);
@@ -2270,6 +2286,7 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                
                 .withName("HoneyBadgerHandguard").withTextureName("Dummy.png")
                 .build(modContext);
 
@@ -2308,6 +2325,10 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                .withModernRecipe(
+                        CraftingGroup.ATTACHMENT_MODIFICATION,
+                        new CraftingEntry(MWCItems.gunmetalIngot, 3),
+                        new CraftingEntry(MWCItems.steelIngot, 1))
                 .withName("HoneyBadgerMatrixArmsHandguard").withTextureName("Dummy.png")
                 .build(modContext);
 
@@ -2343,6 +2364,7 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                
                 .withName("M60HandGuard").withTextureName("Dummy.png")
                 .build(modContext);
 
@@ -2381,6 +2403,7 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                
                 .withName("M60E4Guard").withTextureName("Dummy.png")
                 .build(modContext);
 
@@ -2416,6 +2439,7 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                
                 .withName("M249HandGuard").withTextureName("Dummy.png")
                 .build(modContext);
 
@@ -2452,6 +2476,10 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                .withModernRecipe(
+                        CraftingGroup.ATTACHMENT_MODIFICATION,
+                        new CraftingEntry(MWCItems.gunmetalIngot, 3),
+                        new CraftingEntry(MWCItems.steelIngot, 1))
                 .withName("Mk48HandGuard").withTextureName("Dummy.png")
                 .build(modContext);
 
@@ -2487,6 +2515,7 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                
                 .withName("M249UpperHandGuard").withTextureName("Dummy.png")
                 .build(modContext);
 
@@ -2525,6 +2554,10 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                .withModernRecipe(
+                        CraftingGroup.ATTACHMENT_MODIFICATION,
+                        new CraftingEntry(MWCItems.gunmetalIngot, 3),
+                        new CraftingEntry(MWCItems.steelIngot, 1))
                 .withName("Mk48UpperHandGuard").withTextureName("Dummy.png")
                 .build(modContext);
 
@@ -2562,6 +2595,7 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                
                 .withName("StonerHANDGUARD").withTextureName("Dummy.png")
                 .build(modContext);
 
@@ -2597,6 +2631,7 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                
                 .withName("AUGA1").withTextureName("Dummy.png")
                 .build(modContext);
 
@@ -2633,6 +2668,10 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                .withModernRecipe(
+                        CraftingGroup.ATTACHMENT_MODIFICATION,
+                        new CraftingEntry(MWCItems.gunmetalIngot, 3),
+                        new CraftingEntry(MWCItems.steelIngot, 1))
                 .withName("AUGA2handguard").withTextureName("Dummy.png")
                 .build(modContext);
 
@@ -2669,6 +2708,10 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                .withModernRecipe(
+                        CraftingGroup.ATTACHMENT_MODIFICATION,
+                        new CraftingEntry(MWCItems.gunmetalIngot, 3),
+                        new CraftingEntry(MWCItems.steelIngot, 1))
                 .withName("AUGA3handguard").withTextureName("Dummy.png")
                 .build(modContext);
 
@@ -2705,6 +2748,10 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                .withModernRecipe(
+                        CraftingGroup.ATTACHMENT_MODIFICATION,
+                        new CraftingEntry(MWCItems.gunmetalIngot, 3),
+                        new CraftingEntry(MWCItems.steelIngot, 1))
                 .withName("EF88Handguard").withTextureName("Dummy.png")
                 .build(modContext);
 
@@ -2740,6 +2787,7 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                
                 .withName("AUGDefaultKit").withTextureName("Dummy.png")
                 .build(modContext);
 
@@ -2775,6 +2823,10 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                .withModernRecipe(
+                        CraftingGroup.ATTACHMENT_MODIFICATION,
+                        new CraftingEntry(MWCItems.gunmetalIngot, 2),
+                        new CraftingEntry(MWCItems.steelIngot, 1))
                 .withName("AUGParaConversion").withTextureName("Dummy.png")
                 .build(modContext);
 
@@ -2815,6 +2867,10 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                .withModernRecipe(
+                        CraftingGroup.ATTACHMENT_MODIFICATION,
+                        new CraftingEntry(MWCItems.gunmetalIngot, 3),
+                        new CraftingEntry(MWCItems.steelIngot, 1))
                 .withName("AUGA3extGuard").withTextureName("Dummy.png")
                 .build(modContext);
 
@@ -2850,6 +2906,7 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                
                 .withName("M1CarbineBody").withTextureName("Dummy.png")
                 .build(modContext);
 
@@ -2885,6 +2942,11 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                .withModernRecipe(
+                        CraftingGroup.ATTACHMENT_MODIFICATION,
+                        new CraftingEntry(MWCItems.gunmetalIngot, 3),
+                        new CraftingEntry(MWCItems.steelIngot, 2),
+                        new CraftingEntry(MWCItems.syntheticPolymerComposite, 1))
                 .withName("M1A1CarbineBody").withTextureName("Dummy.png")
                 .build(modContext);
 
@@ -2920,6 +2982,7 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                
                 .withName("M1CarbineHandguard").withTextureName("Dummy.png")
                 .build(modContext);
 
@@ -2955,6 +3018,10 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                .withModernRecipe(
+                        CraftingGroup.ATTACHMENT_MODIFICATION,
+                        new CraftingEntry(MWCItems.gunmetalIngot, 3),
+                        new CraftingEntry(MWCItems.steelIngot, 1))
                 .withName("M1CarbineVentilatedHandguard").withTextureName("Dummy.png")
                 .build(modContext);
 
@@ -2991,16 +3058,17 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                .withModernRecipe(
+                        CraftingGroup.ATTACHMENT_MODIFICATION,
+                        new CraftingEntry(MWCItems.gunmetalIngot, 3),
+                        new CraftingEntry(MWCItems.steelIngot, 1))
                 .withName("M1ScoutCarbineHandguard").withTextureName("Dummy.png")
                 .build(modContext);
 
         G3A1Handguard = new AttachmentBuilder<Weapon>().withCategory(AttachmentCategory.GUARD)
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
                 .withModel(new com.paneedah.mwc.models.G3A1Handguard(), "g3.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 3),
-                        new CraftingEntry(MWCItems.steelIngot, 1))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.G3A1Handguard) {
                         GlStateManager.translate(-0.6F, 0.3F, -1.4F);
@@ -3107,6 +3175,7 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                
                 .withName("DSR1Handguard").withTextureName("Dummy.png")
                 .build(modContext);
 
@@ -3142,6 +3211,10 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                .withModernRecipe(
+                        CraftingGroup.ATTACHMENT_MODIFICATION,
+                        new CraftingEntry(MWCItems.gunmetalIngot, 3),
+                        new CraftingEntry(MWCItems.steelIngot, 1))
                 .withName("DSR1HandguardRailed").withTextureName("Dummy.png")
                 .build(modContext);
 
@@ -3177,6 +3250,7 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                
                 .withName("DSR1Barrel").withTextureName("Dummy.png")
                 .build(modContext);
 
@@ -3212,16 +3286,17 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                .withModernRecipe(
+                        CraftingGroup.ATTACHMENT_MODIFICATION,
+                        new CraftingEntry(MWCItems.steelIngot, 3),
+                        new CraftingEntry(MWCItems.gunmetalPlate, 1))
                 .withName("DSR1BarrelLong").withTextureName("Dummy.png")
                 .build(modContext);
 
         M14Body = new AttachmentBuilder<Weapon>().withCategory(AttachmentCategory.BACKGRIP)
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
                 .withModel(new com.paneedah.mwc.models.M14Body(), "m14dmr.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 4),
-                        new CraftingEntry(MWCItems.steelIngot, 3))
+                
                 .withModel(new FALIron(), "gun.png")
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.M14Body) {
@@ -3422,10 +3497,7 @@ public class Attachments {
         M14Cover = new AttachmentBuilder<Weapon>().withCategory(AttachmentCategory.GUARD)
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
                 .withModel(new com.paneedah.mwc.models.M14Cover(), "m14dmr.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 3),
-                        new CraftingEntry(MWCItems.steelIngot, 2))
+                
                 .withRequiredAttachments(M14Body, M14SOCOMChassis)
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.M14Cover) {
@@ -3544,9 +3616,7 @@ public class Attachments {
         ScarStock = new AttachmentBuilder<Weapon>().withCategory(AttachmentCategory.STOCK)
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
                 .withModel(new com.paneedah.mwc.models.ScarStock(), "scarl.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 3))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.ScarStock) {
                         GlStateManager.translate(-0.6F, 0F, 1.5F);
@@ -3662,9 +3732,7 @@ public class Attachments {
         ScarHStock = new AttachmentBuilder<Weapon>().withCategory(AttachmentCategory.STOCK)
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
                 .withModel(new com.paneedah.mwc.models.ScarStock(), "scar_stock_h.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 3))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.ScarStock) {
                         GlStateManager.translate(-0.6F, 0F, 1.8F);
@@ -3700,10 +3768,7 @@ public class Attachments {
         VectorStock = new AttachmentBuilder<Weapon>().withCategory(AttachmentCategory.STOCK)
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
                 .withModel(new com.paneedah.mwc.models.KrissVectorStock(), "krissvector.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 2),
-                        new CraftingEntry(MWCItems.steelIngot, 1))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.KrissVectorStock) {
                         GlStateManager.translate(-0.6F, -0.5F, 1.5F);
@@ -3808,6 +3873,7 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                
                 .withName("UMP45Receiver").withTextureName("Dummy.png")
                 .build(modContext);
 
@@ -3843,6 +3909,10 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                .withModernRecipe(
+                        CraftingGroup.ATTACHMENT_MODIFICATION,
+                        new CraftingEntry(MWCItems.gunmetalIngot, 4),
+                        new CraftingEntry(MWCItems.steelIngot, 2))
                 .withName("UMP9Receiver").withTextureName("Dummy.png")
                 .build(modContext);
 
@@ -3878,15 +3948,14 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                
                 .withName("UMP45Stock").withTextureName("Dummy.png")
                 .build(modContext);
 
         MAC10Stock = new AttachmentBuilder<Weapon>().withCategory(AttachmentCategory.STOCK)
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
                 .withModel(new com.paneedah.mwc.models.MAC10Stock(), "mac10.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 2))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.MAC10Stock) {
                         GlStateManager.translate(-0.6F, -0.5F, 1.5F);
@@ -3961,9 +4030,7 @@ public class Attachments {
         ACRStock = new AttachmentBuilder<Weapon>().withCategory(AttachmentCategory.STOCK)
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
                 .withModel(new com.paneedah.mwc.models.ACRStock(), "acr.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 3))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.ACRStock) {
                         GlStateManager.translate(-0.6F, 0.3F, 1.4F);
@@ -4219,6 +4286,7 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                
                 .withName("M1014Stock").withTextureName("Dummy.png")
                 .build(modContext);
 
@@ -4254,6 +4322,7 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                
                 .withName("M1014Grip").withTextureName("Dummy.png")
                 .build(modContext);
 
@@ -4289,6 +4358,7 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                
                 .withName("M4BenelliStock").withTextureName("Dummy.png")
                 .build(modContext);
 
@@ -4324,6 +4394,7 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                
                 .withName("Spas12Stock").withTextureName("Dummy.png")
                 .build(modContext);
 
@@ -4359,6 +4430,7 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                
                 .withName("M249Stock").withTextureName("Dummy.png")
                 .build(modContext);
 
@@ -4394,6 +4466,11 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                .withModernRecipe(
+                        CraftingGroup.ATTACHMENT_MODIFICATION,
+                        new CraftingEntry(MWCItems.gunmetalIngot, 3),
+                        new CraftingEntry(MWCItems.steelIngot, 2),
+                        new CraftingEntry(MWCItems.syntheticPolymerComposite, 1))
                 .withName("M249ParaStock").withTextureName("Dummy.png")
                 .build(modContext);
 
@@ -4432,6 +4509,11 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                .withModernRecipe(
+                        CraftingGroup.ATTACHMENT_MODIFICATION,
+                        new CraftingEntry(MWCItems.gunmetalIngot, 3),
+                        new CraftingEntry(MWCItems.steelIngot, 2),
+                        new CraftingEntry(MWCItems.syntheticPolymerComposite, 1))
                 .withName("M249MilspecStock").withTextureName("Dummy.png")
                 .build(modContext);
 
@@ -4470,6 +4552,11 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                .withModernRecipe(
+                        CraftingGroup.ATTACHMENT_MODIFICATION,
+                        new CraftingEntry(MWCItems.gunmetalIngot, 3),
+                        new CraftingEntry(MWCItems.steelIngot, 2),
+                        new CraftingEntry(MWCItems.syntheticPolymerComposite, 1))
                 .withName("M249Hk416Stock").withTextureName("Dummy.png")
                 .build(modContext);
 
@@ -4602,9 +4689,7 @@ public class Attachments {
                 .withModel(new com.paneedah.mwc.models.AKRail2(), "akrail.png")
                 .withModel(new com.paneedah.mwc.models.AKRail3(), "akrail.png")
                 .withModel(new com.paneedah.mwc.models.AKRail4(), "akrail.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 2))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.ScorpionEVO3A1HandguardShort) {
                         GlStateManager.translate(-0.6F, 0.2F, -1.3F);
@@ -4787,6 +4872,10 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                .withModernRecipe(
+                        CraftingGroup.ATTACHMENT_MODIFICATION,
+                        new CraftingEntry(MWCItems.gunmetalIngot, 2),
+                        new CraftingEntry(MWCItems.steelIngot, 1))
                 .withName("ShotgunRail").withTextureName("Dummy.png")
                 .build(modContext);
 
@@ -4823,6 +4912,10 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                .withModernRecipe(
+                        CraftingGroup.ATTACHMENT_MODIFICATION,
+                        new CraftingEntry(MWCItems.gunmetalIngot, 2),
+                        new CraftingEntry(MWCItems.steelIngot, 1))
                 .withName("Kar98Krail").withTextureName("Dummy.png")
                 .build(modContext);
 
@@ -4859,6 +4952,10 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                .withModernRecipe(
+                        CraftingGroup.ATTACHMENT_MODIFICATION,
+                        new CraftingEntry(MWCItems.gunmetalIngot, 2),
+                        new CraftingEntry(MWCItems.steelIngot, 1))
                 .withName("M60Rail").withTextureName("Dummy.png")
                 .build(modContext);
 
@@ -5057,6 +5154,10 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                .withModernRecipe(
+                        CraftingGroup.ATTACHMENT_MODIFICATION,
+                        new CraftingEntry(MWCItems.gunmetalIngot, 2),
+                        new CraftingEntry(MWCItems.steelIngot, 1))
                 .withName("NGSWRRail").withTextureName("Dummy.png")
                 .build(modContext);
 
@@ -5094,6 +5195,10 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                .withModernRecipe(
+                        CraftingGroup.ATTACHMENT_MODIFICATION,
+                        new CraftingEntry(MWCItems.gunmetalIngot, 2),
+                        new CraftingEntry(MWCItems.steelIngot, 1))
                 .withName("RailRiser").withTextureName("Dummy.png")
                 .build(modContext);
 
@@ -5132,6 +5237,7 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                
                 .withName("M1911Slide")
                 .withRenderablePart().withTextureName("Dummy.png")
                 .build(modContext);
@@ -5169,6 +5275,7 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                
                 .withName("M1911Body")
                 .withRenderablePart().withTextureName("Dummy.png")
                 .build(modContext);
@@ -5208,6 +5315,10 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                .withModernRecipe(
+                        CraftingGroup.ATTACHMENT_MODIFICATION,
+                        new CraftingEntry(MWCItems.gunmetalIngot, 3),
+                        new CraftingEntry(MWCItems.steelIngot, 2))
                 .withName("M191144MagSlide")
                 .withRenderablePart().withTextureName("Dummy.png")
                 .build(modContext);
@@ -5245,6 +5356,10 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                .withModernRecipe(
+                        CraftingGroup.ATTACHMENT_MODIFICATION,
+                        new CraftingEntry(MWCItems.gunmetalIngot, 3),
+                        new CraftingEntry(MWCItems.steelIngot, 2))
                 .withName("M191144MagBody")
                 .withRenderablePart().withTextureName("Dummy.png")
                 .build(modContext);
@@ -5255,9 +5370,7 @@ public class Attachments {
                 .withModel(new com.paneedah.mwc.models.M9slide(), "m9a1.png")
                 .withModel(new com.paneedah.mwc.models.M9A1frontsight(), "M9A1frontsight")
                 .withModel(new com.paneedah.mwc.models.M9A1rearsight(), "M9A1rearsight")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 2))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.M9slide) {
                         GlStateManager.translate(-0.6F, 0.2F, -0.3F);
@@ -5295,9 +5408,7 @@ public class Attachments {
                 .withCategory(AttachmentCategory.BACKGRIP)
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
                 .withModel(new com.paneedah.mwc.models.M9(), "m9a1.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 3))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.M9) {
                         GlStateManager.translate(-0.6F, -0.1F, -0.1F);
@@ -5449,6 +5560,10 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                .withModernRecipe(
+                        CraftingGroup.ATTACHMENT_MODIFICATION,
+                        new CraftingEntry(MWCItems.gunmetalIngot, 2),
+                        new CraftingEntry(MWCItems.steelIngot, 1))
                 .withName("SamuraiEdgeMount")
                 .withRenderablePart().withTextureName("Dummy.png")
                 .build(modContext);
@@ -5485,6 +5600,7 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                
                 .withName("DesertEagleSlide")
                 .withRenderablePart().withTextureName("Dummy.png")
                 .build(modContext);
@@ -5522,6 +5638,7 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                
                 .withName("DesertEagleBody")
                 .withRenderablePart().withTextureName("Dummy.png")
                 .build(modContext);
@@ -5559,6 +5676,10 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                .withModernRecipe(
+                        CraftingGroup.ATTACHMENT_MODIFICATION,
+                        new CraftingEntry(MWCItems.gunmetalIngot, 3),
+                        new CraftingEntry(MWCItems.steelIngot, 2))
                 .withName("DesertEagleLongBody")
                 .withRenderablePart().withTextureName("Dummy.png")
                 .build(modContext);
@@ -5596,6 +5717,10 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                .withModernRecipe(
+                        CraftingGroup.ATTACHMENT_MODIFICATION,
+                        new CraftingEntry(MWCItems.gunmetalIngot, 3),
+                        new CraftingEntry(MWCItems.steelIngot, 2))
                 .withName("DesertEagleBodyGolden")
                 .withRenderablePart().withTextureName("Dummy.png")
                 .build(modContext);
@@ -5632,6 +5757,10 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                .withModernRecipe(
+                        CraftingGroup.ATTACHMENT_MODIFICATION,
+                        new CraftingEntry(MWCItems.gunmetalIngot, 3),
+                        new CraftingEntry(MWCItems.steelIngot, 2))
                 .withName("DesertEagleSlideGolden")
                 .withRenderablePart().withTextureName("Dummy.png")
                 .build(modContext);
@@ -5669,6 +5798,10 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                .withModernRecipe(
+                        CraftingGroup.ATTACHMENT_MODIFICATION,
+                        new CraftingEntry(MWCItems.gunmetalIngot, 3),
+                        new CraftingEntry(MWCItems.steelIngot, 2))
                 .withName("DesertEagleBodyBlack")
                 .withRenderablePart().withTextureName("Dummy.png")
                 .build(modContext);
@@ -5705,6 +5838,10 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                .withModernRecipe(
+                        CraftingGroup.ATTACHMENT_MODIFICATION,
+                        new CraftingEntry(MWCItems.gunmetalIngot, 3),
+                        new CraftingEntry(MWCItems.steelIngot, 2))
                 .withName("DesertEagleSlideBlack")
                 .withRenderablePart().withTextureName("Dummy.png")
                 .build(modContext);
@@ -5713,9 +5850,7 @@ public class Attachments {
                 .withCategory(AttachmentCategory.BACKGRIP)
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
                 .withModel(new com.paneedah.mwc.models.Glock19(), "glock19.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 3))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.Glock19) {
                         GlStateManager.translate(-0.6F, -0.1F, -0.3F);
@@ -5790,9 +5925,7 @@ public class Attachments {
                 .withCategory(AttachmentCategory.BACKGRIP)
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
                 .withModel(new com.paneedah.mwc.models.Glock19XBody(), "glock19.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 3))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.Glock19XBody) {
                         GlStateManager.translate(-0.6F, -0.1F, -0.3F);
@@ -5872,9 +6005,7 @@ public class Attachments {
                 .withModel(new com.paneedah.mwc.models.Glock19Slide(), "glock19.png")
                 .withModel(new com.paneedah.mwc.models.M1911frontsight(), "m1911frontsight")
                 .withModel(new com.paneedah.mwc.models.GlockRearSight(), "glockrearsight")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 2))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.Glock19Slide) {
                         GlStateManager.translate(-0.6F, -0.1F, -0.3F);
@@ -5914,9 +6045,7 @@ public class Attachments {
                 .withModel(new com.paneedah.mwc.models.Glock18Cslide(), "glock18c.png")
                 .withModel(new com.paneedah.mwc.models.M1911frontsight(), "m1911frontsight")
                 .withModel(new com.paneedah.mwc.models.GlockRearSight(), "glockrearsight")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 2))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.Glock18Cslide) {
                         GlStateManager.translate(-0.6F, -0.1F, -0.3F);
@@ -6164,9 +6293,7 @@ public class Attachments {
                 .withCategory(AttachmentCategory.BACKGRIP)
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
                 .withModel(new com.paneedah.mwc.models.SCCYCPX2(), "sccycpx2.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 3))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.SCCYCPX2) {
                         GlStateManager.translate(-0.6F, -0.1F, -0.3F);
@@ -6287,9 +6414,7 @@ public class Attachments {
                 .withModel(new com.paneedah.mwc.models.SCCYCPX2Slide(), "sccycpx2.png")
                 .withModel(new com.paneedah.mwc.models.M9A1frontsight(), "M9A1frontsight")
                 .withModel(new com.paneedah.mwc.models.M9A1rearsight(), "M9A1rearsight")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 2))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.SCCYCPX2Slide) {
                         GlStateManager.translate(-0.6F, -0.1F, -0.3F);
@@ -6371,9 +6496,7 @@ public class Attachments {
                 .withModel(new com.paneedah.mwc.models.P226Slide(), "P226.png")
                 .withModel(new com.paneedah.mwc.models.P226rearsight(), "p226rearsight.png")
                 .withModel(new com.paneedah.mwc.models.P226frontsight(), "p226frontsight.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 2))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.P226Slide) {
                         GlStateManager.translate(-0.6F, -0.1F, -0.3F);
@@ -6442,6 +6565,7 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                
                 .withName("FiveSevenSlide")
                 .withRenderablePart().withTextureName("Dummy.png")
                 .build(modContext);
@@ -6450,9 +6574,7 @@ public class Attachments {
                 .withCategory(AttachmentCategory.BACKGRIP)
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
                 .withModel(new com.paneedah.mwc.models.MakarovPM(), "makarovpm.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 3))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.MakarovPM) {
                         GlStateManager.translate(-0.6F, -0.1F, -0.3F);
@@ -6492,9 +6614,7 @@ public class Attachments {
                 .withModel(new com.paneedah.mwc.models.MakarovPMSlide(), "gun.png")
                 .withModel(new com.paneedah.mwc.models.makarovrearsight(), "gun.png")
                 .withModel(new com.paneedah.mwc.models.makarovfrontsight(), "gun.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 2))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.MakarovPMSlide) {
                         GlStateManager.translate(-0.6F, -0.1F, -0.3F);
@@ -6574,9 +6694,7 @@ public class Attachments {
                 .withCategory(AttachmentCategory.FRONTSIGHT)
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
                 .withModel(new com.paneedah.mwc.models.MP443Slide(), "mp443.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 2))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.MP443Slide) {
                         GlStateManager.translate(-0.6F, -0.1F, -0.3F);
@@ -6656,9 +6774,7 @@ public class Attachments {
         MAC10Body = new AttachmentBuilder<Weapon>().withCategory(AttachmentCategory.RECEIVER)
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
                 .withModel(new com.paneedah.mwc.models.MAC10Body(), "mac10.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 3))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.MAC10Body) {
                         GlStateManager.translate(-0.6F, 0.3F, 0F);
@@ -6695,9 +6811,7 @@ public class Attachments {
                 .withCategory(AttachmentCategory.FRONTSIGHT)
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
                 .withModel(new com.paneedah.mwc.models.MAC10Action(), "mac10.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 3))
+                
                 .withRequiredAttachments(MAC10Body)
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.MAC10Action) {
@@ -6735,9 +6849,7 @@ public class Attachments {
         MP5NavyHandGuard = new AttachmentBuilder<Weapon>().withCategory(AttachmentCategory.GUARD)
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
                 .withModel(new com.paneedah.mwc.models.MP5NavyHandGuard(), "mp5.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 3))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.MP5NavyHandGuard) {
                         GlStateManager.translate(-0.6F, 0.2F, -1.3F);
@@ -6917,6 +7029,10 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                .withModernRecipe(
+                        CraftingGroup.ATTACHMENT_MODIFICATION,
+                        new CraftingEntry(MWCItems.gunmetalIngot, 2),
+                        new CraftingEntry(MWCItems.steelIngot, 1))
                 .withName("GlockHogueGrip").withTextureName("Dummy.png")
                 .build(modContext);
 
@@ -6961,10 +7077,7 @@ public class Attachments {
         APSGrip = new AttachmentBuilder<Weapon>().withCategory(AttachmentCategory.BACKGRIP)
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
                 .withModel(new com.paneedah.mwc.models.APSgrip(), "aps.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 2),
-                        new CraftingEntry(Blocks.PLANKS, 1))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.APSgrip) {
                         GlStateManager.translate(-0.6F, -0.4F, 0.4F);
@@ -7039,9 +7152,7 @@ public class Attachments {
         MAC10Grip = new AttachmentBuilder<Weapon>().withCategory(AttachmentCategory.BACKGRIP)
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
                 .withModel(new com.paneedah.mwc.models.MAC10Grip(), "mac10.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 3))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.MAC10Grip) {
                         GlStateManager.translate(-0.6F, -0.4F, 0.4F);
@@ -7077,9 +7188,7 @@ public class Attachments {
         MP5Stock = new AttachmentBuilder<Weapon>().withCategory(AttachmentCategory.STOCK)
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
                 .withModel(new com.paneedah.mwc.models.MP5Stock(), "mp5.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 3))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.MP5Stock) {
                         GlStateManager.translate(-0.6F, 0.2F, 1.6F);
@@ -7279,9 +7388,7 @@ public class Attachments {
                 .withModel(new com.paneedah.mwc.models.AR15FN15Handguard(), "ar15.png")
                 .withModel(new com.paneedah.mwc.models.AKRail(), "akrail.png")
                 .withModel(new com.paneedah.mwc.models.AKRail2(), "akrail.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 3))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.AR15FN15Handguard) {
                         GlStateManager.translate(-0.6F, 0.3F, -1.5F);
@@ -7321,9 +7428,7 @@ public class Attachments {
                 .withModel(new com.paneedah.mwc.models.AKRail2(), "akrail.png")
                 .withModel(new com.paneedah.mwc.models.AKRail3(), "akrail.png")
                 .withModel(new com.paneedah.mwc.models.AKRail5(), "akrail.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 3))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.M38HandGuard) {
                         GlStateManager.translate(-0.6F, 0.5F, -1.4F);
@@ -7434,6 +7539,7 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                
                 .withName("HK417Handguard").withTextureName("Dummy.png")
                 .build(modContext);
 
@@ -7473,6 +7579,10 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                .withModernRecipe(
+                        CraftingGroup.ATTACHMENT_MODIFICATION,
+                        new CraftingEntry(MWCItems.gunmetalIngot, 3),
+                        new CraftingEntry(MWCItems.steelIngot, 1))
                 .withName("HK417HandguardTan").withTextureName("Dummy.png")
                 .build(modContext);
 
@@ -7725,9 +7835,7 @@ public class Attachments {
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
                 .withModel(new com.paneedah.mwc.models.M4Receiver(), "m4a1.png")
                 .withModel(new com.paneedah.mwc.models.AKRail(), "akrail.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 2))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.M4Receiver) {
                         GlStateManager.translate(-0.6F, 0.3F, 0F);
@@ -7764,9 +7872,7 @@ public class Attachments {
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
                 .withModel(new com.paneedah.mwc.models.HK416Receiver(), "HK416Receiver.png")
                 .withModel(new com.paneedah.mwc.models.AKRail(), "akrail.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 2))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.M4Receiver) {
                         GlStateManager.translate(-0.6F, 0.3F, 0F);
@@ -7799,41 +7905,6 @@ public class Attachments {
                 .withName("HK416Receiver").withTextureName("Dummy.png")
                 .build(modContext);
 
-        C8SFWReceiver = new AttachmentBuilder<Weapon>().withCategory(AttachmentCategory.RECEIVER)
-                .withCreativeTab(MWC.ATTACHMENTS_TAB)
-                .withModel(new com.paneedah.mwc.models.M4Receiver(), "C8SFW_gun.png")
-                .withModel(new com.paneedah.mwc.models.AKRail(), "C8SFW_gun.png")
-                .withInventoryModelPositioning(model -> {
-                    if (model instanceof com.paneedah.mwc.models.M4Receiver) {
-                        GlStateManager.translate(-0.6F, 0.3F, 0F);
-                        GlStateManager.rotate(10F, 1f, 0f, 0f);
-                        GlStateManager.rotate(-190F, 0f, 1f, 0f);
-                        GlStateManager.rotate(0F, 0f, 0f, 1f);
-                        GlStateManager.scale(0.9F, 0.9F, 0.9f);
-                    } else {
-                        GlStateManager.scale(0f, 0f, 0f);
-                    }
-                }).withFirstPersonModelPositioning(model -> {
-                    if (model instanceof com.paneedah.mwc.models.M4Receiver) {
-                        GlStateManager.translate(0.1F, -0.8F, 0.4F);
-                        GlStateManager.rotate(30F, 0f, 1f, 0f);
-                        GlStateManager.scale(0.7F, 0.7F, 0.7F);
-                    } else {
-                        GlStateManager.scale(0F, 0F, 0F);
-                    }
-
-                }).withThirdPersonModelPositioning(model -> {
-                    if (model instanceof com.paneedah.mwc.models.M4Receiver) {
-                        GlStateManager.translate(-0.8F, -0.5F, 0.8F);
-                        GlStateManager.rotate(-50F, 0f, 1f, 0f);
-                        GlStateManager.rotate(80F, 1f, 0f, 0f);
-                        GlStateManager.scale(0.5F, 0.5F, 0.5F);
-                    } else {
-                        GlStateManager.scale(0F, 0F, 0F);
-                    }
-                })
-                .withName("C8SFWReceiver").withTextureName("Dummy.png")
-                .build(modContext);
 
         VLTORReceiver = new AttachmentBuilder<Weapon>().withCategory(AttachmentCategory.RECEIVER)
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
@@ -7907,6 +7978,10 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                .withModernRecipe(
+                        CraftingGroup.ATTACHMENT_MODIFICATION,
+                        new CraftingEntry(MWCItems.gunmetalIngot, 4),
+                        new CraftingEntry(MWCItems.steelIngot, 2))
                 .withName("AR57Receiver").withTextureName("Dummy.png")
                 .build(modContext);
 
@@ -7943,6 +8018,7 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                
                 .withName("HK417Receiver").withTextureName("Dummy.png")
                 .build(modContext);
 
@@ -7979,6 +8055,10 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                .withModernRecipe(
+                        CraftingGroup.ATTACHMENT_MODIFICATION,
+                        new CraftingEntry(MWCItems.gunmetalIngot, 4),
+                        new CraftingEntry(MWCItems.steelIngot, 2))
                 .withName("HK417ReceiverTan").withTextureName("Dummy.png")
                 .build(modContext);
 
@@ -7986,9 +8066,7 @@ public class Attachments {
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
                 .withModel(new com.paneedah.mwc.models.M110Receiver(), "M110.png")
                 .withModel(new com.paneedah.mwc.models.AKRail(), "akrailm110.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 3))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.M110Receiver) {
                         GlStateManager.translate(-0.6F, 0.3F, 0F);
@@ -8024,9 +8102,7 @@ public class Attachments {
         Z10Receiver = new AttachmentBuilder<Weapon>()
                 .withCategory(AttachmentCategory.RECEIVER)
                 .withModel(new com.paneedah.mwc.models.AKRail(), "akrail.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 3))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.AKRail) {
                         GlStateManager.translate(-0.6F, 0.3F, 0F);
@@ -8063,10 +8139,7 @@ public class Attachments {
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
                 .withModel(new com.paneedah.mwc.models.Beowulf50CalReceiver(), "beowulf50cal.png")
                 .withModel(new com.paneedah.mwc.models.AKRail(), "akrail.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 3),
-                        new CraftingEntry(MWCItems.steelIngot, 2))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.Beowulf50CalReceiver) {
                         GlStateManager.translate(-0.6F, 0.3F, 0F);
@@ -8131,15 +8204,14 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                
                 .withName("S710Receiver").withTextureName("Dummy.png")
                 .build(modContext);
 
         CZ805BrenReceiver = new AttachmentBuilder<Weapon>().withCategory(AttachmentCategory.RECEIVER)
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
                 .withModel(new com.paneedah.mwc.models.CZ805BrenReceiver(), "CZ805Bren.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 3))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.CZ805BrenReceiver) {
                         GlStateManager.translate(-0.6F, 0.3F, 0F);
@@ -8205,6 +8277,7 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                
                 .withName("HoneyBadgerReceiver").withTextureName("Dummy.png")
                 .build(modContext);
 
@@ -8241,6 +8314,10 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                .withModernRecipe(
+                        CraftingGroup.ATTACHMENT_MODIFICATION,
+                        new CraftingEntry(MWCItems.gunmetalIngot, 4),
+                        new CraftingEntry(MWCItems.steelIngot, 2))
                 .withName("HoneyBadgerReceiverBlack").withTextureName("Dummy.png")
                 .build(modContext);
 
@@ -8277,6 +8354,10 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                .withModernRecipe(
+                        CraftingGroup.ATTACHMENT_MODIFICATION,
+                        new CraftingEntry(MWCItems.gunmetalIngot, 4),
+                        new CraftingEntry(MWCItems.steelIngot, 2))
                 .withName("HoneyBadgerKnightsReceiver").withTextureName("Dummy.png")
                 .build(modContext);
 
@@ -8313,6 +8394,10 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                .withModernRecipe(
+                        CraftingGroup.ATTACHMENT_MODIFICATION,
+                        new CraftingEntry(MWCItems.gunmetalIngot, 4),
+                        new CraftingEntry(MWCItems.steelIngot, 2))
                 .withName("HoneyBadgerKnightsReceiverBlack").withTextureName("Dummy.png")
                 .build(modContext);
 
@@ -8495,9 +8580,7 @@ public class Attachments {
         M4HandGuard = new AttachmentBuilder<Weapon>().withCategory(AttachmentCategory.GUARD)
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
                 .withModel(new com.paneedah.mwc.models.M4HandGuard(), "m4a1.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 3))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.M4HandGuard) {
                         GlStateManager.translate(-0.6F, 0.3F, -1.3F);
@@ -8566,6 +8649,10 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                .withModernRecipe(
+                        CraftingGroup.ATTACHMENT_MODIFICATION,
+                        new CraftingEntry(MWCItems.gunmetalIngot, 3),
+                        new CraftingEntry(MWCItems.steelIngot, 1))
                 .withName("AR57Handguard").withTextureName("Dummy.png")
                 .build(modContext);
 
@@ -8602,15 +8689,14 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                
                 .withName("NTW20Guard").withTextureName("Dummy.png")
                 .build(modContext);
 
         M16HandGuard = new AttachmentBuilder<Weapon>().withCategory(AttachmentCategory.GUARD)
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
                 .withModel(new com.paneedah.mwc.models.M16HandGuard(), "m16a4.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 4))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.M16HandGuard) {
                         GlStateManager.translate(-0.6F, 0.3F, -1.5F);
@@ -8646,9 +8732,7 @@ public class Attachments {
         M16A1Handguard = new AttachmentBuilder<Weapon>().withCategory(AttachmentCategory.GUARD)
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
                 .withModel(new com.paneedah.mwc.models.M16A1Handguard(), "m16a1.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 4))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.M16A1Handguard) {
                         GlStateManager.translate(-0.6F, 0.3F, -1.5F);
@@ -8730,9 +8814,7 @@ public class Attachments {
                 .withModel(new com.paneedah.mwc.models.AKRail2(), "akrail.png")
                 .withModel(new com.paneedah.mwc.models.AKRail3(), "akrail.png")
                 .withModel(new com.paneedah.mwc.models.AKRail5(), "akrail.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 4))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.M16A4Handguard) {
                         GlStateManager.translate(-0.6F, 0.5F, -1.8F);
@@ -8772,9 +8854,7 @@ public class Attachments {
                 .withModel(new com.paneedah.mwc.models.AKRail2(), "akrailm110.png")
                 .withModel(new com.paneedah.mwc.models.AKRail3(), "akrailm110.png")
                 .withModel(new com.paneedah.mwc.models.AKRail5(), "akrailm110.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 4))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.M110Handguard) {
                         GlStateManager.translate(-0.6F, 0.5F, -1.8F);
@@ -8812,9 +8892,7 @@ public class Attachments {
                 .withModel(new com.paneedah.mwc.models.Z10Handguard(), "z10.png")
                 .withModel(new com.paneedah.mwc.models.AKRail(), "akrail.png")
                 .withModel(new com.paneedah.mwc.models.AKRail2(), "akrail.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 3))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.Z10Handguard) {
                         GlStateManager.translate(-0.6F, 0.5F, -1.8F);
@@ -8854,9 +8932,7 @@ public class Attachments {
                 .withModel(new com.paneedah.mwc.models.AKRail2(), "akrail.png")
                 .withModel(new com.paneedah.mwc.models.AKRail3(), "akrail.png")
                 .withModel(new com.paneedah.mwc.models.AKRail5(), "akrail.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 3))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.AR10SuperSASSHandguard) {
                         GlStateManager.translate(-0.6F, 0.5F, -1.8F);
@@ -8921,6 +8997,7 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                
                 .withName("S710Handguard").withTextureName("Dummy.png")
                 .build(modContext);
         SIGMCXHandguard = new AttachmentBuilder<Weapon>().withCategory(AttachmentCategory.GUARD)
@@ -8929,9 +9006,7 @@ public class Attachments {
                 .withModel(new com.paneedah.mwc.models.AKRail(), "akrail.png")
                 .withModel(new com.paneedah.mwc.models.AKRail2(), "akrail.png")
                 .withModel(new com.paneedah.mwc.models.AKRail3(), "akrail.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 3))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.SIGMCXHandguard) {
                         GlStateManager.translate(-0.6F, 0.3F, -1.5F);
@@ -8999,16 +9074,17 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                .withModernRecipe(
+                        CraftingGroup.ATTACHMENT_MODIFICATION,
+                        new CraftingEntry(MWCItems.gunmetalIngot, 3),
+                        new CraftingEntry(MWCItems.steelIngot, 1))
                 .withName("SIGMCXHandguardShort").withTextureName("Dummy.png")
                 .build(modContext);
 
         MPXHandguard = new AttachmentBuilder<Weapon>().withCategory(AttachmentCategory.GUARD)
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
                 .withModel(new com.paneedah.mwc.models.MPXHandguard(), "mpx.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 2),
-                        new CraftingEntry(MWCItems.steelIngot, 1))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.MPXHandguard) {
                         GlStateManager.translate(-0.6F, 0.3F, -1.5F);
@@ -9124,9 +9200,7 @@ public class Attachments {
                 .withModel(new com.paneedah.mwc.models.K2C1Handguard(), "k2c1.png")
                 .withModel(new com.paneedah.mwc.models.AKRail(), "akrail.png")
                 .withModel(new com.paneedah.mwc.models.AKRail2(), "akrail.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 2))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.K2C1Handguard) {
                         GlStateManager.translate(-0.6F, 0.5F, -1.8F);
@@ -9200,9 +9274,7 @@ public class Attachments {
         M4Grip = new AttachmentBuilder<Weapon>().withCategory(AttachmentCategory.BACKGRIP)
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
                 .withModel(new com.paneedah.mwc.models.M4Grip(), "m4a1.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 2))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.M4Grip) {
                         GlStateManager.translate(-0.6F, -0.6F, 0.4F);
@@ -9305,6 +9377,10 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                .withModernRecipe(
+                        CraftingGroup.ATTACHMENT_MODIFICATION,
+                        new CraftingEntry(MWCItems.gunmetalIngot, 2),
+                        new CraftingEntry(MWCItems.steelIngot, 1))
                 .withName("SOCOM_Grip").withTextureName("Dummy.png")
                 .build(modContext);
 
@@ -9349,9 +9425,7 @@ public class Attachments {
         HK416Grip = new AttachmentBuilder<Weapon>().withCategory(AttachmentCategory.BACKGRIP)
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
                 .withModel(new com.paneedah.mwc.models.HKgrip(), "hkgrip.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 2))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.HKgrip) {
                         GlStateManager.translate(-0.6F, -0.6F, 0.4F);
@@ -9387,9 +9461,7 @@ public class Attachments {
         HK416GripTan = new AttachmentBuilder<Weapon>().withCategory(AttachmentCategory.BACKGRIP)
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
                 .withModel(new com.paneedah.mwc.models.HKgrip(), "hkgriptan.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 2))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.HKgrip) {
                         GlStateManager.translate(-0.6F, -0.6F, 0.4F);
@@ -9425,9 +9497,7 @@ public class Attachments {
         M110Grip = new AttachmentBuilder<Weapon>().withCategory(AttachmentCategory.BACKGRIP)
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
                 .withModel(new com.paneedah.mwc.models.M110Grip(), "M110.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 2))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.M110Grip) {
                         GlStateManager.translate(-0.6F, -0.6F, 0.4F);
@@ -9492,15 +9562,14 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                
                 .withName("S710TricunGrip").withTextureName("Dummy.png")
                 .build(modContext);
 
         K2C1Grip = new AttachmentBuilder<Weapon>().withCategory(AttachmentCategory.BACKGRIP)
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
                 .withModel(new com.paneedah.mwc.models.K2C1Grip(), "k2c1.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 2))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.K2C1Grip) {
                         GlStateManager.translate(-0.6F, -0F, 0F);
@@ -9536,10 +9605,7 @@ public class Attachments {
         AK47Grip = new AttachmentBuilder<Weapon>().withCategory(AttachmentCategory.BACKGRIP)
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
                 .withModel(new com.paneedah.mwc.models.AKGrip(), "ak47.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 2),
-                        new CraftingEntry(Blocks.PLANKS, 1))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.AKGrip) {
                         GlStateManager.translate(-0.6F, -0.6F, 0.4F);
@@ -9575,9 +9641,7 @@ public class Attachments {
         AK101Grip = new AttachmentBuilder<Weapon>().withCategory(AttachmentCategory.BACKGRIP)
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
                 .withModel(new com.paneedah.mwc.models.AK101Grip(), "AK101Grip.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 2))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.AK101Grip) {
                         GlStateManager.translate(-0.6F, -0.6F, 0.4F);
@@ -9613,9 +9677,7 @@ public class Attachments {
         AKErgoGrip = new AttachmentBuilder<Weapon>().withCategory(AttachmentCategory.BACKGRIP)
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
                 .withModel(new com.paneedah.mwc.models.AKErgoGrip(), "akergogrip.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 2))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.AKErgoGrip) {
                         GlStateManager.translate(-0.6F, -0.6F, 0.4F);
@@ -9651,9 +9713,7 @@ public class Attachments {
         AKErgoGripGreen = new AttachmentBuilder<Weapon>().withCategory(AttachmentCategory.BACKGRIP)
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
                 .withModel(new com.paneedah.mwc.models.AKErgoGrip(), "ak12grip.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 2))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.AKErgoGrip) {
                         GlStateManager.translate(-0.6F, -0.6F, 0.4F);
@@ -9727,9 +9787,7 @@ public class Attachments {
         AK12Grip = new AttachmentBuilder<Weapon>().withCategory(AttachmentCategory.BACKGRIP)
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
                 .withModel(new com.paneedah.mwc.models.AK12Grip(), "ak12kal.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 2))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.AK12Grip) {
                         GlStateManager.translate(-0.6F, -0.6F, 0.4F);
@@ -9833,6 +9891,7 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                
                 .withName("HoneyBadgerStock").withTextureName("Dummy.png")
                 .build(modContext);
 
@@ -9869,6 +9928,11 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                .withModernRecipe(
+                        CraftingGroup.ATTACHMENT_MODIFICATION,
+                        new CraftingEntry(MWCItems.gunmetalIngot, 3),
+                        new CraftingEntry(MWCItems.steelIngot, 2),
+                        new CraftingEntry(MWCItems.syntheticPolymerComposite, 1))
                 .withName("HoneyBadgerStockBlack").withTextureName("Dummy.png")
                 .build(modContext);
 
@@ -9876,10 +9940,7 @@ public class Attachments {
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
                 .withRenderablePart()
                 .withModel(new com.paneedah.mwc.models.G3Stock(), "g3.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 4),
-                        new CraftingEntry(MWCItems.steelIngot, 2))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.G3Stock) {
                         GlStateManager.translate(-0.6F, 0F, 1.4F);
@@ -9916,10 +9977,7 @@ public class Attachments {
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
                 .withRenderablePart()
                 .withModel(new com.paneedah.mwc.models.MP7Stock(), "mp7.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 3),
-                        new CraftingEntry(MWCItems.steelIngot, 1))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.MP7Stock) {
                         GlStateManager.translate(-0.6F, -0.0F, 1.3F);
@@ -10001,14 +10059,8 @@ public class Attachments {
                 .withCategory(AttachmentCategory.STOCK)
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
                 .withModel(new com.paneedah.mwc.models.AK47stock(), "ak47.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 3),
-                        new CraftingEntry(Blocks.PLANKS, 2))
-//                .withModernRecipe(new ItemStack(MwItems.steelIngot, 8), new
-//                		ItemStack(MwItems.carbonComposite, 8), new
-//                		ItemStack(MwItems.gunmetalPlate, 12), new
-//                		ItemStack(Blocks.PLANKS, 4))
+                
+//                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.AK47stock) {
                         GlStateManager.translate(-0.6F, 0F, 1.6F);
@@ -10045,14 +10097,8 @@ public class Attachments {
                 .withCategory(AttachmentCategory.STOCK)
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
                 .withModel(new com.paneedah.mwc.models.DragunovStock(), "dragunov.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 5),
-                        new CraftingEntry(Blocks.PLANKS, 4))
-//                .withModernRecipe(new ItemStack(MwItems.steelIngot, 8), new
-//                		ItemStack(MwItems.carbonComposite, 8), new
-//                		ItemStack(MwItems.gunmetalPlate, 12), new
-//                		ItemStack(Blocks.PLANKS, 4))
+                
+//                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.DragunovStock) {
                         GlStateManager.translate(-0.6F, 0F, 1.6F);
@@ -10160,15 +10206,18 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                .withModernRecipe(
+                        CraftingGroup.ATTACHMENT_MODIFICATION,
+                        new CraftingEntry(MWCItems.gunmetalIngot, 3),
+                        new CraftingEntry(MWCItems.steelIngot, 2),
+                        new CraftingEntry(MWCItems.syntheticPolymerComposite, 1))
                 .withName("RPKstock").withTextureName("Dummy.png")
                 .build(modContext);
 
         AK101Stock = new AttachmentBuilder<Weapon>().withCategory(AttachmentCategory.STOCK)
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
                 .withModel(new com.paneedah.mwc.models.AK101Stock(), "ak101stock.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 4))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.AK101Stock) {
                         GlStateManager.translate(-0.6F, 0F, 1.6F);
@@ -10204,9 +10253,7 @@ public class Attachments {
         AK74Stock = new AttachmentBuilder<Weapon>().withCategory(AttachmentCategory.STOCK)
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
                 .withModel(new com.paneedah.mwc.models.AK74Stock(), "AK74Stock.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 4))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.AK74Stock) {
                         GlStateManager.translate(-0.6F, 0F, 1.6F);
@@ -10242,9 +10289,7 @@ public class Attachments {
         AK12Stock = new AttachmentBuilder<Weapon>().withCategory(AttachmentCategory.STOCK)
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
                 .withModel(new com.paneedah.mwc.models.AK12Stock(), "ak12kal.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 4))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.AK12Stock) {
                         GlStateManager.translate(-0.6F, 0F, 1.6F);
@@ -10318,10 +10363,7 @@ public class Attachments {
         VSSVintorezStock = new AttachmentBuilder<Weapon>().withCategory(AttachmentCategory.STOCK)
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
                 .withModel(new com.paneedah.mwc.models.VSSVintorezStock(), "vssvintorez.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 3),
-                        new CraftingEntry(Blocks.PLANKS, 2))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.VSSVintorezStock) {
                         GlStateManager.translate(-0.6F, -0.6F, 1.2F);
@@ -10442,9 +10484,7 @@ public class Attachments {
                 .withCategory(AttachmentCategory.STOCK)
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
                 .withModel(new com.paneedah.mwc.models.CollapsableMOEStock(), "CollapsableMOEStock.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 3))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.CollapsableMOEStock) {
                         GlStateManager.translate(-0.6F, 0F, 1.4F);
@@ -10482,9 +10522,7 @@ public class Attachments {
                 .withCategory(AttachmentCategory.STOCK)
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
                 .withModel(new com.paneedah.mwc.models.CollapsableMOEStock(), "ak12stock.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 3))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.CollapsableMOEStock) {
                         GlStateManager.translate(-0.6F, 0F, 1.4F);
@@ -10521,9 +10559,7 @@ public class Attachments {
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
                 .withRenderablePart()
                 .withModel(new com.paneedah.mwc.models.MagpulCTRStock(), "MagpulCTRStock.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 3))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.MagpulCTRStock) {
                         GlStateManager.translate(-0.6F, 0F, 1.4F);
@@ -10599,9 +10635,7 @@ public class Attachments {
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
                 .withRenderablePart()
                 .withModel(new com.paneedah.mwc.models.MilSpecStock(), "MilSpecStock.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 3))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.MilSpecStock) {
                         GlStateManager.translate(-0.6F, 0F, 1.4F);
@@ -10638,9 +10672,7 @@ public class Attachments {
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
                 .withRenderablePart()
                 .withModel(new com.paneedah.mwc.models.CZ805BrenStock(), "CZ805Bren.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 3))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.CZ805BrenStock) {
                         GlStateManager.translate(-0.6F, 0F, 1.4F);
@@ -10677,9 +10709,7 @@ public class Attachments {
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
                 .withRenderablePart()
                 .withModel(new com.paneedah.mwc.models.SIGMCXStock(), "sigMCx.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 3))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.SIGMCXStock) {
                         GlStateManager.translate(-0.6F, 0F, 1.4F);
@@ -10712,41 +10742,6 @@ public class Attachments {
                 .withName("SIGMCXStock").withTextureName("Dummy.png")
                 .build(modContext);
 
-        C8Stock = new AttachmentBuilder<Weapon>().withCategory(AttachmentCategory.STOCK)
-//                .withCreativeTab(MWC.AttachmentsTab)
-                .withRenderablePart()
-                .withModel(new com.paneedah.mwc.models.MilSpecStock(), "C8Stock.png")
-                .withInventoryModelPositioning(model -> {
-                    if (model instanceof com.paneedah.mwc.models.MilSpecStock) {
-                        GlStateManager.translate(-0.6F, 0F, 1.4F);
-                        GlStateManager.rotate(10F, 1f, 0f, 0f);
-                        GlStateManager.rotate(-190F, 0f, 1f, 0f);
-                        GlStateManager.rotate(0F, 0f, 0f, 1f);
-                        GlStateManager.scale(0.9F, 0.9F, 0.9f);
-                    } else {
-                        GlStateManager.scale(0f, 0f, 0f);
-                    }
-                }).withFirstPersonModelPositioning(model -> {
-                    if (model instanceof com.paneedah.mwc.models.MilSpecStock) {
-                        GlStateManager.translate(0.1F, -0.8F, 0.4F);
-                        GlStateManager.rotate(30F, 0f, 1f, 0f);
-                        GlStateManager.scale(0.7F, 0.7F, 0.7F);
-                    } else {
-                        GlStateManager.scale(0F, 0F, 0F);
-                    }
-
-                }).withThirdPersonModelPositioning(model -> {
-                    if (model instanceof com.paneedah.mwc.models.MilSpecStock) {
-                        GlStateManager.translate(-0.8F, -0.5F, 0.8F);
-                        GlStateManager.rotate(-50F, 0f, 1f, 0f);
-                        GlStateManager.rotate(80F, 1f, 0f, 0f);
-                        GlStateManager.scale(0.5F, 0.5F, 0.5F);
-                    } else {
-                        GlStateManager.scale(0F, 0F, 0F);
-                    }
-                })
-                .withName("C8Stock").withTextureName("Dummy.png")
-                .build(modContext);
 
         MilSpecStockTan = new AttachmentBuilder<Weapon>().withCategory(AttachmentCategory.STOCK)
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
@@ -10830,9 +10825,7 @@ public class Attachments {
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
                 .withRenderablePart()
                 .withModel(new com.paneedah.mwc.models.HK416Stock(), "HK416Stock.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 3))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.HK416Stock) {
                         GlStateManager.translate(-0.6F, 0F, 1.4F);
@@ -10898,15 +10891,18 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                .withModernRecipe(
+                        CraftingGroup.ATTACHMENT_MODIFICATION,
+                        new CraftingEntry(MWCItems.gunmetalIngot, 3),
+                        new CraftingEntry(MWCItems.steelIngot, 2),
+                        new CraftingEntry(MWCItems.syntheticPolymerComposite, 1))
                 .withName("SOCOM_Stock").withTextureName("Dummy.png")
                 .build(modContext);
 
         M16Stock = new AttachmentBuilder<Weapon>().withCategory(AttachmentCategory.STOCK)
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
                 .withModel(new com.paneedah.mwc.models.M16Stock(), "m16stock.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 3))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.M16Stock) {
                         GlStateManager.translate(-0.6F, -0.2F, 1.7F);
@@ -10943,9 +10939,7 @@ public class Attachments {
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
                 .withRenderablePart()
                 .withModel(new com.paneedah.mwc.models.HK416Stock(), "HK416Stocktan.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 3))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.HK416Stock) {
                         GlStateManager.translate(-0.6F, 0F, 1.4F);
@@ -10981,10 +10975,7 @@ public class Attachments {
         M110Stock = new AttachmentBuilder<Weapon>().withCategory(AttachmentCategory.STOCK)
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
                 .withModel(new com.paneedah.mwc.models.M110Stock(), "m110.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 4),
-                        new CraftingEntry(MWCItems.steelIngot, 3))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.M110Stock) {
                         GlStateManager.translate(-0.6F, -0.2F, 1.7F);
@@ -11020,10 +11011,7 @@ public class Attachments {
         PRSPrecisionStock = new AttachmentBuilder<Weapon>().withCategory(AttachmentCategory.STOCK)
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
                 .withModel(new com.paneedah.mwc.models.ARPRSPrecisionStock(), "gun.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 4),
-                        new CraftingEntry(MWCItems.steelIngot, 3))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.ARPRSPrecisionStock) {
                         GlStateManager.translate(-0.6F, -0.2F, 1.7F);
@@ -11059,10 +11047,7 @@ public class Attachments {
         AK47HandleGuard = new AttachmentBuilder<Weapon>().withCategory(AttachmentCategory.GUARD)
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
                 .withModel(new com.paneedah.mwc.models.AK47HandleGuard(), "ak47.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 3),
-                        new CraftingEntry(Blocks.PLANKS, 2))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.AK47HandleGuard) {
                         GlStateManager.translate(-0.6F, 0.4F, -2F);
@@ -11178,9 +11163,7 @@ public class Attachments {
         AK101HandGuard = new AttachmentBuilder<Weapon>().withCategory(AttachmentCategory.GUARD)
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
                 .withModel(new com.paneedah.mwc.models.AK101HandGuard(), "ak101handguard.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 3))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.AK101HandGuard) {
                         GlStateManager.translate(-0.6F, 0.4F, -2F);
@@ -11216,9 +11199,7 @@ public class Attachments {
         AK74Handguard = new AttachmentBuilder<Weapon>().withCategory(AttachmentCategory.GUARD)
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
                 .withModel(new com.paneedah.mwc.models.AK74Handguard(), "AK74Handguard.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 3))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.AK74Handguard) {
                         GlStateManager.translate(-0.6F, 0.4F, -2F);
@@ -11411,9 +11392,7 @@ public class Attachments {
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
                 .withModel(new com.paneedah.mwc.models.AK15HandleGuard(), "AK15HandleGuard.png")
                 .withModel(new com.paneedah.mwc.models.AKRail(), "AKRailgrey.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 3))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.AK15HandleGuard) {
                         GlStateManager.translate(-0.6F, 0.4F, -2F);
@@ -11450,9 +11429,7 @@ public class Attachments {
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
                 .withModel(new com.paneedah.mwc.models.AK15HandleGuard(), "ak12handguard.png")
                 .withModel(new com.paneedah.mwc.models.AKRail(), "AKRailgrey.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 3))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.AK15HandleGuard) {
                         GlStateManager.translate(-0.6F, 0.4F, -2F);
@@ -11527,9 +11504,7 @@ public class Attachments {
         AK12Handguard = new AttachmentBuilder<Weapon>().withCategory(AttachmentCategory.GUARD)
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
                 .withModel(new com.paneedah.mwc.models.AK12Handguard(), "ak12kal.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 3))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.AK12Handguard) {
                         GlStateManager.translate(-0.6F, 0.4F, -2F);
@@ -11603,9 +11578,7 @@ public class Attachments {
         KBP9A91Handguard = new AttachmentBuilder<Weapon>().withCategory(AttachmentCategory.GUARD)
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
                 .withModel(new com.paneedah.mwc.models.KBP9A91Handguard(), "kbp9a91.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 3))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.KBP9A91Handguard) {
                         GlStateManager.translate(-0.6F, 0.4F, -2F);
@@ -11717,10 +11690,7 @@ public class Attachments {
         VSSVintorezHandguard = new AttachmentBuilder<Weapon>().withCategory(AttachmentCategory.GUARD)
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
                 .withModel(new com.paneedah.mwc.models.VSSVintorezHandguard(), "vssvintorez.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 3),
-                        new CraftingEntry(Blocks.PLANKS, 3))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.VSSVintorezHandguard) {
                         GlStateManager.translate(-0.6F, 0.3F, -1.4F);
@@ -11832,9 +11802,7 @@ public class Attachments {
         AK47DustCover = new AttachmentBuilder<Weapon>().withCategory(AttachmentCategory.RAILING)
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
                 .withModel(new com.paneedah.mwc.models.AK47DustCover(), "ak47.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 3))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.AK47DustCover) {
                         GlStateManager.translate(-0.6F, 0.4F, -0.2F);
@@ -11870,9 +11838,7 @@ public class Attachments {
         DragunovDustCover = new AttachmentBuilder<Weapon>().withCategory(AttachmentCategory.RAILING)
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
                 .withModel(new com.paneedah.mwc.models.DragunovDustCover(), "dragunov.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 5))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.DragunovDustCover) {
                         GlStateManager.translate(-0.6F, 0.4F, -0.2F);
@@ -11984,9 +11950,7 @@ public class Attachments {
         AK101DustCover = new AttachmentBuilder<Weapon>().withCategory(AttachmentCategory.RAILING)
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
                 .withModel(new com.paneedah.mwc.models.AK101DustCover(), "ak101dustcover.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 3))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.AK101DustCover) {
                         GlStateManager.translate(-0.6F, 0.4F, -0.2F);
@@ -12062,9 +12026,7 @@ public class Attachments {
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
                 .withModel(new com.paneedah.mwc.models.AK15DustCover(), "ak15dustcover.png")
                 .withModel(new com.paneedah.mwc.models.AKRail(), "akrail.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 3))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.AK15DustCover) {
                         GlStateManager.translate(-0.6F, 0.4F, -0.2F);
@@ -12100,9 +12062,7 @@ public class Attachments {
         AK12DustCover = new AttachmentBuilder<Weapon>().withCategory(AttachmentCategory.RAILING)
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
                 .withModel(new com.paneedah.mwc.models.AK12DustCover(), "ak12kal.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 3))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.AK12DustCover) {
                         GlStateManager.translate(-0.6F, 0.4F, -0.2F);
@@ -12176,9 +12136,7 @@ public class Attachments {
         VSSVintorezDustCover = new AttachmentBuilder<Weapon>().withCategory(AttachmentCategory.RAILING)
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
                 .withModel(new com.paneedah.mwc.models.VSSVintorezDustCover(), "vssvintorez.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 3))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.VSSVintorezDustCover) {
                         GlStateManager.translate(-0.6F, 0.4F, -0.2F);
@@ -12281,6 +12239,7 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                
                 .withName("FNFALDustCover").withTextureName("Dummy.png")
                 .build(modContext);
 
@@ -12317,6 +12276,9 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                .withModernRecipe(
+                        CraftingGroup.ATTACHMENT_MODIFICATION,
+                        new CraftingEntry(MWCItems.gunmetalIngot, 1))
                 .withName("SA58DustCover").withTextureName("Dummy.png")
                 .build(modContext);
 
@@ -12352,6 +12314,7 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                
                 .withName("FNFALGrip").withTextureName("Dummy.png")
                 .build(modContext);
 
@@ -12387,6 +12350,7 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                
                 .withName("FNFALStock").withTextureName("Dummy.png")
                 .build(modContext);
 
@@ -12422,6 +12386,7 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                
                 .withName("FNFALHandguard").withTextureName("Dummy.png")
                 .build(modContext);
 
@@ -12458,6 +12423,10 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                .withModernRecipe(
+                        CraftingGroup.ATTACHMENT_MODIFICATION,
+                        new CraftingEntry(MWCItems.gunmetalIngot, 3),
+                        new CraftingEntry(MWCItems.steelIngot, 1))
                 .withName("FNFALPARAHandguard").withTextureName("Dummy.png")
                 .build(modContext);
 
@@ -12535,6 +12504,7 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                
                 .withName("M60FrontSight").withTextureName("Dummy.png")
                 .build(modContext);
 
@@ -12575,15 +12545,14 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                
                 .withName("M38FrontSight").withTextureName("Dummy.png")
                 .build(modContext);
 
         HK416FrontSight = new AttachmentBuilder<Weapon>().withCategory(AttachmentCategory.FRONTSIGHT)
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
                 .withModel(new com.paneedah.mwc.models.G95_upright_frontsights(), "gun.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.steelIngot, 1))
+                
                 .withRequiredAttachments(M38HandGuard, LVOAVHandGuard, Mk18HandGuard,
                         StonerHANDGUARD, AR57Handguard, M16A4HandGuard, M4CarbineHandGuard,
                         ACRHandGuard, ACRHandGuardBlack, ACRWEMSKHandGuardTan,
@@ -12629,9 +12598,7 @@ public class Attachments {
         MBUSFrontSight = new AttachmentBuilder<Weapon>().withCategory(AttachmentCategory.FRONTSIGHT)
                 .withCreativeTab(MWC.ATTACHMENTS_TAB)
                 .withModel(new com.paneedah.mwc.models.MBUSFrontSight(), "gun.png")
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_MODIFICATION,
-                        new CraftingEntry(MWCItems.steelIngot, 1))
+                
                 .withRequiredAttachments(M38HandGuard, LVOAVHandGuard, Mk18HandGuard,
                         StonerHANDGUARD, AR57Handguard, M16A4HandGuard, M4CarbineHandGuard,
                         ACRHandGuard, ACRHandGuardBlack, ACRWEMSKHandGuardTan,
@@ -12730,6 +12697,11 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                .withModernRecipe(
+                        CraftingGroup.ATTACHMENT_NORMAL,
+                        new CraftingEntry(MWCItems.gunmetalIngot, 2),
+                        new CraftingEntry(MWCItems.steelIngot, 2),
+                        new CraftingEntry(Blocks.GLASS, 1))
                 .withName("Leupold")
                 .withTextureName("Dummy.png").build(modContext);
 
@@ -14080,6 +14052,11 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                .withModernRecipe(
+                        CraftingGroup.ATTACHMENT_NORMAL,
+                        new CraftingEntry(MWCItems.gunmetalIngot, 2),
+                        new CraftingEntry(MWCItems.steelIngot, 2),
+                        new CraftingEntry(Blocks.GLASS, 1))
                 .withName("HPScope").withTextureName("Dummy.png")
                 .build(modContext);
 
@@ -14269,6 +14246,11 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                .withModernRecipe(
+                        CraftingGroup.ATTACHMENT_NORMAL,
+                        new CraftingEntry(MWCItems.gunmetalIngot, 2),
+                        new CraftingEntry(MWCItems.steelIngot, 2),
+                        new CraftingEntry(Blocks.GLASS, 1))
                 .withName("m2a1_sight").withTextureName("Dummy.png")
                 .build(modContext);
 
@@ -14329,6 +14311,11 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                .withModernRecipe(
+                        CraftingGroup.ATTACHMENT_NORMAL,
+                        new CraftingEntry(MWCItems.gunmetalIngot, 2),
+                        new CraftingEntry(MWCItems.steelIngot, 2),
+                        new CraftingEntry(Blocks.GLASS, 1))
                 .withName("F2000Scope")
 
                 .withTextureName("Dummy.png")
@@ -14367,6 +14354,11 @@ public class Attachments {
                         GlStateManager.scale(0.4F, 0.4F, 0.4F);
                     }
                 })
+                .withModernRecipe(
+                        CraftingGroup.ATTACHMENT_NORMAL,
+                        new CraftingEntry(MWCItems.gunmetalIngot, 2),
+                        new CraftingEntry(MWCItems.steelIngot, 2),
+                        new CraftingEntry(Blocks.GLASS, 1))
                 .withName("M202scope")
 
                 .withTextureName("Dummy.png")
@@ -14429,6 +14421,11 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                .withModernRecipe(
+                        CraftingGroup.ATTACHMENT_NORMAL,
+                        new CraftingEntry(MWCItems.gunmetalIngot, 2),
+                        new CraftingEntry(MWCItems.steelIngot, 2),
+                        new CraftingEntry(Blocks.GLASS, 1))
                 .withName("AUGscope")
 
                 .withTextureName("Dummy.png")
@@ -14587,7 +14584,11 @@ public class Attachments {
                         GlStateManager.rotate(90F, 0f, 0f, 1f);
                         GlStateManager.scale(0.4F, 0.4F, 0.4F);
                     }
-                }).withName("M32Barrel")
+                }).withModernRecipe(
+                        CraftingGroup.ATTACHMENT_MODIFICATION,
+                        new CraftingEntry(MWCItems.steelIngot, 3),
+                        new CraftingEntry(MWCItems.gunmetalPlate, 1))
+                .withName("M32Barrel")
 
                 .withTextureName("Dummy.png")
                 .build(modContext);
@@ -14624,7 +14625,8 @@ public class Attachments {
                         GlStateManager.rotate(90F, 0f, 0f, 1f);
                         GlStateManager.scale(0.4F, 0.4F, 0.4F);
                     }
-                }).withName("Remington870Pump")
+                })
+                .withName("Remington870Pump")
 
                 .withTextureName("Dummy.png")
                 .build(modContext);
@@ -14661,7 +14663,11 @@ public class Attachments {
                         GlStateManager.rotate(90F, 0f, 0f, 1f);
                         GlStateManager.scale(0.4F, 0.4F, 0.4F);
                     }
-                }).withName("Remington870MagpulPump")
+                }).withModernRecipe(
+                        CraftingGroup.ATTACHMENT_MODIFICATION,
+                        new CraftingEntry(MWCItems.gunmetalIngot, 2),
+                        new CraftingEntry(MWCItems.steelIngot, 1))
+                .withName("Remington870MagpulPump")
 
                 .withTextureName("Dummy.png")
                 .build(modContext);
@@ -14698,7 +14704,11 @@ public class Attachments {
                         GlStateManager.rotate(90F, 0f, 0f, 1f);
                         GlStateManager.scale(0.4F, 0.4F, 0.4F);
                     }
-                }).withName("Remington870PoliceMagnumPump")
+                }).withModernRecipe(
+                        CraftingGroup.ATTACHMENT_MODIFICATION,
+                        new CraftingEntry(MWCItems.gunmetalIngot, 2),
+                        new CraftingEntry(MWCItems.steelIngot, 1))
+                .withName("Remington870PoliceMagnumPump")
 
                 .withTextureName("Dummy.png")
                 .build(modContext);
@@ -14744,7 +14754,11 @@ public class Attachments {
                     } else if (model instanceof com.paneedah.mwc.models.AKRail) {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
-                }).withName("Remington870FABDefensePump")
+                }).withModernRecipe(
+                        CraftingGroup.ATTACHMENT_MODIFICATION,
+                        new CraftingEntry(MWCItems.gunmetalIngot, 2),
+                        new CraftingEntry(MWCItems.steelIngot, 1))
+                .withName("Remington870FABDefensePump")
 
                 .withTextureName("Dummy.png")
                 .build(modContext);
@@ -14780,7 +14794,8 @@ public class Attachments {
                         GlStateManager.rotate(90F, 0f, 0f, 1f);
                         GlStateManager.scale(0.4F, 0.4F, 0.4F);
                     }
-                }).withName("Remington870Stock")
+                })
+                .withName("Remington870Stock")
 
                 .withTextureName("Dummy.png")
                 .build(modContext);
@@ -14816,7 +14831,12 @@ public class Attachments {
                         GlStateManager.rotate(90F, 0f, 0f, 1f);
                         GlStateManager.scale(0.4F, 0.4F, 0.4F);
                     }
-                }).withName("Remington870PoliceMagnumStock")
+                }).withModernRecipe(
+                        CraftingGroup.ATTACHMENT_MODIFICATION,
+                        new CraftingEntry(MWCItems.gunmetalIngot, 3),
+                        new CraftingEntry(MWCItems.steelIngot, 2),
+                        new CraftingEntry(MWCItems.syntheticPolymerComposite, 1))
+                .withName("Remington870PoliceMagnumStock")
 
                 .withTextureName("Dummy.png")
                 .build(modContext);
@@ -14865,7 +14885,12 @@ public class Attachments {
                     } else if (model instanceof com.paneedah.mwc.models.MilSpecStock) {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
-                }).withName("Remington870MilSpecStock")
+                }).withModernRecipe(
+                        CraftingGroup.ATTACHMENT_MODIFICATION,
+                        new CraftingEntry(MWCItems.gunmetalIngot, 3),
+                        new CraftingEntry(MWCItems.steelIngot, 2),
+                        new CraftingEntry(MWCItems.syntheticPolymerComposite, 1))
+                .withName("Remington870MilSpecStock")
 
                 .withTextureName("Dummy.png")
                 .build(modContext);
@@ -14914,7 +14939,12 @@ public class Attachments {
                     } else if (model instanceof com.paneedah.mwc.models.HK416Stock) {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
-                }).withName("Remington870HK416StockStock")
+                }).withModernRecipe(
+                        CraftingGroup.ATTACHMENT_MODIFICATION,
+                        new CraftingEntry(MWCItems.gunmetalIngot, 3),
+                        new CraftingEntry(MWCItems.steelIngot, 2),
+                        new CraftingEntry(MWCItems.syntheticPolymerComposite, 1))
+                .withName("Remington870HK416StockStock")
 
                 .withTextureName("Dummy.png")
                 .build(modContext);
@@ -14950,7 +14980,12 @@ public class Attachments {
                         GlStateManager.rotate(90F, 0f, 0f, 1f);
                         GlStateManager.scale(0.4F, 0.4F, 0.4F);
                     }
-                }).withName("Remington870SawedGrip")
+                }).withModernRecipe(
+                        CraftingGroup.ATTACHMENT_MODIFICATION,
+                        new CraftingEntry(MWCItems.gunmetalIngot, 3),
+                        new CraftingEntry(MWCItems.steelIngot, 2),
+                        new CraftingEntry(MWCItems.syntheticPolymerComposite, 1))
+                .withName("Remington870SawedGrip")
 
                 .withTextureName("Dummy.png")
                 .build(modContext);
@@ -14995,7 +15030,8 @@ public class Attachments {
                     } else if (model instanceof com.paneedah.mwc.models.R870part) {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
-                }).withName("Remington870Barrel")
+                })
+                .withName("Remington870Barrel")
 
                 .withTextureName("Dummy.png")
                 .build(modContext);
@@ -15040,7 +15076,11 @@ public class Attachments {
                     } else if (model instanceof com.paneedah.mwc.models.M9A1frontsight) {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
-                }).withName("Remington870PoliceMagnumBarrel")
+                }).withModernRecipe(
+                        CraftingGroup.ATTACHMENT_MODIFICATION,
+                        new CraftingEntry(MWCItems.steelIngot, 3),
+                        new CraftingEntry(MWCItems.gunmetalPlate, 1))
+                .withName("Remington870PoliceMagnumBarrel")
 
                 .withTextureName("Dummy.png")
                 .build(modContext);
@@ -15085,7 +15125,11 @@ public class Attachments {
                     } else if (model instanceof com.paneedah.mwc.models.M9A1frontsight) {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
-                }).withName("Remington870SawedBarrel")
+                }).withModernRecipe(
+                        CraftingGroup.ATTACHMENT_MODIFICATION,
+                        new CraftingEntry(MWCItems.steelIngot, 3),
+                        new CraftingEntry(MWCItems.gunmetalPlate, 1))
+                .withName("Remington870SawedBarrel")
 
                 .withTextureName("Dummy.png")
                 .build(modContext);
@@ -15121,7 +15165,8 @@ public class Attachments {
                         GlStateManager.rotate(90F, 0f, 0f, 1f);
                         GlStateManager.scale(0.4F, 0.4F, 0.4F);
                     }
-                }).withName("KS23Stock")
+                })
+                .withName("KS23Stock")
 
                 .withTextureName("Dummy.png")
                 .build(modContext);
@@ -15157,7 +15202,12 @@ public class Attachments {
                         GlStateManager.rotate(90F, 0f, 0f, 1f);
                         GlStateManager.scale(0.4F, 0.4F, 0.4F);
                     }
-                }).withName("KS23RaptorGrip")
+                }).withModernRecipe(
+                        CraftingGroup.ATTACHMENT_MODIFICATION,
+                        new CraftingEntry(MWCItems.gunmetalIngot, 3),
+                        new CraftingEntry(MWCItems.steelIngot, 2),
+                        new CraftingEntry(MWCItems.syntheticPolymerComposite, 1))
+                .withName("KS23RaptorGrip")
 
                 .withTextureName("Dummy.png")
                 .build(modContext);
@@ -15193,7 +15243,12 @@ public class Attachments {
                         GlStateManager.rotate(90F, 0f, 0f, 1f);
                         GlStateManager.scale(0.4F, 0.4F, 0.4F);
                     }
-                }).withName("KS23MStock")
+                }).withModernRecipe(
+                        CraftingGroup.ATTACHMENT_MODIFICATION,
+                        new CraftingEntry(MWCItems.gunmetalIngot, 3),
+                        new CraftingEntry(MWCItems.steelIngot, 2),
+                        new CraftingEntry(MWCItems.syntheticPolymerComposite, 1))
+                .withName("KS23MStock")
 
                 .withTextureName("Dummy.png")
                 .build(modContext);
@@ -15230,7 +15285,8 @@ public class Attachments {
                         GlStateManager.rotate(90F, 0f, 0f, 1f);
                         GlStateManager.scale(0.4F, 0.4F, 0.4F);
                     }
-                }).withName("KS23Barrel")
+                })
+                .withName("KS23Barrel")
 
                 .withTextureName("Dummy.png")
                 .build(modContext);
@@ -15267,7 +15323,11 @@ public class Attachments {
                         GlStateManager.rotate(90F, 0f, 0f, 1f);
                         GlStateManager.scale(0.4F, 0.4F, 0.4F);
                     }
-                }).withName("KS23ExtendedBarrel")
+                }).withModernRecipe(
+                        CraftingGroup.ATTACHMENT_MODIFICATION,
+                        new CraftingEntry(MWCItems.steelIngot, 3),
+                        new CraftingEntry(MWCItems.gunmetalPlate, 1))
+                .withName("KS23ExtendedBarrel")
 
                 .withTextureName("Dummy.png")
                 .build(modContext);
@@ -15351,7 +15411,8 @@ public class Attachments {
                         GlStateManager.rotate(90F, 0f, 0f, 1f);
                         GlStateManager.scale(0.4F, 0.4F, 0.4F);
                     }
-                }).withName("AKIron")
+                })
+                .withName("AKIron")
 
                 .withTextureName("Dummy.png")
                 .build(modContext);
@@ -15389,7 +15450,8 @@ public class Attachments {
                         GlStateManager.rotate(90F, 0f, 0f, 1f);
                         GlStateManager.scale(0.4F, 0.4F, 0.4F);
                     }
-                }).withName("AK12Iron")
+                })
+                .withName("AK12Iron")
 
                 .withTextureName("Dummy.png")
                 .build(modContext);
@@ -15676,7 +15738,11 @@ public class Attachments {
                         GlStateManager.rotate(90F, 0f, 0f, 1f);
                         GlStateManager.scale(0.4F, 0.4F, 0.4F);
                     }
-                }).withName("silencer_eabh").withTextureName("Dummy.png")
+                }).withModernRecipe(
+                        CraftingGroup.ATTACHMENT_MODIFICATION,
+                        new CraftingEntry(MWCItems.gunmetalIngot, 4),
+                        new CraftingEntry(MWCItems.steelIngot, 2))
+                .withName("silencer_eabh").withTextureName("Dummy.png")
                 .build(modContext);
 
         Silencer762x54 = new AttachmentBuilder<Weapon>().withCategory(AttachmentCategory.SILENCER)
@@ -15888,6 +15954,7 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                
                 .withName("AKMIron").withTextureName("Dummy.png")
                 .build(modContext);
 
@@ -15902,10 +15969,7 @@ public class Attachments {
                         KrissVectorReceiver, Vector556Handguard, Origin12Grip, HKS20Grip,
                         Beowulf50CalReceiver, HK417Receiver, HK417ReceiverTan, HK416Receiver,
                         M110Receiver, Z10Receiver)
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_NORMAL,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 2),
-                        new CraftingEntry(MWCItems.steelIngot, 1))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.TritiumRearSights) {
                         GlStateManager.translate(-0.6F, -0.9F, 0.45F);
@@ -15950,10 +16014,7 @@ public class Attachments {
                         ARX160Chassis,
                         Beowulf50CalReceiver, HK417Receiver, HK417ReceiverTan, HK416Receiver,
                         M110Receiver, Z10Receiver)
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_NORMAL,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 2),
-                        new CraftingEntry(MWCItems.steelIngot, 1))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.MBUSRearSight) {
                         GlStateManager.translate(-0.6F, -0.9F, 0.45F);
@@ -15997,10 +16058,7 @@ public class Attachments {
                         KrissVectorReceiver, Vector556Handguard, Origin12Grip, HKS20Grip,
                         Beowulf50CalReceiver, HK417Receiver, HK417ReceiverTan, CZ805BrenReceiver,
                         HK416Receiver, M110Receiver, DSR1Handguard, DSR1HandguardRailed, Z10Receiver)
-                .withModernRecipe(
-                        CraftingGroup.ATTACHMENT_NORMAL,
-                        new CraftingEntry(MWCItems.gunmetalIngot, 2),
-                        new CraftingEntry(MWCItems.steelIngot, 1))
+                
                 .withInventoryModelPositioning(model -> {
                     if (model instanceof com.paneedah.mwc.models.G95_upright_rearsights) {
                         GlStateManager.translate(-0.6F, -0.9F, 0.45F);
@@ -16066,6 +16124,7 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                
                 .withName("FNFALRearSights").withTextureName("Dummy.png")
                 .build(modContext);
 
@@ -16101,6 +16160,7 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                
                 .withName("M16A1RearSight").withTextureName("Dummy.png")
                 .build(modContext);
 
@@ -16139,6 +16199,7 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                
                 .withName("K2C1RearSight").withTextureName("Dummy.png")
                 .build(modContext);
 
@@ -16175,6 +16236,7 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                
                 .withName("ScorpionRearSight").withTextureName("Dummy.png")
                 .build(modContext);
 
@@ -16211,6 +16273,10 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                .withModernRecipe(
+                        CraftingGroup.ATTACHMENT_MODIFICATION,
+                        new CraftingEntry(MWCItems.gunmetalIngot, 1),
+                        new CraftingEntry(MWCItems.steelIngot, 1))
                 .withName("ScorpionFrontSight").withTextureName("Dummy.png")
                 .build(modContext);
 
@@ -16249,6 +16315,7 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                
                 .withName("MP7IronSights")
                 .withRenderablePart().withTextureName("Dummy.png")
                 .build(modContext);
@@ -16288,6 +16355,10 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                .withModernRecipe(
+                        CraftingGroup.ATTACHMENT_MODIFICATION,
+                        new CraftingEntry(MWCItems.gunmetalIngot, 1),
+                        new CraftingEntry(MWCItems.steelIngot, 1))
                 .withName("MP7IronSightsStanding")
                 .withRenderablePart().withTextureName("Dummy.png")
                 .build(modContext);
@@ -16324,6 +16395,7 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                
                 .withName("Kar98Ksight").withTextureName("Dummy.png")
                 .build(modContext);
 
@@ -16362,6 +16434,7 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                
                 .withName("AK15ironsight")
                 .withRenderablePart().withTextureName("Dummy.png")
                 .build(modContext);
@@ -16401,6 +16474,7 @@ public class Attachments {
                         GlStateManager.scale(0F, 0F, 0F);
                     }
                 })
+                
                 .withName("AK12ironsight")
                 .withRenderablePart().withTextureName("Dummy.png")
                 .build(modContext);
@@ -16476,7 +16550,11 @@ public class Attachments {
                         GlStateManager.rotate(90F, 0f, 0f, 1f);
                         GlStateManager.scale(0.4F, 0.4F, 0.4F);
                     }
-                }).withName("Silencer357").withTextureName("Dummy.png")
+                }).withModernRecipe(
+                        CraftingGroup.ATTACHMENT_MODIFICATION,
+                        new CraftingEntry(MWCItems.gunmetalIngot, 4),
+                        new CraftingEntry(MWCItems.steelIngot, 2))
+                .withName("Silencer357").withTextureName("Dummy.png")
                 .build(modContext);
 
         Silencer57x38 = new AttachmentBuilder<Weapon>().withCategory(AttachmentCategory.SILENCER)
@@ -16631,6 +16709,10 @@ public class Attachments {
                         GlStateManager.scale(0.4F, 0.4F, 0.4F);
                     }
                 })
+                .withModernRecipe(
+                        CraftingGroup.ATTACHMENT_MODIFICATION,
+                        new CraftingEntry(MWCItems.gunmetalIngot, 4),
+                        new CraftingEntry(MWCItems.steelIngot, 2))
                 .withName("HoneyBadgerSilencer").withTextureName("Dummy.png")
                 .build(modContext);
 
@@ -16895,6 +16977,10 @@ public class Attachments {
                     }
                 })
                 .withRenderablePart()
+                .withModernRecipe(
+                        CraftingGroup.ATTACHMENT_MODIFICATION,
+                        new CraftingEntry(MWCItems.gunmetalIngot, 2),
+                        new CraftingEntry(Items.REDSTONE, 2))
                 .withName("DanWessonLaser").withTextureName("Dummy.png")
                 .build(modContext);
 
@@ -16933,6 +17019,10 @@ public class Attachments {
                         GlStateManager.scale(0.6F, 0.6F, 0.6F);
                     }
                 })
+                .withModernRecipe(
+                        CraftingGroup.ATTACHMENT_MODIFICATION,
+                        new CraftingEntry(MWCItems.gunmetalIngot, 2),
+                        new CraftingEntry(MWCItems.steelIngot, 1))
                 .withName("M1928Grip").withTextureName("Dummy.png")
                 .build(modContext);
 
@@ -16971,6 +17061,7 @@ public class Attachments {
                         GlStateManager.scale(0.6F, 0.6F, 0.6F);
                     }
                 })
+                
                 .withName("M1A1Grip").withTextureName("Dummy.png")
                 .build(modContext);
 
@@ -17441,6 +17532,7 @@ public class Attachments {
                     }
                 })
                 .withRenderablePart()
+                
                 .withName("AUGgrip").withTextureName("Dummy.png")
                 .build(modContext);
 
@@ -17481,6 +17573,10 @@ public class Attachments {
                     }
                 })
                 .withRenderablePart()
+                .withModernRecipe(
+                        CraftingGroup.ATTACHMENT_MODIFICATION,
+                        new CraftingEntry(MWCItems.gunmetalIngot, 2),
+                        new CraftingEntry(MWCItems.steelIngot, 1))
                 .withName("USPMatchCompensator").withTextureName("Dummy.png")
                 .build(modContext);
 

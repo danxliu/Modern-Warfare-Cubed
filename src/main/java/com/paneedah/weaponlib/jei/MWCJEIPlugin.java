@@ -8,8 +8,10 @@ import mezz.jei.api.IModPlugin;
 import mezz.jei.api.IModRegistry;
 import mezz.jei.api.JEIPlugin;
 import mezz.jei.api.recipe.IRecipeCategoryRegistration;
+import mezz.jei.api.ingredients.IIngredientBlacklist;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.fml.common.registry.ForgeRegistries;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,6 +29,13 @@ public class MWCJEIPlugin implements IModPlugin {
 
     @Override
     public void register(IModRegistry registry) {
+        IIngredientBlacklist blacklist = registry.getJeiHelpers().getIngredientBlacklist();
+        for (Item item : ForgeRegistries.ITEMS.getValuesCollection()) {
+            if (item.getRegistryName() != null && item.getRegistryName().getNamespace().equals(ProjectConstants.ID) && item.getCreativeTab() == null) {
+                blacklist.addIngredientToBlacklist(new ItemStack(item));
+            }
+        }
+
         // Register Workbench recipes
         List<StationRecipeWrapper> workbenchRecipes = new ArrayList<>();
         addRecipesForGroup(workbenchRecipes, CraftingGroup.GUN);

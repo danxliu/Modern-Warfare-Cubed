@@ -2785,24 +2785,6 @@
       ]
     },
     {
-      "entryName": "mwc:SCCYCPX2BodyTan",
-      "craftingGroup": "ATTACHMENT_MODIFICATION",
-      "recipe": [
-        {
-          "entryName": "minecraft:string",
-          "isOreDictionary": false,
-          "count": 3,
-          "defaultItem": "minecraft:air"
-        },
-        {
-          "entryName": "paper",
-          "defaultItem": "minecraft:paper",
-          "isOreDictionary": true,
-          "count": 2
-        }
-      ]
-    },
-    {
       "entryName": "mwc:SCCYCPX2Slide",
       "craftingGroup": "ATTACHMENT_MODIFICATION",
       "recipe": [
@@ -8289,6 +8271,3882 @@
           "defaultItem": "mwc:synthetic_plastic",
           "isOreDictionary": true,
           "count": 9
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:AUGscope",
+      "craftingGroup": "ATTACHMENT_NORMAL",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 2
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 2
+        },
+        {
+          "entryName": "glass",
+          "defaultItem": "minecraft:glass",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:F2000Scope",
+      "craftingGroup": "ATTACHMENT_NORMAL",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 2
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 2
+        },
+        {
+          "entryName": "glass",
+          "defaultItem": "minecraft:glass",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:HPScope",
+      "craftingGroup": "ATTACHMENT_NORMAL",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 2
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 2
+        },
+        {
+          "entryName": "glass",
+          "defaultItem": "minecraft:glass",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:Leupold",
+      "craftingGroup": "ATTACHMENT_NORMAL",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 2
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 2
+        },
+        {
+          "entryName": "glass",
+          "defaultItem": "minecraft:glass",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:M202scope",
+      "craftingGroup": "ATTACHMENT_NORMAL",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 2
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 2
+        },
+        {
+          "entryName": "glass",
+          "defaultItem": "minecraft:glass",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:m2a1_sight",
+      "craftingGroup": "ATTACHMENT_NORMAL",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 2
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 2
+        },
+        {
+          "entryName": "glass",
+          "defaultItem": "minecraft:glass",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:AK12Iron",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 1
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:AKIron",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 1
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:AKMIron",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 1
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:FNFALRearSights",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 1
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:M16A1RearSight",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 1
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:M38FrontSight",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 1
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:M60FrontSight",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 1
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:Kar98Ksight",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 1
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:DanWessonLaser",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 2
+        },
+        {
+          "entryName": "dustRedstone",
+          "defaultItem": "minecraft:redstone",
+          "isOreDictionary": true,
+          "count": 2
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:HoneyBadgerSilencer",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 4
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 2
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:silencer_eabh",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 4
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 2
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:C8Stock",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 3
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 2
+        },
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:FNFALStock",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 3
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 2
+        },
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:M249Stock",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 3
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 2
+        },
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:M249ParaStock",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 3
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 2
+        },
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:M249MilspecStock",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 3
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 2
+        },
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:M249Hk416Stock",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 3
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 2
+        },
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:M1014Stock",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 3
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 2
+        },
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:Spas12Stock",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 3
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 2
+        },
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:SOCOM_Stock",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 3
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 2
+        },
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:M4BenelliStock",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 3
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 2
+        },
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:KS23Stock",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 3
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 2
+        },
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:KS23MStock",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 3
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 2
+        },
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:KS23RaptorGrip",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 3
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 2
+        },
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:M1CarbineBody",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 3
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 2
+        },
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:Remington870Stock",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 3
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 2
+        },
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:Remington870MilSpecStock",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 3
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 2
+        },
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:Remington870PoliceMagnumStock",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 3
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 2
+        },
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:Remington870HK416StockStock",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 3
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 2
+        },
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:Remington870SawedGrip",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 3
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 2
+        },
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:HKS20Stock",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 3
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 2
+        },
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:G2ContenderStock",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 3
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 2
+        },
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:M1A1CarbineBody",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 3
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 2
+        },
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:FNFALGrip",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 2
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:HKS20Grip",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 2
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:S710TricunGrip",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 2
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:M1014Grip",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 2
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:AUGgrip",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 2
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:G2ContenderGrip",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 2
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:M1A1Grip",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 2
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:M1928Grip",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 2
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:USPMatchCompensator",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 2
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:GlockHogueGrip",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 2
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:AR57Handguard",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 3
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:AUGA1",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 3
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:AUGA2handguard",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 3
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:AUGA3handguard",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 3
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:AUGA3extGuard",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 3
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:EF88Handguard",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 3
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:HK417Handguard",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 3
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:HK417HandguardTan",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 3
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:S710Handguard",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 3
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:M60HandGuard",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 3
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:M60E4Guard",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 3
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:M249HandGuard",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 3
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:M249UpperHandGuard",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 3
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:Mk48HandGuard",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 3
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:Mk48UpperHandGuard",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 3
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:StonerHANDGUARD",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 3
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:NTW20Guard",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 3
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:DSR1Handguard",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 3
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:DSR1HandguardRailed",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 3
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:AR57Receiver",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 4
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 2
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:C8SFWReceiver",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 4
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 2
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:HK417Receiver",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 4
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 2
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:HK417ReceiverTan",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 4
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 2
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:S710Receiver",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 4
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 2
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:DSR1Barrel",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 3
+        },
+        {
+          "entryName": "plateGunmetal",
+          "defaultItem": "mwc:gunmetal_plate",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:DSR1BarrelLong",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 3
+        },
+        {
+          "entryName": "plateGunmetal",
+          "defaultItem": "mwc:gunmetal_plate",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:G2ContenderBarrelLong",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 3
+        },
+        {
+          "entryName": "plateGunmetal",
+          "defaultItem": "mwc:gunmetal_plate",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:G2ContenderBarrelShort",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 3
+        },
+        {
+          "entryName": "plateGunmetal",
+          "defaultItem": "mwc:gunmetal_plate",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:KS23Barrel",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 3
+        },
+        {
+          "entryName": "plateGunmetal",
+          "defaultItem": "mwc:gunmetal_plate",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:KS23ExtendedBarrel",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 3
+        },
+        {
+          "entryName": "plateGunmetal",
+          "defaultItem": "mwc:gunmetal_plate",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:M32Barrel",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 3
+        },
+        {
+          "entryName": "plateGunmetal",
+          "defaultItem": "mwc:gunmetal_plate",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:DesertEagleBody",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 3
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 2
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:DesertEagleBodyBlack",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 3
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 2
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:DesertEagleBodyGolden",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 3
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 2
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:DesertEagleLongBody",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 3
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 2
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:DesertEagleSlide",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 3
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 2
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:DesertEagleSlideBlack",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 3
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 2
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:DesertEagleSlideGolden",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 3
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 2
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:FiveSevenSlide",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 3
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 2
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:M191144MagBody",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 3
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 2
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:M191144MagSlide",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 3
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 2
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:M1911Body",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 3
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 2
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:M1911Slide",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 3
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 2
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:Remington700APACChassis",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 4
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 2
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:Remington700Chassis",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 4
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 2
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:Remington700MDTXRSChassis",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 4
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 2
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:SSG08Chassis",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 4
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 2
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:Kar98Krail",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 2
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:M60Rail",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 2
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:RailRiser",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 2
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:ShotgunRail",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 2
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:MAS21Mount",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 2
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:Remington870Pump",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 2
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:Remington870MagpulPump",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 2
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:Remington870FABDefensePump",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 2
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:Remington870PoliceMagnumPump",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 2
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:Remington870Barrel",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 3
+        },
+        {
+          "entryName": "plateGunmetal",
+          "defaultItem": "mwc:gunmetal_plate",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:Remington870PoliceMagnumBarrel",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 3
+        },
+        {
+          "entryName": "plateGunmetal",
+          "defaultItem": "mwc:gunmetal_plate",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:Remington870SawedBarrel",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 3
+        },
+        {
+          "entryName": "plateGunmetal",
+          "defaultItem": "mwc:gunmetal_plate",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:M1CarbineHandguard",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 3
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:M1CarbineVentilatedHandguard",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 3
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:M1ScoutCarbineHandguard",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 3
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:AUGDefaultKit",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 2
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:AUGParaConversion",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 2
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:P90DefaultKit",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 2
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:P90Terminator",
+      "craftingGroup": "ATTACHMENT_MODIFICATION",
+      "recipe": [
+        {
+          "entryName": "ingotGunmetal",
+          "defaultItem": "mwc:gunmetal_ingot",
+          "isOreDictionary": true,
+          "count": 2
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:browning_hi_power",
+      "craftingGroup": "GUN",
+      "recipe": [
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 6
+        },
+        {
+          "entryName": "plateGunmetal",
+          "defaultItem": "mwc:gunmetal_plate",
+          "isOreDictionary": true,
+          "count": 3
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 3
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:m1911",
+      "craftingGroup": "GUN",
+      "recipe": [
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 6
+        },
+        {
+          "entryName": "plateGunmetal",
+          "defaultItem": "mwc:gunmetal_plate",
+          "isOreDictionary": true,
+          "count": 3
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 3
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:m712",
+      "craftingGroup": "GUN",
+      "recipe": [
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 6
+        },
+        {
+          "entryName": "plateGunmetal",
+          "defaultItem": "mwc:gunmetal_plate",
+          "isOreDictionary": true,
+          "count": 3
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 3
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:Python",
+      "craftingGroup": "GUN",
+      "recipe": [
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 7
+        },
+        {
+          "entryName": "plateGunmetal",
+          "defaultItem": "mwc:gunmetal_plate",
+          "isOreDictionary": true,
+          "count": 5
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 4
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:chiappa_rhino",
+      "craftingGroup": "GUN",
+      "recipe": [
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 7
+        },
+        {
+          "entryName": "plateGunmetal",
+          "defaultItem": "mwc:gunmetal_plate",
+          "isOreDictionary": true,
+          "count": 5
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 4
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:g2_contender",
+      "craftingGroup": "GUN",
+      "recipe": [
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 7
+        },
+        {
+          "entryName": "plateGunmetal",
+          "defaultItem": "mwc:gunmetal_plate",
+          "isOreDictionary": true,
+          "count": 5
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 4
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:taurus_raging_hunter",
+      "craftingGroup": "GUN",
+      "recipe": [
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 7
+        },
+        {
+          "entryName": "plateGunmetal",
+          "defaultItem": "mwc:gunmetal_plate",
+          "isOreDictionary": true,
+          "count": 5
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 4
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:mares_leg",
+      "craftingGroup": "GUN",
+      "recipe": [
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 7
+        },
+        {
+          "entryName": "plateGunmetal",
+          "defaultItem": "mwc:gunmetal_plate",
+          "isOreDictionary": true,
+          "count": 5
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 4
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:apc9",
+      "craftingGroup": "GUN",
+      "recipe": [
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 7
+        },
+        {
+          "entryName": "plateGunmetal",
+          "defaultItem": "mwc:gunmetal_plate",
+          "isOreDictionary": true,
+          "count": 5
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 4
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:pp91_kedr",
+      "craftingGroup": "GUN",
+      "recipe": [
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 7
+        },
+        {
+          "entryName": "plateGunmetal",
+          "defaultItem": "mwc:gunmetal_plate",
+          "isOreDictionary": true,
+          "count": 5
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 4
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:uzi",
+      "craftingGroup": "GUN",
+      "recipe": [
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 7
+        },
+        {
+          "entryName": "plateGunmetal",
+          "defaultItem": "mwc:gunmetal_plate",
+          "isOreDictionary": true,
+          "count": 5
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 4
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:s7_10_tricun",
+      "craftingGroup": "GUN",
+      "recipe": [
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 7
+        },
+        {
+          "entryName": "plateGunmetal",
+          "defaultItem": "mwc:gunmetal_plate",
+          "isOreDictionary": true,
+          "count": 5
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 4
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:mp40",
+      "craftingGroup": "GUN",
+      "recipe": [
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 5
+        },
+        {
+          "entryName": "plateGunmetal",
+          "defaultItem": "mwc:gunmetal_plate",
+          "isOreDictionary": true,
+          "count": 5
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 4
+        },
+        {
+          "entryName": "plankWood",
+          "defaultItem": "minecraft:planks",
+          "isOreDictionary": true,
+          "count": 4
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:m1928_thompson",
+      "craftingGroup": "GUN",
+      "recipe": [
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 5
+        },
+        {
+          "entryName": "plateGunmetal",
+          "defaultItem": "mwc:gunmetal_plate",
+          "isOreDictionary": true,
+          "count": 5
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 4
+        },
+        {
+          "entryName": "plankWood",
+          "defaultItem": "minecraft:planks",
+          "isOreDictionary": true,
+          "count": 4
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:ak12_kal",
+      "craftingGroup": "GUN",
+      "recipe": [
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 7
+        },
+        {
+          "entryName": "plateGunmetal",
+          "defaultItem": "mwc:gunmetal_plate",
+          "isOreDictionary": true,
+          "count": 11
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 4
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:f2000",
+      "craftingGroup": "GUN",
+      "recipe": [
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 7
+        },
+        {
+          "entryName": "plateGunmetal",
+          "defaultItem": "mwc:gunmetal_plate",
+          "isOreDictionary": true,
+          "count": 11
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 4
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:mas_21",
+      "craftingGroup": "GUN",
+      "recipe": [
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 7
+        },
+        {
+          "entryName": "plateGunmetal",
+          "defaultItem": "mwc:gunmetal_plate",
+          "isOreDictionary": true,
+          "count": 11
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 4
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:steyr_aug_a1",
+      "craftingGroup": "GUN",
+      "recipe": [
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 7
+        },
+        {
+          "entryName": "plateGunmetal",
+          "defaultItem": "mwc:gunmetal_plate",
+          "isOreDictionary": true,
+          "count": 11
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 4
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:MP43E",
+      "craftingGroup": "GUN",
+      "recipe": [
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 5
+        },
+        {
+          "entryName": "plateGunmetal",
+          "defaultItem": "mwc:gunmetal_plate",
+          "isOreDictionary": true,
+          "count": 11
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 4
+        },
+        {
+          "entryName": "plankWood",
+          "defaultItem": "minecraft:planks",
+          "isOreDictionary": true,
+          "count": 6
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:stg44",
+      "craftingGroup": "GUN",
+      "recipe": [
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 5
+        },
+        {
+          "entryName": "plateGunmetal",
+          "defaultItem": "mwc:gunmetal_plate",
+          "isOreDictionary": true,
+          "count": 11
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 4
+        },
+        {
+          "entryName": "plankWood",
+          "defaultItem": "minecraft:planks",
+          "isOreDictionary": true,
+          "count": 6
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:hk_417",
+      "craftingGroup": "GUN",
+      "recipe": [
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 11
+        },
+        {
+          "entryName": "plateGunmetal",
+          "defaultItem": "mwc:gunmetal_plate",
+          "isOreDictionary": true,
+          "count": 14
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 6
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:m1941_johnson_rifle",
+      "craftingGroup": "GUN",
+      "recipe": [
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 11
+        },
+        {
+          "entryName": "plateGunmetal",
+          "defaultItem": "mwc:gunmetal_plate",
+          "isOreDictionary": true,
+          "count": 14
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 6
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:m1941_johnson",
+      "craftingGroup": "GUN",
+      "recipe": [
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 11
+        },
+        {
+          "entryName": "plateGunmetal",
+          "defaultItem": "mwc:gunmetal_plate",
+          "isOreDictionary": true,
+          "count": 14
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 6
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:Kar98K",
+      "craftingGroup": "GUN",
+      "recipe": [
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 8
+        },
+        {
+          "entryName": "plateGunmetal",
+          "defaultItem": "mwc:gunmetal_plate",
+          "isOreDictionary": true,
+          "count": 14
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 6
+        },
+        {
+          "entryName": "plankWood",
+          "defaultItem": "minecraft:planks",
+          "isOreDictionary": true,
+          "count": 8
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:Krag_Jorgensen",
+      "craftingGroup": "GUN",
+      "recipe": [
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 8
+        },
+        {
+          "entryName": "plateGunmetal",
+          "defaultItem": "mwc:gunmetal_plate",
+          "isOreDictionary": true,
+          "count": 14
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 6
+        },
+        {
+          "entryName": "plankWood",
+          "defaultItem": "minecraft:planks",
+          "isOreDictionary": true,
+          "count": 8
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:M1873",
+      "craftingGroup": "GUN",
+      "recipe": [
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 8
+        },
+        {
+          "entryName": "plateGunmetal",
+          "defaultItem": "mwc:gunmetal_plate",
+          "isOreDictionary": true,
+          "count": 14
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 6
+        },
+        {
+          "entryName": "plankWood",
+          "defaultItem": "minecraft:planks",
+          "isOreDictionary": true,
+          "count": 8
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:Springfield",
+      "craftingGroup": "GUN",
+      "recipe": [
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 8
+        },
+        {
+          "entryName": "plateGunmetal",
+          "defaultItem": "mwc:gunmetal_plate",
+          "isOreDictionary": true,
+          "count": 14
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 6
+        },
+        {
+          "entryName": "plankWood",
+          "defaultItem": "minecraft:planks",
+          "isOreDictionary": true,
+          "count": 8
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:g43_gewehr",
+      "craftingGroup": "GUN",
+      "recipe": [
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 8
+        },
+        {
+          "entryName": "plateGunmetal",
+          "defaultItem": "mwc:gunmetal_plate",
+          "isOreDictionary": true,
+          "count": 14
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 6
+        },
+        {
+          "entryName": "plankWood",
+          "defaultItem": "minecraft:planks",
+          "isOreDictionary": true,
+          "count": 8
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:m1_carbine",
+      "craftingGroup": "GUN",
+      "recipe": [
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 8
+        },
+        {
+          "entryName": "plateGunmetal",
+          "defaultItem": "mwc:gunmetal_plate",
+          "isOreDictionary": true,
+          "count": 14
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 6
+        },
+        {
+          "entryName": "plankWood",
+          "defaultItem": "minecraft:planks",
+          "isOreDictionary": true,
+          "count": 8
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:m1_garand",
+      "craftingGroup": "GUN",
+      "recipe": [
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 8
+        },
+        {
+          "entryName": "plateGunmetal",
+          "defaultItem": "mwc:gunmetal_plate",
+          "isOreDictionary": true,
+          "count": 14
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 6
+        },
+        {
+          "entryName": "plankWood",
+          "defaultItem": "minecraft:planks",
+          "isOreDictionary": true,
+          "count": 8
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:hs12",
+      "craftingGroup": "GUN",
+      "recipe": [
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 8
+        },
+        {
+          "entryName": "plateGunmetal",
+          "defaultItem": "mwc:gunmetal_plate",
+          "isOreDictionary": true,
+          "count": 12
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 3
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:saiga12",
+      "craftingGroup": "GUN",
+      "recipe": [
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 8
+        },
+        {
+          "entryName": "plateGunmetal",
+          "defaultItem": "mwc:gunmetal_plate",
+          "isOreDictionary": true,
+          "count": 12
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 3
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:spas_12",
+      "craftingGroup": "GUN",
+      "recipe": [
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 8
+        },
+        {
+          "entryName": "plateGunmetal",
+          "defaultItem": "mwc:gunmetal_plate",
+          "isOreDictionary": true,
+          "count": 12
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 3
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:remington870",
+      "craftingGroup": "GUN",
+      "recipe": [
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 8
+        },
+        {
+          "entryName": "plateGunmetal",
+          "defaultItem": "mwc:gunmetal_plate",
+          "isOreDictionary": true,
+          "count": 12
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 3
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:ks23",
+      "craftingGroup": "GUN",
+      "recipe": [
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 8
+        },
+        {
+          "entryName": "plateGunmetal",
+          "defaultItem": "mwc:gunmetal_plate",
+          "isOreDictionary": true,
+          "count": 12
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 3
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:M1897",
+      "craftingGroup": "GUN",
+      "recipe": [
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 6
+        },
+        {
+          "entryName": "plateGunmetal",
+          "defaultItem": "mwc:gunmetal_plate",
+          "isOreDictionary": true,
+          "count": 12
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 3
+        },
+        {
+          "entryName": "plankWood",
+          "defaultItem": "minecraft:planks",
+          "isOreDictionary": true,
+          "count": 4
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:browning_auto_5",
+      "craftingGroup": "GUN",
+      "recipe": [
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 6
+        },
+        {
+          "entryName": "plateGunmetal",
+          "defaultItem": "mwc:gunmetal_plate",
+          "isOreDictionary": true,
+          "count": 12
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 3
+        },
+        {
+          "entryName": "plankWood",
+          "defaultItem": "minecraft:planks",
+          "isOreDictionary": true,
+          "count": 4
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:as50",
+      "craftingGroup": "GUN",
+      "recipe": [
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 12
+        },
+        {
+          "entryName": "plateGunmetal",
+          "defaultItem": "mwc:gunmetal_plate",
+          "isOreDictionary": true,
+          "count": 16
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 8
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:dsr1",
+      "craftingGroup": "GUN",
+      "recipe": [
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 12
+        },
+        {
+          "entryName": "plateGunmetal",
+          "defaultItem": "mwc:gunmetal_plate",
+          "isOreDictionary": true,
+          "count": 16
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 8
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:l96a1",
+      "craftingGroup": "GUN",
+      "recipe": [
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 12
+        },
+        {
+          "entryName": "plateGunmetal",
+          "defaultItem": "mwc:gunmetal_plate",
+          "isOreDictionary": true,
+          "count": 16
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 8
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:m200_intervention",
+      "craftingGroup": "GUN",
+      "recipe": [
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 12
+        },
+        {
+          "entryName": "plateGunmetal",
+          "defaultItem": "mwc:gunmetal_plate",
+          "isOreDictionary": true,
+          "count": 16
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 8
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:m40a6",
+      "craftingGroup": "GUN",
+      "recipe": [
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 12
+        },
+        {
+          "entryName": "plateGunmetal",
+          "defaultItem": "mwc:gunmetal_plate",
+          "isOreDictionary": true,
+          "count": 16
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 8
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:remington_700",
+      "craftingGroup": "GUN",
+      "recipe": [
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 12
+        },
+        {
+          "entryName": "plateGunmetal",
+          "defaultItem": "mwc:gunmetal_plate",
+          "isOreDictionary": true,
+          "count": 16
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 8
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:ssg_08",
+      "craftingGroup": "GUN",
+      "recipe": [
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 12
+        },
+        {
+          "entryName": "plateGunmetal",
+          "defaultItem": "mwc:gunmetal_plate",
+          "isOreDictionary": true,
+          "count": 16
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 8
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:sv98",
+      "craftingGroup": "GUN",
+      "recipe": [
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 12
+        },
+        {
+          "entryName": "plateGunmetal",
+          "defaultItem": "mwc:gunmetal_plate",
+          "isOreDictionary": true,
+          "count": 16
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 8
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:m249",
+      "craftingGroup": "GUN",
+      "recipe": [
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 14
+        },
+        {
+          "entryName": "plateGunmetal",
+          "defaultItem": "mwc:gunmetal_plate",
+          "isOreDictionary": true,
+          "count": 18
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 8
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:m60e4",
+      "craftingGroup": "GUN",
+      "recipe": [
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 14
+        },
+        {
+          "entryName": "plateGunmetal",
+          "defaultItem": "mwc:gunmetal_plate",
+          "isOreDictionary": true,
+          "count": 18
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 8
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:stonera1",
+      "craftingGroup": "GUN",
+      "recipe": [
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 14
+        },
+        {
+          "entryName": "plateGunmetal",
+          "defaultItem": "mwc:gunmetal_plate",
+          "isOreDictionary": true,
+          "count": 18
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 8
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:bren_mkii",
+      "craftingGroup": "GUN",
+      "recipe": [
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 10
+        },
+        {
+          "entryName": "plateGunmetal",
+          "defaultItem": "mwc:gunmetal_plate",
+          "isOreDictionary": true,
+          "count": 18
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 8
+        },
+        {
+          "entryName": "plankWood",
+          "defaultItem": "minecraft:planks",
+          "isOreDictionary": true,
+          "count": 8
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:dp28",
+      "craftingGroup": "GUN",
+      "recipe": [
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 10
+        },
+        {
+          "entryName": "plateGunmetal",
+          "defaultItem": "mwc:gunmetal_plate",
+          "isOreDictionary": true,
+          "count": 18
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 8
+        },
+        {
+          "entryName": "plankWood",
+          "defaultItem": "minecraft:planks",
+          "isOreDictionary": true,
+          "count": 8
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:mg34",
+      "craftingGroup": "GUN",
+      "recipe": [
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 10
+        },
+        {
+          "entryName": "plateGunmetal",
+          "defaultItem": "mwc:gunmetal_plate",
+          "isOreDictionary": true,
+          "count": 18
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 8
+        },
+        {
+          "entryName": "plankWood",
+          "defaultItem": "minecraft:planks",
+          "isOreDictionary": true,
+          "count": 8
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:mg42",
+      "craftingGroup": "GUN",
+      "recipe": [
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 10
+        },
+        {
+          "entryName": "plateGunmetal",
+          "defaultItem": "mwc:gunmetal_plate",
+          "isOreDictionary": true,
+          "count": 18
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 8
+        },
+        {
+          "entryName": "plankWood",
+          "defaultItem": "minecraft:planks",
+          "isOreDictionary": true,
+          "count": 8
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:gl06",
+      "craftingGroup": "GUN",
+      "recipe": [
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 15
+        },
+        {
+          "entryName": "plateGunmetal",
+          "defaultItem": "mwc:gunmetal_plate",
+          "isOreDictionary": true,
+          "count": 20
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 10
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:m202",
+      "craftingGroup": "GUN",
+      "recipe": [
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 15
+        },
+        {
+          "entryName": "plateGunmetal",
+          "defaultItem": "mwc:gunmetal_plate",
+          "isOreDictionary": true,
+          "count": 20
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 10
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:m32_mgl",
+      "craftingGroup": "GUN",
+      "recipe": [
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 15
+        },
+        {
+          "entryName": "plateGunmetal",
+          "defaultItem": "mwc:gunmetal_plate",
+          "isOreDictionary": true,
+          "count": 20
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 10
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:m79",
+      "craftingGroup": "GUN",
+      "recipe": [
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 15
+        },
+        {
+          "entryName": "plateGunmetal",
+          "defaultItem": "mwc:gunmetal_plate",
+          "isOreDictionary": true,
+          "count": 20
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 10
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:rpg7",
+      "craftingGroup": "GUN",
+      "recipe": [
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 15
+        },
+        {
+          "entryName": "plateGunmetal",
+          "defaultItem": "mwc:gunmetal_plate",
+          "isOreDictionary": true,
+          "count": 20
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 10
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:chainsaw",
+      "craftingGroup": "GUN",
+      "recipe": [
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 20
+        },
+        {
+          "entryName": "plateGunmetal",
+          "defaultItem": "mwc:gunmetal_plate",
+          "isOreDictionary": true,
+          "count": 25
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 12
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:m134",
+      "craftingGroup": "GUN",
+      "recipe": [
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 20
+        },
+        {
+          "entryName": "plateGunmetal",
+          "defaultItem": "mwc:gunmetal_plate",
+          "isOreDictionary": true,
+          "count": 25
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 12
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:ninth_sin",
+      "craftingGroup": "GUN",
+      "recipe": [
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 20
+        },
+        {
+          "entryName": "plateGunmetal",
+          "defaultItem": "mwc:gunmetal_plate",
+          "isOreDictionary": true,
+          "count": 25
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 12
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:ntw_20",
+      "craftingGroup": "GUN",
+      "recipe": [
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 20
+        },
+        {
+          "entryName": "plateGunmetal",
+          "defaultItem": "mwc:gunmetal_plate",
+          "isOreDictionary": true,
+          "count": 25
+        },
+        {
+          "entryName": "ingotSteel",
+          "defaultItem": "mwc:steel_ingot",
+          "isOreDictionary": true,
+          "count": 12
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:turretgun",
+      "craftingGroup": "GUN",
+      "recipe": [
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 5
+        },
+        {
+          "entryName": "plateGunmetal",
+          "defaultItem": "mwc:gunmetal_plate",
+          "isOreDictionary": true,
+          "count": 6
+        },
+        {
+          "entryName": "mwc:M4A1",
+          "isOreDictionary": false,
+          "count": 1,
+          "defaultItem": "minecraft:air"
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:turretgunsilenced",
+      "craftingGroup": "GUN",
+      "recipe": [
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 5
+        },
+        {
+          "entryName": "plateGunmetal",
+          "defaultItem": "mwc:gunmetal_plate",
+          "isOreDictionary": true,
+          "count": 6
+        },
+        {
+          "entryName": "mwc:M4A1",
+          "isOreDictionary": false,
+          "count": 1,
+          "defaultItem": "minecraft:air"
+        }
+      ]
+    },
+    {
+      "entryName": "mwc:turretgunupgraded",
+      "craftingGroup": "GUN",
+      "recipe": [
+        {
+          "entryName": "compositePolymerSynthetic",
+          "defaultItem": "mwc:synthetic_polymer_composite",
+          "isOreDictionary": true,
+          "count": 5
+        },
+        {
+          "entryName": "plateGunmetal",
+          "defaultItem": "mwc:gunmetal_plate",
+          "isOreDictionary": true,
+          "count": 6
+        },
+        {
+          "entryName": "mwc:M4A1",
+          "isOreDictionary": false,
+          "count": 1,
+          "defaultItem": "minecraft:air"
         }
       ]
     }

@@ -1,7 +1,7 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "${id}:items/workshop"
+        "layer0": "mwc:items/workshop"
     },
 	"display": {
 		"thirdperson_righthand": {

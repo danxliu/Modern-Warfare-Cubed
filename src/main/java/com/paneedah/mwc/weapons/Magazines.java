@@ -19,7 +19,7 @@ public class Magazines {
     public static ItemMagazine M38Mag;
     public static ItemMagazine SOCOM_Mag;
     public static ItemMagazine HK417Mag;
-    public static ItemMagazine C8Mag;
+
     public static ItemMagazine Stanag50;
     public static ItemMagazine Stanag60;
     public static ItemMagazine Stanag100;
@@ -618,7 +618,7 @@ public class Magazines {
                 .withCreativeTab(MWC.AMMUNITION_AND_MAGAZINES_TAB)
                 .withModel(new com.paneedah.mwc.models.SOCOM_Mag(), "socom_mag.png")
                 .withRequiredAttachments(Attachments.Placeholder, Attachments.M4Receiver, Attachments.VLTORReceiver,
-                        Attachments.AUGDefaultKit, Attachments.Vector556Handguard, Attachments.C8SFWReceiver,
+                        Attachments.AUGDefaultKit, Attachments.Vector556Handguard,
                         Attachments.HK416Receiver, Attachments.ScarLReceiver,
                         Attachments.SIGMCXHandguardShort, Attachments.SIG556Grip)
                 .withFirstPersonPositioning(() -> {
@@ -666,29 +666,6 @@ public class Magazines {
                 .withMaxStackSize(6)
                 .withTextureName("Dummy.png").build(modContext, ItemMagazine.class);
 
-        Magazines.C8Mag = new ItemMagazine.Builder().withCapacity(30).withCompatibleBullet(Bullets.Bullet556x45).withName("C8Mag")
-                .withCreativeTab(MWC.AMMUNITION_AND_MAGAZINES_TAB)
-                .withModel(new com.paneedah.mwc.models.C8Mag(), "c8mag.png")
-                .withRequiredAttachments(Attachments.Placeholder, Attachments.M4Receiver, Attachments.VLTORReceiver,
-                        Attachments.AUGDefaultKit, Attachments.Vector556Handguard, Attachments.C8SFWReceiver)
-                .withFirstPersonPositioning(() -> {
-                    GlStateManager.translate(0.1F, -0.3F, 0.4F);
-                    GlStateManager.rotate(30F, 0f, 1f, 0f);
-                    GlStateManager.scale(0.7F, 0.7F, 0.7F);
-                }).withThirdPersonPositioning(() -> {
-                    GlStateManager.translate(-0.3F, 0.5F, 0.1F);
-                    GlStateManager.rotate(-50F, 0f, 1f, 0f);
-                    GlStateManager.rotate(10F, 1f, 0f, 0f);
-                    GlStateManager.scale(0.7F, 0.7F, 0.7F);
-                }).withInventoryPositioning(() -> {
-                    GlStateManager.translate(0.3F, 0.6F, -0.6F);
-                    GlStateManager.rotate(-150F, 0f, 1f, 0f);
-                    GlStateManager.rotate(-6F, 1f, 0f, 0f);
-                    GlStateManager.rotate(-15F, 0f, 0f, 1f);
-                    GlStateManager.scale(1.1F, 1.1F, 1.1f);
-                })
-                .withMaxStackSize(6)
-                .withTextureName("Dummy.png").build(modContext, ItemMagazine.class);
 
         Magazines.Stanag50 = new ItemMagazine.Builder()
                 .withCapacity(50)
