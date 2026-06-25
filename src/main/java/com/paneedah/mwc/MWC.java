@@ -57,6 +57,8 @@ public final class MWC {
     // Todo: Make this configurable via the future YAML config system from FBP, or Valkyrie integration, the later would be best.
     public static int bulletHitParticleMult = 6;
 
+    private static boolean shutdownHookAdded = false;
+
     @SidedProxy(serverSide = "com.paneedah.weaponlib.CommonModContext", clientSide = "com.paneedah.weaponlib.ClientModContext")
     public static ModContext modContext;
 
@@ -80,7 +82,10 @@ public final class MWC {
         commonProxy.init(this);
 
         if (initializationEvent.getSide().isClient()) {
-            Runtime.getRuntime().addShutdownHook(new Thread(ClientTickerController::stop));
+            if (!shutdownHookAdded) {
+                Runtime.getRuntime().addShutdownHook(new Thread(ClientTickerController::stop));
+                shutdownHookAdded = true;
+            }
 
             updateDebugHandler();
 
