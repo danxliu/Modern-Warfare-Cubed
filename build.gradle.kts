@@ -58,6 +58,11 @@ repositories {
             includeGroup("curse.maven")
         }
     }
+
+    maven {
+        name = "BlameJared Maven (JEI)"
+        url = uri("https://maven.blamejared.com")
+    }
 }
 
 dependencies {
@@ -71,6 +76,9 @@ dependencies {
     annotationProcessor("org.ow2.asm:asm-debug-all:5.2")
     annotationProcessor("com.google.guava:guava:32.1.2-jre")
     annotationProcessor("com.google.code.gson:gson:2.8.9")
+
+    compileOnly("mezz.jei:jei_1.12.2:4.16.1.302:api")
+    runtimeOnly("mezz.jei:jei_1.12.2:4.16.1.302")
 
     val mixinBooter: String = modUtils.enableMixins("zone.rong:mixinbooter:$mixinBooterVersion", "mixins.${id}.refmap.json") as String
     api(mixinBooter) {
