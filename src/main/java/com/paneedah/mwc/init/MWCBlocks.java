@@ -11,6 +11,7 @@ import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.oredict.OreDictionary;
 
 import static com.paneedah.mwc.ProjectConstants.ID;
 
@@ -27,17 +28,22 @@ public class MWCBlocks {
 
     public static void init() {
         copperOre = new OreBase("copper_ore");
+        copperOre.setOreDict("oreCopper");
 
         tinOre = new OreBase("tin_ore");
+        tinOre.setOreDict("oreTin");
 
         leadOre = new OreBase("lead_ore");
+        leadOre.setOreDict("oreLead");
 
         sulfurOre = new OreBase("sulfur_ore");
+        sulfurOre.setOreDict("oreSulfur");
         sulfurOre.isSmeltable(false);
         sulfurOre.setItemDropped(MWCItems.sulfurDust);
         sulfurOre.setDropAmount(2, 5);
 
         graphiteOre = new OreBase("graphite_ore");
+        graphiteOre.setOreDict("oreGraphite");
         graphiteOre.isSmeltable(false);
         graphiteOre.setItemDropped(MWCItems.graphiteChunk);
         graphiteOre.setDropAmount(1, 3);
@@ -67,6 +73,21 @@ public class MWCBlocks {
         }
 
         itemRegistryEvent.getRegistry().registerAll(items);
+        registerOreDictionaryKeys(blocks);
+    }
+
+    static void registerOreDictionaryKeys(OreBase[] blocks) {
+        for (OreBase block : blocks) {
+            String[] oreDictKeys = block.getOreDictKeys();
+
+            if (oreDictKeys == null) {
+                continue;
+            }
+
+            for (String oreDictKey : oreDictKeys) {
+                OreDictionary.registerOre(oreDictKey, block);
+            }
+        }
     }
 
     @SubscribeEvent

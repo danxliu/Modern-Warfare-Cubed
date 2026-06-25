@@ -14,6 +14,7 @@ public class OreBase extends BlockOre {
     Item itemBlock, drop;
     int harvestLevel = 2, minDrop = 1, maxDrop = 1;
     boolean smelt = true;
+    private String[] oreDictKeys;
 
     public OreBase(String registryName) {
         setRegistryName(registryName);
@@ -70,5 +71,13 @@ public class OreBase extends BlockOre {
     public void setDropAmount(int dropChance) {
         this.minDrop = dropChance;
         this.maxDrop = dropChance;
+    }
+
+    public void setOreDict(String... oreDictKeys) {
+        this.oreDictKeys = oreDictKeys;
+    }
+
+    public String[] getOreDictKeys() {
+        return oreDictKeys;
     }
 }
