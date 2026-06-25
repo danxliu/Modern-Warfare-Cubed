@@ -36,12 +36,13 @@ public class WavefrontLoader {
     }
 
     public static WavefrontModel loadSubModel(String model, String subModel, boolean vaoMode) {
-        BufferedReader br = createBufferedReader(new ResourceLocation(OBJ_MODEL_LOCATION + model + ".obj"));
-
         boolean startRead = false;
         ArrayList<String> lines = new ArrayList<>();
+        ResourceLocation loc = new ResourceLocation(OBJ_MODEL_LOCATION + model + ".obj");
 
-        try {
+        try (IResource resource = MC.getResourceManager().getResource(loc);
+             InputStream is = resource.getInputStream();
+             BufferedReader br = new BufferedReader(new InputStreamReader(is))) {
             while (br.ready()) {
                 String line = br.readLine();
 
@@ -71,11 +72,13 @@ public class WavefrontLoader {
     }
 
     public static WavefrontModel loadWeaponModel(String model, List<String> objectNames, boolean vaoMode) {
-        BufferedReader br = createBufferedReader(new ResourceLocation(OBJ_MODEL_LOCATION + model + ".obj"));
         boolean startRead = false;
         ArrayList<String> lines = new ArrayList<>();
+        ResourceLocation loc = new ResourceLocation(OBJ_MODEL_LOCATION + model + ".obj");
 
-        try {
+        try (IResource resource = MC.getResourceManager().getResource(loc);
+             InputStream is = resource.getInputStream();
+             BufferedReader br = new BufferedReader(new InputStreamReader(is))) {
             while (br.ready()) {
                 String line = br.readLine();
 
@@ -100,10 +103,11 @@ public class WavefrontLoader {
 
 
     public static WavefrontModel load(ResourceLocation loc) {
-        BufferedReader br = createBufferedReader(loc);
         ArrayList<String> lines = new ArrayList<>();
 
-        try {
+        try (IResource resource = MC.getResourceManager().getResource(loc);
+             InputStream is = resource.getInputStream();
+             BufferedReader br = new BufferedReader(new InputStreamReader(is))) {
             while (br.ready()) {
                 lines.add(br.readLine());
             }
@@ -113,21 +117,6 @@ public class WavefrontLoader {
         }
 
         return process(lines, false);
-    }
-
-    private static BufferedReader createBufferedReader(ResourceLocation loc) {
-        IResource resource = null;
-
-        try {
-            resource = MC.getResourceManager().getResource(loc);
-        } catch (IOException e) {
-            System.err.println("Could not load obj file " + loc.getPath());
-            return null;
-        }
-
-        InputStream is = resource.getInputStream();
-
-        return new BufferedReader(new InputStreamReader(is));
     }
 
     private static WavefrontModel process(ArrayList<String> unprocessed, boolean vaoMode) {

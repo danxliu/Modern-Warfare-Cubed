@@ -6,6 +6,7 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.paneedah.mwc.rendering.Transform;
 import lombok.Getter;
+import net.minecraft.client.resources.IResource;
 import net.minecraft.util.ResourceLocation;
 
 import java.io.BufferedReader;
@@ -145,18 +146,18 @@ public class BBLoader {
         // Create an animation set
         AnimationSet animationSet = new AnimationSet();
 
-        // Initialize our buffered reader object
-        BufferedReader br;
+        // Initialize our master JSON object
+        JsonObject masterJSON = null;
         try {
             ResourceLocation loc = new ResourceLocation(directory + fileName);
-            br = new BufferedReader(new InputStreamReader(MC.getResourceManager().getResource(loc).getInputStream()));
+            try (IResource resource = MC.getResourceManager().getResource(loc);
+                 BufferedReader br = new BufferedReader(new InputStreamReader(resource.getInputStream()))) {
+                masterJSON = gson.fromJson(br, JsonObject.class);
+            }
         } catch (Exception e) {
             LOGGER.error("Failed to create reader for file: {}", fileName);
             return null;
         }
-
-        // Create a master JSON object
-        JsonObject masterJSON = gson.fromJson(br, JsonObject.class);
 
         // Do a basic check to make sure this is valid: has a version key, and the version key
         // lines up. Alert the user if it's a different version so the developer can make adjustments.

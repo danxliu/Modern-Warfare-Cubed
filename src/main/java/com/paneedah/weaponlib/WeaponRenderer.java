@@ -35,6 +35,7 @@ import net.minecraft.client.renderer.entity.RenderPlayer;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
 import net.minecraft.client.renderer.texture.TextureManager;
 import net.minecraft.client.renderer.vertex.DefaultVertexFormats;
+import net.minecraft.client.resources.IResource;
 import net.minecraft.client.shader.Framebuffer;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
@@ -4479,8 +4480,8 @@ public class WeaponRenderer extends ModelSource implements IBakedModel {
                 hasCalculatedSheetDimensions = true;
 
 
-                try {
-                    InputStream inputStream = MC.getResourceManager().getResource(GUN_ICON_SHEET).getInputStream();
+                try (IResource resource = MC.getResourceManager().getResource(GUN_ICON_SHEET);
+                     InputStream inputStream = resource.getInputStream()) {
                     BufferedImage bf = ImageIO.read(inputStream);
 
                     gunIconSheetWidth = bf.getWidth();

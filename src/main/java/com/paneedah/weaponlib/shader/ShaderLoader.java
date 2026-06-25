@@ -2,6 +2,7 @@ package com.paneedah.weaponlib.shader;
 
 import com.paneedah.mwc.utils.QuickResourceLocation;
 import com.paneedah.weaponlib.render.bgl.GLCompatible;
+import net.minecraft.client.resources.IResource;
 import net.minecraft.util.ResourceLocation;
 import org.apache.commons.compress.utils.IOUtils;
 import org.lwjgl.BufferUtils;
@@ -90,7 +91,8 @@ public class ShaderLoader {
      * @throws IOException If there is an error reading the file
      */
     private static ByteBuffer readFileToBuf(ResourceLocation file) throws IOException {
-        try (InputStream inputStream = MC.getResourceManager().getResource(file).getInputStream()) {
+        try (IResource resource = MC.getResourceManager().getResource(file);
+             InputStream inputStream = resource.getInputStream()) {
             byte[] bytes = IOUtils.toByteArray(inputStream);
             ByteBuffer buffer = BufferUtils.createByteBuffer(bytes.length);
             buffer.put(bytes);
