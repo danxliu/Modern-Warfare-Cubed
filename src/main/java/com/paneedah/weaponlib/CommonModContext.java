@@ -233,11 +233,8 @@ public class CommonModContext implements ModContext {
         GameRegistry.registerTileEntity(TileEntityWorkbench.class, ID + ":tileworkbench");
         Block workbenchblock = new WorkbenchBlock(this, "weapon_workbench", Material.WOOD).setCreativeTab(MWC.BLOCKS_AND_INGOTS_TAB);
         if (workbenchblock.getRegistryName() == null) {
-            if (workbenchblock.getTranslationKey().length() < ID.length() + 2 + 5) {
-                throw new IllegalArgumentException("Unlocalize block name too short " + workbenchblock.getTranslationKey());
-            }
             String unlocalizedName = workbenchblock.getTranslationKey().toLowerCase();
-            String registryName = unlocalizedName.substring(5 + ID.length() + 1);
+            String registryName = unlocalizedName.replaceFirst("tile\\." + ID.toLowerCase() + "\\.", "");
             workbenchblock.setRegistryName(ID, registryName);
         }
 
@@ -250,11 +247,8 @@ public class CommonModContext implements ModContext {
         Block ammopressblock = new BlockAmmoPress(this, "ammo_press", Material.IRON).setCreativeTab(MWC.BLOCKS_AND_INGOTS_TAB);
 
         if (ammopressblock.getRegistryName() == null) {
-            if (ammopressblock.getTranslationKey().length() < ID.length() + 2 + 5) {
-                throw new IllegalArgumentException("Unlocalize block name too short " + ammopressblock.getTranslationKey());
-            }
             String unlocalizedName = ammopressblock.getTranslationKey().toLowerCase();
-            String registryName = unlocalizedName.substring(5 + ID.length() + 1);
+            String registryName = unlocalizedName.replaceFirst("tile\\." + ID.toLowerCase() + "\\.", "");
             ammopressblock.setRegistryName(ID, registryName);
         }
 
