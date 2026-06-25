@@ -73,7 +73,9 @@ dependencies {
         isTransitive = false
     }
 
-    annotationProcessor("org.ow2.asm:asm-debug-all:5.2")
+    annotationProcessor("org.ow2.asm:asm-tree:9.7.1")
+    annotationProcessor("org.ow2.asm:asm-commons:9.7.1")
+    annotationProcessor("org.ow2.asm:asm-util:9.7.1")
     annotationProcessor("com.google.guava:guava:32.1.2-jre")
     annotationProcessor("com.google.code.gson:gson:2.8.9")
 
