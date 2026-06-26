@@ -230,7 +230,7 @@ public class CommonModContext implements ModContext {
     @Override
     public void preInitEnd(Object mod) {
         // Workbench
-        GameRegistry.registerTileEntity(TileEntityWorkbench.class, ID + ":tileworkbench");
+        GameRegistry.registerTileEntity(TileEntityWorkbench.class, new ResourceLocation(ID, "tileworkbench"));
         Block workbenchblock = new WorkbenchBlock(this, "weapon_workbench", Material.WOOD).setCreativeTab(MWC.BLOCKS_AND_INGOTS_TAB);
         if (workbenchblock.getRegistryName() == null) {
             String unlocalizedName = workbenchblock.getTranslationKey().toLowerCase();
@@ -243,7 +243,7 @@ public class CommonModContext implements ModContext {
         this.registerRenderableItem(workbenchblock.getRegistryName(), workbenchItemBlock, null);
 
         // Ammo press
-        GameRegistry.registerTileEntity(TileEntityAmmoPress.class, ID + ":tileammopress");
+        GameRegistry.registerTileEntity(TileEntityAmmoPress.class, new ResourceLocation(ID, "tileammopress"));
         Block ammopressblock = new BlockAmmoPress(this, "ammo_press", Material.IRON).setCreativeTab(MWC.BLOCKS_AND_INGOTS_TAB);
 
         if (ammopressblock.getRegistryName() == null) {

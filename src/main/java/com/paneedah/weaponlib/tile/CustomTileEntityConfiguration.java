@@ -119,7 +119,7 @@ public class CustomTileEntityConfiguration<T extends CustomTileEntityConfigurati
         tileEntityBlock.setCreativeTab(creativeTab);
         tileEntityBlock.setBoundingBox(boundingBox);
         ResourceLocation textureResource = new ResourceLocation(ID, textureName);
-        GameRegistry.registerTileEntity(tileEntityClass, "tile" + name);
+        GameRegistry.registerTileEntity(tileEntityClass, new ResourceLocation(ID, "tile" + name));
 
         //System.out.println("RUNNING!");
 
