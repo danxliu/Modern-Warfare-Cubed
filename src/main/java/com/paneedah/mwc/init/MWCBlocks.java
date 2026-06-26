@@ -2,6 +2,7 @@ package com.paneedah.mwc.init;
 
 import com.paneedah.mwc.bases.OreBase;
 import com.paneedah.mwc.blocks.BarbedWireBlock;
+import com.paneedah.mwc.blocks.BarbedWireFlamingBlock;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
@@ -28,6 +29,7 @@ public class MWCBlocks {
     public static OreBase graphiteOre;
 
     public static BarbedWireBlock barbedWire;
+    public static BarbedWireFlamingBlock barbedWireFlaming;
 
     public static final List<Block> ALL_BLOCKS = new ArrayList<>();
 
@@ -54,6 +56,7 @@ public class MWCBlocks {
         graphiteOre.setDropAmount(1, 3);
 
         barbedWire = new BarbedWireBlock();
+        barbedWireFlaming = new BarbedWireFlamingBlock();
 
         ALL_BLOCKS.add(copperOre);
         ALL_BLOCKS.add(tinOre);
@@ -61,6 +64,7 @@ public class MWCBlocks {
         ALL_BLOCKS.add(sulfurOre);
         ALL_BLOCKS.add(graphiteOre);
         ALL_BLOCKS.add(barbedWire);
+        ALL_BLOCKS.add(barbedWireFlaming);
     }
 
     @SubscribeEvent
