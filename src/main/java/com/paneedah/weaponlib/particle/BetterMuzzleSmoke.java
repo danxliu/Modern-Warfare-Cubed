@@ -1,7 +1,7 @@
 package com.paneedah.weaponlib.particle;
 
 import com.paneedah.mwc.renderer.ParticleRenderer;
-import com.paneedah.weaponlib.particle.vehicle.TurbulentSmokeParticle;
+import net.minecraft.client.particle.Particle;
 import net.minecraft.client.renderer.BufferBuilder;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.entity.Entity;
@@ -16,7 +16,7 @@ import java.util.Random;
 import static com.paneedah.mwc.proxies.ClientProxy.MC;
 import static com.paneedah.mwc.ProjectConstants.ID;
 
-public class BetterMuzzleSmoke extends TurbulentSmokeParticle {
+public class BetterMuzzleSmoke extends Particle {
 
     public static final ResourceLocation SMOKE1 = new ResourceLocation(ID + ":textures/smokes/smokesheet.png");
     public static final ResourceLocation SMOKE2 = new ResourceLocation(ID + ":textures/smokes/smokes2.png");
@@ -24,7 +24,7 @@ public class BetterMuzzleSmoke extends TurbulentSmokeParticle {
     public int ran;
 
     public BetterMuzzleSmoke(World worldIn, double xCoordIn, double yCoordIn, double zCoordIn, double p_i1221_8_, double p_i1221_10_, double p_i1221_12_, int indexY) {
-        super(worldIn, xCoordIn, yCoordIn, zCoordIn, p_i1221_8_, p_i1221_10_, p_i1221_12_, indexY);
+        super(worldIn, xCoordIn, yCoordIn, zCoordIn, p_i1221_8_, p_i1221_10_, p_i1221_12_);
 
         this.particleMaxAge = (int) (6 + (4 * Math.random()));
         double sub = 5;

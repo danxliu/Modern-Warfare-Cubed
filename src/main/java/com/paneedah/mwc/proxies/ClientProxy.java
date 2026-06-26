@@ -94,7 +94,6 @@ public class ClientProxy extends CommonProxy {
         modelMesher.register(Armors.Tacticalhelmet, 0, new ModelResourceLocation(ID + ":tactical_helmet", "inventory"));
 
         modelMesher.register(Armors.JPNVG18helmet, 0, new ModelResourceLocation(ID + ":jpnvg18_helmet", "inventory"));
-
         modelMesher.register(Armors.GasMaskM40, 0, new ModelResourceLocation(ID + ":m40gasmask_helmet", "inventory"));
 
         // Todo: Actually remove this once fixed.

@@ -8,7 +8,7 @@ import com.paneedah.mwc.rendering.Transform;
 import com.paneedah.weaponlib.animation.load.BBLoader;
 import com.paneedah.weaponlib.render.gui.ModificationGUI;
 import com.paneedah.weaponlib.render.WeaponSpritesheetBuilder;
-import com.paneedah.weaponlib.vehicle.VehiclePart;
+
 import lombok.Getter;
 import net.minecraft.command.CommandBase;
 import net.minecraft.command.ICommandSender;
@@ -31,7 +31,7 @@ public class DebugCommand extends CommandBase {
     private static final String DEBUG_ARG_OFF = "off";
     private static final String DEBUG_ARG_PAUSE = "pause";
     private static final String DEBUG_ARG_PART = "part";
-    private static final String DEBUG_ARG_VPART = "vpart";
+
     private static final String DEBUG_ARG_SCALE = "scale";
     private static final String DEBUG_ARG_SHOW = "show";
     private static final String DEBUG_ARG_WATCH = "watch";
@@ -84,9 +84,7 @@ public class DebugCommand extends CommandBase {
         return String.format("/%s %s main|lhand|rhand", COMMAND_DEBUG, DEBUG_ARG_PART);
     }
 
-    private String getSubCommandVPartUsage() {
-        return String.format("/%s %s main|lhand|rhand|swheel", COMMAND_DEBUG, DEBUG_ARG_VPART);
-    }
+
 
     private String getSubCommandShowUsage() {
         return String.format("/%s %s code", COMMAND_DEBUG, DEBUG_ARG_SHOW);
@@ -122,9 +120,7 @@ public class DebugCommand extends CommandBase {
                 case DEBUG_ARG_PART:
                     processWeaponPartSubCommand(args);
                     break;
-                case DEBUG_ARG_VPART:
-                    processVehiclePartSubCommand(args);
-                    break;
+
                 case DEBUG_ARG_SHOW:
                     processShowSubCommand(args);
                     break;
@@ -504,54 +500,7 @@ public class DebugCommand extends CommandBase {
         }
     }
 
-    private void processVehiclePartSubCommand(String[] args) {
-        if (args.length != 2) {
-            MC.player.sendMessage(new TextComponentString(getSubCommandVPartUsage()));
-            return;
-        }
 
-        try {
-            switch (args[1].toLowerCase()) {
-                case "main":
-                    DebugPositioner.setDebugPart(VehiclePart.MAIN);
-                    break;
-                case "lhand":
-                    DebugPositioner.setDebugPart(VehiclePart.LEFT_HAND);
-                    break;
-                case "rhand":
-                    DebugPositioner.setDebugPart(VehiclePart.RIGHT_HAND);
-                    break;
-                case "swheel":
-                    DebugPositioner.setDebugPart(VehiclePart.STEERING_WHEEL);
-                    break;
-                case "flarm":
-                    DebugPositioner.setDebugPart(VehiclePart.FRONT_LEFT_CONTROL_ARM);
-                    break;
-                case "frarm":
-                    DebugPositioner.setDebugPart(VehiclePart.FRONT_RIGHT_CONTROL_ARM);
-                    break;
-                case "flwheel":
-                    DebugPositioner.setDebugPart(VehiclePart.FRONT_LEFT_WHEEL);
-                    break;
-                case "frwheel":
-                    DebugPositioner.setDebugPart(VehiclePart.FRONT_RIGHT_WHEEL);
-                    break;
-                case "rlwheel":
-                    DebugPositioner.setDebugPart(VehiclePart.REAR_LEFT_WHEEL);
-                    break;
-                case "rrwheel":
-                    DebugPositioner.setDebugPart(VehiclePart.REAR_RIGHT_WHEEL);
-                    break;
-                default:
-                    MC.player.sendMessage(new TextComponentString("Don't know anything about part " + args[1]));
-                    return;
-            }
-
-            MC.player.sendMessage(new TextComponentString("Debugging part " + args[1]));
-        } catch (NumberFormatException e) {
-            MC.player.sendMessage(new TextComponentString(getSubCommandVPartUsage()));
-        }
-    }
 
     @Override
     public int getRequiredPermissionLevel() {

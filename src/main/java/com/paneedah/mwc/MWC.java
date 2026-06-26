@@ -123,7 +123,7 @@ public final class MWC {
         CHANNEL.registerMessage(new ShellMessageHandler(), ShellMessageClient.class, -10, Side.CLIENT);
         CHANNEL.registerMessage(new BalancePackClientMessageHandler(), BalancePackClientMessage.class, -11, Side.CLIENT);
         CHANNEL.registerMessage(new BloodClientMessageHandler(), BloodClientMessage.class, -12, Side.CLIENT);
-        CHANNEL.registerMessage(new VehicleClientMessageHandler(), VehicleClientMessage.class, -13, Side.CLIENT);
+
         CHANNEL.registerMessage(new EntityInventorySyncMessageClientHandler(modContext), EntityInventorySyncMessage.class, -14, Side.CLIENT);
         CHANNEL.registerMessage(new ExposureMessageHandler(), ExposureMessage.class, -15, Side.CLIENT);
 
@@ -134,8 +134,7 @@ public final class MWC {
         CHANNEL.registerMessage(new NightVisionToggleMessageHandler(), NightVisionToggleMessage.class, 5, Side.SERVER);
         CHANNEL.registerMessage(new EntityInventorySyncMessageServerHandler(modContext), EntityInventorySyncMessage.class, 6, Side.SERVER);
         CHANNEL.registerMessage(new OpenCustomPlayerInventoryGuiMessageHandler(this), OpenCustomPlayerInventoryGuiMessage.class, 7, Side.SERVER);
-        CHANNEL.registerMessage(new VehicleControlMessageHandler(), VehicleControlMessage.class, 8, Side.SERVER);
-        CHANNEL.registerMessage(new VehicleInteractMessageHandler(), VehicleInteractMessage.class, 9, Side.SERVER);
+
         CHANNEL.registerMessage(new OpenDoorMessageHandler(), OpenDoorMessage.class, 10, Side.SERVER);
         CHANNEL.registerMessage(new CraftingStationServerMessageHandler(), CraftingStationServerMessage.class, 11, Side.SERVER);
         CHANNEL.registerMessage(new CraftingServerMessageHandler(), CraftingServerMessage.class, 12, Side.SERVER);

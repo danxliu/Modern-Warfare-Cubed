@@ -54,13 +54,10 @@ public class CompatibleRenderingRegistry implements ICustomModelLoader {
     }
 
     public void register(Item item, String name, Object renderer) {
-        if (renderer != null) {
-            renderers.add((ModelSource) renderer);
-        }
-
-        modelSourceLocations.add(ID + ":models/item/" + name);
         ModelResourceLocation modelID = new ModelResourceLocation(ID + ":" + name, "inventory");
         if (renderer != null) {
+            renderers.add((ModelSource) renderer);
+            modelSourceLocations.add((ID + ":models/item/" + name).toLowerCase());
             ((ModelSource) renderer).setModelResourceLocation(modelID);
         }
 
@@ -74,7 +71,7 @@ public class CompatibleRenderingRegistry implements ICustomModelLoader {
         // TODO: figure out what's going on with this name
         if (renderer != null) {
             renderers.add((ModelSource) renderer);
-            modelSourceLocations.add(ID + ":models/item/" + name);
+            modelSourceLocations.add((ID + ":models/item/" + name).toLowerCase());
         }
 
         ModelResourceLocation modelID = new ModelResourceLocation(name, "inventory");
@@ -103,9 +100,12 @@ public class CompatibleRenderingRegistry implements ICustomModelLoader {
         return ModelLoaderRegistry.getMissingModel();
     }
 
-    public void registerEntityRenderingHandler(Class<? extends Entity> class1,
-                                               Object spawnEntityRenderer) {
-        RenderingRegistry.registerEntityRenderingHandler(class1, (Render<? extends Entity>) spawnEntityRenderer);
+    public void registerEntityRenderingHandler(Class<? extends Entity> class1, Object spawnEntityRenderer) {
+        if (spawnEntityRenderer instanceof net.minecraftforge.fml.client.registry.IRenderFactory) {
+            RenderingRegistry.registerEntityRenderingHandler(class1, (net.minecraftforge.fml.client.registry.IRenderFactory) spawnEntityRenderer);
+        } else {
+            RenderingRegistry.registerEntityRenderingHandler(class1, (Render<? extends Entity>) spawnEntityRenderer);
+        }
     }
 
     public void processDelayedRegistrations() {

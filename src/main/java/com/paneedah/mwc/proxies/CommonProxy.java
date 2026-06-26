@@ -11,13 +11,9 @@ import com.paneedah.mwc.items.melee.NightStickFactory;
 import com.paneedah.mwc.items.melee.TacticalTomahawkFactory;
 import com.paneedah.mwc.skins.GunSkins;
 import com.paneedah.mwc.tileentities.TileEntities;
-import com.paneedah.mwc.tileentities.TurretBaseFactory;
-import com.paneedah.mwc.vehicle.Vehicles;
 import com.paneedah.mwc.weapons.*;
-import com.paneedah.weaponlib.UniversalSoundLookup;
 import com.paneedah.weaponlib.SpecialAttachments;
-import com.paneedah.weaponlib.vehicle.network.VehicleDataSerializer;
-import com.paneedah.weaponlib.vehicle.network.VehiclePhysSerializer;
+import com.paneedah.weaponlib.UniversalSoundLookup;
 import net.minecraft.network.datasync.DataSerializers;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
@@ -57,7 +53,6 @@ public class CommonProxy {
         new BaseballBatNailsFactory().createMelee(this);
         new NightStickFactory().createMelee(this);
 
-        TurretBaseFactory.createTileEntity(MWC.modContext);
         TileEntities.createTileEntity(MWC.modContext);
 
         MWC.modContext.preInitEnd(mod);
@@ -67,11 +62,12 @@ public class CommonProxy {
         MWC.modContext.init(mod);
 
         Entities.init(MWC.modContext);
-        Vehicles.init(MWC.modContext);
 
         GameRegistry.registerWorldGenerator(new ModernWorldGenerator(), 0);
     }
 
-    public void postInit(final MWC mod, final FMLPostInitializationEvent initializationEvent) {
-    }
+    public void postInit(
+        final MWC mod,
+        final FMLPostInitializationEvent initializationEvent
+    ) {}
 }

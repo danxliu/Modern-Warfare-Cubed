@@ -3,7 +3,7 @@ package com.paneedah.weaponlib;
 import com.paneedah.mwc.asm.Interceptors;
 import com.paneedah.mwc.instancing.PlayerItemInstance;
 import com.paneedah.mwc.instancing.PlayerWeaponInstance;
-import com.paneedah.mwc.network.messages.VehicleInteractMessage;
+
 import com.paneedah.mwc.proxies.ClientProxy;
 import com.paneedah.mwc.utils.MWCUtil;
 import com.paneedah.mwc.utils.PlayerUtil;
@@ -26,8 +26,7 @@ import com.paneedah.weaponlib.shader.dynamic.DynamicShaderGroupManager;
 import com.paneedah.weaponlib.shader.dynamic.DynamicShaderGroupSource;
 import com.paneedah.weaponlib.shader.dynamic.DynamicShaderPhase;
 import com.paneedah.weaponlib.tracking.LivingEntityTracker;
-import com.paneedah.weaponlib.vehicle.EntityVehicle;
-import com.paneedah.weaponlib.vehicle.collisions.OreintedBB;
+
 import net.minecraft.block.Block;
 import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -154,11 +153,6 @@ public class ClientEventHandler {
             LivingEntityTracker tracker = LivingEntityTracker.getTracker(MC.player);
             if (tracker != null) {
                 tracker.update();
-            }
-            if (player instanceof EntityPlayerSP && player.getRidingEntity() instanceof EntityVehicle) {
-                final EntityPlayerSP clientPlayer = (EntityPlayerSP) player;
-                final EntityVehicle entityBoat = (EntityVehicle) clientPlayer.getRidingEntity();
-                entityBoat.updateInputs(clientPlayer.movementInput.leftKeyDown, clientPlayer.movementInput.rightKeyDown, clientPlayer.movementInput.forwardKeyDown, clientPlayer.movementInput.backKeyDown);
             }
 
             if (MC.player != null) {
@@ -376,9 +370,6 @@ public class ClientEventHandler {
     @SubscribeEvent
     @SideOnly(Side.CLIENT)
     protected void onPreRenderPlayerPreEvent(RenderPlayerEvent.Pre event) {
-        if (event.getEntityPlayer().isRiding() && event.getEntityPlayer().getRidingEntity() instanceof EntityVehicle && event.getEntityPlayer().limbSwing != 39) {
-            event.setCanceled(true);
-        }
 
         final ClientModContext modContext = (ClientModContext) getModContext();
 
@@ -429,42 +420,6 @@ public class ClientEventHandler {
         }
     }
 
-    @SubscribeEvent
-    public void onRightHandEmpty(PlayerInteractEvent.RightClickEmpty event) {
-        handleVehicleInteraction(event, true, 10, 7);
-    }
-
-    @SubscribeEvent
-    public void onLeftHandEmpty(PlayerInteractEvent.LeftClickEmpty event) {
-        handleVehicleInteraction(event, false, 3, 4);
-    }
-
-    private void handleVehicleInteraction(PlayerInteractEvent event, boolean isRightClick, int range, int rayLength) {
-        final EntityPlayer player = MC.player;
-        if (player == null || player.world == null) {
-            return; // Early exit if player or world is null
-        }
-
-        final List<EntityVehicle> entityVehicleList = player.world.getEntitiesWithinAABB(
-                EntityVehicle.class,
-                new AxisAlignedBB(player.getPosition()).grow(range)
-        );
-
-        if (entityVehicleList.isEmpty()) {
-            return;
-        }
-
-        Vec3d start = player.getPositionEyes(MC.getRenderPartialTicks());
-        Vec3d endVec = start.add(player.getLookVec().scale(rayLength));
-
-        for (EntityVehicle entityVehicle : entityVehicleList) {
-            OreintedBB boundingBox = entityVehicle.getOreintedBoundingBox();
-            if (boundingBox.doRayTrace(start, endVec) != null) {
-                CHANNEL.sendToServer(new VehicleInteractMessage(isRightClick, entityVehicle.getEntityId(), player.getEntityId()));
-                return; // Exit after the first valid interaction
-            }
-        }
-    }
 
 
     public static TextureAtlasSprite carParticles;
@@ -500,19 +455,6 @@ public class ClientEventHandler {
         }
     }
 
-    @SubscribeEvent
-    @SideOnly(Side.CLIENT)
-    public final void updateFOV(FOVUpdateEvent fovUpdateEvent) {
-        final EntityPlayer player = fovUpdateEvent.getEntity();
-
-        if (!player.isRiding() || !(player.getRidingEntity() instanceof EntityVehicle)) {
-            return;
-        }
-
-        final EntityVehicle vehicle = (EntityVehicle) player.getRidingEntity();
-
-        fovUpdateEvent.setNewfov((float) (fovUpdateEvent.getFov() + ((vehicle.getSolver().getSyntheticAcceleration() / 55 + (vehicle.getRealSpeed() / 120)) * 0.2)));
-    }
 
     @SubscribeEvent
     public void keyInputEvent(GuiScreenEvent.KeyboardInputEvent kie) {

@@ -13,8 +13,7 @@ import com.paneedah.weaponlib.debug.DebugRenderer;
 import com.paneedah.weaponlib.electronics.ItemHandheld;
 import com.paneedah.weaponlib.render.gui.ModificationGUI;
 import com.paneedah.weaponlib.render.gui.GUIRenderHelper;
-import com.paneedah.weaponlib.vehicle.EntityVehicle;
-import com.paneedah.weaponlib.vehicle.VehicleCustomGUI;
+
 import net.minecraft.block.BlockDoor;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.gui.Gui;
@@ -107,7 +106,7 @@ public final class HUD extends Gui {
     private static final double OPEN_DOOR_PERCENT_WIDTH_POS = 0.4;
     private static final double OPEN_DOOR_PERCENT_HEIGHT_POS = 0.6;
 
-    public static final VehicleCustomGUI VEHICLE_GUI_OVERLAY = new VehicleCustomGUI();
+
     private static final ResourceLocation AMMUNITION_COUNTER_TEXTURES = QuickResourceLocation.quickLoc("gui", "hud");
 
     private boolean playerLookingAtDoor;
@@ -122,7 +121,7 @@ public final class HUD extends Gui {
         handleCrosshair(renderGameOverlayEvent);
 
         handleHelmetHUD(renderGameOverlayEvent);
-        handleVehicleHUD(renderGameOverlayEvent);
+
         handleAnimationModeHUD(renderGameOverlayEvent);
         handleAmmunitionCounterHUD(renderGameOverlayEvent);
 
@@ -156,17 +155,17 @@ public final class HUD extends Gui {
         final int screenWidth = scaledResolution.getScaledWidth();
         final int screenHeight = scaledResolution.getScaledHeight();
 
-        GlStateManager.pushAttrib(); // TODO: This fucks up the GlStateManager - Luna Mira Lage (Desoroxxx) 2025-12-28
+        GL11.glPushAttrib(GL11.GL_ALL_ATTRIB_BITS);
 
-        GlStateManager.color(1, 1, 1, 1);
-        GlStateManager.disableLighting();
-        GlStateManager.blendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE_MINUS_SRC_ALPHA);
-        GlStateManager.enableBlend();
+        GL11.glColor4f(1, 1, 1, 1);
+        GL11.glDisable(GL11.GL_LIGHTING);
+        GL11.glBlendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE_MINUS_SRC_ALPHA);
+        GL11.glEnable(GL11.GL_BLEND);
 
         MC.renderEngine.bindTexture(new ResourceLocation(hudTexture));
         drawFullScreenQuad(screenWidth, screenHeight);
 
-        GlStateManager.popAttrib(); // TODO: This fucks up the GlStateManager - Luna Mira Lage (Desoroxxx) 2025-12-28
+        GL11.glPopAttrib();
     }
 
     private static void drawFullScreenQuad(final double width, final double height) {
@@ -185,28 +184,7 @@ public final class HUD extends Gui {
 
     // endregion
 
-    // region Vehicle HUD
 
-    private void handleVehicleHUD(final RenderGameOverlayEvent.Pre renderGameOverlayEvent) {
-        final ElementType eventType = renderGameOverlayEvent.getType();
-
-        if (!MC.player.isRiding() || !(MC.player.getRidingEntity() instanceof EntityVehicle))
-            return;
-
-        final EntityVehicle entityVehicle = (EntityVehicle) MC.player.getRidingEntity();
-
-        if (!Double.isNaN(entityVehicle.getSolver().getVelocityVector().lengthSquared()) && entityVehicle.getSolver().getVelocityVector().lengthSquared() != 0 &&
-                (eventType == CROSSHAIRS || eventType == HOTBAR || eventType == HEALTH || eventType == EXPERIENCE || eventType == ARMOR)) {
-            renderGameOverlayEvent.setCanceled(true);
-        }
-
-        if (eventType != HOTBAR)
-            return;
-
-        VEHICLE_GUI_OVERLAY.renderGUI(entityVehicle);
-    }
-
-    // endregion
 
     // region Animation Mode HUD
 

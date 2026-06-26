@@ -6,7 +6,7 @@ import com.paneedah.mwc.proxies.ClientProxy;
 import com.paneedah.weaponlib.compatibility.CompatibleExposureCapability;
 import com.paneedah.mwc.instancing.PlayerGrenadeInstance;
 import com.paneedah.weaponlib.melee.PlayerMeleeInstance;
-import com.paneedah.weaponlib.vehicle.EntityVehicle;
+
 import net.minecraft.client.model.ModelBiped;
 import net.minecraft.client.renderer.entity.RenderPlayer;
 import net.minecraft.entity.player.EntityPlayer;
@@ -132,13 +132,7 @@ public class WeaponEventHandler {
         }
     }
 
-    @SideOnly(Side.CLIENT)
-    @SubscribeEvent
-    public final void onRenderItemEvent(RenderHandEvent event) {
-        if (MC.player.getRidingEntity() instanceof EntityVehicle) {
-            event.setCanceled(true);
-        }
-    }
+
 
     @SubscribeEvent
     public void onEntityJoinedWorldEvent(EntityJoinWorldEvent entityJoinWorldEvent) {
