@@ -26,7 +26,10 @@ public class MWCRecipes {
     }
 
     @SubscribeEvent
-    public static void registerItems(RegistryEvent.Register<IRecipe> itemRegistryEvent) {
+    public static void registerItems(RegistryEvent.Register<IRecipe> event) {
         CraftingFileManager.getInstance().loadDirectory();
+
+        // Crafting recipes are loaded via JSON in assets/mwc/recipes/
     }
 }
+

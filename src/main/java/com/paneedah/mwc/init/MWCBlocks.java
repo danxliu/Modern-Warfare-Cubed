@@ -1,7 +1,7 @@
 package com.paneedah.mwc.init;
 
-import com.paneedah.mwc.bases.BlockBase;
 import com.paneedah.mwc.bases.OreBase;
+import com.paneedah.mwc.blocks.BarbedWireBlock;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
@@ -12,6 +12,9 @@ import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.oredict.OreDictionary;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import static com.paneedah.mwc.ProjectConstants.ID;
 
@@ -24,7 +27,9 @@ public class MWCBlocks {
     public static OreBase leadOre;
     public static OreBase graphiteOre;
 
-    public static OreBase[] blocks;
+    public static BarbedWireBlock barbedWire;
+
+    public static final List<Block> ALL_BLOCKS = new ArrayList<>();
 
     public static void init() {
         copperOre = new OreBase("copper_ore");
@@ -48,40 +53,40 @@ public class MWCBlocks {
         graphiteOre.setItemDropped(MWCItems.graphiteChunk);
         graphiteOre.setDropAmount(1, 3);
 
-        blocks = new OreBase[]{
-                copperOre,
-                tinOre,
-                sulfurOre,
-                leadOre,
-                graphiteOre
-        };
+        barbedWire = new BarbedWireBlock();
+
+        ALL_BLOCKS.add(copperOre);
+        ALL_BLOCKS.add(tinOre);
+        ALL_BLOCKS.add(leadOre);
+        ALL_BLOCKS.add(sulfurOre);
+        ALL_BLOCKS.add(graphiteOre);
+        ALL_BLOCKS.add(barbedWire);
     }
 
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> blockRegistryEvent) {
-        blockRegistryEvent.getRegistry().registerAll(blocks);
+        blockRegistryEvent.getRegistry().registerAll(ALL_BLOCKS.toArray(new Block[0]));
     }
 
     @SubscribeEvent
     public static void registerItemBlock(RegistryEvent.Register<Item> itemRegistryEvent) {
-        Item[] items = new Item[blocks.length];
+        Item[] items = new Item[ALL_BLOCKS.size()];
 
-        for (int i = 0; i < blocks.length; i++) {
-            items[i] = new ItemBlock(blocks[i]);
-            items[i].setRegistryName(blocks[i].getRegistryName());
+        for (int i = 0; i < ALL_BLOCKS.size(); i++) {
+            items[i] = new ItemBlock(ALL_BLOCKS.get(i));
+            items[i].setRegistryName(ALL_BLOCKS.get(i).getRegistryName());
         }
 
         itemRegistryEvent.getRegistry().registerAll(items);
-        registerOreDictionaryKeys(blocks);
+        registerOreDictionaryKeys(ALL_BLOCKS);
     }
 
-    static void registerOreDictionaryKeys(OreBase[] blocks) {
-        for (OreBase block : blocks) {
-            String[] oreDictKeys = block.getOreDictKeys();
+    static void registerOreDictionaryKeys(List<Block> blocks) {
+        for (Block block : blocks) {
+            if (!(block instanceof OreBase)) continue;
 
-            if (oreDictKeys == null) {
-                continue;
-            }
+            String[] oreDictKeys = ((OreBase) block).getOreDictKeys();
+            if (oreDictKeys == null) continue;
 
             for (String oreDictKey : oreDictKeys) {
                 OreDictionary.registerOre(oreDictKey, block);
@@ -91,10 +96,8 @@ public class MWCBlocks {
 
     @SubscribeEvent
     public static void registerRenders(ModelRegistryEvent modelRegistryEvent) {
-        for (Block block : blocks) {
-            if (block instanceof BlockBase || block instanceof OreBase) {
-                ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), 0, new ModelResourceLocation(block.getRegistryName().toString(), "inventory"));
-            }
+        for (Block block : ALL_BLOCKS) {
+            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), 0, new ModelResourceLocation(block.getRegistryName().toString(), "inventory"));
         }
     }
 }
