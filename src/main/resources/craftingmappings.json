@@ -10831,30 +10831,6 @@
       ]
     },
     {
-      "entryName": "mwc:mas_21",
-      "craftingGroup": "GUN",
-      "recipe": [
-        {
-          "entryName": "compositePolymerSynthetic",
-          "defaultItem": "mwc:synthetic_polymer_composite",
-          "isOreDictionary": true,
-          "count": 7
-        },
-        {
-          "entryName": "plateGunmetal",
-          "defaultItem": "mwc:gunmetal_plate",
-          "isOreDictionary": true,
-          "count": 11
-        },
-        {
-          "entryName": "ingotSteel",
-          "defaultItem": "mwc:steel_ingot",
-          "isOreDictionary": true,
-          "count": 4
-        }
-      ]
-    },
-    {
       "entryName": "mwc:steyr_aug_a1",
       "craftingGroup": "GUN",
       "recipe": [
@@ -11618,30 +11594,6 @@
     },
     {
       "entryName": "mwc:m60e4",
-      "craftingGroup": "GUN",
-      "recipe": [
-        {
-          "entryName": "compositePolymerSynthetic",
-          "defaultItem": "mwc:synthetic_polymer_composite",
-          "isOreDictionary": true,
-          "count": 14
-        },
-        {
-          "entryName": "plateGunmetal",
-          "defaultItem": "mwc:gunmetal_plate",
-          "isOreDictionary": true,
-          "count": 18
-        },
-        {
-          "entryName": "ingotSteel",
-          "defaultItem": "mwc:steel_ingot",
-          "isOreDictionary": true,
-          "count": 8
-        }
-      ]
-    },
-    {
-      "entryName": "mwc:stonera1",
       "craftingGroup": "GUN",
       "recipe": [
         {
