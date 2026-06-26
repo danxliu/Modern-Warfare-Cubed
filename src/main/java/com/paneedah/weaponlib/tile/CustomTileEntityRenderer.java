@@ -24,12 +24,18 @@ public class CustomTileEntityRenderer<T extends CustomTileEntity<?>>
     private final ModelBase model;
     private final ResourceLocation textureResource;
     private final Consumer<TileEntity> positioning;
+    private final float displayScale;
+    private final float offsetX, offsetY, offsetZ;
 
     public CustomTileEntityRenderer(ModelBase model, ResourceLocation textureResource,
-                                    Consumer<TileEntity> positioning) {
+                                    Consumer<TileEntity> positioning, float displayScale, float offsetX, float offsetY, float offsetZ) {
         this.model = model;
         this.textureResource = textureResource;
         this.positioning = positioning;
+        this.displayScale = displayScale;
+        this.offsetX = offsetX;
+        this.offsetY = offsetY;
+        this.offsetZ = offsetZ;
     }
 
     /**
@@ -79,5 +85,8 @@ public class CustomTileEntityRenderer<T extends CustomTileEntity<?>>
 
         GlStateManager.translate(-0.5F, -0.5F, -0.5F);
         GlStateManager.translate(0F, -0.5F, 0F);
+
+        GlStateManager.scale(displayScale, displayScale, displayScale);
+        GlStateManager.translate(offsetX, offsetY, offsetZ);
     }
 }

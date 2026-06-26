@@ -81,7 +81,8 @@ final class HierarchicalPartRenderer<Part, State> implements StatefulRenderer<St
         try {
 
             EntityVehicle v = (EntityVehicle) context.getEntity();
-            VehicleState state = (v).getState();
+            VehicleState state = v != null ? v.getState() : VehicleState.IDLE;
+
 
 
             positioner.position(SinglePart.MAIN, context);
@@ -93,8 +94,8 @@ final class HierarchicalPartRenderer<Part, State> implements StatefulRenderer<St
             int pass = net.minecraftforge.client.MinecraftForgeClient.getRenderPass();
 
 
-            double susRoll = InterpolationUtil.interpolateValue(v.getSolver().prevSuspensionRoll, v.getSolver().suspensionRoll, MC.getRenderPartialTicks());
-            double susPitch = InterpolationUtil.interpolateValue(v.getSolver().prevSuspensionPitch, v.getSolver().suspensionPitch, MC.getRenderPartialTicks());
+            double susRoll = v != null ? InterpolationUtil.interpolateValue(v.getSolver().prevSuspensionRoll, v.getSolver().suspensionRoll, MC.getRenderPartialTicks()) : 0.0;
+            double susPitch = v != null ? InterpolationUtil.interpolateValue(v.getSolver().prevSuspensionPitch, v.getSolver().suspensionPitch, MC.getRenderPartialTicks()) : 0.0;
 
             // System.out.println(susPitch);
             if (pass == 0 && part != VehiclePart.WINDOWS) {
@@ -138,7 +139,7 @@ final class HierarchicalPartRenderer<Part, State> implements StatefulRenderer<St
                         //System.out.println(partRenderer.);
 
 
-                        if (v.getConfiguration().performShiftAnimation()) {
+                        if (v != null && v.getConfiguration().performShiftAnimation()) {
                             if (v.getConfiguration().shiftWithRight()) {
                                 if (renderablePart == VehiclePart.RIGHT_HAND) {
 
@@ -165,16 +166,16 @@ final class HierarchicalPartRenderer<Part, State> implements StatefulRenderer<St
 
                         }
 
-                        if (renderablePart == VehiclePart.RIGHT_HAND && (!v.getConfiguration().shiftWithRight() || !v.getConfiguration().performShiftAnimation())
-                                && part == VehiclePart.MAIN) {
-                            continue;
+                        if (v != null) {
+                            if (renderablePart == VehiclePart.RIGHT_HAND && (!v.getConfiguration().shiftWithRight() || !v.getConfiguration().performShiftAnimation())
+                                    && part == VehiclePart.MAIN) {
+                                continue;
+                            }
 
-                        }
-
-                        if (renderablePart == VehiclePart.LEFT_HAND && (v.getConfiguration().shiftWithRight() || !v.getConfiguration().performShiftAnimation())
-                                && part == VehiclePart.MAIN) {
-                            continue;
-
+                            if (renderablePart == VehiclePart.LEFT_HAND && (v.getConfiguration().shiftWithRight() || !v.getConfiguration().performShiftAnimation())
+                                    && part == VehiclePart.MAIN) {
+                                continue;
+                            }
                         }
 
 

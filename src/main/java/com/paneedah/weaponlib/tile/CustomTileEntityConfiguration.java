@@ -8,6 +8,7 @@ import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemBlock;
+import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.AxisAlignedBB;
@@ -18,6 +19,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Supplier;
@@ -36,8 +38,24 @@ public class CustomTileEntityConfiguration<T extends CustomTileEntityConfigurati
     private final AtomicInteger counter = new AtomicInteger(10000);
     private final Supplier<Integer> entityIdSupplier = () -> counter.incrementAndGet();
     private Consumer<TileEntity> positioning = tileEntity -> {};
+    private BiConsumer<ItemStack, net.minecraft.client.renderer.block.model.ItemCameraTransforms.TransformType> itemPositioning = (itemStack, transformType) -> {};
     private Function<IBlockState, AxisAlignedBB> boundingBox;
+    private float displayScale = 1.0F;
+    private float displayOffsetX = 0F;
+    private float displayOffsetY = 0F;
+    private float displayOffsetZ = 0F;
 
+    public T withDisplayScale(float scale) {
+        this.displayScale = scale;
+        return safeCast(this);
+    }
+
+    public T withDisplayOffset(float x, float y, float z) {
+        this.displayOffsetX = x;
+        this.displayOffsetY = y;
+        this.displayOffsetZ = z;
+        return safeCast(this);
+    }
 
     private T safeCast(CustomTileEntityConfiguration<T> input) {
         return (T) input;
@@ -83,6 +101,11 @@ public class CustomTileEntityConfiguration<T extends CustomTileEntityConfigurati
         return safeCast(this);
     }
 
+    public T withItemPositioning(BiConsumer<ItemStack, net.minecraft.client.renderer.block.model.ItemCameraTransforms.TransformType> itemPositioning) {
+        this.itemPositioning = itemPositioning;
+        return safeCast(this);
+    }
+
     public T withBoundingBox(Function<IBlockState, AxisAlignedBB> boundingBox) {
         this.boundingBox = boundingBox;
         return safeCast(this);
@@ -106,6 +129,20 @@ public class CustomTileEntityConfiguration<T extends CustomTileEntityConfigurati
     }
 
     public void build(ModContext modContext) {
+
+        ModelBase model = null;
+        if (FMLCommonHandler.instance().getSide() == Side.CLIENT) {
+            try {
+                model = (ModelBase) Class.forName(modelClassName).newInstance();
+            } catch (InstantiationException | IllegalAccessException | ClassNotFoundException e) {
+                e.printStackTrace();
+            }
+        }
+
+        if (this.boundingBox == null && model != null) {
+            AxisAlignedBB aabb = ModelAABB.compute(model);
+            this.boundingBox = state -> aabb;
+        }
 
         Class<? extends TileEntity> tileEntityClass = createTileEntityClass();
 
@@ -136,11 +173,16 @@ public class CustomTileEntityConfiguration<T extends CustomTileEntityConfigurati
         ItemBlock itemBlock = new ItemBlock(tileEntityBlock);
         // TODO: introduce registerItem()
 
-        modContext.registerRenderableItem(tileEntityBlock.getRegistryName(), itemBlock, null);
+        Object itemRenderer = null;
+        if (FMLCommonHandler.instance().getSide() == Side.CLIENT) {
+            itemRenderer = RendererRegistration.createItemRenderer(model, textureResource, positioning, itemPositioning, displayScale, displayOffsetX, displayOffsetY, displayOffsetZ);
+        }
+
+        modContext.registerRenderableItem(tileEntityBlock.getRegistryName(), itemBlock, itemRenderer);
 
         if (FMLCommonHandler.instance().getSide() == Side.CLIENT) {
-            RendererRegistration.registerRenderableEntity(modContext, name, tileEntityClass, modelClassName,
-                    textureResource, positioning, tileEntityBlock);
+            RendererRegistration.registerRenderableEntity(modContext, name, tileEntityClass, model,
+                    textureResource, positioning, tileEntityBlock, displayScale, displayOffsetX, displayOffsetY, displayOffsetZ);
         }
     }
 
@@ -148,24 +190,15 @@ public class CustomTileEntityConfiguration<T extends CustomTileEntityConfigurati
         /*
          * This method is wrapped into a static class to facilitate conditional client-side only loading
          */
+        private static Object createItemRenderer(ModelBase model, ResourceLocation textureResource, Consumer<TileEntity> positioning, BiConsumer<ItemStack, net.minecraft.client.renderer.block.model.ItemCameraTransforms.TransformType> itemPositioning, float displayScale, float displayOffsetX, float displayOffsetY, float displayOffsetZ) {
+            return new CustomTileEntityItemRenderer(model, textureResource, positioning, itemPositioning, displayScale, displayOffsetX, displayOffsetY, displayOffsetZ);
+        }
+
         private static <T extends CustomTileEntityConfiguration<T>> void registerRenderableEntity(
-                ModContext context, String name, Class<? extends TileEntity> tileEntityClass, String modelClassName,
-                ResourceLocation textureResource, Consumer<TileEntity> positioning, CustomTileEntityBlock tileEntityBlock) {
-            try {
-
-//                MC.getRenderItem().getItemModelMesher()
-//                    .register(Item.getItemFromBlock(tileEntityBlock), 0,
-//                        new ModelResourceLocation(ID + ":" + name, "inventory"));
-
-//                ModelResourceLocation itemModelResourceLocation = new ModelResourceLocation(ID + ":" + name, "inventory");
-//                ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(tileEntityBlock), 0, itemModelResourceLocation);
-
-                ModelBase model = (ModelBase) Class.forName(modelClassName).newInstance();
-                ClientRegistry.bindTileEntitySpecialRenderer(tileEntityClass, (TileEntitySpecialRenderer) new CustomTileEntityRenderer(model, textureResource, positioning));
-
-            } catch (InstantiationException | IllegalAccessException | ClassNotFoundException e) {
-                e.printStackTrace();
-            }
+                ModContext context, String name, Class<? extends TileEntity> tileEntityClass, ModelBase model,
+                ResourceLocation textureResource, Consumer<TileEntity> positioning, CustomTileEntityBlock tileEntityBlock, float displayScale, float displayOffsetX, float displayOffsetY, float displayOffsetZ) {
+            
+            ClientRegistry.bindTileEntitySpecialRenderer(tileEntityClass, (TileEntitySpecialRenderer) new CustomTileEntityRenderer(model, textureResource, positioning, displayScale, displayOffsetX, displayOffsetY, displayOffsetZ));
         }
     }
 }

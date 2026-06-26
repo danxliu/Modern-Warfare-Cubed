@@ -345,19 +345,12 @@ public class EntityVehicleConfiguration implements EntityConfiguration {
 
             ItemVehicle vehicleItem = new ItemVehicle(entityName, entityClass);
 
-            vehicleItem.setRegistryName(ID, entityName); // temporary hack
-            ForgeRegistries.ITEMS.register(vehicleItem);
-            //System.out.println("Renderer Registrar: " + (ID + ":"  + entityName));
-            //ModelLoader.setCustomModelResourceLocation(vehicleItem, 0, new net.minecraft.client.renderer.block.model.ModelResourceLocation(ID + ":"  + entityName, "inventory"));
-
-            // register the item renderer
-
-
-            // System.out.println("VEHICLE REGISTRY NAME: " + vehicleItem.getRegistryName());
-            //
-//            if(spawnEgg) {
-//                compatibility.registerEgg(context, entityClass, entityName, primaryEggColor, secondaryEggColor);
-//            }
+            Object itemRenderer = null;
+            if (FMLCommonHandler.instance().getSide() == Side.CLIENT) {
+                itemRenderer = RendererRegistration.createItemRenderer(renderer, entityClass);
+            }
+            
+            context.registerRenderableItem(entityName, vehicleItem, itemRenderer);
 
             if (FMLCommonHandler.instance().getSide() == Side.CLIENT) {
                 RendererRegistration.registerRenderableEntity(context, entityClass, renderer);
@@ -366,6 +359,11 @@ public class EntityVehicleConfiguration implements EntityConfiguration {
         }
 
         private static class RendererRegistration {
+            
+            private static Object createItemRenderer(StatefulRenderer<VehicleRenderableState> renderer, Class<? extends Entity> entityClass) {
+                return new VehicleItemRenderer(renderer, entityClass);
+            }
+            
             /*
              * This method is wrapped into a static class to facilitate conditional client-side only loading
              */
