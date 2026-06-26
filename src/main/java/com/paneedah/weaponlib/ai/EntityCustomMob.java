@@ -5,7 +5,9 @@ import com.paneedah.mwc.network.messages.EntityPickupMessage;
 import com.paneedah.weaponlib.*;
 import com.paneedah.weaponlib.ai.EntityConfiguration.Equipment;
 import com.paneedah.weaponlib.ai.EntityConfiguration.TexturedModel;
-import com.paneedah.weaponlib.compatibility.CompatibleDataManager;
+import net.minecraft.network.datasync.DataParameter;
+import net.minecraft.network.datasync.DataSerializers;
+import net.minecraft.network.datasync.EntityDataManager;
 import com.paneedah.weaponlib.grenade.GrenadeAttackAspect;
 import com.paneedah.weaponlib.grenade.ItemGrenade;
 import lombok.Getter;
@@ -43,12 +45,11 @@ import static com.paneedah.mwc.MWC.CHANNEL;
 public class EntityCustomMob extends EntityMob implements IRangedAttackMob, Contextual, Configurable<EntityConfiguration> {
 
     private static final float FLAT_WORLD_SPAWN_CHANCE = 0.01f;
-    private static final CompatibleDataManager.Key VARIANT = CompatibleDataManager.createKey(EntityCustomMob.class, int.class);
-    private static final CompatibleDataManager.Key SWINGING_ARMS = CompatibleDataManager.createKey(EntityCustomMob.class, boolean.class);
-    private static final CompatibleDataManager.Key DELAYED_ATTACK_TIMER_INCREMENT = CompatibleDataManager.createKey(EntityCustomMob.class, int.class);
-    private static final CompatibleDataManager.Key DELAYED_ATTACK_STARTED = CompatibleDataManager.createKey(EntityCustomMob.class, boolean.class);
+    private static final DataParameter<Integer> VARIANT = EntityDataManager.createKey(EntityCustomMob.class, DataSerializers.VARINT);
+    private static final DataParameter<Boolean> SWINGING_ARMS = EntityDataManager.createKey(EntityCustomMob.class, DataSerializers.BOOLEAN);
+    private static final DataParameter<Integer> DELAYED_ATTACK_TIMER_INCREMENT = EntityDataManager.createKey(EntityCustomMob.class, DataSerializers.VARINT);
+    private static final DataParameter<Boolean> DELAYED_ATTACK_STARTED = EntityDataManager.createKey(EntityCustomMob.class, DataSerializers.BOOLEAN);
 
-    protected CompatibleDataManager compatibleDataManager;
 
     private ModContext modContext;
 
@@ -126,11 +127,10 @@ public class EntityCustomMob extends EntityMob implements IRangedAttackMob, Cont
 
     protected void entityInit() {
         super.entityInit();
-        compatibleDataManager = new CompatibleDataManager(dataManager);
-        compatibleDataManager.register(VARIANT, Integer.valueOf(0));
-        compatibleDataManager.register(SWINGING_ARMS, Boolean.valueOf(false));
-        compatibleDataManager.register(DELAYED_ATTACK_TIMER_INCREMENT, Integer.valueOf(0));
-        compatibleDataManager.register(DELAYED_ATTACK_STARTED, Boolean.valueOf(false));
+        this.dataManager.register(VARIANT, 0);
+        this.dataManager.register(SWINGING_ARMS, false);
+        this.dataManager.register(DELAYED_ATTACK_TIMER_INCREMENT, 0);
+        this.dataManager.register(DELAYED_ATTACK_STARTED, false);
     }
 
     @Override
@@ -479,19 +479,19 @@ public class EntityCustomMob extends EntityMob implements IRangedAttackMob, Cont
     }
 
     public int getVariant() {
-        return this.compatibleDataManager.get(VARIANT).intValue();
+        return this.dataManager.get(VARIANT);
     }
 
     public void setVariant(int variant) {
-        this.compatibleDataManager.set(VARIANT, Integer.valueOf(variant));
+        this.dataManager.set(VARIANT, variant);
     }
 
     public boolean isSwingingArms() {
-        return this.compatibleDataManager.get(SWINGING_ARMS).booleanValue();
+        return this.dataManager.get(SWINGING_ARMS);
     }
 
     public void setSwingingArms(boolean swingingArms) {
-        this.compatibleDataManager.set(SWINGING_ARMS, Boolean.valueOf(swingingArms));
+        this.dataManager.set(SWINGING_ARMS, swingingArms);
     }
 
     @Override
@@ -571,19 +571,19 @@ public class EntityCustomMob extends EntityMob implements IRangedAttackMob, Cont
     }
 
     public void setDelayedAttackTimerIncrement(int increment) {
-        this.compatibleDataManager.set(DELAYED_ATTACK_TIMER_INCREMENT, Integer.valueOf(increment));
+        this.dataManager.set(DELAYED_ATTACK_TIMER_INCREMENT, increment);
     }
 
     public int getDelayedAttackTimerIncrement() {
-        return this.compatibleDataManager.get(DELAYED_ATTACK_TIMER_INCREMENT).intValue();
+        return this.dataManager.get(DELAYED_ATTACK_TIMER_INCREMENT);
     }
 
     public boolean isDelayedAttackStarted() {
-        return this.compatibleDataManager.get(DELAYED_ATTACK_STARTED).booleanValue();
+        return this.dataManager.get(DELAYED_ATTACK_STARTED);
     }
 
     public void startDelayedAttack() {
-        this.compatibleDataManager.set(DELAYED_ATTACK_STARTED, Boolean.valueOf(true));
+        this.dataManager.set(DELAYED_ATTACK_STARTED, true);
     }
 
     @Override
