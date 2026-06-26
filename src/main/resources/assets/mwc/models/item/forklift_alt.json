@@ -1,65 +1,72 @@
 {
-    "parent": "builtin/generated",
-    "textures": {
-        "layer0": "mwc:items/forklift_alt"
-    },
+    "parent": "builtin/entity",
     "display": {
         "thirdperson_righthand": {
             "translation": [
                 0,
-                3,
-                1
+                2,
+                0
             ],
             "scale": [
-                0.55,
-                0.55,
-                0.55
+                0.1,
+                0.1,
+                0.1
+            ],
+            "rotation": [
+                0,
+                90,
+                0
             ]
         },
         "thirdperson_lefthand": {
             "translation": [
                 0,
-                3,
-                1
+                2,
+                0
             ],
             "scale": [
-                0.55,
-                0.55,
-                0.55
+                0.1,
+                0.1,
+                0.1
+            ],
+            "rotation": [
+                0,
+                90,
+                0
             ]
         },
         "firstperson_righthand": {
             "rotation": [
-                0,
-                -90,
-                25
+                -45,
+                -25,
+                0
             ],
             "translation": [
-                1.13,
-                3.2,
-                1.13
+                0,
+                2,
+                0
             ],
             "scale": [
-                0.68,
-                0.68,
-                0.68
+                0.107,
+                0.107,
+                0.107
             ]
         },
         "firstperson_lefthand": {
             "rotation": [
-                0,
-                -90,
-                25
+                -45,
+                -25,
+                0
             ],
             "translation": [
-                1.13,
-                3.2,
-                1.13
+                0,
+                2,
+                0
             ],
             "scale": [
-                0.68,
-                0.68,
-                0.68
+                0.107,
+                0.107,
+                0.107
             ]
         },
         "ground": {
@@ -69,9 +76,9 @@
                 0
             ],
             "scale": [
-                0.5,
-                0.5,
-                0.5
+                0.067,
+                0.067,
+                0.067
             ]
         },
         "fixed": {
@@ -79,6 +86,23 @@
                 0,
                 180,
                 0
+            ]
+        },
+        "gui": {
+            "rotation": [
+                45,
+                45,
+                0
+            ],
+            "translation": [
+                0,
+                0,
+                0
+            ],
+            "scale": [
+                0.167,
+                0.167,
+                0.167
             ]
         }
     }

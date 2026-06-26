@@ -154,16 +154,6 @@ public class TileEntities {
                     GlStateManager.translate(0.55f, 0.6f, 0.55f);
                     GlStateManager.rotate(90F, 0f, 1f, 0f);
                 })
-                .withItemPositioning((itemStack, transformType) -> {
-                    GlStateManager.scale(0.35f, 0.35f, 0.35f);
-                    GlStateManager.translate(0.2f, 0f, 0f);
-                    if (transformType == ItemCameraTransforms.TransformType.THIRD_PERSON_RIGHT_HAND || transformType == ItemCameraTransforms.TransformType.THIRD_PERSON_LEFT_HAND) {
-                        GlStateManager.translate(0f, -0.3f, 0f);
-                    }
-                    if (transformType == ItemCameraTransforms.TransformType.GUI) {
-                        GlStateManager.translate(0f, 0.7f, 0f);
-                    }
-                })
                 .build(MWC.modContext);
 
         new LootBoxConfiguration()
@@ -177,16 +167,6 @@ public class TileEntities {
                     GlStateManager.scale(0.5f, 0.5f, 0.5f);
                     GlStateManager.translate(0.2f, 1.63f, 1.7f);
                     GlStateManager.rotate(90F, 0f, 1f, 0f);
-                })
-                .withItemPositioning((itemStack, transformType) -> {
-                    GlStateManager.scale(0.35f, 0.35f, 0.35f);
-                    GlStateManager.translate(0.2f, 0f, 0f);
-                    if (transformType == ItemCameraTransforms.TransformType.THIRD_PERSON_RIGHT_HAND || transformType == ItemCameraTransforms.TransformType.THIRD_PERSON_LEFT_HAND) {
-                        GlStateManager.translate(0f, -0.3f, 0f);
-                    }
-                    if (transformType == ItemCameraTransforms.TransformType.GUI) {
-                        GlStateManager.translate(0f, 0.7f, 0f);
-                    }
                 })
                 .build(MWC.modContext);
 
@@ -706,10 +686,6 @@ public class TileEntities {
                     GlStateManager.translate(0.5f, 1.8f, 0.55f);
                     GlStateManager.rotate(-90F, 0f, 1f, 0f);
                 })
-                .withItemPositioning((itemStack, transformType) -> {
-                    GlStateManager.scale(0.7f, 0.7f, 0.7f);
-                    GlStateManager.translate(0.2f, -0.8f, 0f);
-                })
                 .build(MWC.modContext);
 
         new LootBoxConfiguration()
@@ -728,16 +704,6 @@ public class TileEntities {
                     GlStateManager.scale(0.9f, 0.9f, 0.9f);
                     GlStateManager.translate(0.5f, 0.2f, 0.55f);
                     GlStateManager.rotate(-90F, 0f, 1f, 0f);
-                })
-                .withItemPositioning((itemStack, transformType) -> {
-                    GlStateManager.scale(0.5f, 0.5f, 0.5f);
-                    GlStateManager.translate(0.2f, -0.2f, 0f);
-                    if (transformType == ItemCameraTransforms.TransformType.THIRD_PERSON_RIGHT_HAND || transformType == ItemCameraTransforms.TransformType.THIRD_PERSON_LEFT_HAND) {
-                        GlStateManager.translate(0f, -0.3f, 0f);
-                    }
-                    if (transformType == ItemCameraTransforms.TransformType.GUI) {
-                        GlStateManager.translate(0f, 0.7f, 0f);
-                    }
                 })
                 .build(MWC.modContext);
 
@@ -758,16 +724,6 @@ public class TileEntities {
                     GlStateManager.scale(0.9f, 0.9f, 0.9f);
                     GlStateManager.translate(0.6f, 0.2f, 0.5f);
                     GlStateManager.rotate(-90F, 0f, 1f, 0f);
-                })
-                .withItemPositioning((itemStack, transformType) -> {
-                    GlStateManager.scale(0.35f, 0.35f, 0.35f);
-                    GlStateManager.translate(0.2f, 0f, 0f);
-                    if (transformType == ItemCameraTransforms.TransformType.THIRD_PERSON_RIGHT_HAND || transformType == ItemCameraTransforms.TransformType.THIRD_PERSON_LEFT_HAND) {
-                        GlStateManager.translate(0f, -0.3f, 0f);
-                    }
-                    if (transformType == ItemCameraTransforms.TransformType.GUI) {
-                        GlStateManager.translate(0f, 0.7f, 0f);
-                    }
                 })
                 .build(MWC.modContext);
 
@@ -834,16 +790,6 @@ public class TileEntities {
                     GlStateManager.translate(0.5f, -0.5f, 0.5f);
                     GlStateManager.rotate(-45F, 0f, 1f, 0f);
                 })
-                .withItemPositioning((itemStack, transformType) -> {
-                    GlStateManager.scale(0.35f, 0.35f, 0.35f);
-                    GlStateManager.translate(0.2f, 0f, 0f);
-                    if (transformType == ItemCameraTransforms.TransformType.THIRD_PERSON_RIGHT_HAND || transformType == ItemCameraTransforms.TransformType.THIRD_PERSON_LEFT_HAND) {
-                        GlStateManager.translate(0f, -0.3f, 0f);
-                    }
-                    if (transformType == ItemCameraTransforms.TransformType.GUI) {
-                        GlStateManager.translate(0f, 0.7f, 0f);
-                    }
-                })
                 .build(MWC.modContext);
 
         new LootBoxConfiguration()
@@ -856,16 +802,6 @@ public class TileEntities {
                     GlStateManager.scale(1f, 1f, 1f);
                     GlStateManager.translate(0.5f, 0f, 0.5f);
                     GlStateManager.rotate(-45F, 0f, 1f, 0f);
-                })
-                .withItemPositioning((itemStack, transformType) -> {
-                    GlStateManager.scale(0.35f, 0.35f, 0.35f);
-                    GlStateManager.translate(0.2f, 0f, 0f);
-                    if (transformType == ItemCameraTransforms.TransformType.THIRD_PERSON_RIGHT_HAND || transformType == ItemCameraTransforms.TransformType.THIRD_PERSON_LEFT_HAND) {
-                        GlStateManager.translate(0f, -0.3f, 0f);
-                    }
-                    if (transformType == ItemCameraTransforms.TransformType.GUI) {
-                        GlStateManager.translate(0f, 0.7f, 0f);
-                    }
                 })
                 .build(MWC.modContext);
 
@@ -1426,16 +1362,6 @@ public class TileEntities {
                     GlStateManager.translate(0.3f, 0f, 0.5f);
                     GlStateManager.rotate(90F, 0f, 1f, 0f);
                 })
-                .withItemPositioning((itemStack, transformType) -> {
-                    GlStateManager.scale(0.35f, 0.35f, 0.35f);
-                    GlStateManager.translate(0.2f, 0f, 0f);
-                    if (transformType == ItemCameraTransforms.TransformType.THIRD_PERSON_RIGHT_HAND || transformType == ItemCameraTransforms.TransformType.THIRD_PERSON_LEFT_HAND) {
-                        GlStateManager.translate(0f, -0.4f, 0f);
-                    }
-                    if (transformType == ItemCameraTransforms.TransformType.GUI) {
-                        GlStateManager.translate(0f, 0.7f, 0f);
-                    }
-                })
                 .build(MWC.modContext);
 
         new LootBoxConfiguration()
@@ -1549,16 +1475,6 @@ public class TileEntities {
                     GlStateManager.translate(0.5f, 0f, 0.5f);
                     GlStateManager.rotate(-90F, 0f, 1f, 0f);
                 })
-                .withItemPositioning((itemStack, transformType) -> {
-                    GlStateManager.scale(0.35f, 0.35f, 0.35f);
-                    GlStateManager.translate(0.2f, 0f, 0f);
-                    if (transformType == ItemCameraTransforms.TransformType.THIRD_PERSON_RIGHT_HAND || transformType == ItemCameraTransforms.TransformType.THIRD_PERSON_LEFT_HAND) {
-                        GlStateManager.translate(0f, -0.3f, 0f);
-                    }
-                    if (transformType == ItemCameraTransforms.TransformType.GUI) {
-                        GlStateManager.translate(0f, 0.7f, 0f);
-                    }
-                })
                 .build(MWC.modContext);
 
         new LootBoxConfiguration()
@@ -1609,16 +1525,6 @@ public class TileEntities {
                 .withPositioning(tileEntity -> {
                     GlStateManager.scale(1.5f, 1.5f, 1.5f);
                     GlStateManager.translate(0.3f, -0.45f, -1f);
-                })
-                .withItemPositioning((itemStack, transformType) -> {
-                    GlStateManager.scale(0.35f, 0.35f, 0.35f);
-                    GlStateManager.translate(0.2f, 0f, 0f);
-                    if (transformType == ItemCameraTransforms.TransformType.THIRD_PERSON_RIGHT_HAND || transformType == ItemCameraTransforms.TransformType.THIRD_PERSON_LEFT_HAND) {
-                        GlStateManager.translate(0f, -0.3f, 0f);
-                    }
-                    if (transformType == ItemCameraTransforms.TransformType.GUI) {
-                        GlStateManager.translate(0f, 0.7f, 0f);
-                    }
                 })
                 .build(MWC.modContext);
     }

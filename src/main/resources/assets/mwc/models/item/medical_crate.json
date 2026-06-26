@@ -1,5 +1,5 @@
 {
-    "parent": "builtin/generated",
+    "parent": "builtin/entity",
     "textures": {
         "layer0": "mwc:items/medical_crate"
     },
@@ -7,59 +7,69 @@
         "thirdperson_righthand": {
             "translation": [
                 0,
-                3,
-                1
+                2,
+                0
             ],
             "scale": [
-                0.55,
-                0.55,
-                0.55
+                0.182,
+                0.182,
+                0.182
+            ],
+            "rotation": [
+                0,
+                90,
+                0
             ]
         },
         "thirdperson_lefthand": {
             "translation": [
                 0,
-                3,
-                1
+                2,
+                0
             ],
             "scale": [
-                0.55,
-                0.55,
-                0.55
+                0.182,
+                0.182,
+                0.182
+            ],
+            "rotation": [
+                0,
+                90,
+                0
             ]
         },
         "firstperson_righthand": {
             "rotation": [
-                0,
-                -90,
-                25
+                -45,
+                -25,
+                0
             ],
             "translation": [
-                1.13,
-                3.2,
-                1.13
+                0,
+                2,
+                0
             ],
             "scale": [
-                0.68,
-                0.68,
-                0.68
+                0.194,
+                0.194,
+                0.194
             ]
         },
         "firstperson_lefthand": {
             "rotation": [
-                0,
-                -90,
-                25
+                -45,
+                -25,
+                0
             ],
             "translation": [
-                1.13,
-                3.2,
-                1.13
+                0,
+                2,
+                0
             ],
             "scale": [
-                0.68,
-                0.68,
-                0.68
+                0.194,
+                0.194,
+                0.194
             ]
         },
         "ground": {
@@ -69,9 +79,9 @@
                 0
             ],
             "scale": [
-                0.5,
-                0.5,
-                0.5
+                0.121,
+                0.121,
+                0.121
             ]
         },
         "fixed": {
@@ -79,6 +89,23 @@
                 0,
                 180,
                 0
+            ]
+        },
+        "gui": {
+            "rotation": [
+                45,
+                45,
+                0
+            ],
+            "translation": [
+                0,
+                0,
+                0
+            ],
+            "scale": [
+                0.303,
+                0.303,
+                0.303
             ]
         }
     }

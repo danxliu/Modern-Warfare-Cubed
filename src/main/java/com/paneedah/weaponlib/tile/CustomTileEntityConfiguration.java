@@ -38,7 +38,6 @@ public class CustomTileEntityConfiguration<T extends CustomTileEntityConfigurati
     private final AtomicInteger counter = new AtomicInteger(10000);
     private final Supplier<Integer> entityIdSupplier = () -> counter.incrementAndGet();
     private Consumer<TileEntity> positioning = tileEntity -> {};
-    private BiConsumer<ItemStack, net.minecraft.client.renderer.block.model.ItemCameraTransforms.TransformType> itemPositioning = (itemStack, transformType) -> {};
     private Function<IBlockState, AxisAlignedBB> boundingBox;
     private float displayScale = 1.0F;
     private float displayOffsetX = 0F;
@@ -98,11 +97,6 @@ public class CustomTileEntityConfiguration<T extends CustomTileEntityConfigurati
 
     public T withPositioning(Consumer<TileEntity> positioning) {
         this.positioning = positioning;
-        return safeCast(this);
-    }
-
-    public T withItemPositioning(BiConsumer<ItemStack, net.minecraft.client.renderer.block.model.ItemCameraTransforms.TransformType> itemPositioning) {
-        this.itemPositioning = itemPositioning;
         return safeCast(this);
     }
 
@@ -175,10 +169,11 @@ public class CustomTileEntityConfiguration<T extends CustomTileEntityConfigurati
 
         Object itemRenderer = null;
         if (FMLCommonHandler.instance().getSide() == Side.CLIENT) {
-            itemRenderer = RendererRegistration.createItemRenderer(model, textureResource, positioning, itemPositioning, displayScale, displayOffsetX, displayOffsetY, displayOffsetZ);
+            itemRenderer = RendererRegistration.createItemRenderer(model, textureResource, positioning, displayScale, displayOffsetX, displayOffsetY, displayOffsetZ);
+            itemBlock.setTileEntityItemStackRenderer((net.minecraft.client.renderer.tileentity.TileEntityItemStackRenderer) itemRenderer);
         }
 
-        modContext.registerRenderableItem(tileEntityBlock.getRegistryName(), itemBlock, itemRenderer);
+        modContext.registerRenderableItem(tileEntityBlock.getRegistryName(), itemBlock, null);
 
         if (FMLCommonHandler.instance().getSide() == Side.CLIENT) {
             RendererRegistration.registerRenderableEntity(modContext, name, tileEntityClass, model,
@@ -190,8 +185,8 @@ public class CustomTileEntityConfiguration<T extends CustomTileEntityConfigurati
         /*
          * This method is wrapped into a static class to facilitate conditional client-side only loading
          */
-        private static Object createItemRenderer(ModelBase model, ResourceLocation textureResource, Consumer<TileEntity> positioning, BiConsumer<ItemStack, net.minecraft.client.renderer.block.model.ItemCameraTransforms.TransformType> itemPositioning, float displayScale, float displayOffsetX, float displayOffsetY, float displayOffsetZ) {
-            return new CustomTileEntityItemRenderer(model, textureResource, positioning, itemPositioning, displayScale, displayOffsetX, displayOffsetY, displayOffsetZ);
+        private static Object createItemRenderer(ModelBase model, ResourceLocation textureResource, Consumer<TileEntity> positioning, float displayScale, float displayOffsetX, float displayOffsetY, float displayOffsetZ) {
+            return new CustomTileEntityItemRenderer(model, textureResource, positioning, displayScale, displayOffsetX, displayOffsetY, displayOffsetZ);
         }
 
         private static <T extends CustomTileEntityConfiguration<T>> void registerRenderableEntity(
