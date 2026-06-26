@@ -8,6 +8,13 @@ build
 !.idea/scopes/
 !.idea/scopes/*
 
+### Eclipse Buildship ###
+.classpath
+.project
+.factorypath
+.settings/
+bin/
+
 ### Project ###
 run
 
