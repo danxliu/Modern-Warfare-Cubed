@@ -59,6 +59,7 @@ public class CompatibleRenderingRegistry implements ICustomModelLoader {
             renderers.add((ModelSource) renderer);
             modelSourceLocations.add((ID + ":models/item/" + name).toLowerCase());
             ((ModelSource) renderer).setModelResourceLocation(modelID);
+            item.setTileEntityItemStackRenderer(new com.paneedah.mwc.renderer.MWCTileEntityItemStackRenderer((ModelSource) renderer));
         }
 
         delayedRegistrations.add((renderItem) -> {
@@ -77,6 +78,7 @@ public class CompatibleRenderingRegistry implements ICustomModelLoader {
         ModelResourceLocation modelID = new ModelResourceLocation(name, "inventory");
         if (renderer != null) {
             ((ModelSource) renderer).setModelResourceLocation(modelID);
+            item.setTileEntityItemStackRenderer(new com.paneedah.mwc.renderer.MWCTileEntityItemStackRenderer((ModelSource) renderer));
         }
 
         delayedRegistrations.add((renderItem) -> {

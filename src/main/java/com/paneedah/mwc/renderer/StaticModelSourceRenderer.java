@@ -89,52 +89,12 @@ public class StaticModelSourceRenderer extends ModelSource {
 		if (net.minecraftforge.common.ForgeModContainer.allowEmissiveItems)
 			return Collections.emptyList();
 
-		if (itemStack == ItemStack.EMPTY)
-			return Collections.emptyList();
-
-		if (transformType == null
-		        || transformType == ItemCameraTransforms.TransformType.GROUND
-		        || transformType == ItemCameraTransforms.TransformType.GUI
-		        || transformType == ItemCameraTransforms.TransformType.FIRST_PERSON_RIGHT_HAND
-		        || transformType == ItemCameraTransforms.TransformType.THIRD_PERSON_RIGHT_HAND) {
-
-			Tessellator tessellator = Tessellator.getInstance();
-			BufferBuilder worldrenderer = tessellator.getBuffer();
-			tessellator.draw();
-			GlStateManager.pushMatrix();
-
-			if (owner != null) {
-				if (transformType == ItemCameraTransforms.TransformType.THIRD_PERSON_RIGHT_HAND) {
-
-					if (owner.isSneaking()) {
-						GlStateManager.translate(0.0F, -0.2F, 0.0F);
-					}
-				}
-			}
-
-			final int currentTextureId = GlStateManager.glGetInteger(GL11.GL_TEXTURE_BINDING_2D);
-
-			if (transformType == null && owner instanceof EntityPlayer) {
-				renderCustomEquipped((EntityPlayer) owner, itemStack);
-			} else {
-				renderItem();
-			}
-
-			// Rebind the texture that was saved before our rendering, as it may have binded some other texture.
-			if (currentTextureId != GlStateManager.glGetInteger(GL11.GL_TEXTURE_BINDING_2D))
-				GlStateManager.bindTexture(currentTextureId);
-
-			GlStateManager.popMatrix();
-			worldrenderer.begin(GL11.GL_QUADS, DefaultVertexFormats.ITEM);
-		}
-
-		// Reset the dynamic values.
-		this.owner = null;
-		this.itemStack = ItemStack.EMPTY;
-		this.transformType = null;
-
-		return Collections.emptyList();
-	}
+    @Override
+    public List<BakedQuad> getQuads(IBlockState state, EnumFacing side, long rand) {
+        // Reset the dynamic values.
+        this.owner = null;
+        this.itemStack = null;
+        this.transformType = null;
 
 	@Override
 	public final boolean isAmbientOcclusion() {
@@ -151,10 +111,10 @@ public class StaticModelSourceRenderer extends ModelSource {
 		return false;
 	}
 
-	@Override
-	public TextureAtlasSprite getParticleTexture() {
-		return MC.getTextureMapBlocks().getMissingSprite();
-	}
+    @Override
+    public final boolean isBuiltInRenderer() {
+        return true;
+    }
 
 	@SideOnly(Side.CLIENT)
 	public void renderItem() {

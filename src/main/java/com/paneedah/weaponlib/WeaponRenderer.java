@@ -3569,74 +3569,6 @@ public class WeaponRenderer extends ModelSource implements IBakedModel {
 
     @Override
     public List<BakedQuad> getQuads(IBlockState state, EnumFacing side, long rand) {
-        // Todo: Actually make rendering compatible with Emissive Renderer
-        if (ForgeModContainer.allowEmissiveItems) {
-            ForgeModContainer.allowEmissiveItems = false;
-        }
-
-        if (transformType == ItemCameraTransforms.TransformType.GROUND
-                || transformType == ItemCameraTransforms.TransformType.GUI
-                || transformType == ItemCameraTransforms.TransformType.FIRST_PERSON_RIGHT_HAND
-                || transformType == ItemCameraTransforms.TransformType.THIRD_PERSON_RIGHT_HAND
-                || transformType == ItemCameraTransforms.TransformType.FIRST_PERSON_LEFT_HAND
-                || transformType == ItemCameraTransforms.TransformType.THIRD_PERSON_LEFT_HAND) {
-
-            Tessellator tessellator = Tessellator.getInstance();
-            BufferBuilder worldrenderer = tessellator.getBuffer();
-            tessellator.draw();
-            GlStateManager.pushMatrix();
-
-            if (player != null) {
-                if (transformType == ItemCameraTransforms.TransformType.THIRD_PERSON_RIGHT_HAND) {
-
-
-
-					/*
-					if (player.isSneaking() && (getClientModContext() != null && getClientModContext().getMainHeldWeapon() != null && getClientModContext().getMainHeldWeapon().isAimed())) {
-						//GlStateManager.translate(0.0F, 0.2F, 0.0F);
-					}*/
-
-                } else if (transformType == ItemCameraTransforms.TransformType.FIRST_PERSON_LEFT_HAND
-                        || transformType == ItemCameraTransforms.TransformType.FIRST_PERSON_RIGHT_HAND) {
-                    //
-                }
-            }
-
-            if (onGround()) {
-                GlStateManager.scale(-3f, -3f, -3f);
-            }
-
-            int currentTextureId = GlStateManager.glGetInteger(GL11.GL_TEXTURE_BINDING_2D);
-
-            if (!AnimationModeProcessor.getInstance().getFPSMode()) {
-                renderItem();
-                //RenderHelper.enableStandardItemLighting();
-            } else {
-                GlStateManager.pushMatrix();
-                renderItem();
-                GlStateManager.popMatrix();
-
-                OpenGLSelectionHelper.startSelectionPass();
-                OpenGLSelectionHelper.bindSelectBuffer();
-                renderItem();
-                OpenGLSelectionHelper.stopSelectionPass();
-                OpenGLSelectionHelper.fbo.bindFramebuffer(true);
-
-                if (AnimationModeProcessor.getInstance().colorSelected == -1) {
-                    OpenGLSelectionHelper.readValueAtMousePosition();
-                }
-
-                MC.getFramebuffer().bindFramebuffer(false);
-            }
-
-            if (currentTextureId != 0) {
-                GlStateManager.bindTexture(currentTextureId);
-            }
-            GlStateManager.popMatrix();
-
-            worldrenderer.begin(GL11.GL_QUADS, DefaultVertexFormats.ITEM);
-        }
-
         // Reset the dynamic values.
         this.player = null;
         this.itemStack = null;
@@ -3661,7 +3593,7 @@ public class WeaponRenderer extends ModelSource implements IBakedModel {
 
     @Override
     public final boolean isBuiltInRenderer() {
-        return false;
+        return true;
     }
 
     @Override

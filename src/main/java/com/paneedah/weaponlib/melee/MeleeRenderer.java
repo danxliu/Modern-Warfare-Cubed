@@ -818,7 +818,7 @@ public class MeleeRenderer extends ModelSource implements IBakedModel {
 
     @Override
     public final boolean isBuiltInRenderer() {
-        return false;
+        return true;
     }
 
     @Override
@@ -845,46 +845,6 @@ public class MeleeRenderer extends ModelSource implements IBakedModel {
 
     @Override
     public List<BakedQuad> getQuads(IBlockState state, EnumFacing side, long rand) {
-        // Todo: Actually make rendering compatible with Emissive Renderer
-        if (net.minecraftforge.common.ForgeModContainer.allowEmissiveItems) {
-            return Collections.emptyList();
-        }
-
-        if (itemStack == null) {
-            return Collections.emptyList();
-        }
-        if (transformType == ItemCameraTransforms.TransformType.GROUND
-                || transformType == ItemCameraTransforms.TransformType.GUI
-                || transformType == ItemCameraTransforms.TransformType.FIRST_PERSON_RIGHT_HAND
-                || transformType == ItemCameraTransforms.TransformType.THIRD_PERSON_RIGHT_HAND
-        ) {
-
-            Tessellator tessellator = Tessellator.getInstance();
-            BufferBuilder worldrenderer = tessellator.getBuffer();
-            tessellator.draw();
-            GlStateManager.pushMatrix();
-
-            if (player != null) {
-                if (transformType == ItemCameraTransforms.TransformType.THIRD_PERSON_RIGHT_HAND) {
-                    if (player.isSneaking()) {
-                        GlStateManager.translate(0.0F, -0.2F, 0.0F);
-                    }
-                }
-            }
-
-            if (onGround()) {
-                GlStateManager.scale(-3f, -3f, -3f);
-            }
-
-            int currentTextureId = GlStateManager.glGetInteger(GL11.GL_TEXTURE_BINDING_2D);
-            renderItem();
-            if (currentTextureId != 0) {
-                GlStateManager.bindTexture(currentTextureId);
-            }
-            GlStateManager.popMatrix();
-            worldrenderer.begin(GL11.GL_QUADS, DefaultVertexFormats.ITEM);
-        }
-
         // Reset the dynamic values.
         this.player = null;
         this.itemStack = null;

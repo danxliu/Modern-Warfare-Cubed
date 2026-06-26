@@ -13,4 +13,6 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 public abstract class ModelSource implements IBakedModel {
 
     private ModelResourceLocation modelResourceLocation;
+
+    public abstract void renderItem();
 }
