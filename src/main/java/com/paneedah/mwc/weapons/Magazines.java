@@ -122,7 +122,6 @@ public class Magazines {
     public static ItemMagazine DesertEagleMag;
     public static ItemMagazine M60Mag;
     public static ItemMagazine M249Mag;
-    public static ItemMagazine StonerMag;
     public static ItemMagazine M134Mag;
     public static ItemMagazine FuelCell;
     public static ItemMagazine NinthSinMag;
@@ -525,30 +524,6 @@ public class Magazines {
                 })
                 .withMaxStackSize(6)
                 .withTextureName("Dummy.png").build(modContext, ItemMagazine.class);
-
-        Magazines.StonerMag = new ItemMagazine.Builder().withCapacity(100).withCompatibleBullet(Bullets.Bullet556x45).withName("StonerMag")
-                .withCreativeTab(MWC.AMMUNITION_AND_MAGAZINES_TAB)
-                .withModel(new com.paneedah.mwc.models.StonerA1MAG(), "m249.png")
-
-                .withFirstPersonPositioning(() -> {
-                    GlStateManager.translate(0.1F, -0.3F, 0.4F);
-                    GlStateManager.rotate(30F, 0f, 1f, 0f);
-                    GlStateManager.scale(0.7F, 0.7F, 0.7F);
-                }).withThirdPersonPositioning(() -> {
-                    GlStateManager.translate(-0.3F, 0.5F, 0.1F);
-                    GlStateManager.rotate(-50F, 0f, 1f, 0f);
-                    GlStateManager.rotate(10F, 1f, 0f, 0f);
-                    GlStateManager.scale(0.7F, 0.7F, 0.7F);
-                }).withInventoryPositioning(() -> {
-                    GlStateManager.translate(0.3F, -2.2F, 3.7F);
-                    GlStateManager.rotate(-150F, 0f, 1f, 0f);
-                    GlStateManager.rotate(-6F, 1f, 0f, 0f);
-                    GlStateManager.rotate(-15F, 0f, 0f, 1f);
-                    GlStateManager.scale(0.8F, 0.8F, 0.8f);
-                })
-                .withMaxStackSize(6)
-                .withTextureName("Dummy.png").build(modContext, ItemMagazine.class);
-
         Magazines.HoneyBadgerMag = new ItemMagazine.Builder()
                 .withCapacity(30)
                 .withCompatibleBullet(Bullets.Bullet762x35)

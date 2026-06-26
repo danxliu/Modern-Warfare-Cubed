@@ -9571,24 +9571,6 @@
       ]
     },
     {
-      "entryName": "mwc:StonerHANDGUARD",
-      "craftingGroup": "ATTACHMENT_MODIFICATION",
-      "recipe": [
-        {
-          "entryName": "ingotGunmetal",
-          "defaultItem": "mwc:gunmetal_ingot",
-          "isOreDictionary": true,
-          "count": 3
-        },
-        {
-          "entryName": "ingotSteel",
-          "defaultItem": "mwc:steel_ingot",
-          "isOreDictionary": true,
-          "count": 1
-        }
-      ]
-    },
-    {
       "entryName": "mwc:NTW20Guard",
       "craftingGroup": "ATTACHMENT_MODIFICATION",
       "recipe": [
@@ -10184,24 +10166,6 @@
     },
     {
       "entryName": "mwc:ShotgunRail",
-      "craftingGroup": "ATTACHMENT_MODIFICATION",
-      "recipe": [
-        {
-          "entryName": "ingotGunmetal",
-          "defaultItem": "mwc:gunmetal_ingot",
-          "isOreDictionary": true,
-          "count": 2
-        },
-        {
-          "entryName": "ingotSteel",
-          "defaultItem": "mwc:steel_ingot",
-          "isOreDictionary": true,
-          "count": 1
-        }
-      ]
-    },
-    {
-      "entryName": "mwc:MAS21Mount",
       "craftingGroup": "ATTACHMENT_MODIFICATION",
       "recipe": [
         {
