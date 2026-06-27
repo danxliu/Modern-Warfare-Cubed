@@ -676,7 +676,7 @@ public class M1GarandFactory implements GunFactory {
                         )
 
                         .build())
-                .withSpawnEntityDamage(15f)
+                .withSpawnEntityDamage(30f)
                 .withSpawnEntityGravityVelocity(0.0118f)
 
 

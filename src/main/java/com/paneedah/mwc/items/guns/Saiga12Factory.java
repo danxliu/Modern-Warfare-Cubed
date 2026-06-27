@@ -1236,7 +1236,7 @@ public class Saiga12Factory implements GunFactory {
                         )
 
                         .build())
-                .withSpawnEntityDamage(6f)
+                .withSpawnEntityDamage(12f)
                 .withSpawnEntityGravityVelocity(0.0118f)
 
                 .build(MWC.modContext);

@@ -779,7 +779,7 @@ public class AK12Factory implements GunFactory {
                                 }, 280, 0))
 
                         .build())
-                .withSpawnEntityDamage(6.3f)
+                .withSpawnEntityDamage(12.6f)
                 .withSpawnEntityGravityVelocity(0.0118f)
 
                 .build(MWC.modContext);

@@ -2192,7 +2192,7 @@ public class L96A1Factory implements GunFactory {
                         )
 
                         .build())
-                .withSpawnEntityDamage(14f)
+                .withSpawnEntityDamage(28f)
                 .withSpawnEntityGravityVelocity(0f)
 
 

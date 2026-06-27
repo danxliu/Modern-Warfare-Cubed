@@ -517,7 +517,7 @@ public class ChainsawFactory implements GunFactory {
                         )
 
                         .build())
-                .withSpawnEntityDamage(2f)
+                .withSpawnEntityDamage(4f)
                 .withPellets(5)
                 .withSpawnEntityGravityVelocity(99f)
                 .withSpawnEntitySpeed(1.9F)

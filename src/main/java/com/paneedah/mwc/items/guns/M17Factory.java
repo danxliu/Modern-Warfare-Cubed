@@ -251,7 +251,7 @@ public class M17Factory implements GunFactory {
                                 })
 
                         .build())
-                .withSpawnEntityDamage(5f)
+                .withSpawnEntityDamage(10f)
                 .withSpawnEntityGravityVelocity(0.02f)
 
 

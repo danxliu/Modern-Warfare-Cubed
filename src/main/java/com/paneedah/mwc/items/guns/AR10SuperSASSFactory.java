@@ -1026,7 +1026,7 @@ public class AR10SuperSASSFactory implements GunFactory {
                                 }, 250, 0))
 
                         .build())
-                .withSpawnEntityDamage(10f)
+                .withSpawnEntityDamage(20f)
                 .withSpawnEntityGravityVelocity(0.0118f)
 
 

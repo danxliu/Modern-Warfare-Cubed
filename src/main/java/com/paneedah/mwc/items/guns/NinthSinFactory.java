@@ -2406,7 +2406,7 @@ public class NinthSinFactory implements GunFactory {
                         )
 
                         .build())
-                .withSpawnEntityDamage(4f)
+                .withSpawnEntityDamage(8f)
                 .withSpawnEntityGravityVelocity(0.0118f)
 
 

@@ -710,7 +710,7 @@ public class M82Factory implements GunFactory {
                                 }, 300, 0))
 
                         .build())
-                .withSpawnEntityDamage(25f)
+                .withSpawnEntityDamage(50f)
                 .withSpawnEntityGravityVelocity(0f)
 
 

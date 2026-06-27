@@ -1653,7 +1653,7 @@ public class MG34Factory implements GunFactory {
                         )
 
                         .build())
-                .withSpawnEntityDamage(13.5f)
+                .withSpawnEntityDamage(27f)
                 .withSpawnEntityGravityVelocity(0.0118f)
 
                 .build(MWC.modContext);

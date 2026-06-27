@@ -1391,7 +1391,7 @@ public class KS23Factory implements GunFactory {
                         )
 
                         .build())
-                .withSpawnEntityDamage(7.5f)
+                .withSpawnEntityDamage(15f)
                 .withSpawnEntityGravityVelocity(0.8f)
 
 

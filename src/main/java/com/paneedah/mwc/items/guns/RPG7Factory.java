@@ -949,7 +949,7 @@ public class RPG7Factory implements GunFactory {
                         )
 
                         .build())
-                .withSpawnEntityDamage(70f)
+                .withSpawnEntityDamage(140f)
                 .withSpawnEntityRocketParticles()
                 .withSpawnEntitySpeed(4f)
                 .withSpawnEntityGravityVelocity(0.001f)

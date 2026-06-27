@@ -5242,7 +5242,7 @@ public class M60E4Factory implements GunFactory {
                         )
 
                         .build())
-                .withSpawnEntityDamage(10f)
+                .withSpawnEntityDamage(20f)
                 .withSpawnEntityGravityVelocity(0.0118f)
 
                 .build(MWC.modContext);

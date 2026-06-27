@@ -519,7 +519,7 @@ public class HK_P12Factory implements GunFactory {
                                 }, 250, 0))
 
                         .build())
-                .withSpawnEntityDamage(5.3f)
+                .withSpawnEntityDamage(10.6f)
                 .withSpawnEntityGravityVelocity(0.02f)
 
                 .build(MWC.modContext);

@@ -1654,7 +1654,7 @@ public class G2ContenderFactory implements GunFactory {
                         )
 
                         .build())
-                .withSpawnEntityDamage(6.5f)
+                .withSpawnEntityDamage(13f)
                 .withSpawnEntityGravityVelocity(0.8f)
 
 

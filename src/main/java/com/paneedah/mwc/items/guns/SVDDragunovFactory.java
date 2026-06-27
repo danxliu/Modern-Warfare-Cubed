@@ -794,7 +794,7 @@ public class SVDDragunovFactory implements GunFactory {
                                 }, 300, 0))
 
                         .build())
-                .withSpawnEntityDamage(14f)
+                .withSpawnEntityDamage(28f)
                 .withSpawnEntityGravityVelocity(0.0118f)
 
                 .build(MWC.modContext);

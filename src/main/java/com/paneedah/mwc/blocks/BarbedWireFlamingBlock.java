@@ -20,7 +20,7 @@ import static com.paneedah.mwc.ProjectConstants.ID;
 
 public class BarbedWireFlamingBlock extends Block {
 
-    private static final float DAMAGE_PER_HIT = 2.0F;
+    private static final float DAMAGE_PER_HIT = 4.0F;
     private static final int HARVEST_LEVEL = 0;
 
     public BarbedWireFlamingBlock() {

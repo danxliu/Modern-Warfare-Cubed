@@ -1696,7 +1696,7 @@ public class NTW20Factory implements GunFactory {
 
 
                         .build())
-                .withSpawnEntityDamage(35f)
+                .withSpawnEntityDamage(70f)
                 .withSpawnEntityGravityVelocity(0f)
 
 

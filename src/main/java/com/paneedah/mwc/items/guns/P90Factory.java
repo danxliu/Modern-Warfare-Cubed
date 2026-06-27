@@ -774,7 +774,7 @@ public class P90Factory implements GunFactory {
                                 }, 280, 0))
 
                         .build())
-                .withSpawnEntityDamage(5.5f)
+                .withSpawnEntityDamage(11f)
                 .withSpawnEntityGravityVelocity(0.0118f)
 
                 .build(MWC.modContext);

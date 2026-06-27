@@ -747,7 +747,7 @@ public class APC9Factory implements GunFactory {
                                 }, 280, 0))
 
                         .build())
-                .withSpawnEntityDamage(5f)
+                .withSpawnEntityDamage(10f)
                 .withSpawnEntityGravityVelocity(0.0118f)
 
                 .build(MWC.modContext);

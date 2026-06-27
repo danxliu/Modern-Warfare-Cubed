@@ -806,7 +806,7 @@ public class ScarHFactory implements GunFactory {
                                 }, 250, 0))
 
                         .build())
-                .withSpawnEntityDamage(8f)
+                .withSpawnEntityDamage(16f)
                 .withSpawnEntityGravityVelocity(0.0118f)
 
 

@@ -823,7 +823,7 @@ public class VSSVintorezFactory implements GunFactory {
                                 }, 280, 0))
 
                         .build())
-                .withSpawnEntityDamage(13f)
+                .withSpawnEntityDamage(26f)
                 .withSpawnEntityGravityVelocity(0.0118f)
 
                 .build(MWC.modContext);

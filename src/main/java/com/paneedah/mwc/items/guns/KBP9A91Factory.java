@@ -519,7 +519,7 @@ public class KBP9A91Factory implements GunFactory {
                                 }, 280, 0))
 
                         .build())
-                .withSpawnEntityDamage(7f)
+                .withSpawnEntityDamage(14f)
                 .withSpawnEntityGravityVelocity(0.0118f)
 
                 .build(MWC.modContext);

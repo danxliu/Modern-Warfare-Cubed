@@ -22,7 +22,7 @@ public class BarbedWireBlock extends Block {
 
     public static final DamageSource BARBED_WIRE_DAMAGE = new DamageSource("barbedWire");
 
-    private static final float DAMAGE_PER_HIT = 2.0F;
+    private static final float DAMAGE_PER_HIT = 4.0F;
     private static final int HARVEST_LEVEL = 0;
 
     public BarbedWireBlock() {

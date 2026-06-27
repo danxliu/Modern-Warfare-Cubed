@@ -1000,7 +1000,7 @@ public class M1941JohnsonFactory implements GunFactory {
                         )
 
                         .build())
-                .withSpawnEntityDamage(15f)
+                .withSpawnEntityDamage(30f)
                 .withSpawnEntityGravityVelocity(0.0118f)
 
                 .build(MWC.modContext);

@@ -1277,7 +1277,7 @@ public class M1CarbineFactory implements GunFactory {
                                 }, 280, 0))
 
                         .build())
-                .withSpawnEntityDamage(6f)
+                .withSpawnEntityDamage(12f)
                 .withSpawnEntityGravityVelocity(0.0118f)
 
                 .build(MWC.modContext);

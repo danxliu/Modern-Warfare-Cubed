@@ -2095,7 +2095,7 @@ public class Remington700Factory implements GunFactory {
                                 }, 50, 200))
 
                         .build())
-                .withSpawnEntityDamage(14f)
+                .withSpawnEntityDamage(28f)
                 .withSpawnEntityGravityVelocity(0f)
 
 

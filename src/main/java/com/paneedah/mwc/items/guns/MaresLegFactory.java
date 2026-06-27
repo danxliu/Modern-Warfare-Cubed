@@ -922,7 +922,7 @@ public class MaresLegFactory implements GunFactory {
                         )
 
                         .build())
-                .withSpawnEntityDamage(5.5f)
+                .withSpawnEntityDamage(11f)
 
 
                 .build(MWC.modContext);

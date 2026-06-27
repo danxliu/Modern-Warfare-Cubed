@@ -2207,7 +2207,7 @@ public class Kar98KFactory implements GunFactory {
                         )
 
                         .build())
-                .withSpawnEntityDamage(13.5f)
+                .withSpawnEntityDamage(27f)
                 .withSpawnEntityGravityVelocity(0f)
 
 

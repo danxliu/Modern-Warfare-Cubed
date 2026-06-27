@@ -484,7 +484,7 @@ public class SCCYCPX2Factory implements GunFactory {
                                 }, 250, 0))
 
                         .build())
-                .withSpawnEntityDamage(5f)
+                .withSpawnEntityDamage(10f)
                 .withSpawnEntityGravityVelocity(0.02f)
 
 

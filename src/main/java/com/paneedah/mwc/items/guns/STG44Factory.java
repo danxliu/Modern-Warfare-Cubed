@@ -1408,7 +1408,7 @@ public class STG44Factory implements GunFactory {
                         )
 
                         .build())
-                .withSpawnEntityDamage(7.7f)
+                .withSpawnEntityDamage(15.4f)
                 .withSpawnEntityGravityVelocity(0.0118f)
 
                 .build(MWC.modContext);

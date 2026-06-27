@@ -920,7 +920,7 @@ public class G43GewehrFactory implements GunFactory {
                                 }, 280, 0))
 
                         .build())
-                .withSpawnEntityDamage(13.5f)
+                .withSpawnEntityDamage(27f)
                 .withSpawnEntityGravityVelocity(0.0118f)
 
                 .build(MWC.modContext);

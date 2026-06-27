@@ -471,7 +471,7 @@ public class MakarovPMFactory implements GunFactory {
                                 }, 250, 0))
 
                         .build())
-                .withSpawnEntityDamage(4.5f)
+                .withSpawnEntityDamage(9f)
                 .withSpawnEntityGravityVelocity(0.02f)
 
 

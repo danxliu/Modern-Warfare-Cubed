@@ -1241,7 +1241,7 @@ public class M1928ThompsonFactory implements GunFactory {
                         )
 
                         .build())
-                .withSpawnEntityDamage(5.3f)
+                .withSpawnEntityDamage(10.6f)
                 .withSpawnEntityGravityVelocity(0.0118f)
 
                 .build(MWC.modContext);

@@ -788,7 +788,7 @@ public class FNFALFactory implements GunFactory {
                                 }, 300, 0))
 
                         .build())
-                .withSpawnEntityDamage(10f)
+                .withSpawnEntityDamage(20f)
                 .withSpawnEntityGravityVelocity(0.0118f)
 
                 .build(MWC.modContext);

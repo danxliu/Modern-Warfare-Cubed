@@ -1839,7 +1839,7 @@ public class SupernovaFactory implements GunFactory {
                         )
 
                         .build())
-                .withSpawnEntityDamage(6f)
+                .withSpawnEntityDamage(12f)
                 .withSpawnEntityGravityVelocity(0.8f)
 
 

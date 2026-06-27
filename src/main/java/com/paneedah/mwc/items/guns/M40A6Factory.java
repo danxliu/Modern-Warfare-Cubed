@@ -477,7 +477,7 @@ public class M40A6Factory implements GunFactory {
                                 })
 
                         .build())
-                .withSpawnEntityDamage(15f)
+                .withSpawnEntityDamage(30f)
                 .withSpawnEntityGravityVelocity(0f)
 
 

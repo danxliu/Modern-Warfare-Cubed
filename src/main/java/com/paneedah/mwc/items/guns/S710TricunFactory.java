@@ -849,7 +849,7 @@ public class S710TricunFactory implements GunFactory {
                                 }, 250, 0))
 
                         .build())
-                .withSpawnEntityDamage(5.4f)
+                .withSpawnEntityDamage(10.8f)
                 .withSpawnEntityGravityVelocity(0.0118f)
 
 

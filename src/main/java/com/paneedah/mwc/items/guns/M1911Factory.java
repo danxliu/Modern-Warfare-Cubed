@@ -1578,7 +1578,7 @@ public class M1911Factory implements GunFactory {
                         )
 
                         .build())
-                .withSpawnEntityDamage(5.3f)
+                .withSpawnEntityDamage(10.6f)
                 .withSpawnEntityGravityVelocity(0.02f)
 
 

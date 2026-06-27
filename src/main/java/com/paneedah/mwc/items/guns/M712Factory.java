@@ -1286,7 +1286,7 @@ public class M712Factory implements GunFactory {
                         )
 
                         .build())
-                .withSpawnEntityDamage(5.4f)
+                .withSpawnEntityDamage(10.8f)
                 .withSpawnEntityGravityVelocity(0.02f)
 
 

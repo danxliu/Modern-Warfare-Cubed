@@ -1661,7 +1661,7 @@ public class KragJorgensenFactory implements GunFactory {
                         )
 
                         .build())
-                .withSpawnEntityDamage(13.8f)
+                .withSpawnEntityDamage(27.6f)
                 .withSpawnEntityGravityVelocity(0f)
 
 

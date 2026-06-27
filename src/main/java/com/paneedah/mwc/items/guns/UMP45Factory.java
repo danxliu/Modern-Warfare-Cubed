@@ -710,7 +710,7 @@ public class UMP45Factory implements GunFactory {
                                 }, 280, 0))
 
                         .build())
-                .withSpawnEntityDamage(5.3f)
+                .withSpawnEntityDamage(10.6f)
                 .withSpawnEntityGravityVelocity(0.0118f)
 
                 .build(MWC.modContext);

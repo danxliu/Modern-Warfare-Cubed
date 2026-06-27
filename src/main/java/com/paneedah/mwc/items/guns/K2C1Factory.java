@@ -780,7 +780,7 @@ public class K2C1Factory implements GunFactory {
                                 }, 250, 0))
 
                         .build())
-                .withSpawnEntityDamage(6f)
+                .withSpawnEntityDamage(12f)
                 .withSpawnEntityGravityVelocity(0.0118f)
 
 

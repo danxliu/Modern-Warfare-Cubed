@@ -2023,7 +2023,7 @@ public class AS50Factory implements GunFactory {
 
 
                         .build())
-                .withSpawnEntityDamage(25f)
+                .withSpawnEntityDamage(50f)
                 .withSpawnEntityGravityVelocity(0f)
 
 
