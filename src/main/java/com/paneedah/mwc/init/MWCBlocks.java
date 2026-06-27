@@ -1,12 +1,20 @@
 package com.paneedah.mwc.init;
 
+import static com.paneedah.mwc.ProjectConstants.ID;
+
+import com.paneedah.mwc.bases.BlockBase;
+import com.paneedah.mwc.bases.IItemBlockProvider;
 import com.paneedah.mwc.bases.OreBase;
 import com.paneedah.mwc.blocks.BarbedWireBlock;
 import com.paneedah.mwc.blocks.BarbedWireFlamingBlock;
+import com.paneedah.mwc.blocks.SteelBricksDoubleSlab;
+import com.paneedah.mwc.blocks.SteelBricksHalfSlab;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
+import net.minecraft.item.ItemSlab;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.event.RegistryEvent;
@@ -16,8 +24,6 @@ import net.minecraftforge.oredict.OreDictionary;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import static com.paneedah.mwc.ProjectConstants.ID;
 
 @Mod.EventBusSubscriber(modid = ID)
 public class MWCBlocks {
@@ -30,6 +36,10 @@ public class MWCBlocks {
 
     public static BarbedWireBlock barbedWire;
     public static BarbedWireFlamingBlock barbedWireFlaming;
+
+    public static Block steelBricks;
+    public static SteelBricksHalfSlab steelBricksHalfSlab;
+    public static SteelBricksDoubleSlab steelBricksDoubleSlab;
 
     public static final List<Block> ALL_BLOCKS = new ArrayList<>();
 
@@ -58,6 +68,10 @@ public class MWCBlocks {
         barbedWire = new BarbedWireBlock();
         barbedWireFlaming = new BarbedWireFlamingBlock();
 
+        steelBricks = new BlockBase("steel_bricks").setHardness(50.0F).setResistance(2000.0F);
+        steelBricksHalfSlab = new SteelBricksHalfSlab();
+        steelBricksDoubleSlab = new SteelBricksDoubleSlab();
+
         ALL_BLOCKS.add(copperOre);
         ALL_BLOCKS.add(tinOre);
         ALL_BLOCKS.add(leadOre);
@@ -65,6 +79,9 @@ public class MWCBlocks {
         ALL_BLOCKS.add(graphiteOre);
         ALL_BLOCKS.add(barbedWire);
         ALL_BLOCKS.add(barbedWireFlaming);
+        ALL_BLOCKS.add(steelBricks);
+        ALL_BLOCKS.add(steelBricksHalfSlab);
+        ALL_BLOCKS.add(steelBricksDoubleSlab);
     }
 
     @SubscribeEvent
@@ -74,14 +91,22 @@ public class MWCBlocks {
 
     @SubscribeEvent
     public static void registerItemBlock(RegistryEvent.Register<Item> itemRegistryEvent) {
-        Item[] items = new Item[ALL_BLOCKS.size()];
+        List<Item> items = new ArrayList<>();
 
-        for (int i = 0; i < ALL_BLOCKS.size(); i++) {
-            items[i] = new ItemBlock(ALL_BLOCKS.get(i));
-            items[i].setRegistryName(ALL_BLOCKS.get(i).getRegistryName());
+        for (Block block : ALL_BLOCKS) {
+            Item item;
+            if (block instanceof IItemBlockProvider) {
+                item = ((IItemBlockProvider) block).getItemBlock();
+            } else {
+                item = new ItemBlock(block);
+            }
+            if (item != null) {
+                item.setRegistryName(block.getRegistryName());
+                items.add(item);
+            }
         }
 
-        itemRegistryEvent.getRegistry().registerAll(items);
+        itemRegistryEvent.getRegistry().registerAll(items.toArray(new Item[0]));
         registerOreDictionaryKeys(ALL_BLOCKS);
     }
 
@@ -101,7 +126,10 @@ public class MWCBlocks {
     @SubscribeEvent
     public static void registerRenders(ModelRegistryEvent modelRegistryEvent) {
         for (Block block : ALL_BLOCKS) {
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), 0, new ModelResourceLocation(block.getRegistryName().toString(), "inventory"));
+            Item item = Item.getItemFromBlock(block);
+            if (item != null && item != Items.AIR) {
+                ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(block.getRegistryName().toString(), "inventory"));
+            }
         }
     }
 }

@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "variant=default": { "model": "mwc:steel_bricks" }
+    }
+}
