@@ -3,7 +3,8 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [64, 64],
 	"textures": {
-		"2": "mwc:blocks/barbed_wire_flaming"
+		"2": "mwc:blocks/barbed_wire_flaming",
+		"particle": "mwc:blocks/barbed_wire_flaming"
 	},
 	"elements": [
 		{
