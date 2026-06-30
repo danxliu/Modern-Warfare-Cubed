@@ -1018,7 +1018,7 @@ itemGroup.throwables=Throwables
 itemGroup.blocksAndIngots=Blocks & Ingots
 
 key.categories.weaponlib=${name}
-key.custom_inventory=Open Custom Inventory 
+key.custom_inventory=Open Custom Inventory
 key.texture_change=Change Gun Skin
 key.fire_mode=Selective Fire
 key.reload=Reload Gun
@@ -1206,3 +1206,5 @@ death.attack.barbedWire.player=%s was cut by %s's barbed wire
 tile.steel_bricks.name=Steel Bricks
 tile.steel_bricks_slab.name=Steel Bricks Slab
 tile.steel_bars.name=Steel Bars
+tile.mine.name=Anti-Personnel Mine
+death.attack.mine=%s was blown up by a mine

@@ -8,6 +8,7 @@ import com.paneedah.mwc.bases.OreBase;
 import com.paneedah.mwc.bases.PaneBase;
 import com.paneedah.mwc.blocks.BarbedWireBlock;
 import com.paneedah.mwc.blocks.BarbedWireFlamingBlock;
+import com.paneedah.mwc.blocks.MineBlock;
 import com.paneedah.mwc.blocks.SteelBricksDoubleSlab;
 import com.paneedah.mwc.blocks.SteelBricksHalfSlab;
 import net.minecraft.block.Block;
@@ -38,6 +39,7 @@ public class MWCBlocks {
 
     public static BarbedWireBlock barbedWire;
     public static BarbedWireFlamingBlock barbedWireFlaming;
+    public static MineBlock mine;
 
     public static Block steelBricks;
     public static SteelBricksHalfSlab steelBricksHalfSlab;
@@ -70,6 +72,7 @@ public class MWCBlocks {
 
         barbedWire = new BarbedWireBlock();
         barbedWireFlaming = new BarbedWireFlamingBlock();
+        mine = new MineBlock();
 
         steelBricks = new BlockBase("steel_bricks").setHardness(50.0F).setResistance(2000.0F);
         steelBricksHalfSlab = new SteelBricksHalfSlab();
@@ -83,6 +86,7 @@ public class MWCBlocks {
         ALL_BLOCKS.add(graphiteOre);
         ALL_BLOCKS.add(barbedWire);
         ALL_BLOCKS.add(barbedWireFlaming);
+        ALL_BLOCKS.add(mine);
         ALL_BLOCKS.add(steelBricks);
         ALL_BLOCKS.add(steelBricksHalfSlab);
         ALL_BLOCKS.add(steelBricksDoubleSlab);
