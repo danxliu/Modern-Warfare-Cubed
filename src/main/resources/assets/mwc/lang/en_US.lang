@@ -1205,3 +1205,4 @@ death.attack.barbedWire=%s was cut by barbed wire
 death.attack.barbedWire.player=%s was cut by %s's barbed wire
 tile.steel_bricks.name=Steel Bricks
 tile.steel_bricks_slab.name=Steel Bricks Slab
+tile.steel_bars.name=Steel Bars

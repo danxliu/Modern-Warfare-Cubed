@@ -1,0 +1,8 @@
+{
+    "parent": "block/iron_bars_side",
+    "textures": {
+        "bars": "mwc:blocks/steel_bars",
+        "edge": "mwc:blocks/steel_bars",
+        "pane": "mwc:blocks/steel_bars"
+    }
+}

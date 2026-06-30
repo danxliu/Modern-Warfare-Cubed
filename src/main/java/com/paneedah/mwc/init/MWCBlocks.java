@@ -5,11 +5,13 @@ import static com.paneedah.mwc.ProjectConstants.ID;
 import com.paneedah.mwc.bases.BlockBase;
 import com.paneedah.mwc.bases.IItemBlockProvider;
 import com.paneedah.mwc.bases.OreBase;
+import com.paneedah.mwc.bases.PaneBase;
 import com.paneedah.mwc.blocks.BarbedWireBlock;
 import com.paneedah.mwc.blocks.BarbedWireFlamingBlock;
 import com.paneedah.mwc.blocks.SteelBricksDoubleSlab;
 import com.paneedah.mwc.blocks.SteelBricksHalfSlab;
 import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
@@ -40,6 +42,7 @@ public class MWCBlocks {
     public static Block steelBricks;
     public static SteelBricksHalfSlab steelBricksHalfSlab;
     public static SteelBricksDoubleSlab steelBricksDoubleSlab;
+    public static Block steelBars;
 
     public static final List<Block> ALL_BLOCKS = new ArrayList<>();
 
@@ -71,6 +74,7 @@ public class MWCBlocks {
         steelBricks = new BlockBase("steel_bricks").setHardness(50.0F).setResistance(2000.0F);
         steelBricksHalfSlab = new SteelBricksHalfSlab();
         steelBricksDoubleSlab = new SteelBricksDoubleSlab();
+        steelBars = new PaneBase("steel_bars", Material.IRON, true).setHardness(50.0F).setResistance(2000.0F);
 
         ALL_BLOCKS.add(copperOre);
         ALL_BLOCKS.add(tinOre);
@@ -82,6 +86,7 @@ public class MWCBlocks {
         ALL_BLOCKS.add(steelBricks);
         ALL_BLOCKS.add(steelBricksHalfSlab);
         ALL_BLOCKS.add(steelBricksDoubleSlab);
+        ALL_BLOCKS.add(steelBars);
     }
 
     @SubscribeEvent
