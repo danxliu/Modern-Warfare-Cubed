@@ -12,6 +12,8 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
+
+import static com.paneedah.mwc.ProjectConstants.LOGGER;
 import java.util.Map;
 import java.util.Map.Entry;
 
@@ -89,8 +91,7 @@ public class WeaponSpritesheetBuilder {
         try {
             result.createNewFile();
         } catch (IOException e) {
-            System.err.println("Error creating icon sheet file!");
-            e.printStackTrace();
+            LOGGER.catching(e);
         }
 
         ImageCaptureUtil.saveImageToDisk(result, master);

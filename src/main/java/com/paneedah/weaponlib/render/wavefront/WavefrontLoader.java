@@ -12,6 +12,7 @@ import java.util.List;
 
 import static com.paneedah.mwc.proxies.ClientProxy.MC;
 import static com.paneedah.mwc.ProjectConstants.ID;
+import static com.paneedah.mwc.ProjectConstants.LOGGER;
 
 public class WavefrontLoader {
 
@@ -64,8 +65,7 @@ public class WavefrontLoader {
                 }
             }
         } catch (IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
+            LOGGER.catching(e);
         }
 
         return process(lines, vaoMode);
@@ -95,7 +95,7 @@ public class WavefrontLoader {
                 }
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            LOGGER.catching(e);
         }
 
         return process(lines, vaoMode);
@@ -112,8 +112,7 @@ public class WavefrontLoader {
                 lines.add(br.readLine());
             }
         } catch (IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
+            LOGGER.catching(e);
         }
 
         return process(lines, false);

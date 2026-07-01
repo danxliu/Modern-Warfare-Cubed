@@ -281,7 +281,7 @@ public class WeaponFireAspect implements Aspect<WeaponState, PlayerWeaponInstanc
         	try {
         		JSoundEngine.getInstance().playSound();
         	} catch(Exception e) {
-        		e.printStackTrace();
+        		LOGGER.catching(e);
         	}*/
 
             // Should prevent sound from being one sided

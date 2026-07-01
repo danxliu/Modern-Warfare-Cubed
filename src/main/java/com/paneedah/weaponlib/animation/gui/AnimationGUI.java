@@ -17,7 +17,11 @@ import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraftforge.fml.relauncher.ReflectionHelper;
+import org.lwjgl.input.Keyboard;
 import org.lwjgl.input.Mouse;
+
+import static com.paneedah.mwc.ProjectConstants.LOGGER;
+import static com.paneedah.mwc.proxies.ClientProxy.MC;
 
 import java.awt.*;
 import java.lang.reflect.Field;
@@ -388,7 +392,7 @@ public class AnimationGUI {
         try {
             npi = (NetworkPlayerInfo) f.invoke(MC.player, (Object) null);
         } catch (Exception e) {
-            e.printStackTrace();
+            LOGGER.catching(e);
         }
 
         if (npi != null) {
@@ -397,7 +401,8 @@ public class AnimationGUI {
                 f2.setAccessible(true);
                 f2.set(npi, type);
 
-            } catch (Exception ignored) {
+            } catch (Exception e) {
+                LOGGER.catching(e);
             }
         }
 

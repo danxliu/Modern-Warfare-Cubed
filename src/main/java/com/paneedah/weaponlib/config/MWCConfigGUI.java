@@ -17,6 +17,7 @@ import java.util.List;
 import java.util.Map.Entry;
 
 import static com.paneedah.mwc.ProjectConstants.ID;
+import static com.paneedah.mwc.ProjectConstants.LOGGER;
 
 public class MWCConfigGUI extends GuiConfig {
 
@@ -75,7 +76,8 @@ public class MWCConfigGUI extends GuiConfig {
             configTree.addNode(annotation.category(), element);
 
 
-        } catch (IllegalArgumentException | IllegalAccessException ignored) {
+        } catch (IllegalArgumentException | IllegalAccessException e) {
+            LOGGER.catching(e);
         }
     }
 

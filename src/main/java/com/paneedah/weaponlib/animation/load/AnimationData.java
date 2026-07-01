@@ -14,6 +14,8 @@ import net.minecraft.util.SoundEvent;
 import net.minecraft.util.math.Vec3d;
 import org.lwjgl.opengl.GL11;
 
+import static com.paneedah.mwc.ProjectConstants.LOGGER;
+
 import java.util.*;
 import java.util.Map.Entry;
 
@@ -177,7 +179,7 @@ public class AnimationData {
                     translationKey = translateKeyframes.get(f);
                 }
             } catch (Exception e) {
-                e.printStackTrace();
+                LOGGER.catching(e);
             }
 
             // System.out.println(f + " | " + new BlockbenchTransition(timeDelta,

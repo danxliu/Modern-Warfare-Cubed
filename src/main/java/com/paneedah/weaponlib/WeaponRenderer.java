@@ -4147,7 +4147,7 @@ public class WeaponRenderer extends ModelSource implements IBakedModel {
 
 
                 } catch (IOException e) {
-                    e.printStackTrace();
+                    LOGGER.catching(e);
                     gunIconSheetHeight = 1664;
                     gunIconSheetWidth = 1664;
                 }

@@ -5,6 +5,8 @@ import net.minecraft.item.Item;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import static com.paneedah.mwc.ProjectConstants.LOGGER;
+
 
 /**
  * CraftingRegistry that stores all of the craftable items, allows for an easy lookup of them,
@@ -139,7 +141,8 @@ public class CraftingRegistry {
             crafting.setCraftingRecipe(entry);
             crafting.setCraftingGroup(group);
 
-        } catch (Exception ignored) {
+        } catch (Exception e) {
+            LOGGER.catching(e);
             return;
         }
 

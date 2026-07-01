@@ -129,7 +129,7 @@ public class CraftingFileManager extends JSONDatabaseManager {
             return baos;
 
         } catch (IOException e) {
-            e.printStackTrace();
+            LOGGER.catching(e);
         }
 
         return baos;

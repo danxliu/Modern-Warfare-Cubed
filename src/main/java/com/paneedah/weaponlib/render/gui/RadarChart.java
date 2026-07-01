@@ -6,6 +6,8 @@ import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.client.renderer.vertex.DefaultVertexFormats;
 import org.lwjgl.opengl.GL11;
 
+import static com.paneedah.mwc.ProjectConstants.LOGGER;
+
 import java.util.LinkedList;
 
 import static com.paneedah.mwc.proxies.ClientProxy.MC;
@@ -212,7 +214,7 @@ public class RadarChart {
                     text = text.charAt(0) + "";
                 }
             } catch (Exception e) {
-                e.printStackTrace();
+                LOGGER.catching(e);
             }
             //text = text.charAt(0) + "";
 

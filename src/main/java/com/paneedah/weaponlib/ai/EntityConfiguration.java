@@ -573,7 +573,7 @@ public class EntityConfiguration {
                     try {
                         tmv.model = (ModelBiped) Class.forName(tmv.modelClassName).newInstance();
                     } catch (InstantiationException | IllegalAccessException | ClassNotFoundException e) {
-                        e.printStackTrace();
+                        LOGGER.catching(e);
                     }
                 }
 
@@ -590,8 +590,7 @@ public class EntityConfiguration {
                     ModelBiped model = (ModelBiped) Class.forName(texturedModelVariants.get(0).modelClassName).newInstance();
                     context.registerRenderableEntity(entityClass, new RenderCustomMob(model));
                 } catch (InstantiationException | IllegalAccessException | ClassNotFoundException e) {
-                    e.printStackTrace();
-
+                    LOGGER.catching(e);
                 }
             }
         }

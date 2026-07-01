@@ -9,6 +9,8 @@ import org.lwjgl.opengl.GLContext;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
+
+import static com.paneedah.mwc.ProjectConstants.LOGGER;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
@@ -48,6 +50,7 @@ public class CompatibilityClassGenerator {
 
                     clazz = Class.forName(classInformationString);
                 } catch (Error e) {
+                    LOGGER.catching(e);
                     continue;
                 }
 
@@ -59,7 +62,7 @@ public class CompatibilityClassGenerator {
 
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            LOGGER.catching(e);
         }
     }
 
@@ -295,8 +298,7 @@ public class CompatibilityClassGenerator {
 				if(breakOut) break;
 				
 			} catch (ClassNotFoundException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+				LOGGER.catching(e);
 			}
 			
 		}
@@ -334,8 +336,7 @@ public class CompatibilityClassGenerator {
 					
 				}
 			} catch (Throwable e) {
-				// TODO Auto-generated catch block
-				//e.printStackTrace();
+				LOGGER.catching(e);
 			}
 			
 		}

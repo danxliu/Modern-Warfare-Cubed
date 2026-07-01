@@ -18,6 +18,8 @@ import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 
+import static com.paneedah.mwc.ProjectConstants.LOGGER;
+
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.BiConsumer;
 import java.util.function.Consumer;
@@ -129,7 +131,7 @@ public class CustomTileEntityConfiguration<T extends CustomTileEntityConfigurati
             try {
                 model = (ModelBase) Class.forName(modelClassName).newInstance();
             } catch (InstantiationException | IllegalAccessException | ClassNotFoundException e) {
-                e.printStackTrace();
+                LOGGER.catching(e);
             }
         }
 
