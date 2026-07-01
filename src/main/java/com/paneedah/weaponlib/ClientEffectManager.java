@@ -2,9 +2,9 @@ package com.paneedah.weaponlib;
 
 import com.paneedah.mwc.utils.VectorUtil;
 import com.paneedah.weaponlib.ClientEventHandler.MuzzleFlash;
-import com.paneedah.weaponlib.particle.BetterMuzzleSmoke;
 import com.paneedah.weaponlib.particle.ExplosionParticleFX;
 import com.paneedah.weaponlib.particle.ExplosionSmokeFX;
+import com.paneedah.weaponlib.render.MuzzleSmokeViewModel;
 import dev.redstudio.redcore.math.vectors.Vector3D;
 import dev.redstudio.redcore.math.vectors.Vector3F;
 import net.minecraft.entity.EntityLivingBase;
@@ -22,35 +22,9 @@ final class ClientEffectManager implements EffectManager {
 
     @Override
     public void spawnSmokeParticle(EntityLivingBase player, float xOffset, float yOffset) {
-        Vector3F look = VectorUtil.convertToVector3F(player.getLookVec());
-
-        double motionX = MC.world.rand.nextGaussian() * 0.0003;
-        double motionY = MC.world.rand.nextGaussian() * 0.0003;
-        double motionZ = MC.world.rand.nextGaussian() * 0.0003;
-
-        float distance = 1.2f;
-        float scale = 5f * 1; // TODO: check why scale multiplier was set to 2.0 in 1.7.10
-        float positionRandomizationFactor = 0.01f;
-
-        double posX = player.posX + (look.x * distance) + (MC.world.rand.nextFloat() * 2.0f - 1) * positionRandomizationFactor + (-look.z * xOffset);
-        double posY = player.posY + (look.y * distance) + (MC.world.rand.nextFloat() * 2.0f - 1) * positionRandomizationFactor - yOffset;
-        double posZ = player.posZ + (look.z * distance) + (MC.world.rand.nextFloat() * 2.0f - 1) * positionRandomizationFactor + (look.x * xOffset);
-
-		/*
-		Weapon weapon = (Weapon) player.getHeldItemMainhand().getItem();
-
-		posX += weapon.getMuzzlePosition().x;
-		posY += weapon.getMuzzlePosition().y;
-		posZ += weapon.getMuzzlePosition().z;
-		*/
-
-        if (player instanceof EntityPlayer && player.isSneaking()) {
-            posY -= 0.1f;
+        if (player == MC.player && MC.gameSettings.thirdPersonView == 0) {
+            MuzzleSmokeViewModel.INSTANCE.spawn();
         }
-
-        BetterMuzzleSmoke smokeParticle = new BetterMuzzleSmoke(MC.world, posX, posY, posZ, scale, (float) motionX, (float) motionY, (int) motionZ);
-
-        MC.effectRenderer.addEffect(smokeParticle);
     }
 
     @Override

@@ -76,10 +76,10 @@ public class SpawnEntityRenderer extends Render<Entity> {
                         weaponSpawnEntity.posX,
                         weaponSpawnEntity.posY,
                         weaponSpawnEntity.posZ,
-                        1,
-                        (float) 0,
-                        (float) 0,
-                        0);
+                        0,
+                        0,
+                        0,
+                        1f);
 
                 MC.effectRenderer.addEffect(smokeParticle);
             }
