@@ -297,8 +297,6 @@ public class Interceptors {
             }
         }
 
-
-
         // if(true) return false;
 
         if (
@@ -388,10 +386,10 @@ public class Interceptors {
     public static boolean layerRendererHookSetup = false;
     public static Field layerRendererField;
     public static Method translateItemField;
-    public static HashMap<
+    public static WeakHashMap<
         RenderLivingBase<?>,
         LayerHeldItem
-    > sidePositioningMap = new HashMap<>();
+    > sidePositioningMap = new WeakHashMap<>();
 
     public static void checkLayerRenderersHooks() {
         layerRendererHookSetup = true;
@@ -415,11 +413,7 @@ public class Interceptors {
 
         try {
             list = (List<LayerRenderer<?>>) layerRendererField.get(rlb);
-        } catch (IllegalArgumentException e) {
-            e.printStackTrace();
-            return null;
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
+        } catch (IllegalArgumentException | IllegalAccessException e) {
             return null;
         }
 
@@ -460,40 +454,22 @@ public class Interceptors {
 
             if (!sidePositioningMap.containsKey(livingEntityRenderer)) {
                 LayerHeldItem lhi = extractLayerHeldItem(livingEntityRenderer);
-                if (lhi == null) {
-                    (
-                        (ModelBiped) livingEntityRenderer.getMainModel()
-                    ).postRenderArm(0.0625F, handSide);
-                }
-
                 sidePositioningMap.put(livingEntityRenderer, lhi);
             }
 
-            if (sidePositioningMap.containsKey(livingEntityRenderer)) {
+            LayerHeldItem lhi = sidePositioningMap.get(livingEntityRenderer);
+            if (lhi != null) {
                 try {
-                    translateItemField.invoke(
-                        sidePositioningMap.get(livingEntityRenderer),
-                        handSide
-                    );
-                } catch (IllegalAccessException e) {
+                    translateItemField.invoke(lhi, handSide);
+                } catch (Exception e) {
                     (
                         (ModelBiped) livingEntityRenderer.getMainModel()
                     ).postRenderArm(0.0625F, handSide);
-
-                    e.printStackTrace();
-                } catch (IllegalArgumentException e) {
-                    (
-                        (ModelBiped) livingEntityRenderer.getMainModel()
-                    ).postRenderArm(0.0625F, handSide);
-
-                    e.printStackTrace();
-                } catch (InvocationTargetException e) {
-                    (
-                        (ModelBiped) livingEntityRenderer.getMainModel()
-                    ).postRenderArm(0.0625F, handSide);
-
-                    e.printStackTrace();
                 }
+            } else {
+                (
+                    (ModelBiped) livingEntityRenderer.getMainModel()
+                ).postRenderArm(0.0625F, handSide);
             }
         }
     }
