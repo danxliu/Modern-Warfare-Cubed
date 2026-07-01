@@ -588,10 +588,12 @@ public class GrenadeRenderer extends ModelSource implements IBakedModel {
     private static class StateManagerKey {
         EntityLivingBase player;
         int slot = -1;
+        UUID uuid;
 
-        public StateManagerKey(EntityLivingBase player, int slot) {
+        public StateManagerKey(EntityLivingBase player, int slot, UUID uuid) {
             this.player = player;
             this.slot = slot;
+            this.uuid = uuid;
         }
 
         @Override
@@ -600,6 +602,7 @@ public class GrenadeRenderer extends ModelSource implements IBakedModel {
             int result = 1;
             result = prime * result + ((player == null) ? 0 : player.hashCode());
             result = prime * result + slot;
+            result = prime * result + ((uuid == null) ? 0 : uuid.hashCode());
             return result;
         }
 
@@ -622,7 +625,17 @@ public class GrenadeRenderer extends ModelSource implements IBakedModel {
             } else if (!player.equals(other.player)) {
                 return false;
             }
-            return slot == other.slot;
+            if (slot != other.slot) {
+                return false;
+            }
+            if (uuid == null) {
+                if (other.uuid != null) {
+                    return false;
+                }
+            } else if (!uuid.equals(other.uuid)) {
+                return false;
+            }
+            return true;
         }
 
     }
@@ -678,9 +691,9 @@ public class GrenadeRenderer extends ModelSource implements IBakedModel {
         }
 
 
-        // TODO: what if there are multiple items of the same type? They all share the same state manager.
+        UUID uuid = playerGrenadeInstance != null ? playerGrenadeInstance.getUuid() : null;
         StateManagerKey key = new StateManagerKey(player, playerGrenadeInstance != null ?
-                playerGrenadeInstance.getItemInventoryIndex() : -1);
+                playerGrenadeInstance.getItemInventoryIndex() : -1, uuid);
         MultipartRenderStateManager<RenderableState, Part, RenderContext<RenderableState>> stateManager = firstPersonStateManagers.get(key);
         if (stateManager == null) {
             stateManager = new MultipartRenderStateManager<>(currentState, weaponTransitionProvider);

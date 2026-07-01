@@ -73,6 +73,10 @@ public class ItemGrenade extends Item implements
 
     public static class Builder extends AbstractItemBuilder<Builder> {
 
+        public Builder() {
+            this.maxStackSize = 16;
+        }
+
         protected String textureName;
         protected Consumer<ItemStack> entityPositioning;
         protected Consumer<ItemStack> inventoryPositioning;
@@ -346,7 +350,6 @@ public class ItemGrenade extends Item implements
     public ItemGrenade(Builder builder, ModContext modContext) {
         this.builder = builder;
         this.modContext = modContext;
-        this.maxStackSize = 16;
     }
 
 
