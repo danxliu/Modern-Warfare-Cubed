@@ -703,91 +703,76 @@ public class M1014Factory implements GunFactory {
 
                             // Holo Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.NightRaider)) {
-                                //System.out.println("Position me for Holo");
                                 GlStateManager.translate(0f, 0.295f, 0.4f);
                             }
 
                             // Holo Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.LeupoldRailScope)) {
-                                //System.out.println("Position me for Holo");
                                 GlStateManager.translate(0f, 0.245f, 0.5f);
                             }
 
 //              // Holo Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.ACOG)) {
-                                //System.out.println("Position me for Holo");
                                 GlStateManager.translate(0f, 0.245f, 0.8f);
                             }
 
                             // Holo Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.Specter)) {
-                                //System.out.println("Position me for Holo");
                                 GlStateManager.translate(0f, 0.235f, 0.8f);
                             }
 
                             // Holo Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.HP)) {
-                                //System.out.println("Position me for Holo");
                                 GlStateManager.translate(0f, 0.275f, 0.6f);
                             }
 
                             // Holo Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.Reflex)) {
-                                //System.out.println("Position me for Holo");
                                 GlStateManager.translate(0f, 0.265f, 0.6f);
                             }
 
                             // Holo Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.MicroReflex)) {
-                                //System.out.println("Position me for Holo");
                                 GlStateManager.translate(0f, 0.29f, 0.6f);
                             }
 
                             // Holo Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.Holographic)) {
-                                //System.out.println("Position me for Holo");
                                 GlStateManager.translate(0f, 0.295f, 0.6f);
                             }
 
                             // Holo Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.HolographicAlt)) {
-                                //System.out.println("Position me for Holo");
                                 GlStateManager.translate(0f, 0.295f, 0.6f);
                             }
 
                             // Holo Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.EotechHybrid2)) {
-                                //System.out.println("Position me for Holo");
                                 GlStateManager.translate(0f, 0.295f, 0.45f);
                             }
 
                             // Holo Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.VortexRedux)) {
-                                //System.out.println("Position me for Holo");
                                 GlStateManager.translate(0f, 0.275f, 0.6f);
                             }
 
                             // Holo Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.Kobra)) {
-                                //System.out.println("Position me for Holo");
                                 GlStateManager.translate(0f, 0.295f, 0.6f);
                             }
 
                             // Holo Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.KobraGen3)) {
-                                //System.out.println("Position me for Holo");
                                 GlStateManager.translate(0f, 0.295f, 0.6f);
                             }
 
                             // Holo Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.MicroT1)) {
-                                //System.out.println("Position me for Holo");
                                 GlStateManager.translate(0f, 0.295f, 0.6f);
                             }
 
                             // Holo Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.AimpointCompM5)) {
-                                //System.out.println("Position me for Holo");
                                 GlStateManager.translate(0f, 0.295f, 0.6f);
                             }
 
@@ -806,85 +791,71 @@ public class M1014Factory implements GunFactory {
 
                             // Holo Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.NightRaider)) {
-                                //System.out.println("Position me for Holo");
                                 GlStateManager.translate(0f, 0.295f, 0.3f);
                             }
 
                             // Holo Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.LeupoldRailScope)) {
-                                //System.out.println("Position me for Holo");
                                 GlStateManager.translate(0f, 0.245f, 0.4f);
                             }
 
 //              // Holo Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.ACOG)) {
-                                //System.out.println("Position me for Holo");
                                 GlStateManager.translate(0f, 0.245f, 0.7f);
                             }
 
                             // Holo Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.Specter)) {
-                                //System.out.println("Position me for Holo");
                                 GlStateManager.translate(0f, 0.235f, 0.7f);
                             }
 
                             // Holo Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.Reflex)) {
-                                //System.out.println("Position me for Holo");
                                 GlStateManager.translate(0f, 0.265f, 0.6f);
                             }
 
                             // Holo Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.MicroReflex)) {
-                                //System.out.println("Position me for Holo");
                                 GlStateManager.translate(0f, 0.29f, 0.6f);
                             }
 
                             // Holo Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.Holographic)) {
-                                //System.out.println("Position me for Holo");
                                 GlStateManager.translate(0f, 0.295f, 0.6f);
                             }
 
                             // Holo Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.HolographicAlt)) {
-                                //System.out.println("Position me for Holo");
                                 GlStateManager.translate(0f, 0.295f, 0.6f);
                             }
 
                             // Holo Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.EotechHybrid2)) {
-                                //System.out.println("Position me for Holo");
                                 GlStateManager.translate(0f, 0.295f, 0.35f);
                             }
 
                             // Holo Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.VortexRedux)) {
-                                //System.out.println("Position me for Holo");
                                 GlStateManager.translate(0f, 0.275f, 0.6f);
                             }
 
                             // Holo Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.Kobra)) {
-                                //System.out.println("Position me for Holo");
                                 GlStateManager.translate(0f, 0.295f, 0.6f);
                             }
 
                             // Holo Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.KobraGen3)) {
-                                //System.out.println("Position me for Holo");
                                 GlStateManager.translate(0f, 0.295f, 0.6f);
                             }
 
                             // Holo Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.MicroT1)) {
-                                //System.out.println("Position me for Holo");
                                 GlStateManager.translate(0f, 0.295f, 0.6f);
                             }
 
                             // Holo Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.AimpointCompM5)) {
-                                //System.out.println("Position me for Holo");
                                 GlStateManager.translate(0f, 0.295f, 0.6f);
                             }
 

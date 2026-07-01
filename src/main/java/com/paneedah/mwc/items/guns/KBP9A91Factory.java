@@ -296,19 +296,16 @@ public class KBP9A91Factory implements GunFactory {
 
                             // ACOG Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.KobraMount)) {
-                                //System.out.println("Position me for Acog");
                                 GlStateManager.translate(-0F, 0.305f, 0f);
                             }
 
                             // ACOG Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.OKP7)) {
-                                //System.out.println("Position me for Acog");
                                 GlStateManager.translate(-0.06F, 0.17f, 0f);
                             }
 
                             // ACOG Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.PSO1)) {
-                                //System.out.println("Position me for Acog");
                                 GlStateManager.translate(-0.015F, 0.2f, 0.0f);
                             }
 

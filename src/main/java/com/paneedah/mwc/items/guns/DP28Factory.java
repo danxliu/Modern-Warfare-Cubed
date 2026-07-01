@@ -390,7 +390,6 @@ public class DP28Factory implements GunFactory {
 
                             // ACOG Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.ACOG)) {
-                                //System.out.println("Position me for Acog");
                                 GlStateManager.translate(0F, 0.19f, 0.5f);
                             }
 
@@ -410,7 +409,6 @@ public class DP28Factory implements GunFactory {
 
                             // ACOG Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.ACOG)) {
-                                //System.out.println("Position me for Acog");
                                 GlStateManager.translate(0F, 0.19f, 0.45f);
                             }
 

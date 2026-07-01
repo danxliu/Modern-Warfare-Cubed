@@ -277,7 +277,6 @@ public class MakarovPMFactory implements GunFactory {
                             GlStateManager.translate(0.14f, 0.56f, -2f);
 
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.MakarovPBSlide)) {
-                                //System.out.println("Position me for Holo");
                                 GlStateManager.translate(0f, 0.02f, 0f);
                             }
 

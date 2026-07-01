@@ -116,7 +116,6 @@ public class MP43EFactory implements GunFactory {
 
 //              // Holo Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.PSO1)) {
-                                //System.out.println("Position me for Holo");
                             }
 
                             // Everything else
@@ -722,7 +721,6 @@ public class MP43EFactory implements GunFactory {
 
 //              // Holo Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.PSO1)) {
-                                //System.out.println("Position me for Holo");
                             }
 
                             // Everything else

@@ -868,7 +868,6 @@ public class KragJorgensenFactory implements GunFactory {
 
                             // Scope Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.PSO1)) {
-                                //System.out.println("Position me for Scope");
                             }
 
                             // Everything else
@@ -885,7 +884,6 @@ public class KragJorgensenFactory implements GunFactory {
 
                             // Scope Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.PSO1)) {
-                                //System.out.println("Position me for Scope");
                             }
 
                             // Everything else

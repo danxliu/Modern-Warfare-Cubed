@@ -1051,97 +1051,81 @@ public class Remington700Factory implements GunFactory {
 
                             // HP Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.NightRaider)) {
-                                //System.out.println("Position me for Scope");
                                 GlStateManager.translate(0F, 0.14f, 0.15f);
                             }
 
                             // HP Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.ACOG)) {
-                                //System.out.println("Position me for Scope");
                                 GlStateManager.translate(0F, 0.14f, 0.3f);
                             }
 
                             // HP Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.Specter)) {
-                                //System.out.println("Position me for Scope");
                                 GlStateManager.translate(0F, 0.085f, 0.4f);
                             }
 
                             // HP Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.LeupoldRailScope)) {
-                                //System.out.println("Position me for Scope");
                                 GlStateManager.translate(0F, 0.09f, 0.2f);
                             }
 
                             // HP Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.MicroReflex)) {
-                                //System.out.println("Position me for Scope");
                                 GlStateManager.translate(0F, 0.1f, 0.2f);
                             }
 
                             // HP Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.Reflex)) {
-                                //System.out.println("Position me for Scope");
                                 GlStateManager.translate(0F, 0.08f, 0f);
                             }
 
                             // HP Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.BijiaReflex)) {
-                                //System.out.println("Position me for Scope");
                                 GlStateManager.translate(0F, 0.08f, 0f);
                             }
 
                             // HP Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.Holographic)) {
-                                //System.out.println("Position me for Scope");
                                 GlStateManager.translate(0F, 0.15f, 0f);
                             }
 
                             // HP Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.HolographicAlt)) {
-                                //System.out.println("Position me for Scope");
                                 GlStateManager.translate(0F, 0.15f, 0f);
                             }
 
                             // HP Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.EotechHybrid2)) {
-                                //System.out.println("Position me for Scope");
                                 GlStateManager.translate(0F, 0.14f, 0.25f);
                             }
 
                             // HP Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.VortexRedux)) {
-                                //System.out.println("Position me for Scope");
                                 GlStateManager.translate(0F, 0.15f, 0f);
                             }
 
                             // HP Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.Kobra)) {
-                                //System.out.println("Position me for Scope");
                                 GlStateManager.translate(0F, 0.14f, 0f);
                             }
 
                             // HP Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.KobraGen3)) {
-                                //System.out.println("Position me for Scope");
                                 GlStateManager.translate(0F, 0.14f, 0f);
                             }
 
                             // HP Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.MicroT1)) {
-                                //System.out.println("Position me for Scope");
                                 GlStateManager.translate(-0.005F, 0.11f, 0f);
                             }
 
                             // HP Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.AimpointCompM5)) {
-                                //System.out.println("Position me for Scope");
                                 GlStateManager.translate(-0.005F, 0.11f, 0f);
                             }
 
                             // HP Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.AimpointCompM2)) {
-                                //System.out.println("Position me for Scope");
                                 GlStateManager.translate(-0F, 0.11f, 0f);
                             }
 
@@ -1159,97 +1143,81 @@ public class Remington700Factory implements GunFactory {
 
                             // HP Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.NightRaider)) {
-                                //System.out.println("Position me for Scope");
                                 GlStateManager.translate(0F, 0.14f, 0.1f);
                             }
 
                             // HP Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.ACOG)) {
-                                //System.out.println("Position me for Scope");
                                 GlStateManager.translate(0F, 0.14f, 0.25f);
                             }
 
                             // HP Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.Specter)) {
-                                //System.out.println("Position me for Scope");
                                 GlStateManager.translate(0F, 0.085f, 0.35f);
                             }
 
                             // HP Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.LeupoldRailScope)) {
-                                //System.out.println("Position me for Scope");
                                 GlStateManager.translate(0F, 0.09f, 0.15f);
                             }
 
                             // HP Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.MicroReflex)) {
-                                //System.out.println("Position me for Scope");
                                 GlStateManager.translate(0F, 0.1f, 0.2f);
                             }
 
                             // HP Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.Reflex)) {
-                                //System.out.println("Position me for Scope");
                                 GlStateManager.translate(0F, 0.08f, 0f);
                             }
 
                             // HP Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.BijiaReflex)) {
-                                //System.out.println("Position me for Scope");
                                 GlStateManager.translate(0F, 0.08f, 0f);
                             }
 
                             // HP Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.Holographic)) {
-                                //System.out.println("Position me for Scope");
                                 GlStateManager.translate(0F, 0.15f, 0f);
                             }
 
                             // HP Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.HolographicAlt)) {
-                                //System.out.println("Position me for Scope");
                                 GlStateManager.translate(0F, 0.15f, 0f);
                             }
 
                             // HP Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.EotechHybrid2)) {
-                                //System.out.println("Position me for Scope");
                                 GlStateManager.translate(0F, 0.14f, 0.2f);
                             }
 
                             // HP Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.VortexRedux)) {
-                                //System.out.println("Position me for Scope");
                                 GlStateManager.translate(0F, 0.15f, 0f);
                             }
 
                             // HP Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.Kobra)) {
-                                //System.out.println("Position me for Scope");
                                 GlStateManager.translate(0F, 0.14f, 0f);
                             }
 
                             // HP Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.KobraGen3)) {
-                                //System.out.println("Position me for Scope");
                                 GlStateManager.translate(0F, 0.14f, 0f);
                             }
 
                             // HP Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.MicroT1)) {
-                                //System.out.println("Position me for Scope");
                                 GlStateManager.translate(-0.005F, 0.11f, 0f);
                             }
 
                             // HP Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.AimpointCompM5)) {
-                                //System.out.println("Position me for Scope");
                                 GlStateManager.translate(-0.005F, 0.11f, 0f);
                             }
 
                             // HP Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.AimpointCompM2)) {
-                                //System.out.println("Position me for Scope");
                                 GlStateManager.translate(-0F, 0.11f, 0f);
                             }
 

@@ -169,7 +169,6 @@ public class M1897Factory implements GunFactory {
 
 //              // Holo Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.PSO1)) {
-                                //System.out.println("Position me for Holo");
                             }
 
                             // Everything else
@@ -704,7 +703,6 @@ public class M1897Factory implements GunFactory {
 
 //				// Holo Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.PSO1)) {
-                                //System.out.println("Position me for Holo");
                             }
 
                             // Everything else

@@ -372,13 +372,10 @@ public class M9A1Factory implements GunFactory {
                             GlStateManager.translate(0.145f, 0.67f, -2f);
 
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.RMR)) {
-                                //System.out.println("Position me for Holo");
                                 GlStateManager.translate(0f, 0.24f, 0f);
                             } else if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.BijiaReflex)) {
-                                //System.out.println("Position me for Holo");
                                 GlStateManager.translate(0f, 0.34f, 0f);
                             } else if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.MicroReflex)) {
-                                //System.out.println("Position me for Holo");
                                 GlStateManager.translate(0f, 0.2f, 0f);
                             }
 

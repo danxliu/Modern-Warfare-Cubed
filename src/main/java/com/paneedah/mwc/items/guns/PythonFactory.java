@@ -139,12 +139,10 @@ public class PythonFactory implements GunFactory {
                             GlStateManager.translate(0.14f, 0.78f, -2.0f);
 
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.RMR)) {
-                                //System.out.println("Position me for Holo");
                                 GlStateManager.translate(0f, 0f, 1f);
                             }
 
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.BijiaReflex)) {
-                                //System.out.println("Position me for Holo");
                                 GlStateManager.translate(0f, 0.1f, 1f);
                             }
 

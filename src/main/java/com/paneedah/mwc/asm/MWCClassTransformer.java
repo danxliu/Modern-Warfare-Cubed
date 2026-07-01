@@ -72,7 +72,6 @@ public class MWCClassTransformer implements IClassTransformer {
     }
 
     public static void collideWithPlayer(Entity entityIn) {
-        System.out.println("Swapped");
     }
 
     private static class TestVisitor extends MethodVisitor {
@@ -80,7 +79,6 @@ public class MWCClassTransformer implements IClassTransformer {
 
         public TestVisitor(MethodVisitor mv) {
             super(Opcodes.ASM4, mv);
-            System.out.println("HI I AM TEST VISIRO!");
         }
 
         @Override

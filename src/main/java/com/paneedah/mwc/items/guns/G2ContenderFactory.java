@@ -1030,7 +1030,6 @@ public class G2ContenderFactory implements GunFactory {
 
 //              // Holo Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.LeupoldRailScope)) {
-                                //System.out.println("Position me for Holo");
                                 GlStateManager.translate(0f, 0.27f, 1f);
                             }
 
@@ -1050,7 +1049,6 @@ public class G2ContenderFactory implements GunFactory {
 
 //              // Holo Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.LeupoldRailScope)) {
-                                //System.out.println("Position me for Holo");
                                 GlStateManager.translate(0f, 0.27f, 0.5f);
                             }
 

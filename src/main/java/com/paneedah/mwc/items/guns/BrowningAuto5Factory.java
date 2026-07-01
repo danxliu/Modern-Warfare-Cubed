@@ -110,7 +110,6 @@ public class BrowningAuto5Factory implements GunFactory {
 
 //              // Holo Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.RMR)) {
-                                //System.out.println("Position me for Holo");
                             }
 
                             // Everything else
@@ -307,7 +306,6 @@ public class BrowningAuto5Factory implements GunFactory {
 
 //              // Holo Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.RMR)) {
-                                //System.out.println("Position me for Holo");
                             }
 
                             // Everything else

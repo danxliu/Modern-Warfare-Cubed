@@ -748,115 +748,96 @@ public class ACRFactory implements GunFactory {
 
                             // ACOG Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.MBUSRearSights)) {
-                                //System.out.println("Position me for Acog");
                                 GlStateManager.translate(0F, 0.07f, 0f);
                             }
 
                             // ACOG Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.HK416RearSights)) {
-                                //System.out.println("Position me for Acog");
                                 GlStateManager.translate(0F, 0.055f, 0f);
                             }
 
                             // ACOG Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.TritiumRearSights)) {
-                                //System.out.println("Position me for Acog");
                                 GlStateManager.translate(0F, 0.05f, 0f);
                             }
 
                             // ACOG Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.NightRaider)) {
-                                //System.out.println("Position me for Acog");
                                 GlStateManager.translate(0F, 0.08f, 0.25f);
                             }
 
                             // ACOG Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.ACOG)) {
-                                //System.out.println("Position me for Acog");
                                 GlStateManager.translate(-0F, 0.11f, 0.7f);
                             }
 
                             // ACOG Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.Specter)) {
-                                //System.out.println("Position me for Acog");
                                 GlStateManager.translate(0F, 0.05f, 0.3f);
                             }
 
                             // ACOG Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.LeupoldRailScope)) {
-                                //System.out.println("Position me for Acog");
                                 GlStateManager.translate(0F, 0.06f, 0.05f);
                             }
 
                             // Reflex Zoom
                             else if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.MicroReflex)) {
-                                //System.out.println("Position me for Reflex");
                                 GlStateManager.translate(-0F, 0.055f, 0.6f);
                             }
 
                             // Reflex Zoom
                             else if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.Reflex)) {
-                                //System.out.println("Position me for Reflex");
                                 GlStateManager.translate(-0F, 0.055f, 0.6f);
                             }
 
                             // Reflex Zoom
                             else if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.BijiaReflex)) {
-                                //System.out.println("Position me for Reflex");
                                 GlStateManager.translate(-0F, 0.045f, 0.6f);
                             }
 
                             // Holo Zoom
                             else if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.Holographic)) {
-                                //System.out.println("Position me for Holo");
                                 GlStateManager.translate(-0F, 0.09f, 0.6f);
                             }
 
                             // Holo Zoom
                             else if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.HolographicAlt)) {
-                                //System.out.println("Position me for Holo");
                                 GlStateManager.translate(-0F, 0.09f, 0.6f);
                             }
 
                             // Holo Zoom
                             else if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.EotechHybrid2)) {
-                                //System.out.println("Position me for Holo");
                                 GlStateManager.translate(-0F, 0.1f, 0.3f);
                             }
 
                             // Holo Zoom
                             else if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.VortexRedux)) {
-                                //System.out.println("Position me for Holo");
                                 GlStateManager.translate(-0F, 0.08f, 0.8f);
                             }
 
                             // Holo Zoom
                             else if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.Kobra)) {
-                                //System.out.println("Position me for Holo");
                                 GlStateManager.translate(0F, 0.05f, 0.6f);
                             }
 
                             // Holo Zoom
                             else if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.KobraGen3)) {
-                                //System.out.println("Position me for Holo");
                                 GlStateManager.translate(0F, 0.05f, 0.6f);
                             }
 
                             // Holo Zoom
                             else if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.MicroT1)) {
-                                //System.out.println("Position me for Holo");
                                 GlStateManager.translate(-0.001F, 0.08f, 0.9f);
                             }
 
                             // Holo Zoom
                             else if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.AimpointCompM5)) {
-                                //System.out.println("Position me for Holo");
                                 GlStateManager.translate(-0.001F, 0.08f, 0.9f);
                             }
 
                             // Holo Zoom
                             else if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.AKMIron)) {
-                                //System.out.println("Position me for Holo");
                                 GlStateManager.translate(0F, 0.039f, 0.2f);
                             }
 

@@ -173,12 +173,10 @@ public class DesertEagleFactory implements GunFactory {
                             GlStateManager.translate(0.14f, 0.7f, -2.3f);
 
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.RMR)) {
-                                //System.out.println("Position me for Holo");
                                 GlStateManager.translate(0f, 0.21f, 0.24f);
                             }
 
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.BijiaReflex)) {
-                                //System.out.println("Position me for Holo");
                                 GlStateManager.translate(0f, 0.26f, 0.24f);
                             }
 

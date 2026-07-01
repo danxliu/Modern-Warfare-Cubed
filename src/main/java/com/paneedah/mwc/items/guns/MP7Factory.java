@@ -438,102 +438,85 @@ public class MP7Factory implements GunFactory {
 
                             // ACOG Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.MP7IronSightsStanding)) {
-                                //System.out.println("Position me for Acog");
                                 GlStateManager.translate(0F, 0.175f, 0f);
                             } else {
                                 // ACOG Zoom
                                 if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.NightRaider)) {
-                                    //System.out.println("Position me for Acog");
                                     GlStateManager.translate(0F, 0.15f, 0.8f);
                                 }
 
                                 // ACOG Zoom
                                 if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.ACOG)) {
-                                    //System.out.println("Position me for Acog");
                                     GlStateManager.translate(0F, 0.17f, 0.9f);
                                 }
 
                                 // ACOG Zoom
                                 if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.MicroT1)) {
-                                    //System.out.println("Position me for Acog");
                                     GlStateManager.translate(0F, 0.17f, 0.8f);
                                 }
 
                                 // ACOG Zoom
                                 if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.AimpointCompM5)) {
-                                    //System.out.println("Position me for Acog");
                                     GlStateManager.translate(0F, 0.17f, 0.8f);
                                 }
 
                                 // ACOG Zoom
                                 if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.AimpointCompM2)) {
-                                    //System.out.println("Position me for Acog");
                                     GlStateManager.translate(0F, 0.14f, 0.7f);
                                 }
 
                                 // ACOG Zoom
                                 if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.Specter)) {
-                                    //System.out.println("Position me for Acog");
                                     GlStateManager.translate(0F, 0.12f, 1f);
                                 }
 
                                 // ACOG Zoom
                                 if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.Reflex)) {
-                                    //System.out.println("Position me for Acog");
                                     GlStateManager.translate(0F, 0.12f, 1f);
                                 }
 
                                 // ACOG Zoom
                                 if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.BijiaReflex)) {
-                                    //System.out.println("Position me for Acog");
                                     GlStateManager.translate(0F, 0.12f, 1f);
                                 }
 
                                 // ACOG Zoom
                                 if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.Holographic)) {
-                                    //System.out.println("Position me for Acog");
                                     GlStateManager.translate(0F, 0.215f, 0.8f);
                                 }
 
                                 // ACOG Zoom
                                 if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.HolographicAlt)) {
-                                    //System.out.println("Position me for Acog");
                                     GlStateManager.translate(0F, 0.215f, 0.8f);
                                 }
 
                                 // ACOG Zoom
                                 if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.EotechHybrid2)) {
-                                    //System.out.println("Position me for Acog");
                                     GlStateManager.translate(0F, 0.211f, 0.6f);
                                 }
 
                                 // ACOG Zoom
                                 if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.VortexRedux)) {
-                                    //System.out.println("Position me for Acog");
                                     GlStateManager.translate(0F, 0.21f, 0.8f);
                                 }
 
                                 // ACOG Zoom
                                 if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.Kobra)) {
-                                    //System.out.println("Position me for Acog");
                                     GlStateManager.translate(0F, 0.2f, 0.6f);
                                 }
 
                                 // ACOG Zoom
                                 if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.KobraGen3)) {
-                                    //System.out.println("Position me for Acog");
                                     GlStateManager.translate(0F, 0.2f, 0.6f);
                                 }
 
                                 // ACOG Zoom
                                 if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.MicroReflex)) {
-                                    //System.out.println("Position me for Acog");
                                     GlStateManager.translate(0F, 0.2f, 0.6f);
                                 }
 
                                 // ACOG Zoom
                                 if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.RMR)) {
-                                    //System.out.println("Position me for Acog");
                                     GlStateManager.translate(0F, 0.07f, 0.6f);
                                 }
 

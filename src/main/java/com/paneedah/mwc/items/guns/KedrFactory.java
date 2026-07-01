@@ -571,13 +571,11 @@ public class KedrFactory implements GunFactory {
 
                             // ACOG Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.OKP7)) {
-                                //System.out.println("Position me for Acog");
                                 GlStateManager.translate(-0.07F, 0.13f, 0f);
                             }
 
                             // ACOG Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.PSO1)) {
-                                //System.out.println("Position me for Acog");
                                 GlStateManager.translate(-0.015F, 0.17f, 0.7f);
                             }
 
@@ -597,13 +595,11 @@ public class KedrFactory implements GunFactory {
 
                             // ACOG Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.OKP7)) {
-                                //System.out.println("Position me for Acog");
                                 GlStateManager.translate(-0.07F, 0.13f, 0f);
                             }
 
                             // ACOG Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.PSO1)) {
-                                //System.out.println("Position me for Acog");
                                 GlStateManager.translate(-0.015F, 0.17f, 0.65f);
                             }
 

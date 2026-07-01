@@ -1035,81 +1035,67 @@ public class M32MGLFactory implements GunFactory {
 
                             // ACOG Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.M2A1sight)) {
-                                //System.out.println("Position me for Acog");
                                 GlStateManager.translate(0F, 0.26f, 1.6f);
                             }
                             // ACOG Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.NightRaider)) {
-                                //System.out.println("Position me for Acog");
                                 GlStateManager.translate(0F, 0.28f, 1.4f);
                             }
                             // ACOG Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.ACOG)) {
-                                //System.out.println("Position me for Acog");
                                 GlStateManager.translate(0F, 0.28f, 1.4f);
                             }
                             // ACOG Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.Specter)) {
-                                //System.out.println("Position me for Acog");
                                 GlStateManager.translate(0F, 0.28f, 1.5f);
                             }
 
                             // Reflex Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.Reflex)) {
-                                //System.out.println("Position me for Reflex");
                                 GlStateManager.translate(0F, 0.21f, 1f);
                             }
 
                             // Reflex Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.BijiaReflex)) {
-                                //System.out.println("Position me for Reflex");
                                 GlStateManager.translate(0F, 0.21f, 1f);
                             }
 
                             // Holo Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.Holographic)) {
-                                //System.out.println("Position me for Holo");
                                 GlStateManager.translate(0F, 0.25f, 1f);
                             }
 
                             // Holo Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.HolographicAlt)) {
-                                //System.out.println("Position me for Holo");
                                 GlStateManager.translate(0F, 0.25f, 1f);
                             }
 
 //             // Holo Zoom
 //                if(Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.Vortex)) {
-//                    //System.out.println("Position me for Holo");
 //                    GlStateManager.translate(0F, 0.32f, 1f);
 //                } 
 
                             // Holo Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.EotechHybrid2)) {
-                                //System.out.println("Position me for Holo");
                                 GlStateManager.translate(0F, 0.24f, 1.3f);
                             }
 
                             // Reflex Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.Kobra)) {
-                                //System.out.println("Position me for Reflex");
                                 GlStateManager.translate(0F, 0.24f, 1f);
                             }
 
                             // Reflex Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.MicroT1)) {
-                                //System.out.println("Position me for Reflex");
                                 GlStateManager.translate(0F, 0.26f, 1f);
                             }
 
                             // Reflex Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.AimpointCompM5)) {
-                                //System.out.println("Position me for Reflex");
                                 GlStateManager.translate(0F, 0.26f, 1f);
                             }
 
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.RMR)) {
-                                //System.out.println("Position me for Reflex");
                                 GlStateManager.translate(0F, 0.1f, 1f);
                             }
 
@@ -1127,81 +1113,67 @@ public class M32MGLFactory implements GunFactory {
 
                             // ACOG Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.M2A1sight)) {
-                                //System.out.println("Position me for Acog");
                                 GlStateManager.translate(0F, 0.26f, 1.6f);
                             }
                             // ACOG Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.NightRaider)) {
-                                //System.out.println("Position me for Acog");
                                 GlStateManager.translate(0F, 0.28f, 1.4f);
                             }
                             // ACOG Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.ACOG)) {
-                                //System.out.println("Position me for Acog");
                                 GlStateManager.translate(0F, 0.28f, 1.4f);
                             }
                             // ACOG Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.Specter)) {
-                                //System.out.println("Position me for Acog");
                                 GlStateManager.translate(0F, 0.28f, 1.5f);
                             }
 
                             // Reflex Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.Reflex)) {
-                                //System.out.println("Position me for Reflex");
                                 GlStateManager.translate(0F, 0.21f, 1f);
                             }
 
                             // Reflex Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.BijiaReflex)) {
-                                //System.out.println("Position me for Reflex");
                                 GlStateManager.translate(0F, 0.21f, 1f);
                             }
 
                             // Holo Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.Holographic)) {
-                                //System.out.println("Position me for Holo");
                                 GlStateManager.translate(0F, 0.25f, 1f);
                             }
 
                             // Holo Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.HolographicAlt)) {
-                                //System.out.println("Position me for Holo");
                                 GlStateManager.translate(0F, 0.25f, 1f);
                             }
 
 //             // Holo Zoom
 //                if(Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.Vortex)) {
-//                    //System.out.println("Position me for Holo");
 //                    GlStateManager.translate(0F, 0.32f, 1f);
 //                } 
 
                             // Holo Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.EotechHybrid2)) {
-                                //System.out.println("Position me for Holo");
                                 GlStateManager.translate(0F, 0.24f, 1.3f);
                             }
 
                             // Reflex Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.Kobra)) {
-                                //System.out.println("Position me for Reflex");
                                 GlStateManager.translate(0F, 0.24f, 1f);
                             }
 
                             // Reflex Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.MicroT1)) {
-                                //System.out.println("Position me for Reflex");
                                 GlStateManager.translate(0F, 0.26f, 1f);
                             }
 
                             // Reflex Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.AimpointCompM5)) {
-                                //System.out.println("Position me for Reflex");
                                 GlStateManager.translate(0F, 0.26f, 1f);
                             }
 
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.RMR)) {
-                                //System.out.println("Position me for Reflex");
                                 GlStateManager.translate(0F, 0.1f, 1f);
                             }
 

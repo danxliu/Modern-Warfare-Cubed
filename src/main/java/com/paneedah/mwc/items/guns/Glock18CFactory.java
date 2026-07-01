@@ -331,12 +331,10 @@ public class Glock18CFactory implements GunFactory {
                             GlStateManager.translate(0.105f, 0.67f, -1.9f);
 
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.RMR)) {
-                                //System.out.println("Position me for Holo");
                                 GlStateManager.translate(0f, 0.26f, 1.4f);
                             }
 
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.BijiaReflex)) {
-                                //System.out.println("Position me for Holo");
                                 GlStateManager.translate(0f, 0.36f, 1.4f);
                             }
 

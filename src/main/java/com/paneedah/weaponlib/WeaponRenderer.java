@@ -1683,23 +1683,7 @@ public class WeaponRenderer extends ModelSource implements IBakedModel {
 
             WeaponRenderer renderer = new WeaponRenderer(this);
 
-			/*
-			if(firstPersonPositioning == null) {
-				firstPersonPositioning = (renderContext) -> {
-					GlStateManager.rotate(45F, 0f, 1f, 0f);
 
-					if(renderer.getClientModContext() != null) {
-						PlayerWeaponInstance instance = renderer.getClientModContext().getMainHeldWeapon();
-						if(instance != null && instance.isAimed()) {
-							GlStateManager.translate(xOffsetZoom, yOffsetZoom, weaponProximity);
-						} else {
-							GlStateManager.translate(0F, -1.2F, 0F);
-						}
-					}
-
-				};
-			}
-			*/
 
             if (firstPersonPositioningZooming == null) {
                 firstPersonPositioningZooming = firstPersonPositioning;
@@ -2344,11 +2328,6 @@ public class WeaponRenderer extends ModelSource implements IBakedModel {
                 case LOAD:
 
 
-				/*
-				if(!compoundReload && !compoundReloadEmpty) {
-					currentState = RenderableState.RELOADING;
-				}
-				*/
                     if (shouldDoEmptyVariant()) {
                         currentState = RenderableState.LOAD_EMPTY;
                     } else {
@@ -2888,19 +2867,7 @@ public class WeaponRenderer extends ModelSource implements IBakedModel {
                             context -> {},
                             new LinkedHashMap<>(),
                             DEFAULT_ANIMATION_DURATION);
-//            default:
-//                return getSimpleTransition(context -> {},
-//                        context -> {
-//                            //
-//                        },
-//                        context -> {
-////                            GlStateManager.translate(0f, 0.5f, 0f);
-////                            GlStateManager.rotate(30f, 0f, 0f, 1f);
-//                        },
-//                        new LinkedHashMap<>(),
-//                        DEFAULT_ANIMATION_DURATION);
             }
-            //return null;
         }
     }
 
@@ -2976,20 +2943,7 @@ public class WeaponRenderer extends ModelSource implements IBakedModel {
             MC.renderEngine.bindTexture(new ResourceLocation(ID + ":textures/models/" + getBuilder().getTextureName()));
         } else {
             String textureName = null;
-			/*
-			CompatibleAttachment<?> compatibleSkin = attachments.stream()
-					.filter(ca -> ca.getAttachment() instanceof ItemSkin).findAny().orElse(null);
-			if(compatibleSkin != null) {
-				PlayerItemInstance<?> itemInstance = getClientModContext().getPlayerItemInstanceRegistry()
-						.getCachedItemInstance(renderContext.getPlayer(), weaponItemStack);
-				if(itemInstance instanceof PlayerWeaponInstance) {
-					int textureIndex = ((PlayerWeaponInstance) itemInstance).getActiveTextureIndex();
-					if(textureIndex >= 0) {
-						textureName = ((ItemSkin) compatibleSkin.getAttachment()).getTextureVariant(textureIndex)
-								+ ".png";
-					}
-				}
-			}*/
+
 
             if (textureName == null) {
                 Weapon weapon = ((Weapon) weaponItemStack.getItem());
@@ -3131,21 +3085,7 @@ public class WeaponRenderer extends ModelSource implements IBakedModel {
 
 
 
-		/*
-		for(CompatibleAttachment<?> compatibleAttachment: attachments) {
 
-	        CustomRenderer<RenderableState> postRenderer = (CustomRenderer<RenderableState>) compatibleAttachment.getAttachment().getPostRenderer();
-			if(postRenderer != null) {
-
-				GlStateManager.pushMatrix();
-				GlStateManager.pushAttrib(); // TODO: This fucks up the GlStateManager - Luna Mira Lage (Desoroxxx) 2025-12-28 // Before the transition to GlStateManager it used `GL11.GL_ENABLE_BIT | GL11.GL_CURRENT_BIT`, but GlStateManager don't allow mask so maybe we just don't at all? - Luna Mira Lage (Desoroxxx) - 2025-12-28
-				postRenderer.renderer(renderContext);
-				GlStateManager.popAttrib(); // TODO: This fucks up the GlStateManager - Luna Mira Lage (Desoroxxx) 2025-12-28
-				GlStateManager.popMatrix();
-
-			}
-		}
-		*/
 
     }
 
@@ -3398,29 +3338,7 @@ public class WeaponRenderer extends ModelSource implements IBakedModel {
 
                 }
 
-				/*
-				if(compatibleAttachment.getAttachment().getCategory() == AttachmentCategory.ACTION) {
 
-					//System.out.println("hi");
-					if(renderContext.getWeaponInstance().getAmmo() != 0) {
-						renderContext.getWeaponInstance().setSlideLock(false);
-					}
-
-					WeaponState state = renderContext.getWeaponInstance().getState();
-					//System.out.println(renderContext.getWeaponInstance());
-					if(renderContext.getWeaponInstance().isSlideLockOn() && (state == WeaponState.READY || state == WeaponState.ALERT)) {
-						GlStateManager.translate(0, 0, 0.43);
-					}
-
-					double slideKickback = ClientValueRepo.gunPow.getLerpedFloat()/32f;
-
-					slideKickback *= slideKickback*slideKickback;
-					slideKickback = Math.min(slideKickback, 0.5);
-
-					GlStateManager.translate(0, 0, slideKickback);
-
-				}
-				*/
 				/*
 				if((compatibleAttachment.getAttachment() instanceof ItemMagazine)) {
 					new Transform().withScale(1, 1, 1).withPivotPoint(ClientEventHandler.magRotPositioner.x, ClientEventHandler.magRotPositioner.y, ClientEventHandler.magRotPositioner.z)
@@ -3492,15 +3410,7 @@ public class WeaponRenderer extends ModelSource implements IBakedModel {
         }
 
 
-		/*
 
-        CustomRenderer<RenderableState> postRenderer = (CustomRenderer<RenderableState>) compatibleAttachment.getAttachment().getPostRenderer();
-		if(postRenderer != null) {
-			// Stuff like lasers goes in here
-			//postRenderer.renderer(renderContext);
-			deferredPost.add(new Pair<>(captureCurrentModelViewMatrix(), postRenderer));
-		}
-		*/
 
         for (CompatibleAttachment<?> childAttachment : itemAttachment.getAttachments()) {
             renderCompatibleAttachment(childAttachment, positioner, renderContext);
@@ -3728,21 +3638,6 @@ public class WeaponRenderer extends ModelSource implements IBakedModel {
                 // RenderHelper.enableStandardItemLighting();
 
 
-			/*
-			GlStateManager.rotate(0f, 0, 0, 1);
-			GlStateManager.rotate(120f, 0, 1, 0);
-			GlStateManager.rotate(-20f, 1, 0, 0);
-
-			GlStateManager.translate(-150.0f, -40f, 0f);
-			*/
-
-			 /*
-			GlStateManager.translate(50.0, -50.0, 0.0);
-			//GlStateManager.rotate(180f, 1, 0, 0);
-			GlStateManager.rotate(90f, 0, 0, 1);
-
-			GlStateManager.scale(inventoryScale, inventoryScale, inventoryScale);
-			*/
                 new Transform()
                         .withPosition(75, -85, 0)
                         .withRotation(20, 130, 120)
@@ -3877,176 +3772,7 @@ public class WeaponRenderer extends ModelSource implements IBakedModel {
                 //new Transform().withPosition(-0.5, 0, 0.5).withRotation(15, -5, 15).withScale(1, 1, 1).applyTransformations();
 
 
-			/*
-			AnimationData anm = BBLoader.getAnimation("real", "reload", "main");
-			//AnimationData anm = BBLoader.loadAnimationData("m16.animation.json", "animation.M16.reload", "main");
-			FuckMyLife.instance.bbMap.clear();
-	        for(Entry<Float, BlockbenchTransition> tranny : anm.bbTransition.entrySet()) {
-				FuckMyLife.instance.bbMap.put(tranny.getKey(), tranny.getValue());
-			}
 
-	        FuckMyLife.instance.timer += 0.013f;
-
-	        try {
-	        	//FuckMyLife.instance.position(FuckMyLife.instance.timer, 4.0f, false);
-	        } catch(Exception e) {
-	        	e.printStackTrace();
-	        }*/
-
-	        /*
-	        GlStateManager.rotate(-23.0522f, 0, 0, 1);
-			GlStateManager.rotate(-4.2163f, 0, 1, 0);
-			GlStateManager.rotate(-3.6519f, 1, 0, 0);
-			*/
-
-			/*
-			RecoilParam parameters = renderContext.getWeaponInstance().getWeapon().getRecoilParameters();
-
-			boolean scopeFlag = true;
-			boolean isPistol = parameters.getRecoilGroup() == 1;
-
-			boolean isShotgun = parameters.getRecoilGroup() == 2;
-			boolean isAssault = parameters.getRecoilGroup() == 0;
-			float min = (isAssault && renderContext.getWeaponInstance().isAimed()) ? 0.2f : 1f;
-			if (renderContext.getWeaponInstance().getScope() != null
-					&& renderContext.getWeaponInstance().getScope().isOptical()
-					&& renderContext.getWeaponInstance().isAimed()) {
-				min *= 0.5;
-				scopeFlag = true;
-				// System.out.println("yo");
-			}
-			float maxAngle = (float) (2 * Math.PI);
-			float time = (float) (35f - (ClientValueRepo.gunPow / 400));
-			if (min != 1.0)
-				time = 35f;
-			float tick = (float) ((float) maxAngle * ((MC.player.ticksExisted % time) / time))
-					- (maxAngle / 2);
-
-			double amp = 0.07 + (ClientValueRepo.gunPow / 700);
-			double a = 1;
-			double b = 2;
-			double c = Math.PI;
-
-			EntityPlayer p = MC.player;
-
-			float xRotation = (float) ((float) amp * Math.sin(a * tick + c));
-			float yRotation = (float) ((float) amp * Math.sin(b * tick));
-			float zRotation = (float) 0;
-
-			RenderableState sus = stateDescriptor.getStateManager().getLastState();
-
-			float shoting = (float) ClientValueRepo.gunPow;
-			if (scopeFlag)
-				shoting *= 0.2f;
-
-			float recoilStop = (float) ClientValueRepo.recoilStop / 1.5f;
-
-			float zRot = (float) ((float) -ClientValueRepo.gunPow / 25f + ((float) 0)) * min;
-
-			float pistol = 25;
-			float pR = isPistol ? (float) ClientValueRepo.randomRot.y : 0f;
-
-			float muzzleRiser = (float) shoting / 60f;
-			if (shoting > recoilStop) {
-				muzzleRiser = recoilStop / 60f;
-			}
-
-			if (isPistol || isShotgun)
-				muzzleRiser *= pistol;
-			muzzleRiser *= (min);
-			muzzleRiser *= parameters.getMuzzleClimbMultiplier();
-
-			float wavyBoi = 0f;
-			if (!isPistol) {
-				wavyBoi = (float) Math.pow(Math.sin(ClientValueRepo.recovery * 0.048 + shoting * 0.015), 3) * 2;
-			} else {
-				wavyBoi = (float) Math.pow(-Math.sin((ClientValueRepo.recovery - ClientValueRepo.gunPow) * 0.2), 1) * 2;
-
-			}
-			wavyBoi *= min;
-
-			// System.out.println(wavyBoi);
-			// System.out.println(System.currentTimeMillis());
-
-			// float muzzleDown = ClientValueRepo.gunPow > 30 ? (float)
-			// (ClientValueRepo.gunPow-30f)/5f : 0f;
-			// System.out.println(shoting);
-
-			float aimMultiplier = renderContext.getWeaponInstance().isAimed() ? 0.1f : 1.0f;
-
-			float strafe = (float) ClientValueRepo.strafe * aimMultiplier * 0.7f;
-
-			float forwardMov = (float) ClientValueRepo.forward * aimMultiplier * 0.7f;
-			float rise = (float) (ClientValueRepo.rise / 1f);
-
-
-
-
-			forwardMov = Math.max(0, forwardMov);
-
-			if (!AnimationModeProcessor.getInstance().getFPSMode()) {
-
-				// gun sway
-				applyRotationAtPoint(0f, 0f, 3f, (float) (xRotation) - (wavyBoi) + forwardMov + (rise / 1f),
-						yRotation + strafe, zRotation + zRot);
-
-				// Gun inertia
-				// applyRotationAtPoint(0.0f, 0.0f, 0.0f, wavyBoi, 0, 0);
-
-				float fight = (float) Math.pow(Math.sin(shoting * 0.015), 3);
-				fight *= min;
-				// +-+
-
-				// System.out.println(MC.player.motionY);
-				// float prevWiggle = (float)
-				// (2*Math.PI*((MC.player.ticksExisted%20)/20.0))*MC.getRenderPartialTicks();
-				float prevTickWiggle = (float) (2 * Math.PI
-						* (((MC.player.ticksExisted - 1) % 20) / 20.0));
-
-				// System.out.println(MC.player.ticksExisted);
-				float tickWiggle = (float) (2 * Math.PI * (((ClientValueRepo.ticker.getLerpedFloat()) % 36) / 36.0));
-
-
-				// tickWiggle = MatrixHelper.solveLerp((float) ClientValueRepo.walkYWiggle,
-				// tickWiggle, MC.getRenderPartialTicks());
-
-
-
-				float xWiggle = (float) ((float) Math.sin(tickWiggle) * ClientValueRepo.walkingGun.getLerpedPosition());
-
-				// xWiggle = MatrixHelper.solveLerp((float) ClientValueRepo.walkXWiggle,
-				// xWiggle, MC.getRenderPartialTicks());
-
-				// ClientValueRepo.walkXWiggle = xWiggle;
-
-				float yWiggle = (float) ((float) Math.cos(tickWiggle) * ClientValueRepo.walkingGun.getLerpedPosition())
-						* 0.02f;
-
-				float sway = (float) ((float) ((float) Math.sin(tickWiggle * 2)) * ClientValueRepo.forward) * 0.2f;
-				sway *= aimMultiplier;
-				// xWiggle = (float) ClientValueRepo.walkingGun.getLerpedPosition();
-				// xWiggle = 0f;
-				// forwardMov = 0f;
-
-				// Gun inertia
-
-				applyRotationAtPoint(0.0f, 0.0f, 0.0f,
-						(float) ClientValueRepo.yInertia + fight + (isPistol ? -muzzleRiser : 0f) + forwardMov
-								+ (rise / 1f) + (yWiggle * 3),
-						(float) -ClientValueRepo.xInertia - fight + pR + strafe - (forwardMov * 3) + (sway * 10),
-						(float) ClientValueRepo.xInertia + fight + xWiggle + (forwardMov * 10));
-
-				if (!isPistol)
-					applyRotationAtPoint(0.0f, 0.0f, -1.0f, -muzzleRiser, 0.0f, 0.0f);
-
-				float limitedShoting = Math.min(shoting, (float) ClientValueRepo.recoilStop / 1.5f);
-
-				GlStateManager.translate(0.0 * parameters.getTranslationMultipliers().x + (-strafe / 10) + (sway / 3f),
-						(isPistol ? -0.01 * limitedShoting : 0f) * parameters.getTranslationMultipliers().y
-								+ (rise / 35f) + yWiggle + (forwardMov / 10f),
-						0.01 * limitedShoting * min * parameters.getTranslationMultipliers().z);
-
-			}*/
 
                 weaponRotationHandler.run(renderContext, stateDescriptor);
                 //ads.applyTransformations();
@@ -4590,28 +4316,7 @@ public class WeaponRenderer extends ModelSource implements IBakedModel {
 
         GlStateManager.rotate(MCT, 0, 1, 0);
 
-		/*
-		AnimationData anm = BBLoader.getAnimation("real", "reload", "lefthand");
-		//AnimationData anm = BBLoader.loadAnimationData("m16.animation.json", "animation.M16.reload", "lefthand");
-		FuckMyLife.instance.bbMap.clear();
-        for(Entry<Float, BlockbenchTransition> tranny : anm.bbTransition.entrySet()) {
-			FuckMyLife.instance.bbMap.put(tranny.getKey(), tranny.getValue());
-		}
 
-      //  System.out.println(anm.bbTransition.get(1.5).directTransform());
-        FuckMyLife.instance.timer = 0f;
-        try {
-        	//FuckMyLife.instance.position(FuckMyLife.instance.timer, 4.0f, true);
-        } catch(Exception e) {
-        	e.printStackTrace();
-        }*/
-        // System.out.println(anm.bbTransition);
-
-
-        /*
-        FuckMyLife.instance.timer += 0.01f;
-        FuckMyLife.instance.timer = 0f;
-        */
 
 
         /*

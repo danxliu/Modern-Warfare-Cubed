@@ -650,7 +650,6 @@ public class M712Factory implements GunFactory {
                             GlStateManager.translate(0.350000f, 1.34f, -2f);
 
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.RMR)) {
-                                //System.out.println("Position me for Holo");
                             }
 
                             // Everything else
@@ -668,7 +667,6 @@ public class M712Factory implements GunFactory {
                             GlStateManager.rotate(3F, 0f, 0f, 1f);
 
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.RMR)) {
-                                //System.out.println("Position me for Holo");
                             }
 
                             // Everything else

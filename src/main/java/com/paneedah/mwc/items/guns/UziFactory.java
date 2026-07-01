@@ -293,7 +293,6 @@ public class UziFactory implements GunFactory {
                             GlStateManager.translate(0.14f, 0.79f, -1.6f);
 
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.RMR)) {
-                                //System.out.println("Position me for Holo");
                             }
 
                             // Everything else

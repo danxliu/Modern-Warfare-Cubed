@@ -257,7 +257,6 @@ public class APSFactory implements GunFactory {
                             GlStateManager.translate(0.14f, 0.59f, -1.8f);
 
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.RMR)) {
-                                //System.out.println("Position me for Holo");
                             }
 
                             // Everything else

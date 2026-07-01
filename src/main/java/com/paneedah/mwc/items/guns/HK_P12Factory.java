@@ -315,17 +315,14 @@ public class HK_P12Factory implements GunFactory {
                             GlStateManager.translate(0.15f, 0.67f, -2f);
 
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.ACOG)) {
-                                //System.out.println("Position me for Holo");
                                 GlStateManager.translate(0f, 0.46f, 1.4f);
                             }
 
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.RMR)) {
-                                //System.out.println("Position me for Holo");
                                 GlStateManager.translate(-0.04f, 0.35f, 0f);
                             }
 
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.BijiaReflex)) {
-                                //System.out.println("Position me for Holo");
                                 GlStateManager.translate(-0.04f, 0.35f, 0f);
                             }
                             // Everything else

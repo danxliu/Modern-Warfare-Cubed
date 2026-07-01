@@ -763,7 +763,6 @@ public class AUGFactory implements GunFactory {
 
                             // ACOG Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.AK15ironsight)) {
-                                //System.out.println("Position me for Acog");
                                 GlStateManager.translate(0F, 0.008f, 0f);
                             }
 
@@ -781,7 +780,6 @@ public class AUGFactory implements GunFactory {
 
                             // ACOG Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.AUGscope)) {
-                                //System.out.println("Position me for Acog");
                                 GlStateManager.translate(0F, 0.17f, 0.4f);
                             }
 

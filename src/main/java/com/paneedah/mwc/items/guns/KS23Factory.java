@@ -189,7 +189,6 @@ public class KS23Factory implements GunFactory {
 
 //              // Holo Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.RMR)) {
-                                //System.out.println("Position me for Holo");
                             }
 
                             // Everything else
@@ -696,7 +695,6 @@ public class KS23Factory implements GunFactory {
 
 //              // Holo Zoom
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.RMR)) {
-                                //System.out.println("Position me for Holo");
                             }
 
                             // Everything else

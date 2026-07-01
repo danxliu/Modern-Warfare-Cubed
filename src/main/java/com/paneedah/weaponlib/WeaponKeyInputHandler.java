@@ -91,10 +91,8 @@ public class WeaponKeyInputHandler {
 
         if (AnimationModeProcessor.getInstance().getFPSMode()) {
             if (Keyboard.isKeyDown(Keyboard.KEY_COMMA)) {
-                System.out.println("hello");
                 AnimationModeProcessor.getInstance().transformMode = 1;
             } else if (Keyboard.isKeyDown(Keyboard.KEY_PERIOD)) {
-                System.out.println("hello");
                 AnimationModeProcessor.getInstance().transformMode = 2;
             } else if (Keyboard.isKeyDown(Keyboard.KEY_END)) {
                 OpenGLSelectionHelper.ballBuf.framebufferClear();

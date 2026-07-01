@@ -904,7 +904,6 @@ public class M1911Factory implements GunFactory {
                             GlStateManager.translate(0.350000f, 0.62f, -2f);
 
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.RMR)) {
-                                //System.out.println("Position me for Holo");
                                 GlStateManager.translate(0f, 0.22f, 0f);
                             }
 
@@ -923,7 +922,6 @@ public class M1911Factory implements GunFactory {
                             GlStateManager.rotate(-3F, 0f, 0f, 1f);
 
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.RMR)) {
-                                //System.out.println("Position me for Holo");
                                 GlStateManager.translate(0f, 0.22f, 0f);
                             }
 

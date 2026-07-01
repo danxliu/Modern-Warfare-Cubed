@@ -135,12 +135,10 @@ public class ChiappaRhinoFactory implements GunFactory {
                             GlStateManager.rotate(-3F, 0f, 0f, 1f);
 
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.RMR)) {
-                                //System.out.println("Position me for Holo");
                                 GlStateManager.translate(0f, 0.2f, 0f);
                             }
 
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.BijiaReflex)) {
-                                //System.out.println("Position me for Holo");
                                 GlStateManager.translate(0f, 0.2f, 0f);
                             }
 
@@ -937,12 +935,10 @@ public class ChiappaRhinoFactory implements GunFactory {
                             GlStateManager.translate(0.03f, 1.52f, -2.999999f);
 
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.RMR)) {
-                                //System.out.println("Position me for Holo");
                                 GlStateManager.translate(0f, 0.2f, 0f);
                             }
 
                             if (Weapon.isActiveAttachment(renderContext.getWeaponInstance(), Attachments.BijiaReflex)) {
-                                //System.out.println("Position me for Holo");
                                 GlStateManager.translate(0f, 0.2f, 0f);
                             }
 
