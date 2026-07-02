@@ -1,5 +1,7 @@
 package com.paneedah.weaponlib.compatibility;
 
+import org.lwjgl.opengl.GL11;
+
 import com.google.common.base.Predicate;
 import com.google.common.base.Predicates;
 import com.google.gson.JsonSyntaxException;
@@ -1906,7 +1908,7 @@ public class CompatibleWorldRenderer extends EntityRenderer {
             float f6 = this.itemActivationOffY * (float) (p_190563_2_ / 4);
             GlStateManager.enableAlpha();
             GlStateManager.pushMatrix();
-            GlStateManager.pushAttrib();
+            GL11.glPushAttrib(GL11.GL_ENABLE_BIT | GL11.GL_CURRENT_BIT);
             GlStateManager.enableDepth();
             GlStateManager.disableCull();
             RenderHelper.enableStandardItemLighting();
@@ -1917,7 +1919,7 @@ public class CompatibleWorldRenderer extends EntityRenderer {
             GlStateManager.rotate(6.0F * MathHelper.cos(f * 8.0F), 1.0F, 0.0F, 0.0F);
             GlStateManager.rotate(6.0F * MathHelper.cos(f * 8.0F), 0.0F, 0.0F, 1.0F);
             MC.getRenderItem().renderItem(this.itemActivationItem, ItemCameraTransforms.TransformType.FIXED);
-            GlStateManager.popAttrib();
+            GL11.glPopAttrib();
             GlStateManager.popMatrix();
             RenderHelper.disableStandardItemLighting();
             GlStateManager.enableCull();

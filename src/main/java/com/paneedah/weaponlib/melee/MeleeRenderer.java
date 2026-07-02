@@ -741,7 +741,7 @@ public class MeleeRenderer extends ModelSource implements IBakedModel {
                                             Positioner<Part, RenderContext<RenderableState>> positioner, RenderContext<RenderableState> renderContext) {
 
         GlStateManager.pushMatrix();
-        GlStateManager.pushAttrib(); // TODO: This fucks up the GlStateManager - Luna Mira Lage (Desoroxxx) 2025-12-28 // Before the transition to GlStateManager it used `GL11.GL_ENABLE_BIT | GL11.GL_CURRENT_BIT`, but GlStateManager don't allow mask so maybe we just don't at all? - Luna Mira Lage (Desoroxxx) - 2025-12-28
+        GL11.glPushAttrib(GL11.GL_ENABLE_BIT | GL11.GL_CURRENT_BIT);
 
         if (compatibleAttachment.getPositioning() instanceof BiConsumer) {
             ((BiConsumer) compatibleAttachment.getPositioning()).accept(renderContext.getPlayer(), renderContext.getWeapon());
@@ -764,7 +764,7 @@ public class MeleeRenderer extends ModelSource implements IBakedModel {
             MC.renderEngine.bindTexture(new ResourceLocation(ID
                     + ":textures/models/" + texturedModel.getV()));
             GlStateManager.pushMatrix();
-            GlStateManager.pushAttrib(); // TODO: This fucks up the GlStateManager - Luna Mira Lage (Desoroxxx) 2025-12-28 // Before the transition to GlStateManager it used `GL11.GL_ENABLE_BIT | GL11.GL_CURRENT_BIT`, but GlStateManager don't allow mask so maybe we just don't at all? - Luna Mira Lage (Desoroxxx) - 2025-12-28
+            GL11.glPushAttrib(GL11.GL_ENABLE_BIT | GL11.GL_CURRENT_BIT);
             if (compatibleAttachment.getModelPositioning() != null) {
                 compatibleAttachment.getModelPositioning().accept(texturedModel.getU());
             }
@@ -776,7 +776,7 @@ public class MeleeRenderer extends ModelSource implements IBakedModel {
                     renderContext.getHeadPitch(),
                     renderContext.getScale());
 
-            GlStateManager.popAttrib(); // TODO: This fucks up the GlStateManager - Luna Mira Lage (Desoroxxx) 2025-12-28
+            GL11.glPopAttrib();
             GlStateManager.popMatrix();
         }
 
@@ -784,9 +784,9 @@ public class MeleeRenderer extends ModelSource implements IBakedModel {
         CustomRenderer<RenderableState> postRenderer = (CustomRenderer<RenderableState>) compatibleAttachment.getAttachment().getPostRenderer();
         if (postRenderer != null) {
             GlStateManager.pushMatrix();
-            GlStateManager.pushAttrib(); // TODO: This fucks up the GlStateManager - Luna Mira Lage (Desoroxxx) 2025-12-28 // Before the transition to GlStateManager it used `GL11.GL_ENABLE_BIT | GL11.GL_CURRENT_BIT`, but GlStateManager don't allow mask so maybe we just don't at all? - Luna Mira Lage (Desoroxxx) - 2025-12-28
+            GL11.glPushAttrib(GL11.GL_ENABLE_BIT | GL11.GL_CURRENT_BIT);
             postRenderer.render(renderContext);
-            GlStateManager.popAttrib(); // TODO: This fucks up the GlStateManager - Luna Mira Lage (Desoroxxx) 2025-12-28
+            GL11.glPopAttrib();
             GlStateManager.popMatrix();
         }
 
@@ -794,7 +794,7 @@ public class MeleeRenderer extends ModelSource implements IBakedModel {
             renderCompatibleAttachment(childAttachment, positioner, renderContext);
         }
 
-        GlStateManager.popAttrib(); // TODO: This fucks up the GlStateManager - Luna Mira Lage (Desoroxxx) 2025-12-28
+        GL11.glPopAttrib();
         GlStateManager.popMatrix();
     }
 

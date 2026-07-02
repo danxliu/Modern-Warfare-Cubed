@@ -39,7 +39,7 @@ public class ScopePerspective extends PerspectiveRenderer {
 
         float brightness = perspective.getBrightness(renderContext);
         GlStateManager.pushMatrix();
-        GlStateManager.pushAttrib(); // TODO: This fucks up the GlStateManager - Luna Mira Lage (Desoroxxx) 2025-12-28 // Before the transition to GlStateManager it used `GL11.GL_ENABLE_BIT | GL11.GL_CURRENT_BIT`, but GlStateManager don't allow mask so maybe we just don't at all? - Luna Mira Lage (Desoroxxx) - 2025-12-28
+        GL11.glPushAttrib(GL11.GL_ENABLE_BIT | GL11.GL_CURRENT_BIT);
 
         positioning.run();
         //GlStateManager.bindTexture(framebuffer.framebufferTexture);
@@ -57,7 +57,7 @@ public class ScopePerspective extends PerspectiveRenderer {
         model.render(this.reticle, renderContext, renderContext.getPlayer(), renderContext.getScale());
 
         MC.entityRenderer.enableLightmap();
-        GlStateManager.popAttrib(); // TODO: This fucks up the GlStateManager - Luna Mira Lage (Desoroxxx) 2025-12-28
+        GL11.glPopAttrib();
         GlStateManager.popMatrix();
     }
 }

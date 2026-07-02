@@ -28,9 +28,9 @@ public interface DynamicShaderPhase {
                 GlStateManager.pushMatrix();
                 GlStateManager.loadIdentity();
 
-                GlStateManager.pushAttrib(); // TODO: This fucks up the GlStateManager - Luna Mira Lage (Desoroxxx) 2025-12-28 // Before the transition to GlStateManager it used `GL11.GL_ENABLE_BIT | GL11.GL_CURRENT_BIT`, but GlStateManager don't allow mask so maybe we just don't at all? - Luna Mira Lage (Desoroxxx) - 2025-12-28
+                GL11.glPushAttrib(GL11.GL_ENABLE_BIT | GL11.GL_CURRENT_BIT);
                 shaderGroup.render(context.getPartialTicks());
-                GlStateManager.popAttrib(); // TODO: This fucks up the GlStateManager - Luna Mira Lage (Desoroxxx) 2025-12-28
+                GL11.glPopAttrib();
                 GlStateManager.popMatrix();
                 GlStateManager.matrixMode(originalMatrixMode);
 

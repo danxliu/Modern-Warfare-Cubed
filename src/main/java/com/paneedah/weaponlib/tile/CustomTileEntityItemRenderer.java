@@ -1,5 +1,7 @@
 package com.paneedah.weaponlib.tile;
 
+import org.lwjgl.opengl.GL11;
+
 import static com.paneedah.mwc.proxies.ClientProxy.MC;
 
 import java.util.function.Consumer;
@@ -49,7 +51,7 @@ public class CustomTileEntityItemRenderer extends TileEntityItemStackRenderer {
         MC.getTextureManager().bindTexture(textureResource);
 
         GlStateManager.pushMatrix();
-        GlStateManager.pushAttrib();
+        GL11.glPushAttrib(GL11.GL_ENABLE_BIT | GL11.GL_CURRENT_BIT);
 
         GlStateManager.scale(1.0F, -1.0F, -1.0F);
         GlStateManager.translate(0.5F, -0.5F, -0.5F);
@@ -60,7 +62,7 @@ public class CustomTileEntityItemRenderer extends TileEntityItemStackRenderer {
 
         model.render(null, 0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 0.0625F);
 
-        GlStateManager.popAttrib();
+        GL11.glPopAttrib();
         GlStateManager.popMatrix();
 
         GlStateManager.popMatrix();

@@ -87,7 +87,7 @@ public class FlashFX extends Particle {
         MC.getTextureManager().bindTexture(new ResourceLocation(texture));
 
         GlStateManager.pushMatrix();
-        GlStateManager.pushAttrib(); // TODO: This fucks up the GlStateManager - Luna Mira Lage (Desoroxxx) 2025-12-28 // Before the transition to GlStateManager it used `GL11.GL_ENABLE_BIT`, but GlStateManager don't allow mask so maybe we just don't at all? - Luna Mira Lage (Desoroxxx) - 2025-12-28
+        GL11.glPushAttrib(GL11.GL_ENABLE_BIT);
 
         GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
         GlStateManager.depthMask(false);
@@ -133,7 +133,7 @@ public class FlashFX extends Particle {
 
         RenderHelper.enableStandardItemLighting();
 
-        GlStateManager.popAttrib(); // TODO: This fucks up the GlStateManager - Luna Mira Lage (Desoroxxx) 2025-12-28
+        GL11.glPopAttrib();
         GlStateManager.popMatrix();
     }
 

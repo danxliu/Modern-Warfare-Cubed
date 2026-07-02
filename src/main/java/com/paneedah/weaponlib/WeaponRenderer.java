@@ -1,5 +1,7 @@
 package com.paneedah.weaponlib;
 
+import org.lwjgl.opengl.GL11;
+
 import static com.paneedah.mwc.ProjectConstants.ID;
 import static com.paneedah.mwc.ProjectConstants.LOGGER;
 import static com.paneedah.mwc.proxies.ClientProxy.MC;
@@ -5385,7 +5387,7 @@ public class WeaponRenderer extends ModelSource implements IBakedModel {
             GlStateManager.popMatrix();
         }
         GlStateManager.pushMatrix();
-        GlStateManager.pushAttrib(); // TODO: This fucks up the GlStateManager - Luna Mira Lage (Desoroxxx) 2025-12-28 // Before the transition to GlStateManager it used `GL11.GL_ENABLE_BIT | GL11.GL_CURRENT_BIT`, but GlStateManager don't allow mask so maybe we just don't at all? - Luna Mira Lage (Desoroxxx) - 2025-12-28
+        GL11.glPushAttrib(GL11.GL_ENABLE_BIT | GL11.GL_CURRENT_BIT);
 
         if (compatibleAttachment.getPositioning() instanceof BiConsumer) {
             ((BiConsumer) compatibleAttachment.getPositioning()).accept(
@@ -5428,7 +5430,7 @@ public class WeaponRenderer extends ModelSource implements IBakedModel {
                 )
             );
             GlStateManager.pushMatrix();
-            GlStateManager.pushAttrib(); // TODO: This fucks up the GlStateManager - Luna Mira Lage (Desoroxxx) 2025-12-28 // Before the transition to GlStateManager it used `GL11.GL_ENABLE_BIT | GL11.GL_CURRENT_BIT`, but GlStateManager don't allow mask so maybe we just don't at all? - Luna Mira Lage (Desoroxxx) - 2025-12-28
+            GL11.glPushAttrib(GL11.GL_ENABLE_BIT | GL11.GL_CURRENT_BIT);
 
             //System.out.println(compatibleAttachment.getAttachment().getCategory());
 
@@ -5534,7 +5536,7 @@ public class WeaponRenderer extends ModelSource implements IBakedModel {
                 );
             //}
 
-            GlStateManager.popAttrib(); // TODO: This fucks up the GlStateManager - Luna Mira Lage (Desoroxxx) 2025-12-28
+            GL11.glPopAttrib();
             GlStateManager.popMatrix();
         }
 
@@ -5557,7 +5559,7 @@ public class WeaponRenderer extends ModelSource implements IBakedModel {
             );
         }
 
-        GlStateManager.popAttrib(); // TODO: This fucks up the GlStateManager - Luna Mira Lage (Desoroxxx) 2025-12-28
+        GL11.glPopAttrib();
         GlStateManager.popMatrix();
     }
 
@@ -5579,9 +5581,9 @@ public class WeaponRenderer extends ModelSource implements IBakedModel {
 
             GL11.glLoadMatrix(pair.getFirst());
 
-            GlStateManager.pushAttrib(); // TODO: This fucks up the GlStateManager - Luna Mira Lage (Desoroxxx) 2025-12-28 // Before the transition to GlStateManager it used `GL11.GL_ENABLE_BIT | GL11.GL_CURRENT_BIT`, but GlStateManager don't allow mask so maybe we just don't at all? - Luna Mira Lage (Desoroxxx) - 2025-12-28
+            GL11.glPushAttrib(GL11.GL_ENABLE_BIT | GL11.GL_CURRENT_BIT);
             pair.getSecond().render(renderContext);
-            GlStateManager.popAttrib(); // TODO: This fucks up the GlStateManager - Luna Mira Lage (Desoroxxx) 2025-12-28
+            GL11.glPopAttrib();
             GlStateManager.popMatrix();
         }
     }
@@ -6419,7 +6421,7 @@ public class WeaponRenderer extends ModelSource implements IBakedModel {
             }
 
             GlStateManager.pushMatrix();
-            GlStateManager.pushAttrib(); // TODO: This fucks up the GlStateManager - Luna Mira Lage (Desoroxxx) 2025-12-28 // Before the transition to GlStateManager it used `GL11.GL_ENABLE_BIT`, but GlStateManager don't allow mask so maybe we just don't at all? - Luna Mira Lage (Desoroxxx) - 2025-12-28
+            GL11.glPushAttrib(GL11.GL_ENABLE_BIT);
             GlStateManager.enableBlend();
             GlStateManager.enableAlpha();
             GlStateManager.disableLighting();
@@ -6487,13 +6489,13 @@ public class WeaponRenderer extends ModelSource implements IBakedModel {
 
             tessellator.draw();
 
-            GlStateManager.popAttrib(); // TODO: This fucks up the GlStateManager - Luna Mira Lage (Desoroxxx) 2025-12-28
+            GL11.glPopAttrib();
             GlStateManager.enableLighting();
             GlStateManager.popMatrix();
             GlStateManager.enableTexture2D();
         } else {
             GlStateManager.pushMatrix();
-            GlStateManager.pushAttrib(); // TODO: This fucks up the GlStateManager - Luna Mira Lage (Desoroxxx) 2025-12-28 // Before the transition to GlStateManager it used `GL11.GL_ENABLE_BIT`, but GlStateManager don't allow mask so maybe we just don't at all? - Luna Mira Lage (Desoroxxx) - 2025-12-28
+            GL11.glPushAttrib(GL11.GL_ENABLE_BIT);
 
             GlStateManager.enableBlend();
             GlStateManager.enableAlpha();
@@ -6508,7 +6510,7 @@ public class WeaponRenderer extends ModelSource implements IBakedModel {
 
             drawTexturedQuadFit(0, 0, 256, 256, 0);
 
-            GlStateManager.popAttrib(); // TODO: This fucks up the GlStateManager - Luna Mira Lage (Desoroxxx) 2025-12-28
+            GL11.glPopAttrib();
 
             GlStateManager.popMatrix();
         }

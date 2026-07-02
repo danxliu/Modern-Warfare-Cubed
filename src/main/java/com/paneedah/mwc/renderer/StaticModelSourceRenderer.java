@@ -188,6 +188,7 @@ public class StaticModelSourceRenderer extends ModelSource {
 
 			final ModelBase model = texturedModel.getU();
 
+<<<<<<< HEAD
 			if (transformType != null) {
 				switch (transformType) {
 				case GROUND:
@@ -207,6 +208,16 @@ public class StaticModelSourceRenderer extends ModelSource {
 				default:
 				}
 			}
+=======
+        for (Tuple<ModelBase, String> texturedModel : modelSource.getTexturedModels()) {
+            if (texturedModel.getV().startsWith("customskin_")) {
+                MC.renderEngine.bindTexture(CustomSkin.getCustomSkinResource(texturedModel.getV().replace("customskin_", "")));
+            } else {
+                MC.renderEngine.bindTexture(new ResourceLocation(ID + ":textures/models/" + texturedModel.getV()));
+            }
+            GlStateManager.pushMatrix();
+            GL11.glPushAttrib(GL11.GL_ENABLE_BIT);
+>>>>>>> 1d1123f7 (fix: update glstatemanager calls and clean up)
 
 			model.render(MC.player, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch, scale);
 
@@ -216,11 +227,17 @@ public class StaticModelSourceRenderer extends ModelSource {
 
 		final CustomRenderer<RenderableState> postRenderer = (CustomRenderer<RenderableState>) modelSource.getPostRenderer();
 
+<<<<<<< HEAD
 		// * As far as I know, we only post render stuff that has an instance, so I added that check, this may be incorrect - Luna Mira Lage (Desoroxxx) 2025-11-19
 		if (postRenderer != null && itemStack.getItem() instanceof PlayerItemInstanceFactory) {
 			renderContext.setAgeInTicks(-0.4F);
 			renderContext.setScale(0.08F);
 			renderContext.setCompatibleTransformType(transformType);
+=======
+            GL11.glPopAttrib();
+            GlStateManager.popMatrix();
+        }
+>>>>>>> 1d1123f7 (fix: update glstatemanager calls and clean up)
 
 			renderContext.setPlayerItemInstance(MWC.modContext.getPlayerItemInstanceRegistry().getCachedItemInstance(renderContext.getPlayer(), itemStack));
 
@@ -233,13 +250,26 @@ public class StaticModelSourceRenderer extends ModelSource {
 			GlStateManager.popMatrix();
 		}
 
+<<<<<<< HEAD
 		GlStateManager.popMatrix();
 	}
+=======
+            GlStateManager.pushMatrix();
+            GL11.glPushAttrib(GL11.GL_ENABLE_BIT | GL11.GL_CURRENT_BIT);
+>>>>>>> 1d1123f7 (fix: update glstatemanager calls and clean up)
 
 	protected void renderModelSourceCarryableItem(final ItemStack itemStack, final ItemCameraTransforms.TransformType transformType, final float limbSwing, final float limbSwingAmount, final float ageInTicks, final float netHeadYaw, final float headPitch, final float scale) {
 		final ItemCarryable itemCarryable = (ItemCarryable) itemStack.getItem();
 
+<<<<<<< HEAD
 		final ModelBiped model = EquipmentModelPools.get(itemCarryable.modelName);
+=======
+            GL11.glPopAttrib();
+            GlStateManager.popMatrix();
+        }
+        GlStateManager.popMatrix();
+    }
+>>>>>>> 1d1123f7 (fix: update glstatemanager calls and clean up)
 
 		MC.getTextureManager().bindTexture(new ResourceLocation(ID + ":textures/models/" + itemCarryable.textureName));
 

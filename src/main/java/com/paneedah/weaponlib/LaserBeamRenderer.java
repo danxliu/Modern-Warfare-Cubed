@@ -36,12 +36,12 @@ public class LaserBeamRenderer implements CustomRenderer {
         if (instance instanceof PlayerWeaponInstance && ((PlayerWeaponInstance) instance).isLaserOn() && (type == ItemCameraTransforms.TransformType.THIRD_PERSON_LEFT_HAND || type == ItemCameraTransforms.TransformType.THIRD_PERSON_RIGHT_HAND || type == ItemCameraTransforms.TransformType.FIRST_PERSON_LEFT_HAND || type == ItemCameraTransforms.TransformType.FIRST_PERSON_RIGHT_HAND || type == ItemCameraTransforms.TransformType.GROUND)) {
 
 
-            GlStateManager.pushAttrib(); // TODO: This fucks up the GlStateManager - Luna Mira Lage (Desoroxxx) 2025-12-28
+            GL11.glPushAttrib(GL11.GL_ENABLE_BIT | GL11.GL_CURRENT_BIT);
 
             GlStateManager.disableTexture2D();
 
 
-            //GlStateManager.popAttrib(); // TODO: This fucks up the GlStateManager - Luna Mira Lage (Desoroxxx) 2025-12-28
+            //GL11.glPopAttrib();
 
             GlStateManager.blendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE_MINUS_SRC_ALPHA);
 
@@ -92,12 +92,12 @@ public class LaserBeamRenderer implements CustomRenderer {
             GlStateManager.enableTexture2D();
             GlStateManager.disableBlend();
             GlStateManager.popMatrix();
-            GlStateManager.popAttrib(); // TODO: This fucks up the GlStateManager - Luna Mira Lage (Desoroxxx) 2025-12-28
+            GL11.glPopAttrib();
 
 			/*
 			GlStateManager.pushMatrix();
 
-			GlStateManager.pushAttrib(); // TODO: This fucks up the GlStateManager - Luna Mira Lage (Desoroxxx) 2025-12-28                                 
+			GL11.glPushAttrib(GL11.GL_ENABLE_BIT | GL11.GL_CURRENT_BIT);
 			//GlStateManager.disableCull();
 			//GlStateManager.disableLighting();
 			//GlStateManager.disableTexture2D();
@@ -139,7 +139,7 @@ public class LaserBeamRenderer implements CustomRenderer {
 			
 			GlStateManager.depthMask(true);// do we need this?
 			
-			GlStateManager.popAttrib(); // TODO: This fucks up the GlStateManager - Luna Mira Lage (Desoroxxx) 2025-12-28
+			GL11.glPopAttrib();
 
 			GlStateManager.popMatrix();
 			*/
