@@ -5,15 +5,15 @@ import io.netty.buffer.ByteBuf;
 
 public enum HandheldState implements ManagedState<HandheldState> {
 
-    READY(false),
+    READY,
 
     MODIFYING_REQUESTED(1),
 
-    MODIFYING(2, null, MODIFYING_REQUESTED, null, false),
+    MODIFYING(2, null, MODIFYING_REQUESTED, null),
 
     NEXT_ATTACHMENT_REQUESTED,
 
-    NEXT_ATTACHMENT(2, null, NEXT_ATTACHMENT_REQUESTED, null, false),
+    NEXT_ATTACHMENT(2, null, NEXT_ATTACHMENT_REQUESTED, null),
 
     ALERT;
 
@@ -25,45 +25,32 @@ public enum HandheldState implements ManagedState<HandheldState> {
 
     private final HandheldState commitPhase;
 
-    private final boolean isTransient;
-
     private int priority = DEFAULT_PRIORITY;
 
     HandheldState() {
-        this(null, null, null, true);
+        this(null, null, null);
     }
 
     HandheldState(int priority) {
-        this(priority, null, null, null, true);
-    }
-
-    HandheldState(boolean isTransient) {
-        this(null, null, null, isTransient);
+        this(priority, null, null, null);
     }
 
 //	private WeaponState(WeaponState permitRequestedState, WeaponState transactionFinalState) {
-//		this(permitRequestedState, transactionFinalState, true);
+//		this(permitRequestedState, transactionFinalState);
 //	}
 
-    HandheldState(HandheldState preparingPhase, HandheldState permitRequestedState, HandheldState transactionFinalState, boolean isTransient) {
-        this(DEFAULT_PRIORITY, preparingPhase, permitRequestedState, transactionFinalState, isTransient);
+    HandheldState(HandheldState preparingPhase, HandheldState permitRequestedState, HandheldState transactionFinalState) {
+        this(DEFAULT_PRIORITY, preparingPhase, permitRequestedState, transactionFinalState);
     }
 
-    HandheldState(int priority, HandheldState preparingPhase, HandheldState permitRequestedState, HandheldState transactionFinalState, boolean isTransient) {
+    HandheldState(int priority, HandheldState preparingPhase, HandheldState permitRequestedState, HandheldState transactionFinalState) {
         this.priority = priority;
         this.preparingPhase = preparingPhase;
         this.permitRequestedPhase = permitRequestedState;
         this.commitPhase = transactionFinalState;
-        this.isTransient = false; //isTransient; // TODO: make states non-transient, remove flag from constructor
         //this is required to have up-to-date state on server, e.g. preparing, requested;
         // otherwise issus arise, e.g. item toss would not work correctly
     }
-
-    @Override
-    public boolean isTransient() {
-        return isTransient;
-    }
-
     @Override
     public HandheldState preparingPhase() {
         return preparingPhase;

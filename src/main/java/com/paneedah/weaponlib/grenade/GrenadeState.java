@@ -6,7 +6,7 @@ import io.netty.buffer.ByteBuf;
 
 public enum GrenadeState implements ManagedState<GrenadeState> {
 
-    READY(false),
+    READY,
 
     SAFETY_PING_OFF(9),
 
@@ -24,41 +24,28 @@ public enum GrenadeState implements ManagedState<GrenadeState> {
 
     private final GrenadeState commitPhase;
 
-    private final boolean isTransient;
-
     private int priority = DEFAULT_PRIORITY;
 
     GrenadeState() {
-        this(null, null, null, true);
+        this(null, null, null);
     }
 
     GrenadeState(int priority) {
-        this(priority, null, null, null, true);
+        this(priority, null, null, null);
     }
 
-    GrenadeState(boolean isTransient) {
-        this(null, null, null, isTransient);
+    GrenadeState(GrenadeState preparingPhase, GrenadeState permitRequestedState, GrenadeState transactionFinalState) {
+        this(DEFAULT_PRIORITY, preparingPhase, permitRequestedState, transactionFinalState);
     }
 
-    GrenadeState(GrenadeState preparingPhase, GrenadeState permitRequestedState, GrenadeState transactionFinalState, boolean isTransient) {
-        this(DEFAULT_PRIORITY, preparingPhase, permitRequestedState, transactionFinalState, isTransient);
-    }
-
-    GrenadeState(int priority, GrenadeState preparingPhase, GrenadeState permitRequestedState, GrenadeState transactionFinalState, boolean isTransient) {
+    GrenadeState(int priority, GrenadeState preparingPhase, GrenadeState permitRequestedState, GrenadeState transactionFinalState) {
         this.priority = priority;
         this.preparingPhase = preparingPhase;
         this.permitRequestedPhase = permitRequestedState;
         this.commitPhase = transactionFinalState;
-        this.isTransient = false; //isTransient; // TODO: make states non-transient, remove flag from constructor
         //this is required to have up-to-date state on server, e.g. preparing, requested;
         // otherwise issus arise, e.g. item toss would not work correctly
     }
-
-    @Override
-    public boolean isTransient() {
-        return isTransient;
-    }
-
     @Override
     public GrenadeState preparingPhase() {
         return preparingPhase;

@@ -6,11 +6,11 @@ import lombok.Getter;
 
 public enum MagazineState implements ManagedState<MagazineState> {
 
-    READY(false),
+    READY,
     LOAD_REQUESTED,
-    LOAD(null, LOAD_REQUESTED, null, true),
+    LOAD(null, LOAD_REQUESTED, null),
     UNLOAD_REQUESTED,
-    UNLOAD(null, UNLOAD_REQUESTED, null, true);
+    UNLOAD(null, UNLOAD_REQUESTED, null);
 
     private static final int DEFAULT_PRIORITY = 0;
 
@@ -20,45 +20,32 @@ public enum MagazineState implements ManagedState<MagazineState> {
 
     private final MagazineState commitPhase;
 
-    private final boolean isTransient;
-
     @Getter private final int priority;
 
     MagazineState() {
-        this(null, null, null, true);
+        this(null, null, null);
     }
 
     MagazineState(int priority) {
-        this(priority, null, null, null, true);
-    }
-
-    MagazineState(boolean isTransient) {
-        this(null, null, null, isTransient);
+        this(priority, null, null, null);
     }
 
 //	private WeaponState(WeaponState permitRequestedState, WeaponState transactionFinalState) {
-//		this(permitRequestedState, transactionFinalState, true);
+//		this(permitRequestedState, transactionFinalState);
 //	}
 
-    MagazineState(MagazineState preparingPhase, MagazineState permitRequestedState, MagazineState transactionFinalState, boolean isTransient) {
-        this(DEFAULT_PRIORITY, preparingPhase, permitRequestedState, transactionFinalState, isTransient);
+    MagazineState(MagazineState preparingPhase, MagazineState permitRequestedState, MagazineState transactionFinalState) {
+        this(DEFAULT_PRIORITY, preparingPhase, permitRequestedState, transactionFinalState);
     }
 
-    MagazineState(int priority, MagazineState preparingPhase, MagazineState permitRequestedState, MagazineState transactionFinalState, boolean isTransient) {
+    MagazineState(int priority, MagazineState preparingPhase, MagazineState permitRequestedState, MagazineState transactionFinalState) {
         this.priority = priority;
         this.preparingPhase = preparingPhase;
         this.permitRequestedPhase = permitRequestedState;
         this.commitPhase = transactionFinalState;
-        this.isTransient = false; //isTransient; // TODO: make states non-transient, remove flag from constructor
         //this is required to have up-to-date state on server, e.g. preparing, requested;
         // otherwise issus arise, e.g. item toss would not work correctly
     }
-
-    @Override
-    public boolean isTransient() {
-        return isTransient;
-    }
-
     @Override
     public MagazineState preparingPhase() {
         return preparingPhase;

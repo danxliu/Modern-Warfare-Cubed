@@ -7,22 +7,22 @@ import lombok.Getter;
 public enum WeaponState implements ManagedState<WeaponState> {
 
     DRAWING,
-    READY(false),
+    READY,
     COMPOUND_REQUESTED,
     COMPOUND_EMTPY_REQUESTED,
     TACTICAL_RELOAD,
     COMPOUND_RELOAD,
     COMPOUND_RELOAD_EMPTY,
 
-    COMPOUND_RELOAD_UNLOAD(null, COMPOUND_REQUESTED, null, true),
-    COMPOUND_RELOAD_FINISH(null, COMPOUND_REQUESTED, null, true),
-    COMPOUND_RELOAD_FINISHED(null, COMPOUND_REQUESTED, null, true),
+    COMPOUND_RELOAD_UNLOAD(null, COMPOUND_REQUESTED, null),
+    COMPOUND_RELOAD_FINISH(null, COMPOUND_REQUESTED, null),
+    COMPOUND_RELOAD_FINISHED(null, COMPOUND_REQUESTED, null),
 
-    // COMPOUND_RELOAD(null, COMPOUND_REQUESTED, null, true),
-    // COMPOUND_RELOAD_EMPTY(null, COMPOUND_EMTPY_REQUESTED, null, true),
+    // COMPOUND_RELOAD(null, COMPOUND_REQUESTED, null),
+    // COMPOUND_RELOAD_EMPTY(null, COMPOUND_EMTPY_REQUESTED, null),
 
     LOAD_REQUESTED,
-    LOAD(null, LOAD_REQUESTED, null, true),
+    LOAD(null, LOAD_REQUESTED, null),
     LOAD_ITERATION,
     LOAD_ITERATION_COMPLETED,
     ALL_LOAD_ITERATIONS_COMPLETED, // Applies to iterated loads
@@ -30,7 +30,7 @@ public enum WeaponState implements ManagedState<WeaponState> {
     AWAIT_FURTHER_LOAD_INSTRUCTIONS,
     UNLOAD_PREPARING,
     UNLOAD_REQUESTED,
-    UNLOAD(UNLOAD_PREPARING, UNLOAD_REQUESTED, READY, true),
+    UNLOAD(UNLOAD_PREPARING, UNLOAD_REQUESTED, READY),
 
     FIRING(9),
     RECOILED(10),
@@ -43,10 +43,10 @@ public enum WeaponState implements ManagedState<WeaponState> {
     // EJECTED_SPENT_ROUND,
 
     MODIFYING_REQUESTED(1),
-    MODIFYING(2, null, MODIFYING_REQUESTED, null, false),
+    MODIFYING(2, null, MODIFYING_REQUESTED, null),
 
     NEXT_ATTACHMENT_REQUESTED,
-    NEXT_ATTACHMENT(2, null, NEXT_ATTACHMENT_REQUESTED, null, false),
+    NEXT_ATTACHMENT(2, null, NEXT_ATTACHMENT_REQUESTED, null),
 
     ALERT,
     INSPECTING;
@@ -56,40 +56,28 @@ public enum WeaponState implements ManagedState<WeaponState> {
     private final WeaponState preparingPhase;
     private final WeaponState permitRequestedPhase;
     private final WeaponState commitPhase;
-    private final boolean isTransient;
     @Getter private final int priority;
 
     WeaponState() {
-        this(null, null, null, true);
+        this(null, null, null);
     }
 
     WeaponState(int priority) {
-        this(priority, null, null, null, true);
+        this(priority, null, null, null);
     }
 
-    WeaponState(boolean isTransient) {
-        this(null, null, null, isTransient);
+    WeaponState(WeaponState preparingPhase, WeaponState permitRequestedState, WeaponState transactionFinalState) {
+        this(DEFAULT_PRIORITY, preparingPhase, permitRequestedState, transactionFinalState);
     }
 
-    WeaponState(WeaponState preparingPhase, WeaponState permitRequestedState, WeaponState transactionFinalState, boolean isTransient) {
-        this(DEFAULT_PRIORITY, preparingPhase, permitRequestedState, transactionFinalState, isTransient);
-    }
-
-    WeaponState(int priority, WeaponState preparingPhase, WeaponState permitRequestedState, WeaponState transactionFinalState, boolean isTransient) {
+    WeaponState(int priority, WeaponState preparingPhase, WeaponState permitRequestedState, WeaponState transactionFinalState) {
         this.priority = priority;
         this.preparingPhase = preparingPhase;
         this.permitRequestedPhase = permitRequestedState;
         this.commitPhase = transactionFinalState;
-        this.isTransient = false; // TODO: make states non-transient, remove flag from constructor
         // This is required to have up-to-date state on server, e.g. preparing, requested;
         // Otherwise issues arise, e.g. item toss would not work correctly
     }
-
-    @Override
-    public boolean isTransient() {
-        return isTransient;
-    }
-
     @Override
     public WeaponState preparingPhase() {
         return preparingPhase;
