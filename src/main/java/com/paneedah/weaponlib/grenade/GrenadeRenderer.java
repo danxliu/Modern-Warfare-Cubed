@@ -589,11 +589,13 @@ public class GrenadeRenderer extends ModelSource implements IBakedModel {
         EntityLivingBase player;
         int slot = -1;
         UUID uuid;
+        int stackSize;
 
-        public StateManagerKey(EntityLivingBase player, int slot, UUID uuid) {
+        public StateManagerKey(EntityLivingBase player, int slot, UUID uuid, int stackSize) {
             this.player = player;
             this.slot = slot;
             this.uuid = uuid;
+            this.stackSize = stackSize;
         }
 
         @Override
@@ -603,6 +605,7 @@ public class GrenadeRenderer extends ModelSource implements IBakedModel {
             result = prime * result + ((player == null) ? 0 : player.hashCode());
             result = prime * result + slot;
             result = prime * result + ((uuid == null) ? 0 : uuid.hashCode());
+            result = prime * result + stackSize;
             return result;
         }
 
@@ -633,6 +636,9 @@ public class GrenadeRenderer extends ModelSource implements IBakedModel {
                     return false;
                 }
             } else if (!uuid.equals(other.uuid)) {
+                return false;
+            }
+            if (stackSize != other.stackSize) {
                 return false;
             }
             return true;
@@ -693,7 +699,7 @@ public class GrenadeRenderer extends ModelSource implements IBakedModel {
 
         UUID uuid = playerGrenadeInstance != null ? playerGrenadeInstance.getUuid() : null;
         StateManagerKey key = new StateManagerKey(player, playerGrenadeInstance != null ?
-                playerGrenadeInstance.getItemInventoryIndex() : -1, uuid);
+                playerGrenadeInstance.getItemInventoryIndex() : -1, uuid, itemStack.getCount());
         MultipartRenderStateManager<RenderableState, Part, RenderContext<RenderableState>> stateManager = firstPersonStateManagers.get(key);
         if (stateManager == null) {
             stateManager = new MultipartRenderStateManager<>(currentState, weaponTransitionProvider);
