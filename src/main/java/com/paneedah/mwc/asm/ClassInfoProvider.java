@@ -1,5 +1,11 @@
 package com.paneedah.mwc.asm;
 
+import net.minecraft.launchwrapper.Launch;
+import org.objectweb.asm.ClassReader;
+import org.objectweb.asm.ClassVisitor;
+import org.objectweb.asm.MethodVisitor;
+import org.objectweb.asm.Opcodes;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -107,4 +113,40 @@ public class ClassInfoProvider {
 
     }
 
+    public void sanityCheck(boolean isObfuscated) {
+        if (!isObfuscated) {
+            return;
+        }
+
+        try {
+            ClassInfo info = classInfoMap.get("net/minecraft/entity/EntityLivingBase");
+            String notchClassName = info.getNotchClassName();
+
+            byte[] bytes = Launch.classLoader.getClassBytes(notchClassName);
+            if (bytes == null) {
+                throw new RuntimeException("Modern Warfare Cubed ASM sanity check failed! Could not find class '" + notchClassName + "' (EntityLivingBase). Obfuscation mappings mismatch.");
+            }
+
+            final boolean[] methodFound = {false};
+            ClassReader cr = new ClassReader(bytes);
+            cr.accept(new ClassVisitor(Opcodes.ASM4) {
+                @Override
+                public MethodVisitor visitMethod(int access, String name, String desc, String signature, String[] exceptions) {
+                    if ("a".equals(name) && "(Lvg;FDD)V".equals(desc)) {
+                        methodFound[0] = true;
+                    }
+                    return null;
+                }
+            }, 0);
+
+            if (!methodFound[0]) {
+                throw new RuntimeException("Modern Warfare Cubed ASM sanity check failed! Class '" + notchClassName + "' (EntityLivingBase) does not have the expected method 'a(Lvg;FDD)V' (knockBack). Your environment uses different obfuscation mappings than MWC expects.");
+            }
+        } catch (Exception e) {
+            if (e instanceof RuntimeException) {
+                throw (RuntimeException) e;
+            }
+            throw new RuntimeException("Modern Warfare Cubed ASM sanity check failed!", e);
+        }
+    }
 }

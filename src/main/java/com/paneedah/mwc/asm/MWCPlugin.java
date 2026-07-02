@@ -35,7 +35,10 @@ public class MWCPlugin implements IFMLLoadingPlugin, IEarlyMixinLoader {
 
     @Override
     public void injectData(Map<String, Object> data) {
-
+        Boolean isObfuscated = (Boolean) data.get("runtimeDeobfuscationEnabled");
+        if (isObfuscated != null) {
+            ClassInfoProvider.getInstance().sanityCheck(isObfuscated);
+        }
     }
 
     @Override
