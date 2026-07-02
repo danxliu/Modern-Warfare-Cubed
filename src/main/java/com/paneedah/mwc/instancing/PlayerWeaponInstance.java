@@ -51,6 +51,7 @@ public class PlayerWeaponInstance extends PlayerItemInstance<WeaponState> implem
     private static final String ACTIVE_TEXTURE_INDEX_TAG = "ACTIVE_TEXTURE_INDEX";
     private static final String NIGHT_VISION_ON_TAG = "NIGHT_VISION_ON";
     private static final String MAX_SHOTS_TAG = "MAX_SHOTS";
+    private static final String FIRE_MODE_TAG = "FIRE_MODE";
     private static final String LASER_ON_TAG = "LASER_ON";
     private static final String RECOIL_TAG = "RECOIL";
     private static final String AIMED_TAG = "AIMED";
@@ -98,7 +99,7 @@ public class PlayerWeaponInstance extends PlayerItemInstance<WeaponState> implem
 
     @Getter @Setter private int loadIterationCount;
     @Getter @Setter private int seriesShotCount;
-    @Getter private int maxShots; // ! FIRE_MODE TODO: Enum pls - Luna Mira Lage (Desoroxxx) 2024-11-25
+    @Getter private FireMode fireMode = FireMode.SEMI;
     @Getter private int ammo;
 
     @Getter @Setter private long lastReloadUpdateTimestamp;
@@ -141,7 +142,7 @@ public class PlayerWeaponInstance extends PlayerItemInstance<WeaponState> implem
         setActiveTextureIndex(otherInstance.activeTextureIndex);
         setSlideLock(otherInstance.slideLockOn);
         setLaserOn(otherInstance.laserOn);
-        setMaxShots(otherInstance.maxShots);
+        setFireMode(otherInstance.fireMode);
         setLoadIterationCount(otherInstance.loadIterationCount);
         setLoadAfterUnloadEnabled(otherInstance.loadAfterUnloadEnabled);
     }
@@ -320,7 +321,7 @@ public class PlayerWeaponInstance extends PlayerItemInstance<WeaponState> implem
     }
 
     public boolean isAutomaticModeEnabled() {
-        return maxShots > 1;
+        return fireMode != FireMode.SEMI;
     }
 
     public int[] getActiveAttachmentIds() {
@@ -455,13 +456,23 @@ public class PlayerWeaponInstance extends PlayerItemInstance<WeaponState> implem
         markDirty();
     }
 
-    public void setMaxShots(final int maxShots) {
-        if (this.maxShots == maxShots)
+    public void setFireMode(final FireMode fireMode) {
+        if (this.fireMode == fireMode)
             return;
 
-        this.maxShots = maxShots;
+        this.fireMode = fireMode;
 
         markDirty();
+    }
+
+    public int getMaxShots() {
+        if (fireMode == FireMode.SEMI) {
+            return 1;
+        } else if (fireMode == FireMode.BURST) {
+            return getWeapon().getBurstRounds();
+        } else {
+            return Integer.MAX_VALUE;
+        }
     }
 
     public void setLaserOn(final boolean laserOn) {
@@ -518,7 +529,18 @@ public class PlayerWeaponInstance extends PlayerItemInstance<WeaponState> implem
         activeTextureIndex = tagCompound.getByte(ACTIVE_TEXTURE_INDEX_TAG);
 
         loadIterationCount = tagCompound.getInteger(LOAD_ITERATION_COUNT_TAG);
-        maxShots = tagCompound.getInteger(MAX_SHOTS_TAG);
+        if (tagCompound.hasKey(FIRE_MODE_TAG)) {
+            fireMode = FireMode.values()[tagCompound.getInteger(FIRE_MODE_TAG)];
+        } else {
+            int legacyMaxShots = tagCompound.getInteger(MAX_SHOTS_TAG);
+            if (legacyMaxShots == 1) {
+                fireMode = FireMode.SEMI;
+            } else if (legacyMaxShots == Integer.MAX_VALUE) {
+                fireMode = FireMode.AUTO;
+            } else {
+                fireMode = FireMode.BURST;
+            }
+        }
         ammo = tagCompound.getInteger(AMMO_TAG);
 
         recoil = tagCompound.getFloat(RECOIL_TAG);
@@ -541,7 +563,7 @@ public class PlayerWeaponInstance extends PlayerItemInstance<WeaponState> implem
         tagCompound.setByte(ACTIVE_TEXTURE_INDEX_TAG, activeTextureIndex);
 
         tagCompound.setInteger(LOAD_ITERATION_COUNT_TAG, loadIterationCount);
-        tagCompound.setInteger(MAX_SHOTS_TAG, maxShots);
+        tagCompound.setInteger(FIRE_MODE_TAG, fireMode.ordinal());
         tagCompound.setInteger(AMMO_TAG, ammo);
 
         tagCompound.setFloat(RECOIL_TAG, recoil);
@@ -568,7 +590,7 @@ public class PlayerWeaponInstance extends PlayerItemInstance<WeaponState> implem
         activeTextureIndex = byteBuf.readByte();
 
         loadIterationCount = byteBuf.readInt();
-        maxShots = byteBuf.readInt();
+        fireMode = FireMode.values()[byteBuf.readInt()];
         ammo = byteBuf.readInt();
 
         recoil = byteBuf.readFloat();
@@ -591,7 +613,7 @@ public class PlayerWeaponInstance extends PlayerItemInstance<WeaponState> implem
         byteBuf.writeByte(activeTextureIndex);
 
         byteBuf.writeInt(loadIterationCount);
-        byteBuf.writeInt(maxShots);
+        byteBuf.writeInt(fireMode.ordinal());
         byteBuf.writeInt(ammo);
 
         byteBuf.writeFloat(recoil);

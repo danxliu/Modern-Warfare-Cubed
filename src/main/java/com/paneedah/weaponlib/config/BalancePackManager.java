@@ -1,6 +1,7 @@
 package com.paneedah.weaponlib.config;
 
 import com.google.gson.*;
+import com.paneedah.weaponlib.FireMode;
 import com.paneedah.weaponlib.Weapon;
 import lombok.Getter;
 import lombok.Setter;
@@ -752,23 +753,23 @@ public class BalancePackManager {
 
     }
 
-    public static List<Integer> getFiremodeListForWeapon(Weapon weapon) {
+    public static List<FireMode> getFiremodeListForWeapon(Weapon weapon) {
         if (!hasActiveBalancePack() || !balancePackAddressesWeapon(weapon)
                 || !getActiveBalancePack().getWeaponBalancing(weapon.getName()).wereFiremodePropertiesAltered()) {
-            return weapon.builder.getMaxShots();
+            return weapon.builder.getFireModes();
         }
 
         GunBalanceConfiguration gbc = getActiveBalancePack().getWeaponBalancing(weapon.getName());
-        List<Integer> shotsList = new ArrayList<>();
+        List<FireMode> shotsList = new ArrayList<>();
 
         if (gbc.autoFireEnabled) {
-            shotsList.add(Integer.MAX_VALUE);
+            shotsList.add(FireMode.AUTO);
         }
         if (gbc.singleFireEnabled) {
-            shotsList.add(1);
+            shotsList.add(FireMode.SEMI);
         }
         if (gbc.burstShots != 0) {
-            shotsList.add(gbc.burstShots);
+            shotsList.add(FireMode.BURST);
         }
 
         return shotsList;

@@ -248,7 +248,7 @@ public final class HUD extends Gui {
             drawTexturedModalRect(0, 0, 0, 0, AMMUNITION_COUNTER_BACKGROUND_WIDTH, AMMUNITION_COUNTER_BACKGROUND_HEIGHT);
 
         String totalCapacityString, currentAmmoString;
-        int fireMode; // ! FIRE_MODE TODO: Once it's an enum, this can become much simpler - Luna Mira Lage (Desoroxxx) 2024-11-25
+        int fireModeIconIndex;
         int totalCapacity = 0;
         int currentAmmo = 0;
 
@@ -258,16 +258,16 @@ public final class HUD extends Gui {
         } else if (item instanceof Weapon) {
             final ItemMagazine itemMagazine = (ItemMagazine) WeaponAttachmentAspect.getActiveAttachment(AttachmentCategory.MAGAZINE, weaponInstance);
 
-            // ! FIRE_MODE TODO: Once it's an enum, this can become much simpler - Luna Mira Lage (Desoroxxx) 2024-11-25
-            switch (weaponInstance.getMaxShots()) {
-                case Integer.MAX_VALUE:
-                    fireMode = Weapon.FIRE_MODE_AUTO;
+            switch (weaponInstance.getFireMode()) {
+                case AUTO:
+                    fireModeIconIndex = 0;
                     break;
-                case 1:
-                    fireMode = Weapon.FIRE_MODE_SINGLE;
+                case BURST:
+                    fireModeIconIndex = 1;
                     break;
+                case SEMI:
                 default:
-                    fireMode = Weapon.FIRE_MODE_BURST;
+                    fireModeIconIndex = 2;
                     break;
             }
 
@@ -284,11 +284,11 @@ public final class HUD extends Gui {
 
             GlStateManager.enableBlend();
 
-            drawTexturedModalRect(0, 0, FIRE_MODE_INDICATOR_U_OFFSET + (FIRE_MODE_INDICATOR_U_WIDTH * fireMode), FIRE_MODE_INDICATOR_V_OFFSET, FIRE_MODE_INDICATOR_U_WIDTH, FIRE_MODE_INDICATOR_V_HEIGHT);
+            drawTexturedModalRect(0, 0, FIRE_MODE_INDICATOR_U_OFFSET + (FIRE_MODE_INDICATOR_U_WIDTH * fireModeIconIndex), FIRE_MODE_INDICATOR_V_OFFSET, FIRE_MODE_INDICATOR_U_WIDTH, FIRE_MODE_INDICATOR_V_HEIGHT);
 
             GlStateManager.popMatrix();
 
-            if (((Weapon) item).builder.getMaxShots().size() > 1)
+            if (((Weapon) item).builder.getFireModes().size() > 1)
                 drawScaledString(fireModeKeyName, -fireModeKeyNameOffset + FIRE_MODE_INDICATOR_X_OFFSET, FIRE_MODE_KEY_Y_STRING_OFFSET, FIRE_MODE_KEY_SCALE, BRIGHT_YARROW);
         }
 
