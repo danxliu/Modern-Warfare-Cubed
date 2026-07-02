@@ -488,14 +488,8 @@ public class Weapon
             return this;
         }
 
-<<<<<<< HEAD
-=======
-        public Builder withCreativeTab(CreativeTabs creativeTab) {
-            this.tab = creativeTab;
-            return this;
-        }
 
->>>>>>> 23ce5b8f (refactor weapon instances to use enum)
+
         public Builder withSpawnEntityRocketParticles() {
             this.spawnEntityRocketParticles = true;
             return this;
@@ -855,29 +849,8 @@ public class Weapon
             return this;
         }
 
-<<<<<<< HEAD
-=======
-        @Deprecated
-        public Builder withCrafting(
-            CraftingComplexity craftingComplexity,
-            Object... craftingMaterials
-        ) {
-            if (craftingComplexity == null) {
-                throw new IllegalArgumentException(
-                    "Crafting complexity not set"
-                );
-            }
-            if (craftingMaterials.length < 2) {
-                throw new IllegalArgumentException(
-                    "2 or more materials required for crafting"
-                );
-            }
-            this.craftingComplexity = craftingComplexity;
-            this.craftingMaterials = craftingMaterials;
-            return this;
-        }
 
->>>>>>> 23ce5b8f (refactor weapon instances to use enum)
+
         public Builder withTest() {
             return this;
         }
@@ -1189,8 +1162,9 @@ public class Weapon
                     this.ejectSpentRoundSound
                 );
             }
-
-            weapon.setCreativeTab(tab);
+            if (tab != null) {
+                weapon.setCreativeTab(tab);
+            }
             weapon.setTranslationKey(name);
 
             // Add the magic mag
@@ -1243,63 +1217,6 @@ public class Weapon
                             )
                     );
                 }
-<<<<<<< HEAD
-=======
-            } else if (craftingComplexity != null) {
-                OptionsMetadata optionsMetadata =
-                    new OptionsMetadata.OptionMetadataBuilder()
-                        .withSlotCount(9)
-                        .build(
-                            craftingComplexity,
-                            Arrays.copyOf(
-                                craftingMaterials,
-                                craftingMaterials.length
-                            )
-                        );
-
-                List<Object> shape = modContext
-                    .getRecipeManager()
-                    .createShapedRecipe(
-                        weapon,
-                        weapon.getName(),
-                        optionsMetadata
-                    );
-
-                if (optionsMetadata.isHasOres()) {
-                    ForgeRegistries.RECIPES.register(
-                        new ShapedOreRecipe(
-                            null,
-                            new ItemStack(weapon),
-                            shape.toArray()
-                        )
-                            .setMirrored(false)
-                            .setRegistryName(
-                                ID,
-                                new ItemStack(weapon)
-                                    .getItem()
-                                    .getTranslationKey() + "_recipe"
-                            )
-                    );
-                } else {
-                    ForgeRegistries.RECIPES.register(
-                        new ShapedOreRecipe(
-                            null,
-                            new ItemStack(weapon),
-                            shape.toArray()
-                        )
-                            .setMirrored(false)
-                            .setRegistryName(
-                                ID,
-                                new ItemStack(weapon)
-                                    .getItem()
-                                    .getTranslationKey() + "_recipe"
-                            )
-                    );
-                }
-            } else {
-                noRecipe += 1;
-                //System.err.println("!!!No recipe defined for weapon " + name);
->>>>>>> 23ce5b8f (refactor weapon instances to use enum)
             }
 
             weapon.modernRecipe = modernCraftingRecipe;

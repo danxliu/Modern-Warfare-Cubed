@@ -85,16 +85,17 @@ public class StaticModelSourceRenderer extends ModelSource {
 
 	@Override
 	public List<BakedQuad> getQuads(final IBlockState state, final EnumFacing side, final long rand) {
+		// Reset the dynamic values.
+		this.owner = null;
+		this.itemStack = null;
+		this.transformType = null;
+
 		// TODO: Actually make rendering compatible with Emissive Renderer
 		if (net.minecraftforge.common.ForgeModContainer.allowEmissiveItems)
 			return Collections.emptyList();
 
-    @Override
-    public List<BakedQuad> getQuads(IBlockState state, EnumFacing side, long rand) {
-        // Reset the dynamic values.
-        this.owner = null;
-        this.itemStack = null;
-        this.transformType = null;
+		return Collections.emptyList();
+	}
 
 	@Override
 	public final boolean isAmbientOcclusion() {
@@ -108,13 +109,13 @@ public class StaticModelSourceRenderer extends ModelSource {
 
 	@Override
 	public final boolean isBuiltInRenderer() {
-		return false;
+		return true;
 	}
 
-    @Override
-    public final boolean isBuiltInRenderer() {
-        return true;
-    }
+	@Override
+	public TextureAtlasSprite getParticleTexture() {
+		return MC.getTextureMapBlocks().getMissingSprite();
+	}
 
 	@SideOnly(Side.CLIENT)
 	public void renderItem() {
@@ -184,11 +185,10 @@ public class StaticModelSourceRenderer extends ModelSource {
 			}
 
 			GlStateManager.pushMatrix();
-			GlStateManager.pushAttrib(); // TODO: This fucks up the GlStateManager - Luna Mira Lage (Desoroxxx) 2025-12-28 // Before the transition to GlStateManager it used `GL11.GL_ENABLE_BIT`, but GlStateManager don't allow mask so maybe we just don't at all? - Luna Mira Lage (Desoroxxx) - 2025-12-28
+			GL11.glPushAttrib(GL11.GL_ENABLE_BIT);
 
 			final ModelBase model = texturedModel.getU();
 
-<<<<<<< HEAD
 			if (transformType != null) {
 				switch (transformType) {
 				case GROUND:
@@ -208,68 +208,39 @@ public class StaticModelSourceRenderer extends ModelSource {
 				default:
 				}
 			}
-=======
-        for (Tuple<ModelBase, String> texturedModel : modelSource.getTexturedModels()) {
-            if (texturedModel.getV().startsWith("customskin_")) {
-                MC.renderEngine.bindTexture(CustomSkin.getCustomSkinResource(texturedModel.getV().replace("customskin_", "")));
-            } else {
-                MC.renderEngine.bindTexture(new ResourceLocation(ID + ":textures/models/" + texturedModel.getV()));
-            }
-            GlStateManager.pushMatrix();
-            GL11.glPushAttrib(GL11.GL_ENABLE_BIT);
->>>>>>> 1d1123f7 (fix: update glstatemanager calls and clean up)
 
 			model.render(MC.player, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch, scale);
 
-			GlStateManager.popAttrib(); // TODO: This fucks up the GlStateManager - Luna Mira Lage (Desoroxxx) 2025-12-28
+			GL11.glPopAttrib();
 			GlStateManager.popMatrix();
 		}
 
 		final CustomRenderer<RenderableState> postRenderer = (CustomRenderer<RenderableState>) modelSource.getPostRenderer();
 
-<<<<<<< HEAD
 		// * As far as I know, we only post render stuff that has an instance, so I added that check, this may be incorrect - Luna Mira Lage (Desoroxxx) 2025-11-19
 		if (postRenderer != null && itemStack.getItem() instanceof PlayerItemInstanceFactory) {
 			renderContext.setAgeInTicks(-0.4F);
 			renderContext.setScale(0.08F);
 			renderContext.setCompatibleTransformType(transformType);
-=======
-            GL11.glPopAttrib();
-            GlStateManager.popMatrix();
-        }
->>>>>>> 1d1123f7 (fix: update glstatemanager calls and clean up)
 
 			renderContext.setPlayerItemInstance(MWC.modContext.getPlayerItemInstanceRegistry().getCachedItemInstance(renderContext.getPlayer(), itemStack));
 
 			GlStateManager.pushMatrix();
-			GlStateManager.pushAttrib(); // TODO: This fucks up the GlStateManager - Luna Mira Lage (Desoroxxx) 2025-12-28 // Before the transition to GlStateManager it used `GL11.GL_ENABLE_BIT | GL11.GL_CURRENT_BIT`, but GlStateManager don't allow mask so maybe we just don't at all? - Luna Mira Lage (Desoroxxx) - 2025-12-28
+			GL11.glPushAttrib(GL11.GL_ENABLE_BIT | GL11.GL_CURRENT_BIT);
 
 			postRenderer.render(renderContext);
 
-			GlStateManager.popAttrib(); // TODO: This fucks up the GlStateManager - Luna Mira Lage (Desoroxxx) 2025-12-28
+			GL11.glPopAttrib();
 			GlStateManager.popMatrix();
 		}
 
-<<<<<<< HEAD
 		GlStateManager.popMatrix();
 	}
-=======
-            GlStateManager.pushMatrix();
-            GL11.glPushAttrib(GL11.GL_ENABLE_BIT | GL11.GL_CURRENT_BIT);
->>>>>>> 1d1123f7 (fix: update glstatemanager calls and clean up)
 
 	protected void renderModelSourceCarryableItem(final ItemStack itemStack, final ItemCameraTransforms.TransformType transformType, final float limbSwing, final float limbSwingAmount, final float ageInTicks, final float netHeadYaw, final float headPitch, final float scale) {
 		final ItemCarryable itemCarryable = (ItemCarryable) itemStack.getItem();
 
-<<<<<<< HEAD
 		final ModelBiped model = EquipmentModelPools.get(itemCarryable.modelName);
-=======
-            GL11.glPopAttrib();
-            GlStateManager.popMatrix();
-        }
-        GlStateManager.popMatrix();
-    }
->>>>>>> 1d1123f7 (fix: update glstatemanager calls and clean up)
 
 		MC.getTextureManager().bindTexture(new ResourceLocation(ID + ":textures/models/" + itemCarryable.textureName));
 
